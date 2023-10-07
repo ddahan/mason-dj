@@ -15,6 +15,24 @@ python = "3.12.0"
 Django = "4.*"       # https://github.com/django/django
 django-environ = "*" # https://github.com/joke2k/django-environ
 
+##########################################################################################
+# Security
+##########################################################################################
+django-cors-headers = "*" # https://github.com/adamchainz/django-cors-headers
+
+##########################################################################################
+# API
+##########################################################################################
+orjson = "*"       # https://github.com/ijl/orjson
+django-ninja = "*" # https://github.com/vitalik/django-ninja
+
+##########################################################################################
+# Background tasks
+##########################################################################################
+celery = "*"                # https://github.com/celery/celery
+django-celery-results = "*" # https://github.com/celery/django-celery-results
+django-celery-beat = "*"    # https://github.com/celery/django-celery-beat
+SQLAlchemy = "1.*"          # https://github.com/sqlalchemy/sqlalchemy
 
 ##########################################################################################
 # Database
@@ -24,14 +42,23 @@ psycopg = { extras = [
     "binary",
 ], version = "*" } # https://github.com/psycopg/psycopg
 
+##########################################################################################
+# Additional fields, tags, etc.
+##########################################################################################
+django-extensions = "*" # https://github.com/django-extensions/django-extensions
+django-positions = "*" # https://github.com/jpwatts/django-positions
+django-phonenumber-field = { extras = [
+    "phonenumbers",
+], version = "*" } # https://github.com/stefanfoulis/django-phonenumber-field
+django-safedelete = "*" # https://github.com/makinacorpus/django-safedelete
 
 ##########################################################################################
-# Misc
+# DX & Debug
 ##########################################################################################
-django-cors-headers = "*" # https://github.com/adamchainz/django-cors-headers
-gunicorn = "*"            # https://github.com/benoitc/gunicorn
-ruff = "*"                # https://github.com/charliermarsh/ruff
-ipdb = "*"                # https://github.com/gotcha/ipdb
+django-debug-toolbar = "*" # https://github.com/jazzband/django-debug-toolbar/
+django-rich = "*"          # https://github.com/adamchainz/django-rich
+ruff = "*"                 # https://github.com/charliermarsh/ruff
+ipdb = "*"                 # https://github.com/gotcha/ipdb
 
 [tool.black]
 target-version = ["py312"]
@@ -46,11 +73,13 @@ per-file-ignores = {}
 max-complexity = 10
 
 [tool.ruff.isort]
+known-first-party = ["bricks"]
 section-order = [
     "future",
     "standard-library",
     "django",
     "third-party",
+    "first-party",
     "local-folder",
 ]
 [tool.ruff.isort.sections]

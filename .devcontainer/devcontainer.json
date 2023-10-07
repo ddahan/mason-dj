@@ -33,7 +33,7 @@
             "extensions": [
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "ms-python.black-formatter",
+                "ms-python.black-formatter@prerelease",
                 "charliermarsh.ruff",
                 "tamasfe.even-better-toml"
             ],
