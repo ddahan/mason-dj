@@ -39,7 +39,7 @@ ENV_NAME = env("DJ_ENV_NAME")
 SECRET_KEY = env("DJ_SECRET_KEY")
 DEBUG = env("DJ_DEBUG", cast=bool)
 CORS_ORIGIN_ALLOW_ALL = True
-# INTERNAL_IPS = ["127.0.0.1"]  # required for django debug toolbar
+INTERNAL_IPS = ["127.0.0.1"]  # required for django debug toolbar
 ALLOWED_HOSTS = ["*"]  # To edit according your hosting platform
 PREFIX_URL_ADMIN = "bricks"  # to protect admin page from easy discovery
 
@@ -61,7 +61,7 @@ THIRD_PARTY_APPS = [
     "django_celery_results",
     "django_celery_beat",
     "django_extensions",  # shell_plus, ...
-    # "debug_toolbar",
+    "debug_toolbar",
     "phonenumber_field",
 ]
 
@@ -70,7 +70,7 @@ MY_APPS = ["dj_apps.bricks.apps.BricksConfig"]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
 MIDDLEWARE = [
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",  # to handle CORS with right headers
@@ -127,7 +127,7 @@ TEMPLATES = [
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 ##########################################################################################
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 ##########################################################################################
