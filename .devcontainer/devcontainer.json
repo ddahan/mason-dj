@@ -1,0 +1,105 @@
+{
+    "name": "🧱 Bricks",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "containerEnv": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONBREAKPOINT": "ipdb.set_trace"
+    },
+    "forwardPorts": [
+        8000, // django server
+        5432 // postgres
+    ],
+    "portsAttributes": {
+        "8000": {
+            "label": "Django",
+            "onAutoForward": "notify"
+        },
+        "5432": {
+            "label": "PostgreSQL",
+            "onAutoForward": "silent"
+        }
+    },
+    "onCreateCommand": "poetry config virtualenvs.create false && poetry install",
+    "features": {
+        "ghcr.io/ddahan/feature-starter/poetry:latest": {
+            "version": "1.6.1"
+        },
+        "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "charliermarsh.ruff",
+                "tamasfe.even-better-toml"
+            ],
+            "settings": {
+                //*********************************************************************
+                // general
+                //*********************************************************************
+                "files.insertFinalNewline": true,
+                "files.exclude": {
+                    "**/__pycache__": true,
+                    "**/.ruff_cache": true
+                },
+                //*********************************************************************
+                // editor
+                //*********************************************************************
+                "editor.wordWrap": "wordWrapColumn",
+                "editor.wordWrapColumn": 90,
+                "editor.defaultFormatter": null, // overrided per language
+                "editor.tabSize": 4,
+                "editor.indentSize": "tabSize",
+                "editor.formatOnSave": true,
+                //*********************************************************************
+                // color customizations
+                //*********************************************************************
+                "workbench.colorCustomizations": {
+                    "titleBar.activeBackground": "#9b543d",
+                    "titleBar.activeForeground": "#ffffff"
+                },
+                //*********************************************************************
+                // python
+                //*********************************************************************
+                "python.languageServer": "Pylance", // used for import suggestions only
+                "python.analysis.ignore": [
+                    "*"
+                ], // disable linting as it would be redundant with Ruff 
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.envFile": "${workspaceFolder}/.env",
+                "python.analysis.autoImportCompletions": true,
+                "python.analysis.importFormat": "absolute",
+                "python.analysis.indexing": true,
+                "python.analysis.packageIndexDepths": [
+                    {
+                        "name": "django",
+                        "depth": 10,
+                        "includeAllSymbols": true
+                    }
+                ],
+                //*********************************************************************
+                // black
+                //*********************************************************************
+                "black-formatter.args": [
+                    "--config",
+                    "pyproject.toml"
+                ],
+                "python.analysis.extraPaths": [
+                    "${workspaceFolder}/dj_apps",
+                    "${workspaceFolder}/dj_apps/bricks"
+                ],
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": true
+                    }
+                }
+            }
+        }
+    }
+}
