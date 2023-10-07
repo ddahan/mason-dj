@@ -10,7 +10,7 @@ from mixins.auto_validable import AutoValidable
 from mixins.deactivable import Deactivable
 from phonenumber_field.modelfields import PhoneNumberField
 
-from .base_model import BaseModel
+from ...core.models.base_model import BaseModel
 
 
 class UserManager(BaseUserManager):

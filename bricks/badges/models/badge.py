@@ -1,10 +1,9 @@
 from django.conf import settings
 from django.db import models
 
-from mixins.deactivable import Deactivable, DeactivableQuerySet
-from mixins.expirable import Expirable, ExpirableQueryset
-
-from .base_model import BaseModel, BaseQuerySet
+from core.mixins.deactivable import Deactivable, DeactivableQuerySet
+from core.mixins.expirable import Expirable, ExpirableQueryset
+from core.models.base_model import BaseModel, BaseQuerySet
 
 
 class BaseBadgeQuerySet(ExpirableQueryset, DeactivableQuerySet, BaseQuerySet):
