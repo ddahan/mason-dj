@@ -1,5 +1,5 @@
 {
-    "name": "🧱 Bricks",
+    "name": "🧱 dj-bricks",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
@@ -89,8 +89,7 @@
                     "pyproject.toml"
                 ],
                 "python.analysis.extraPaths": [
-                    "${workspaceFolder}/dj_apps",
-                    "${workspaceFolder}/dj_apps/bricks"
+                    "${workspaceFolder}/bricks"
                 ],
                 "[python]": {
                     "editor.defaultFormatter": "ms-python.black-formatter",

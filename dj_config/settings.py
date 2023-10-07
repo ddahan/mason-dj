@@ -11,13 +11,7 @@ import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-APP_ROOT = "dj_apps"
-APPS_FOLDERS = [
-    APP_ROOT,
-    f"{APP_ROOT}/bricks",
-]
-for folder in APPS_FOLDERS:
-    sys.path.insert(0, os.path.join(BASE_DIR, folder))
+sys.path.insert(0, os.path.join(BASE_DIR, "bricks"))
 
 ##########################################################################################
 # Environment
@@ -65,9 +59,9 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APPS = ["dj_apps.bricks.apps.BricksConfig"]
+MY_APP = ["bricks.apps.BricksConfig"]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APP
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
