@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BricksConfig(AppConfig):
+class BadgesConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "bricks"
+    name = "badges"

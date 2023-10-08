@@ -5,12 +5,11 @@ from django.contrib.auth.models import (
 )
 from django.db import models
 
-from enums.title import Title
-from mixins.auto_validable import AutoValidable
-from mixins.deactivable import Deactivable
+from core.enums.title import Title
+from core.mixins.auto_validable import AutoValidable
+from core.mixins.deactivable import Deactivable
+from core.models.base_model import BaseModel
 from phonenumber_field.modelfields import PhoneNumberField
-
-from ...core.models.base_model import BaseModel
 
 
 class UserManager(BaseUserManager):

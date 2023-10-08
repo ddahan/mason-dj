@@ -89,7 +89,8 @@
                     "pyproject.toml"
                 ],
                 "python.analysis.extraPaths": [
-                    "${workspaceFolder}/bricks"
+                    "${workspaceFolder}/dj_apps"
+                    // TODO: add apps
                 ],
                 "[python]": {
                     "editor.defaultFormatter": "ms-python.black-formatter",

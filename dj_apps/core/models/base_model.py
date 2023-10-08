@@ -5,8 +5,8 @@ This should be inherit from every model added to keep consistency.
 
 from django.db import models
 
-from mixins.secret_id import SecretID
-from mixins.time_stampable import TimeStampable, TimeStampableQueryset
+from core.mixins.secret_id import SecretID
+from core.mixins.time_stampable import TimeStampable, TimeStampableQueryset
 
 
 class BaseQuerySet(TimeStampableQueryset, models.QuerySet):

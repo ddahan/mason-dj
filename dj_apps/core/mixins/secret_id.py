@@ -1,6 +1,6 @@
 from django.db import models
 
-from utils.string_utils import get_secret_id
+from core.utils.string_utils import get_secret_id
 
 
 class SecretID(models.Model):

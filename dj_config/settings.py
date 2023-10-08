@@ -11,7 +11,13 @@ import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-sys.path.insert(0, os.path.join(BASE_DIR, "bricks"))
+APP_ROOT = "dj_apps"
+APPS_FOLDERS = [
+    APP_ROOT,
+    # TODO: add f"{APP_ROOT}/<my_app_name>" for each new app
+]
+for folder in APPS_FOLDERS:
+    sys.path.insert(0, os.path.join(BASE_DIR, folder))
 
 ##########################################################################################
 # Environment
@@ -59,9 +65,13 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APP = ["bricks.apps.BricksConfig"]
+MY_APPS = [
+    "dj_apps.core.apps.CoreConfig",
+    "dj_apps.badges.apps.BadgesConfig",
+    "dj_apps.profiles.apps.ProfilesConfig",
+]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APP
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -127,7 +137,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 ##########################################################################################
 # User related
 ##########################################################################################
-AUTH_USER_MODEL = "bricks.User"
+AUTH_USER_MODEL = "profiles.User"
 
 PHONENUMBER_DEFAULT_REGION = "FR"
 PHONENUMBER_DB_FORMAT = "NATIONAL"
