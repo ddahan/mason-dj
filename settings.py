@@ -9,8 +9,9 @@ import environ
 # Path
 ##########################################################################################
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
+# TODO: autodiscovery introspection here!
 APP_ROOT = "dj_apps"
 APPS_FOLDERS = [
     APP_ROOT,
@@ -85,8 +86,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "dj_config.urls"
-WSGI_APPLICATION = "dj_config.wsgi.application"
+ROOT_URLCONF = "urls"
+WSGI_APPLICATION = "wsgi.application"
 
 
 ##########################################################################################
