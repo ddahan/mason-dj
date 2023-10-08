@@ -22,7 +22,7 @@ services:
     image: 'postgres:15-bookworm'
     restart: unless-stopped
     volumes:
-      - postgres-data-somename:/var/lib/postgresql/data
+      - postgres-data-mason:/var/lib/postgresql/data
     expose:
       - 5432
 
@@ -41,4 +41,4 @@ services:
       - 9601 # metrics
 
 volumes:
-  postgres-data-somename:
+  postgres-data-mason:
