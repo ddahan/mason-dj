@@ -3,7 +3,7 @@ version: '3'
 services:
 
   srv_django:
-    container_name: "ctn_django"
+    container_name: "mason_ctn_django"
     # vars are injected at runtime, so no need to specify env_var value here.
     image: 'python:3.11.6-bookworm'
     volumes:
@@ -14,7 +14,7 @@ services:
       - 8000
 
   srv_postgres:
-    container_name: "ctn_postgres"
+    container_name: "mason_ctn_postgres"
     environment:
       - POSTGRES_DB=mydb
       - POSTGRES_USER=myuser
@@ -27,14 +27,14 @@ services:
       - 5432
 
   srv_redis:
-    container_name: "ctn_redis"
+    container_name: "mason_ctn_redis"
     image: "redis:bookworm"
     restart: unless-stopped
     expose:
       - 6379
 
   srv_soketi:
-    container_name: "ctn_soketi"
+    container_name: "mason_ctn_soketi"
     image: "quay.io/soketi/soketi:1.4-16-debian"
     expose:
       - 6001
