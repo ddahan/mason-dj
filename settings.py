@@ -5,20 +5,7 @@ from pathlib import Path
 import dj_database_url
 import environ
 
-##########################################################################################
-# Path
-##########################################################################################
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent
-
-# TODO: autodiscovery introspection here!
-APP_ROOT = "dj_apps"
-APPS_FOLDERS = [
-    APP_ROOT,
-    # TODO: add f"{APP_ROOT}/<my_app_name>" for each new app
-]
-for folder in APPS_FOLDERS:
-    sys.path.insert(0, os.path.join(BASE_DIR, folder))
 
 ##########################################################################################
 # Environment
@@ -66,11 +53,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APPS = [
-    "dj_apps.core.apps.CoreConfig",
-    "dj_apps.badges.apps.BadgesConfig",
-    "dj_apps.profiles.apps.ProfilesConfig",
-]
+MY_APPS = ["core", "badges", "profiles"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
@@ -89,6 +72,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = "urls"
 WSGI_APPLICATION = "wsgi.application"
 
+##########################################################################################
+# DX: Adding apps to the path is required for auto import
+##########################################################################################
+
+APP_ROOT = "dj_apps"
+for new_path in [APP_ROOT] + [f"{APP_ROOT}/{folder}" for folder in MY_APPS]:
+    sys.path.insert(0, os.path.join(BASE_DIR, new_path))
 
 ##########################################################################################
 # Database
