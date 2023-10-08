@@ -1,7 +1,7 @@
 {
     "name": "🧱 dj-bricks",
     "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
+    "service": "srv_django",
     "workspaceFolder": "/workspace",
     "containerEnv": {
         "PYTHONUNBUFFERED": "1",

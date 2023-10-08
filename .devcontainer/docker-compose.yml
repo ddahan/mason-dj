@@ -2,27 +2,32 @@ version: '3'
 
 services:
   # -- Django container --
-  app:
+  srv_django:
     # vars are injected at runtime, so no need to specify env_var value here.
     image: 'python:3.12.0-bookworm'
-
     volumes:
       - ..:/workspaces:delegated
-
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
-
-    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:db
+    expose:
+      - 8000
 
   # -- PostgreSQL container --
-  db:
+  srv_postgres:
     env_file: .env_db # var created at build-time, so we need an env_file
     image: 'postgres:15-bookworm'
     restart: unless-stopped
-
     volumes:
       - postgres-data-somename:/var/lib/postgresql/data
+    expose:
+      - 5432
+
+  srv_redis:
+    image: "redis:bookworm"
+    restart: unless-stopped
+    expose:
+      - 6379
+
 
 volumes:
   postgres-data-somename:
