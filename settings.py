@@ -142,6 +142,8 @@ PHONENUMBER_DEFAULT_FORMAT = "NATIONAL"
 ##########################################################################################
 
 CELERY_BROKER_URL = env("DJ_REDIS_URL")
+# https://docs.celeryq.dev/en/stable/userguide/configuration.html#broker-connection-retry-on-startup
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_TIMEZONE = TIME_ZONE
 # https://docs.celeryq.dev/en/latest/django/first-steps-with-django.html#django-celery-results-using-the-django-orm-cache-as-a-result-backend
 CELERY_RESULT_BACKEND = "django-db"

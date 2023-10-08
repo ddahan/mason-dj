@@ -1,4 +1,4 @@
-from toto.celery import app
+from bgtasks import app
 
 
 @app.task()

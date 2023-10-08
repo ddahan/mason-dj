@@ -6,7 +6,7 @@
         {
             "label": "Celery",
             "type": "shell",
-            "command": "celery --app toto worker --uid=nobody --gid=nogroup --loglevel INFO",
+            "command": "celery --app bgtasks worker --beat --uid=nobody --gid=nogroup --loglevel INFO",
             "isBackground": true,
             "icon": {
                 "id": "tasklist",
@@ -16,22 +16,8 @@
                 "reveal": "never",
                 "panel": "new",
                 "showReuseMessage": false
-            }
-        },
-        // {
-        //     "label": "Django Tests",
-        //     "type": "shell",
-        //     "command": "python manage.py test -v 2 --noinput --env=.env.test",
-        //     "icon": {
-        //         "id": "checklist",
-        //         "color": "terminal.ansiRed"
-        //     },
-        //     "presentation": {
-        //         "reveal": "always",
-        //         "panel": "shared",
-        //         "showReuseMessage": false,
-        //         "clear": true
-        //     }
-        // }
+            },
+            "problemMatcher": []
+        }
     ]
 }
