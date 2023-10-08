@@ -29,7 +29,7 @@ DEBUG = env("DJ_DEBUG", cast=bool)
 CORS_ORIGIN_ALLOW_ALL = True
 INTERNAL_IPS = ["127.0.0.1"]  # required for django debug toolbar
 ALLOWED_HOSTS = ["*"]  # To edit according your hosting platform
-PREFIX_URL_ADMIN = "bricks"  # to protect admin page from easy discovery
+PREFIX_URL_ADMIN = "mason"  # to protect admin page from easy discovery
 
 ##########################################################################################
 # Apps definition
