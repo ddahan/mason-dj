@@ -15,6 +15,5 @@ class SecretID(models.Model):
         unique=True,
         db_index=True,
         default=get_secret_id,
-        max_length=128,
         editable=False,
     )

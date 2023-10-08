@@ -46,9 +46,9 @@ class User(Deactivable, AutoValidable, PermissionsMixin, AbstractBaseUser, BaseM
         get_latest_by = "created"
 
     email = models.EmailField("e-mail", unique=True)
-    title = models.CharField("civilité", choices=Title.choices, max_length=128)
-    first_name = models.CharField("prénom", max_length=150)
-    last_name = models.CharField("nom", max_length=150)
+    title = models.CharField("civilité", choices=Title.choices)
+    first_name = models.CharField("prénom")
+    last_name = models.CharField("nom")
     phone_number = PhoneNumberField("téléphone", blank=True, null=True)
     birth_date = models.DateField("date de naissance", blank=True, null=True)
     is_staff = models.BooleanField("staff ?", default=False)
