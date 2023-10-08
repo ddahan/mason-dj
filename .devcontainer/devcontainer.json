@@ -9,7 +9,8 @@
     },
     "forwardPorts": [
         8000, // django server
-        5432 // postgres
+        5432, // postgres
+        6379 // redis
     ],
     "portsAttributes": {
         "8000": {
@@ -18,6 +19,10 @@
         },
         "5432": {
             "label": "PostgreSQL",
+            "onAutoForward": "silent"
+        },
+        "6379": {
+            "label": "Redis",
             "onAutoForward": "silent"
         }
     },
@@ -89,8 +94,11 @@
                     "pyproject.toml"
                 ],
                 "python.analysis.extraPaths": [
-                    "${workspaceFolder}/dj_apps"
-                    // TODO: add apps
+                    // TODO: find a "DRYer" way
+                    "${workspaceFolder}/dj_apps",
+                    "${workspaceFolder}/dj_apps/badges",
+                    "${workspaceFolder}/dj_apps/core",
+                    "${workspaceFolder}/dj_apps/profiles"
                 ],
                 "[python]": {
                     "editor.defaultFormatter": "ms-python.black-formatter",

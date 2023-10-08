@@ -14,7 +14,10 @@ services:
 
   # -- PostgreSQL container --
   srv_postgres:
-    env_file: .env_db # var created at build-time, so we need an env_file
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
     image: 'postgres:15-bookworm'
     restart: unless-stopped
     volumes:
