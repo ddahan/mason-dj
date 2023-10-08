@@ -1,4 +1,7 @@
-class BadgesException(Exception):
+from core.exceptions import ProjectException
+
+
+class BadgesException(ProjectException):
     pass
 
 

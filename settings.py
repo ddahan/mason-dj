@@ -141,7 +141,7 @@ PHONENUMBER_DEFAULT_FORMAT = "NATIONAL"
 # tasks execution troubleshooting: https://stackoverflow.com/questions/9769496/celery-received-unregistered-task-of-type-run-example
 ##########################################################################################
 
-CELERY_BROKER_URL = "sqla+" + env("DJ_DATABASE_URL")
+CELERY_BROKER_URL = env("DJ_REDIS_URL")
 CELERY_TIMEZONE = TIME_ZONE
 # https://docs.celeryq.dev/en/latest/django/first-steps-with-django.html#django-celery-results-using-the-django-orm-cache-as-a-result-backend
 CELERY_RESULT_BACKEND = "django-db"

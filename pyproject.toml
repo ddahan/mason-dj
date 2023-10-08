@@ -29,10 +29,11 @@ django-ninja = "*" # https://github.com/vitalik/django-ninja
 ##########################################################################################
 # Background tasks
 ##########################################################################################
-celery = "*"                # https://github.com/celery/celery
+celery = { extras = [
+    "redis",
+], version = "*" } # https://github.com/celery/celery
 django-celery-results = "*" # https://github.com/celery/django-celery-results
-django-celery-beat = "*"    # https://github.com/celery/django-celery-beat
-SQLAlchemy = "1.*"          # https://github.com/sqlalchemy/sqlalchemy
+django-celery-beat = "*" # https://github.com/celery/django-celery-beat
 
 ##########################################################################################
 # Database
