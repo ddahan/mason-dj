@@ -74,7 +74,7 @@ per-file-ignores = {}
 max-complexity = 10
 
 [tool.ruff.isort]
-known-first-party = ["bricks"]
+known-first-party = ["dj_apps"]
 section-order = [
     "future",
     "standard-library",
