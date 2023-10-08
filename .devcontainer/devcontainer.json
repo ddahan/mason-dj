@@ -1,5 +1,5 @@
 {
-    "name": "🧱 dj-bricks",
+    "name": "🧱 mason-dj",
     "dockerComposeFile": "docker-compose.yml",
     "service": "srv_django",
     "workspaceFolder": "/workspace",
@@ -65,7 +65,7 @@
                 //*********************************************************************
                 "workbench.colorCustomizations": {
                     "titleBar.activeBackground": "#9b543d",
-                    "titleBar.activeForeground": "#ffffff"
+                    "titleBar.activeForeground": "#ffd242"
                 },
                 //*********************************************************************
                 // python

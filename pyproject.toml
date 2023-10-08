@@ -1,9 +1,9 @@
 [tool]
 
 [tool.poetry]
-name = "bricks"
+name = "Django Mason Starter"
 version = "0.0.1"
-description = "Bricks Project"
+description = "Django Mason Starter"
 authors = ["David Dahan <david.dahan3@gmail.com>"]
 
 [tool.poetry.dependencies]
