@@ -173,3 +173,14 @@ if os.environ.get("DJ_TESTING_MODE"):
     # Note that the recommendation is to mock instead:
     # https://docs.celeryq.dev/en/stable/userguide/testing.html
     CELERY_TASK_ALWAYS_EAGER = True
+
+
+##########################################################################################
+# Realtime (soketi)
+# https://docs.soketi.app/
+##########################################################################################
+SOKETI_HOST = env("DJ_SOKETI_HOST")
+SOKETI_PORT = env("DJ_SOKETI_PORT", cast=int)
+SOKETI_APP_ID = env("DJ_SOKETI_APP_ID")
+SOKETI_KEY = env("DJ_SOKETI_KEY")
+SOKETI_SECRET = env("DJ_SOKETI_SECRET")
