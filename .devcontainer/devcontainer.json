@@ -27,6 +27,7 @@
         }
     },
     "onCreateCommand": "poetry config virtualenvs.create false && poetry install",
+    "postCreateCommand": "git config core.hooksPath .githooks",
     "features": {
         "ghcr.io/ddahan/feature-starter/poetry:latest": {
             "version": "1.6.1"
@@ -86,19 +87,28 @@
                         "includeAllSymbols": true
                     }
                 ],
-                //*********************************************************************
-                // black
-                //*********************************************************************
-                "black-formatter.args": [
-                    "--config",
-                    "pyproject.toml"
-                ],
                 "python.analysis.extraPaths": [
                     // TODO: find a "DRYer" way
                     "${workspaceFolder}/dj_apps",
                     "${workspaceFolder}/dj_apps/badges",
                     "${workspaceFolder}/dj_apps/core",
                     "${workspaceFolder}/dj_apps/profiles"
+                ],
+                "python.testing.unittestArgs": [
+                    "-v",
+                    "-s",
+                    "./",
+                    "-p",
+                    "test*.py"
+                ],
+                "python.testing.pytestEnabled": false,
+                "python.testing.unittestEnabled": true,
+                //*********************************************************************
+                // black
+                //*********************************************************************
+                "black-formatter.args": [
+                    "--config",
+                    "pyproject.toml"
                 ],
                 "[python]": {
                     "editor.defaultFormatter": "ms-python.black-formatter",

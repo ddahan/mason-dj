@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Runs ruff to prevent committing dirty python files
+ruff check .

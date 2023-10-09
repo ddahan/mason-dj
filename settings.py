@@ -4,6 +4,7 @@ from pathlib import Path
 
 import dj_database_url
 import environ
+from corsheaders.defaults import default_headers
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -27,6 +28,7 @@ ENV_NAME = env("DJ_ENV_NAME")
 SECRET_KEY = env("DJ_SECRET_KEY")
 DEBUG = env("DJ_DEBUG", cast=bool)
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_HEADERS = default_headers + ("x-api-key",)  # required for django-ninja
 INTERNAL_IPS = ["127.0.0.1"]  # required for django debug toolbar
 ALLOWED_HOSTS = ["*"]  # To edit according your hosting platform
 PREFIX_URL_ADMIN = "mason"  # to protect admin page from easy discovery
@@ -53,7 +55,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APPS = ["core", "badges", "profiles"]
+MY_APPS = ["core", "badges", "profiles", "token_auth"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
@@ -184,3 +186,42 @@ SOKETI_PORT = env("DJ_SOKETI_PORT", cast=int)
 SOKETI_APP_ID = env("DJ_SOKETI_APP_ID")
 SOKETI_KEY = env("DJ_SOKETI_KEY")
 SOKETI_SECRET = env("DJ_SOKETI_SECRET")
+
+##########################################################################################
+# Mailing
+# https://docs.djangoproject.com/en/dev/topics/email/#email-backends
+##########################################################################################
+
+# EMAIL_BACKEND_SLUG = env("DJ_EMAIL_BACKEND_SLUG")
+# EMAIL_BACKEND = f"django.core.mail.backends.{EMAIL_BACKEND_SLUG}.EmailBackend"
+# if EMAIL_BACKEND_SLUG == "smtp":
+#     EMAIL_HOST_USER = env("DJ_EMAIL_HOST_USER")
+#     EMAIL_HOST_PASSWORD = env("DJ_EMAIL_HOST_PASSWORD")
+#     EMAIL_HOST = "in-v3.mailjet.com"
+#     EMAIL_PORT = 587
+#     EMAIL_USE_TLS = True
+
+##########################################################################################
+# Media files / Object storage
+##########################################################################################
+
+# TODO: new 4.2 storage variables:
+# https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-STORAGES
+
+# USE_SPACES = env("DJ_USE_SPACES", cast=bool)
+
+# if USE_SPACES is True:
+#     # s3 settings
+#     AWS_ACCESS_KEY_ID = env("DJ_AWS_ACCESS_KEY_ID")
+#     AWS_SECRET_ACCESS_KEY = env("DJ_AWS_SECRET_ACCESS_KEY")
+#     AWS_STORAGE_BUCKET_NAME = env("DJ_AWS_STORAGE_BUCKET_NAME")
+#     AWS_DEFAULT_ACL = "public-read"
+#     AWS_S3_ENDPOINT_URL = "https://fra1.digitaloceanspaces.com"
+#     AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
+#     # media settings
+#     MEDIA_URL = f"https://{AWS_S3_ENDPOINT_URL}/media/"
+#     DEFAULT_FILE_STORAGE = "dj_config.storage_backends.PublicMediaStorage"
+# else:
+#     MEDIA_URL = "/media/"
+#     MEDIA_ROOT = BASE_DIR / "mediafiles"
+#     DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"

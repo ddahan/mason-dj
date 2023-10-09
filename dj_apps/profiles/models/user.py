@@ -5,11 +5,12 @@ from django.contrib.auth.models import (
 )
 from django.db import models
 
+from phonenumber_field.modelfields import PhoneNumberField
+
 from core.enums.title import Title
 from core.mixins.auto_validable import AutoValidable
 from core.mixins.deactivable import Deactivable
 from core.models.base_model import BaseModel
-from phonenumber_field.modelfields import PhoneNumberField
 
 
 class UserManager(BaseUserManager):
@@ -23,6 +24,12 @@ class UserManager(BaseUserManager):
         )
         user.set_password(password)
         user.save(using=self._db)
+
+        # NOTE: Uncomment if you need to generate APIToken for your user
+        # and make this method an atomic transaction.
+        # APIToken: Any = apps.get_model("token_auth", "APIToken")
+        # APIToken.objects.create(user=user)
+
         return user
 
     def create_superuser(self, email, password, **extra_fields):

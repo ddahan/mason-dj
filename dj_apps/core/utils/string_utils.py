@@ -47,3 +47,15 @@ def get_format_arguments(s: str) -> bool:
 
 def to_joined_str(seq: Sequence, char=",") -> str:
     return char.join(seq)
+
+
+def make_digit_trigram(int_id: int) -> str:
+    """
+    Return string from '001' (using 1 int) to '999' (using 999 int)
+    """
+    assert 1 <= int_id <= 999
+    str_id = str(int_id)
+    while len(str_id) < 3:
+        str_id = "0" + str_id
+
+    return str_id

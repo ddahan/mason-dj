@@ -42,6 +42,8 @@ dj-database-url = "*" # https://github.com/jazzband/dj-database-url
 psycopg = { extras = [
     "binary",
 ], version = "*" } # https://github.com/psycopg/psycopg
+# boto3 = "*"           # https://github.com/boto/boto3
+# django-storages = "*" # https://github.com/jschneier/django-storages/
 
 ##########################################################################################
 # Additional fields, tags, etc.
@@ -74,7 +76,8 @@ per-file-ignores = {}
 max-complexity = 10
 
 [tool.ruff.isort]
-known-first-party = ["dj_apps"]
+# 🫤 each module must be described
+known-first-party = ["core", "badges", "mailing", "profiles"]
 section-order = [
     "future",
     "standard-library",
