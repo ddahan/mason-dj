@@ -89,10 +89,10 @@
                 ],
                 "python.analysis.extraPaths": [
                     // TODO: find a "DRYer" way
-                    "${workspaceFolder}/dj_apps",
-                    "${workspaceFolder}/dj_apps/badges",
-                    "${workspaceFolder}/dj_apps/core",
-                    "${workspaceFolder}/dj_apps/profiles"
+                    "${workspaceFolder}/apps",
+                    "${workspaceFolder}/apps/badges",
+                    "${workspaceFolder}/apps/core",
+                    "${workspaceFolder}/apps/profiles"
                 ],
                 "python.testing.unittestArgs": [
                     "-v",

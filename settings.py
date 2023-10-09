@@ -58,7 +58,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-APP_FOLDER = "dj_apps"
+APP_FOLDER = "apps"
 
 MY_APPS = os.listdir(BASE_DIR / Path(APP_FOLDER))
 
