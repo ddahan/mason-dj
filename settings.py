@@ -8,6 +8,11 @@ from corsheaders.defaults import default_headers
 
 BASE_DIR = Path(__file__).resolve().parent
 
+
+def toto():
+    return a
+
+
 ##########################################################################################
 # Environment
 # https://django-environ.readthedocs.io/en/latest/quickstart.html
@@ -35,6 +40,8 @@ PREFIX_URL_ADMIN = "mason"  # to protect admin page from easy discovery
 
 ##########################################################################################
 # Apps definition
+# My apps are automatically generated based on the filesystem
+# Then added to the path for auto import
 ##########################################################################################
 
 DJANGO_APPS = [
@@ -55,7 +62,13 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APPS = ["core", "badges", "profiles", "mailing", "token_auth"]
+APP_FOLDER = "dj_apps"
+
+MY_APPS = os.listdir(BASE_DIR / Path(APP_FOLDER))
+
+
+for new_path in [APP_FOLDER] + [f"{APP_FOLDER}/{folder}" for folder in MY_APPS]:
+    sys.path.insert(0, os.path.join(BASE_DIR, new_path))
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
@@ -74,13 +87,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = "urls"
 WSGI_APPLICATION = "wsgi.application"
 
-##########################################################################################
-# DX: Adding apps to the path is required for auto import
-##########################################################################################
-
-APP_ROOT = "dj_apps"
-for new_path in [APP_ROOT] + [f"{APP_ROOT}/{folder}" for folder in MY_APPS]:
-    sys.path.insert(0, os.path.join(BASE_DIR, new_path))
 
 ##########################################################################################
 # Database
