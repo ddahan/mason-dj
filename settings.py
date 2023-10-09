@@ -194,14 +194,14 @@ SOKETI_SECRET = env("DJ_SOKETI_SECRET")
 # https://docs.djangoproject.com/en/dev/topics/email/#email-backends
 ##########################################################################################
 
-# EMAIL_BACKEND_SLUG = env("DJ_EMAIL_BACKEND_SLUG")
-# EMAIL_BACKEND = f"django.core.mail.backends.{EMAIL_BACKEND_SLUG}.EmailBackend"
-# if EMAIL_BACKEND_SLUG == "smtp":
-#     EMAIL_HOST_USER = env("DJ_EMAIL_HOST_USER")
-#     EMAIL_HOST_PASSWORD = env("DJ_EMAIL_HOST_PASSWORD")
-#     EMAIL_HOST = "in-v3.mailjet.com"
-#     EMAIL_PORT = 587
-#     EMAIL_USE_TLS = True
+EMAIL_BACKEND_SLUG = env("DJ_EMAIL_BACKEND_SLUG")
+EMAIL_BACKEND = f"django.core.mail.backends.{EMAIL_BACKEND_SLUG}.EmailBackend"
+if EMAIL_BACKEND_SLUG == "smtp":
+    EMAIL_HOST = env("DJ_EMAIL_HOST")
+    EMAIL_HOST_USER = env("DJ_EMAIL_HOST_USER")
+    EMAIL_HOST_PASSWORD = env("DJ_EMAIL_HOST_PASSWORD")
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
 
 ##########################################################################################
 # Media files / Object storage
