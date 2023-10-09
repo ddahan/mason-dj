@@ -11,6 +11,7 @@ class AppParameters(Singletonable, models.Model):
     """
 
     class Meta:
+        db_table = "tb_app_parameters"
         verbose_name_plural = "App parameters"
 
     CONTACT_EMAIL = models.CharField(help_text="Adresse e-mail de contact par défaut")

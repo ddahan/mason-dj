@@ -23,6 +23,9 @@ class BaseBadgeQuerySet(ExpirableQueryset, DeactivableQuerySet, BaseQuerySet):
 
 
 class Badge(Expirable, Deactivable, BaseModel):
+    class Meta:
+        db_table = "tb_badges"
+
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         blank=True,

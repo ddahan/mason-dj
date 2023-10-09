@@ -55,7 +55,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
 ]
 
-MY_APPS = ["core", "badges", "profiles", "token_auth"]
+MY_APPS = ["core", "badges", "profiles", "mailing", "token_auth"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 

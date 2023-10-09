@@ -10,5 +10,5 @@ class MailEmitter:
         return f"{self.display_name} <{self.email}>"
 
 
-david_emitter = MailEmitter("David de Puzzle Cook", "david@puzzlecook.com")
-contact_emitter = MailEmitter("Puzzle Cook", "contact@puzzlecook.com")
+david_emitter = MailEmitter("David de Mason", "david@mason.io")
+contact_emitter = MailEmitter("Mason Team", "contact@mason.io")

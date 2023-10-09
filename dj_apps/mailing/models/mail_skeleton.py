@@ -6,7 +6,8 @@ from django.db import models
 from django.template import Template
 from django.template.context import Context
 
-from common.core.mixins.slugable import Slugable
+from core.mixins.slugable import Slugable
+
 from ..exceptions import MailSlugNotFound
 from ..parameters import contact_emitter
 
