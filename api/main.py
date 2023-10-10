@@ -3,30 +3,19 @@ from typing import Any
 
 from django.http.response import Http404, HttpResponse
 
-from ninja import ModelSchema, NinjaAPI
+from ninja import NinjaAPI
 from ninja.errors import ValidationError
 
-from badges.models.badge import Badge
+from badges.endpoints import router as badges_router
 from core.exceptions import ProjectException
 
-from .authentication import ApiKeyAuth, InvalidToken
+from .authentication import InvalidToken
 from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
 from .renderers import ORJSONRenderer
 
-api = NinjaAPI(title="API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
-
-
-class BadgeSchema(ModelSchema):
-    class Config:
-        model = Badge
-        model_fields = ("id", "expiration", "is_active")
-
-
-@api.get("/badges", response=list[BadgeSchema])
-def badges(request):
-    badges = Badge.objects.all()
-    return badges
-
+api = NinjaAPI(title="API", renderer=ORJSONRenderer())
+# TODO: ADD , auth=ApiKeyAuth() as 3rd parameter
+api.add_router("badges", badges_router)
 
 """
 Exception handling is handled here otherwise it's not taken into account
