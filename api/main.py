@@ -13,7 +13,7 @@ from .authentication import ApiKeyAuth, InvalidToken
 from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
 from .renderers import ORJSONRenderer
 
-api = NinjaAPI(title="API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
+api = NinjaAPI(title="Mason API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
 api.add_router("badges", badges_router)
 
 """
