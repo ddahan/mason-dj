@@ -1,9 +1,10 @@
+from django.apps import apps
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
     PermissionsMixin,
 )
-from django.db import models
+from django.db import models, transaction
 
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -14,6 +15,7 @@ from core.models.base_model import BaseModel
 
 
 class UserManager(BaseUserManager):
+    @transaction.atomic()
     def create_user(self, email, password=None, **extra_fields):
         """Custom User Manager is required when defining a custom User class"""
 
@@ -25,10 +27,8 @@ class UserManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
 
-        # NOTE: Uncomment if you need to generate APIToken for your user
-        # and make this method an atomic transaction.
-        # APIToken: Any = apps.get_model("token_auth", "APIToken")
-        # APIToken.objects.create(user=user)
+        APIToken = apps.get_model("token_auth", "APIToken")
+        APIToken.objects.create(user=user)
 
         return user
 

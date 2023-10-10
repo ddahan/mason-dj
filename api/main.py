@@ -9,12 +9,11 @@ from ninja.errors import ValidationError
 from badges.endpoints import router as badges_router
 from core.exceptions import ProjectException
 
-from .authentication import InvalidToken
+from .authentication import ApiKeyAuth, InvalidToken
 from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
 from .renderers import ORJSONRenderer
 
-api = NinjaAPI(title="API", renderer=ORJSONRenderer())
-# TODO: ADD , auth=ApiKeyAuth() as 3rd parameter
+api = NinjaAPI(title="API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
 api.add_router("badges", badges_router)
 
 """
