@@ -33,3 +33,6 @@ class Badge(Expirable, Deactivable, BaseModel):
         on_delete=models.PROTECT,
         verbose_name="propriétaire",
     )
+
+    def __str__(self):
+        return self.sid
