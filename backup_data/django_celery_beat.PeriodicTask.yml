@@ -1,0 +1,50 @@
+- model: django_celery_beat.periodictask
+  pk: 1
+  fields:
+    name: celery.backend_cleanup
+    task: celery.backend_cleanup
+    interval: null
+    crontab: 1
+    solar: null
+    clocked: null
+    args: '[]'
+    kwargs: '{}'
+    queue: null
+    exchange: null
+    routing_key: null
+    headers: '{}'
+    priority: null
+    expires: null
+    expire_seconds: 43200
+    one_off: false
+    start_time: null
+    enabled: true
+    last_run_at: null
+    total_run_count: 0
+    date_changed: 2023-10-10 17:09:53.204951+00:00
+    description: ''
+- model: django_celery_beat.periodictask
+  pk: 2
+  fields:
+    name: Add
+    task: core.tasks.add
+    interval: null
+    crontab: 2
+    solar: null
+    clocked: null
+    args: '[3,2]'
+    kwargs: '{}'
+    queue: null
+    exchange: null
+    routing_key: null
+    headers: '{}'
+    priority: null
+    expires: null
+    expire_seconds: null
+    one_off: false
+    start_time: null
+    enabled: true
+    last_run_at: 2023-10-10 17:11:00.005462+00:00
+    total_run_count: 2
+    date_changed: 2023-10-10 17:11:03.323146+00:00
+    description: ''

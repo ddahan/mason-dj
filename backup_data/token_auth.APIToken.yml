@@ -1,0 +1,6 @@
+- model: token_auth.apitoken
+  pk: jrGNTcG8omKYLyrUfPBrdezt0pnwmMbkOp3-MqysmDs
+  fields:
+    created: 2023-10-10 17:05:05.690658+00:00
+    modified: 2023-10-10 17:05:05.690658+00:00
+    user: 1

@@ -14,6 +14,8 @@ from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
 from .renderers import ORJSONRenderer
 
 api = NinjaAPI(title="Mason API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
+
+# Add routers here
 api.add_router("badges", badges_router)
 
 """

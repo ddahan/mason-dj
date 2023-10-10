@@ -1,0 +1,7 @@
+- model: mailing.mailskeleton
+  pk: 1
+  fields:
+    slug: RESET_PASSWORD
+    subject: Mot de passe oublié ?
+    html_body: Tant pis pour vous !
+    send_mode: to

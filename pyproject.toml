@@ -62,6 +62,8 @@ django-debug-toolbar = "*" # https://github.com/jazzband/django-debug-toolbar/
 django-rich = "*"          # https://github.com/adamchainz/django-rich
 ruff = "*"                 # https://github.com/charliermarsh/ruff
 ipdb = "*"                 # https://github.com/gotcha/ipdb
+pyyaml = "*"
+
 
 [tool.black]
 target-version = ["py311"]

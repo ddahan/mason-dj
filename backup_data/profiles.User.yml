@@ -1,0 +1,19 @@
+- model: profiles.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$600000$6s5cj5pW8jkP33x3VZ0d0o$Nn1l99OGuKrqh2eaCyNUrw5vzWN4SLQ8uDoLAccNAL0=
+    last_login: 2023-10-10 17:06:36.665888+00:00
+    is_superuser: true
+    is_active: true
+    sid: l11jWp07B6YekOYB7UzlHQ
+    created: 2023-10-10 17:05:05.689458+00:00
+    modified: 2023-10-10 17:05:05.692672+00:00
+    email: david.dahan3@gmail.com
+    title: M
+    first_name: David
+    last_name: DAHAN
+    phone_number: null
+    birth_date: null
+    is_staff: true
+    groups: []
+    user_permissions: []

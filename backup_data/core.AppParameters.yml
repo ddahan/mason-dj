@@ -1,0 +1,4 @@
+- model: core.appparameters
+  pk: 1
+  fields:
+    CONTACT_EMAIL: david@mason.io

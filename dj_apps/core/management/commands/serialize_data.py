@@ -1,5 +1,4 @@
-from dataclasses import dataclass
-from typing import Any
+from pathlib import Path
 
 from django.apps import apps
 from django.conf import settings
@@ -7,90 +6,79 @@ from django.core import serializers
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 from django.db import transaction
+from django.db.models.base import ModelBase
 
 from ...utils.shell_utils import yes_or_no
 
-
-@dataclass
-class SerializableModel:
-    app: str
-    model: str
-
-    @property
-    def json_file(self) -> str:
-        return self.model + ".json"
-
-
-##########################################################################################
-# CONFIG
-##########################################################################################
-
-SERIALIZABLE_MODELS = [
-    # Fill the models to be processed
-    SerializableModel("profiles", "User"),
-]
-
-# WARN: the backup file MUST exist, it will not be created automatically
-BACKUP_PATH = settings.BASE_DIR / "backup_data"
-
-##########################################################################################
-# COMMAND
-##########################################################################################
-
-JSON_TO_DB = "JSON_TO_DB"
-DB_TO_JSON = "DB_TO_JSON"
+YAML_TO_DB = "YAML_TO_DB"
+DB_TO_YAML = "DB_TO_YAML"
 
 
 class Command(BaseCommand):
     help = (
-        "Create in database objects from serialized JSON objects for backup OR create "
-        "JSON from existing database."
-        "It can fails if data integrity is not respected. "
+        "Create in database objects from serialized YAML objects for backup OR create "
+        "YAML from existing database."
+        "Note that it can fails if data integrity is not respected."
     )
 
+    BACKUP_PATH = settings.BASE_DIR / "backup_data"
+
+    def get_models(self) -> list[ModelBase]:
+        # Theses apps are useless and can create integrity errors at deserialization
+        blacklisted_apps = ["contenttypes", "sessions", "admin"]
+        return [
+            model
+            for model in apps.get_models()
+            if model._meta.app_label not in blacklisted_apps
+        ]
+
+    def get_full_path(self, model) -> Path:
+        return self.BACKUP_PATH / f"{self.get_model_path(model)}.yml"
+
+    def get_model_path(self, model):
+        return f"{model._meta.app_label}.{model._meta.object_name}"
+
     def add_arguments(self, parser):
-        parser.add_argument("operation", type=str, help=f"{JSON_TO_DB} or {DB_TO_JSON}")
+        parser.add_argument("operation", type=str, help=f"{YAML_TO_DB} or {DB_TO_YAML}")
 
     @transaction.atomic()
     def handle(self, *args, **options):
         operation = options["operation"]
-        if operation == JSON_TO_DB:
+        if operation == YAML_TO_DB:
             if yes_or_no(
-                "This will flush current database and will create a new one from existing"
-                " json backup files."
+                "This will flush current database and will recreate objects from existing"
+                " yaml backup files."
             ):
                 call_command("flush", "--noinput")
                 self.stdout.write("Exising database has been flushed.")
-                for item in SERIALIZABLE_MODELS:
-                    full_path = BACKUP_PATH / f"{item.json_file}"
+                for model in self.get_models():
+                    full_path = self.get_full_path(model)
                     try:
                         with open(full_path, "r") as readfile:
-                            for obj in serializers.deserialize("json", readfile):
+                            for obj in serializers.deserialize("yaml", readfile):
                                 obj.save()
-                                self.stdout.write(
-                                    self.style.SUCCESS(f"{obj.object} is saved")
-                                )
+                                self.stdout.write(self.style.SUCCESS(f"✓ {obj}"))
                     except FileNotFoundError:
                         self.stdout.write(
                             self.style.WARNING(
-                                f"{item.json_file} file not found. The script will"
+                                f"⨉ {full_path} file not found. The script will"
                                 " continue."
                             )
                         )
-        elif operation == DB_TO_JSON:
+        elif operation == DB_TO_YAML:
             if yes_or_no(
-                "This will erase current json files, and will create new ones from"
+                "This will erase current yaml files, and will create new ones from"
                 " exising database."
             ):
-                JSONSerializer = serializers.get_serializer("json")
-                json_serializer = JSONSerializer()
+                YAMLSerializer = serializers.get_serializer("yaml")
+                yaml_serializer = YAMLSerializer()
 
-                for item in SERIALIZABLE_MODELS:
-                    full_path = BACKUP_PATH / item.json_file
+                for model in self.get_models():
+                    full_path = self.get_full_path(model)
                     with open(full_path, "w+") as out:
-                        Model: Any = apps.get_model(item.app, item.model)
-                        json_serializer.serialize(Model.objects.all(), stream=out)
+                        yaml_serializer.serialize(model.objects.all(), stream=out)
+                        self.stdout.write(self.style.SUCCESS(f"✓ {full_path}"))
         else:
             self.stderr.write(
-                f"Invalid operation provided. Must be {JSON_TO_DB} or {DB_TO_JSON}"
+                f"Invalid operation provided. Must be {YAML_TO_DB} or {DB_TO_YAML}"
             )
