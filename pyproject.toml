@@ -56,13 +56,14 @@ django-phonenumber-field = { extras = [
 django-safedelete = "*" # https://github.com/makinacorpus/django-safedelete
 
 ##########################################################################################
-# DX & Debug
+# DX, Testing, Debugging
 ##########################################################################################
 django-debug-toolbar = "*" # https://github.com/jazzband/django-debug-toolbar/
 django-rich = "*"          # https://github.com/adamchainz/django-rich
 ruff = "*"                 # https://github.com/charliermarsh/ruff
 ipdb = "*"                 # https://github.com/gotcha/ipdb
-pyyaml = "*"
+pyyaml = "*"               # https://github.com/yaml/pyyaml
+pytest = "*"               # https://github.com/pytest-dev/pytest
 
 
 [tool.black]
