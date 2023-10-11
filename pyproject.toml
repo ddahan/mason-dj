@@ -59,7 +59,6 @@ django-safedelete = "*" # https://github.com/makinacorpus/django-safedelete
 # DX, Testing, Debugging
 ##########################################################################################
 django-debug-toolbar = "*" # https://github.com/jazzband/django-debug-toolbar/
-django-rich = "*"          # https://github.com/adamchainz/django-rich
 ruff = "*"                 # https://github.com/charliermarsh/ruff
 ipdb = "*"                 # https://github.com/gotcha/ipdb
 pyyaml = "*"               # https://github.com/yaml/pyyaml

@@ -171,7 +171,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # Used for unit tests and CI to remove logs for example, or deactivate throtling
 # https://stackoverflow.com/a/32650980/2255491
 if os.environ.get("DJ_TESTING_MODE"):
-    TEST_RUNNER = "django_rich.test.RichRunner"
     PASSWORD_HASHERS = ("django.contrib.auth.hashers.MD5PasswordHasher",)
     # Celery tasks will be executed locally by blocking until the task returns.
     # Note that the recommendation is to mock instead:
