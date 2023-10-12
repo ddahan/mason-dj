@@ -62,7 +62,7 @@ django-debug-toolbar = "*" # https://github.com/jazzband/django-debug-toolbar/
 ruff = "*"                 # https://github.com/charliermarsh/ruff
 ipdb = "*"                 # https://github.com/gotcha/ipdb
 pyyaml = "*"               # https://github.com/yaml/pyyaml
-pytest = "*"               # https://github.com/pytest-dev/pytest
+pytest-django = "*"        # https://github.com/pytest-dev/pytest-django/
 
 
 [tool.black]
@@ -90,6 +90,10 @@ section-order = [
 ]
 [tool.ruff.isort.sections]
 "django" = ["django"]
+
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "settings"
 
 
 [build-system]
