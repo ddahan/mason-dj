@@ -2,7 +2,7 @@ from ninja import ModelSchema
 
 from profiles.endpoints import UserSchema
 
-from .models.badge import Badge
+from .models import Badge
 
 
 class BadgeSchemaOut(ModelSchema):

@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 
 from ninja import Router
 
-from .models.badge import Badge
+from .models import Badge
 from .schemas import BadgeSchemaInCreate, BadgeSchemaInUpdate, BadgeSchemaOut
 
 router = Router()
