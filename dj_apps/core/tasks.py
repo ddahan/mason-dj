@@ -1,4 +1,4 @@
-from bgtasks import app
+from config.celery import app
 
 
 @app.task()

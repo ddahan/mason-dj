@@ -6,7 +6,8 @@ import dj_database_url
 import environ
 from corsheaders.defaults import default_headers
 
-BASE_DIR = Path(__file__).resolve().parent
+CONFIG_DIR = Path(__file__).resolve().parent
+BASE_DIR = CONFIG_DIR.parent
 
 
 ##########################################################################################
@@ -18,7 +19,7 @@ env = environ.Env()
 # Take environment variables from .env file (if it exists)
 # That's why it is important to NOT version .env file
 # (otherwise prod environment will get local env file values!)
-environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+environ.Env.read_env(os.path.join(CONFIG_DIR, ".env"))
 
 ENV_NAME = env("DJ_ENV_NAME")
 
@@ -81,7 +82,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "urls"
-WSGI_APPLICATION = "wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 ##########################################################################################
@@ -163,20 +164,6 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 ##########################################################################################
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
-
-##########################################################################################
-# Testing
-##########################################################################################
-
-# Used for unit tests and CI to remove logs for example, or deactivate throtling
-# https://stackoverflow.com/a/32650980/2255491
-if os.environ.get("DJ_TESTING_MODE"):
-    PASSWORD_HASHERS = ("django.contrib.auth.hashers.MD5PasswordHasher",)
-    # Celery tasks will be executed locally by blocking until the task returns.
-    # Note that the recommendation is to mock instead:
-    # https://docs.celeryq.dev/en/stable/userguide/testing.html
-    CELERY_TASK_ALWAYS_EAGER = True
-
 
 ##########################################################################################
 # Realtime (soketi)

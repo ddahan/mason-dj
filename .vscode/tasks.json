@@ -6,7 +6,7 @@
         {
             "label": "Celery",
             "type": "shell",
-            "command": "celery --app bgtasks worker --beat --uid=nobody --gid=nogroup --loglevel INFO",
+            "command": "celery --app config.celery worker --beat --uid=nobody --gid=nogroup --loglevel INFO",
             "isBackground": true,
             "icon": {
                 "id": "tasklist",

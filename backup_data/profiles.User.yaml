@@ -2,7 +2,7 @@
   pk: 1
   fields:
     password: pbkdf2_sha256$600000$6s5cj5pW8jkP33x3VZ0d0o$Nn1l99OGuKrqh2eaCyNUrw5vzWN4SLQ8uDoLAccNAL0=
-    last_login: 2023-10-10 17:06:36.665888+00:00
+    last_login: 2023-10-12 19:54:27.081582+00:00
     is_superuser: true
     is_active: true
     sid: l11jWp07B6YekOYB7UzlHQ
