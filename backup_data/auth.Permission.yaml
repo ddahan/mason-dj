@@ -23,30 +23,6 @@
     content_type: 1
     codename: view_logentry
 - model: auth.permission
-  pk: 9
-  fields:
-    name: Can add group
-    content_type: 3
-    codename: add_group
-- model: auth.permission
-  pk: 10
-  fields:
-    name: Can change group
-    content_type: 3
-    codename: change_group
-- model: auth.permission
-  pk: 11
-  fields:
-    name: Can delete group
-    content_type: 3
-    codename: delete_group
-- model: auth.permission
-  pk: 12
-  fields:
-    name: Can view group
-    content_type: 3
-    codename: view_group
-- model: auth.permission
   pk: 5
   fields:
     name: Can add permission
@@ -71,29 +47,29 @@
     content_type: 2
     codename: view_permission
 - model: auth.permission
-  pk: 65
+  pk: 9
   fields:
-    name: Can add badge
-    content_type: 17
-    codename: add_badge
+    name: Can add group
+    content_type: 3
+    codename: add_group
 - model: auth.permission
-  pk: 66
+  pk: 10
   fields:
-    name: Can change badge
-    content_type: 17
-    codename: change_badge
+    name: Can change group
+    content_type: 3
+    codename: change_group
 - model: auth.permission
-  pk: 67
+  pk: 11
   fields:
-    name: Can delete badge
-    content_type: 17
-    codename: delete_badge
+    name: Can delete group
+    content_type: 3
+    codename: delete_group
 - model: auth.permission
-  pk: 68
+  pk: 12
   fields:
-    name: Can view badge
-    content_type: 17
-    codename: view_badge
+    name: Can view group
+    content_type: 3
+    codename: view_group
 - model: auth.permission
   pk: 13
   fields:
@@ -119,173 +95,53 @@
     content_type: 4
     codename: view_contenttype
 - model: auth.permission
-  pk: 69
+  pk: 17
   fields:
-    name: Can add app parameters
-    content_type: 18
-    codename: add_appparameters
+    name: Can add session
+    content_type: 5
+    codename: add_session
 - model: auth.permission
-  pk: 70
+  pk: 18
   fields:
-    name: Can change app parameters
-    content_type: 18
-    codename: change_appparameters
+    name: Can change session
+    content_type: 5
+    codename: change_session
 - model: auth.permission
-  pk: 71
+  pk: 19
   fields:
-    name: Can delete app parameters
-    content_type: 18
-    codename: delete_appparameters
+    name: Can delete session
+    content_type: 5
+    codename: delete_session
 - model: auth.permission
-  pk: 72
+  pk: 20
   fields:
-    name: Can view app parameters
-    content_type: 18
-    codename: view_appparameters
+    name: Can view session
+    content_type: 5
+    codename: view_session
 - model: auth.permission
-  pk: 41
+  pk: 21
   fields:
-    name: Can add periodic task
-    content_type: 11
-    codename: add_periodictask
+    name: Can add task result
+    content_type: 6
+    codename: add_taskresult
 - model: auth.permission
-  pk: 42
+  pk: 22
   fields:
-    name: Can change periodic task
-    content_type: 11
-    codename: change_periodictask
+    name: Can change task result
+    content_type: 6
+    codename: change_taskresult
 - model: auth.permission
-  pk: 43
+  pk: 23
   fields:
-    name: Can delete periodic task
-    content_type: 11
-    codename: delete_periodictask
+    name: Can delete task result
+    content_type: 6
+    codename: delete_taskresult
 - model: auth.permission
-  pk: 44
+  pk: 24
   fields:
-    name: Can view periodic task
-    content_type: 11
-    codename: view_periodictask
-- model: auth.permission
-  pk: 45
-  fields:
-    name: Can add periodic tasks
-    content_type: 12
-    codename: add_periodictasks
-- model: auth.permission
-  pk: 46
-  fields:
-    name: Can change periodic tasks
-    content_type: 12
-    codename: change_periodictasks
-- model: auth.permission
-  pk: 47
-  fields:
-    name: Can delete periodic tasks
-    content_type: 12
-    codename: delete_periodictasks
-- model: auth.permission
-  pk: 48
-  fields:
-    name: Can view periodic tasks
-    content_type: 12
-    codename: view_periodictasks
-- model: auth.permission
-  pk: 37
-  fields:
-    name: Can add interval
-    content_type: 10
-    codename: add_intervalschedule
-- model: auth.permission
-  pk: 38
-  fields:
-    name: Can change interval
-    content_type: 10
-    codename: change_intervalschedule
-- model: auth.permission
-  pk: 39
-  fields:
-    name: Can delete interval
-    content_type: 10
-    codename: delete_intervalschedule
-- model: auth.permission
-  pk: 40
-  fields:
-    name: Can view interval
-    content_type: 10
-    codename: view_intervalschedule
-- model: auth.permission
-  pk: 53
-  fields:
-    name: Can add clocked
-    content_type: 14
-    codename: add_clockedschedule
-- model: auth.permission
-  pk: 54
-  fields:
-    name: Can change clocked
-    content_type: 14
-    codename: change_clockedschedule
-- model: auth.permission
-  pk: 55
-  fields:
-    name: Can delete clocked
-    content_type: 14
-    codename: delete_clockedschedule
-- model: auth.permission
-  pk: 56
-  fields:
-    name: Can view clocked
-    content_type: 14
-    codename: view_clockedschedule
-- model: auth.permission
-  pk: 49
-  fields:
-    name: Can add solar event
-    content_type: 13
-    codename: add_solarschedule
-- model: auth.permission
-  pk: 50
-  fields:
-    name: Can change solar event
-    content_type: 13
-    codename: change_solarschedule
-- model: auth.permission
-  pk: 51
-  fields:
-    name: Can delete solar event
-    content_type: 13
-    codename: delete_solarschedule
-- model: auth.permission
-  pk: 52
-  fields:
-    name: Can view solar event
-    content_type: 13
-    codename: view_solarschedule
-- model: auth.permission
-  pk: 33
-  fields:
-    name: Can add crontab
-    content_type: 9
-    codename: add_crontabschedule
-- model: auth.permission
-  pk: 34
-  fields:
-    name: Can change crontab
-    content_type: 9
-    codename: change_crontabschedule
-- model: auth.permission
-  pk: 35
-  fields:
-    name: Can delete crontab
-    content_type: 9
-    codename: delete_crontabschedule
-- model: auth.permission
-  pk: 36
-  fields:
-    name: Can view crontab
-    content_type: 9
-    codename: view_crontabschedule
+    name: Can view task result
+    content_type: 6
+    codename: view_taskresult
 - model: auth.permission
   pk: 25
   fields:
@@ -335,53 +191,149 @@
     content_type: 8
     codename: view_groupresult
 - model: auth.permission
-  pk: 21
+  pk: 33
   fields:
-    name: Can add task result
-    content_type: 6
-    codename: add_taskresult
+    name: Can add crontab
+    content_type: 9
+    codename: add_crontabschedule
 - model: auth.permission
-  pk: 22
+  pk: 34
   fields:
-    name: Can change task result
-    content_type: 6
-    codename: change_taskresult
+    name: Can change crontab
+    content_type: 9
+    codename: change_crontabschedule
 - model: auth.permission
-  pk: 23
+  pk: 35
   fields:
-    name: Can delete task result
-    content_type: 6
-    codename: delete_taskresult
+    name: Can delete crontab
+    content_type: 9
+    codename: delete_crontabschedule
 - model: auth.permission
-  pk: 24
+  pk: 36
   fields:
-    name: Can view task result
-    content_type: 6
-    codename: view_taskresult
+    name: Can view crontab
+    content_type: 9
+    codename: view_crontabschedule
 - model: auth.permission
-  pk: 61
+  pk: 37
   fields:
-    name: Can add mail skeleton
-    content_type: 16
-    codename: add_mailskeleton
+    name: Can add interval
+    content_type: 10
+    codename: add_intervalschedule
 - model: auth.permission
-  pk: 62
+  pk: 38
   fields:
-    name: Can change mail skeleton
-    content_type: 16
-    codename: change_mailskeleton
+    name: Can change interval
+    content_type: 10
+    codename: change_intervalschedule
 - model: auth.permission
-  pk: 63
+  pk: 39
   fields:
-    name: Can delete mail skeleton
-    content_type: 16
-    codename: delete_mailskeleton
+    name: Can delete interval
+    content_type: 10
+    codename: delete_intervalschedule
 - model: auth.permission
-  pk: 64
+  pk: 40
   fields:
-    name: Can view mail skeleton
-    content_type: 16
-    codename: view_mailskeleton
+    name: Can view interval
+    content_type: 10
+    codename: view_intervalschedule
+- model: auth.permission
+  pk: 41
+  fields:
+    name: Can add periodic task
+    content_type: 11
+    codename: add_periodictask
+- model: auth.permission
+  pk: 42
+  fields:
+    name: Can change periodic task
+    content_type: 11
+    codename: change_periodictask
+- model: auth.permission
+  pk: 43
+  fields:
+    name: Can delete periodic task
+    content_type: 11
+    codename: delete_periodictask
+- model: auth.permission
+  pk: 44
+  fields:
+    name: Can view periodic task
+    content_type: 11
+    codename: view_periodictask
+- model: auth.permission
+  pk: 45
+  fields:
+    name: Can add periodic tasks
+    content_type: 12
+    codename: add_periodictasks
+- model: auth.permission
+  pk: 46
+  fields:
+    name: Can change periodic tasks
+    content_type: 12
+    codename: change_periodictasks
+- model: auth.permission
+  pk: 47
+  fields:
+    name: Can delete periodic tasks
+    content_type: 12
+    codename: delete_periodictasks
+- model: auth.permission
+  pk: 48
+  fields:
+    name: Can view periodic tasks
+    content_type: 12
+    codename: view_periodictasks
+- model: auth.permission
+  pk: 49
+  fields:
+    name: Can add solar event
+    content_type: 13
+    codename: add_solarschedule
+- model: auth.permission
+  pk: 50
+  fields:
+    name: Can change solar event
+    content_type: 13
+    codename: change_solarschedule
+- model: auth.permission
+  pk: 51
+  fields:
+    name: Can delete solar event
+    content_type: 13
+    codename: delete_solarschedule
+- model: auth.permission
+  pk: 52
+  fields:
+    name: Can view solar event
+    content_type: 13
+    codename: view_solarschedule
+- model: auth.permission
+  pk: 53
+  fields:
+    name: Can add clocked
+    content_type: 14
+    codename: add_clockedschedule
+- model: auth.permission
+  pk: 54
+  fields:
+    name: Can change clocked
+    content_type: 14
+    codename: change_clockedschedule
+- model: auth.permission
+  pk: 55
+  fields:
+    name: Can delete clocked
+    content_type: 14
+    codename: delete_clockedschedule
+- model: auth.permission
+  pk: 56
+  fields:
+    name: Can view clocked
+    content_type: 14
+    codename: view_clockedschedule
 - model: auth.permission
   pk: 57
   fields:
@@ -407,29 +359,77 @@
     content_type: 15
     codename: view_user
 - model: auth.permission
-  pk: 17
+  pk: 61
   fields:
-    name: Can add session
-    content_type: 5
-    codename: add_session
+    name: Can add mail skeleton
+    content_type: 16
+    codename: add_mailskeleton
 - model: auth.permission
-  pk: 18
+  pk: 62
   fields:
-    name: Can change session
-    content_type: 5
-    codename: change_session
+    name: Can change mail skeleton
+    content_type: 16
+    codename: change_mailskeleton
 - model: auth.permission
-  pk: 19
+  pk: 63
   fields:
-    name: Can delete session
-    content_type: 5
-    codename: delete_session
+    name: Can delete mail skeleton
+    content_type: 16
+    codename: delete_mailskeleton
 - model: auth.permission
-  pk: 20
+  pk: 64
   fields:
-    name: Can view session
-    content_type: 5
-    codename: view_session
+    name: Can view mail skeleton
+    content_type: 16
+    codename: view_mailskeleton
+- model: auth.permission
+  pk: 65
+  fields:
+    name: Can add badge
+    content_type: 17
+    codename: add_badge
+- model: auth.permission
+  pk: 66
+  fields:
+    name: Can change badge
+    content_type: 17
+    codename: change_badge
+- model: auth.permission
+  pk: 67
+  fields:
+    name: Can delete badge
+    content_type: 17
+    codename: delete_badge
+- model: auth.permission
+  pk: 68
+  fields:
+    name: Can view badge
+    content_type: 17
+    codename: view_badge
+- model: auth.permission
+  pk: 69
+  fields:
+    name: Can add app parameters
+    content_type: 18
+    codename: add_appparameters
+- model: auth.permission
+  pk: 70
+  fields:
+    name: Can change app parameters
+    content_type: 18
+    codename: change_appparameters
+- model: auth.permission
+  pk: 71
+  fields:
+    name: Can delete app parameters
+    content_type: 18
+    codename: delete_appparameters
+- model: auth.permission
+  pk: 72
+  fields:
+    name: Can view app parameters
+    content_type: 18
+    codename: view_appparameters
 - model: auth.permission
   pk: 73
   fields:

@@ -79,7 +79,7 @@ max-complexity = 10
 
 [tool.ruff.isort]
 # 🫤 each module must be described
-known-first-party = ["core", "badges", "mailing", "profiles"]
+known-first-party = ["core", "badges", "mailing", "profiles", "token_auth"]
 section-order = [
     "future",
     "standard-library",

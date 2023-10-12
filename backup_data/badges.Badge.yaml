@@ -16,3 +16,12 @@
     modified: 2023-10-10 17:07:10.682011+00:00
     expiration: 2022-10-10 10:00:00+00:00
     owner: null
+- model: badges.badge
+  pk: 3
+  fields:
+    is_active: true
+    sid: 0LnM915Qf3DdavBeCjZUSw
+    created: 2023-10-11 20:45:13.245637+00:00
+    modified: 2023-10-11 20:45:13.245637+00:00
+    expiration: null
+    owner: null
