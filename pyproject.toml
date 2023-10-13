@@ -63,7 +63,7 @@ ruff = "*"                 # https://github.com/charliermarsh/ruff
 ipdb = "*"                 # https://github.com/gotcha/ipdb
 pyyaml = "*"               # https://github.com/yaml/pyyaml
 pytest-django = "*"        # https://github.com/pytest-dev/pytest-django/
-pytest-factoryboy = "*"    # https://github.com/pytest-dev/pytest-factoryboy/
+factory-boy = "*"          # https://github.com/FactoryBoy/factory_boy/
 
 
 [tool.black]
