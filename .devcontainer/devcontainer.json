@@ -79,7 +79,7 @@
                 "python.pythonPath": "/usr/local/bin/python",
                 "python.envFile": "${workspaceFolder}/.env",
                 "python.analysis.autoImportCompletions": true,
-                "python.analysis.importFormat": "absolute",
+                "python.analysis.importFormat": "relative",
                 "python.analysis.indexing": true,
                 "python.analysis.packageIndexDepths": [
                     {

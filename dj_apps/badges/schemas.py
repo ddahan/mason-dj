@@ -1,6 +1,6 @@
 from ninja import ModelSchema
 
-from profiles.endpoints import UserSchema
+from profiles.schemas import UserSchema
 
 from .models import Badge
 

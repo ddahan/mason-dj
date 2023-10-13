@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 
 import pytest
 
-from badges.models.badge import Badge
+from .models.badge import Badge
 
 User = get_user_model()
 

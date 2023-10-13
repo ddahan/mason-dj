@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from core.utils.shell_utils import sh
+from ...utils.shell_utils import sh
 
 
 class Command(BaseCommand):

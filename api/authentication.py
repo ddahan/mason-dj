@@ -3,7 +3,8 @@ from typing import Any, Optional
 from django.http.request import HttpRequest
 
 from ninja.security import APIKeyHeader
-from token_auth.models.api_token import APIToken
+
+from token_auth.models import APIToken
 
 
 class InvalidToken(Exception):

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import MailSkeleton
+from .models.mail_skeleton import MailSkeleton
 
 
 @admin.register(MailSkeleton)

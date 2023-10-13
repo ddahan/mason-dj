@@ -1,6 +1,6 @@
 from django.db import models
 
-from mixins.singletonable import Singletonable
+from ..mixins.singletonable import Singletonable
 
 
 class AppParameters(Singletonable, models.Model):

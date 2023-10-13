@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Badge
+from .models.badge import Badge
 
 
 @admin.register(Badge)
