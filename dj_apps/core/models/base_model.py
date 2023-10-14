@@ -5,6 +5,7 @@ This should be inherit from every model added to keep consistency.
 
 from django.db import models
 
+from ..mixins.auto_validable import AutoValidable
 from ..mixins.secret_id import SecretID
 from ..mixins.time_stampable import TimeStampable, TimeStampableQueryset
 
@@ -23,6 +24,6 @@ class BaseQuerySet(TimeStampableQueryset, models.QuerySet):
             return None
 
 
-class BaseModel(SecretID, TimeStampable, models.Model):
+class BaseModel(AutoValidable, SecretID, TimeStampable, models.Model):
     class Meta:
         abstract = True

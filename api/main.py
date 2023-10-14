@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from typing import Any
 
+from django.core.exceptions import ValidationError
 from django.http.response import Http404, HttpResponse
 
 from ninja import NinjaAPI
-from ninja.errors import ValidationError
 
 from badges.endpoints import router as badges_router
 from core.exceptions import ProjectException
@@ -13,7 +13,12 @@ from .authentication import ApiKeyAuth, InvalidToken
 from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
 from .renderers import ORJSONRenderer
 
-api = NinjaAPI(title="Mason API", renderer=ORJSONRenderer(), auth=ApiKeyAuth())
+api = NinjaAPI(
+    title="Mason API",
+    renderer=ORJSONRenderer(),
+    auth=ApiKeyAuth(),
+    urls_namespace="api",
+)
 
 # Add routers here
 api.add_router("badges", badges_router)
@@ -49,7 +54,7 @@ def handle_not_found(request, _):
 
 @api.exception_handler(ValidationError)
 def handle_bad_request(request, e):
-    return ErrorContent(BAD_REQUEST, e.errors).build_response(request, 400)
+    return ErrorContent(BAD_REQUEST, e.messages).build_response(request, 400)
 
 
 @api.exception_handler(InvalidToken)

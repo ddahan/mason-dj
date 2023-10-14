@@ -1,5 +1,13 @@
 from typing import Iterable
 
+from django.urls import reverse
+
+
+def api_url(view_name: str, *args, **kwargs) -> str:
+    """Return the url for the api from the view name."""
+    API_NAMESPACE = "api"
+    return reverse(f"{API_NAMESPACE}:{view_name}", args=args, kwargs=kwargs)
+
 
 def same_items(*iterables: Iterable) -> bool:
     """Return True if all given iterables contain the same quantity of the same elements,

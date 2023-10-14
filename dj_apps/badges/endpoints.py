@@ -25,16 +25,21 @@ def create_badge(request, payload: BadgeSchemaInCreate):
 
 @router.put("{sid}", response=BadgeSchemaOut)
 def update_badge(request, sid: str, payload: BadgeSchemaInUpdate):
+    """This accept partial updates by excluding unset fields."""
     badge = get_object_or_404(Badge, sid=sid)
-    for field, value in payload.dict().items():
+    for field, value in payload.dict(exclude_unset=True).items():
         setattr(badge, field, value)
     badge.save()
     return badge
 
 
-@router.patch("{sid}", response=BadgeSchemaOut)
+# TODO: here: add update_badge_partiel but let the user choose the field
+
+
+@router.patch("{sid}/activity", response=BadgeSchemaOut)
 def update_badge_activity(request, sid: str):
-    """Example of a more specific update that deals with a single field"""
+    """Example of a more RPC-Like endpoint which perform a specific mutation, without
+    providing a payload"""
 
     badge = get_object_or_404(Badge, sid=sid)
     badge.invert_activity()

@@ -9,7 +9,6 @@ from django.db import models, transaction
 from phonenumber_field.modelfields import PhoneNumberField
 
 from core.enums.title import Title
-from core.mixins.auto_validable import AutoValidable
 from core.mixins.deactivable import Deactivable
 from core.models.base_model import BaseModel
 
@@ -46,7 +45,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(Deactivable, AutoValidable, PermissionsMixin, AbstractBaseUser, BaseModel):
+class User(Deactivable, PermissionsMixin, AbstractBaseUser, BaseModel):
     class Meta:
         db_table = "tb_users"
         verbose_name = "utilisateur"
