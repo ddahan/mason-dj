@@ -1,16 +1,17 @@
 from dataclasses import dataclass
 from typing import Any
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.http.response import Http404, HttpResponse
 
 from ninja import NinjaAPI
+from ninja.errors import ValidationError as NinjaValidationError
 
 from badges.endpoints import router as badges_router
 from core.exceptions import ProjectException
 
 from .authentication import ApiKeyAuth, InvalidToken
-from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED
+from .consts import BAD_REQUEST, NOT_FOUND, UNAUTHORIZED, UNKNOWN_ERROR
 from .renderers import ORJSONRenderer
 
 api = NinjaAPI(
@@ -47,14 +48,22 @@ class ErrorContent:
         )
 
 
+# TODO: check to see if we got the same output for all errors, with all data in it
+
+
 @api.exception_handler(Http404)
 def handle_not_found(request, _):
     return ErrorContent(NOT_FOUND, None).build_response(request, 404)
 
 
-@api.exception_handler(ValidationError)
+@api.exception_handler(DjangoValidationError)
 def handle_bad_request(request, e):
     return ErrorContent(BAD_REQUEST, e.messages).build_response(request, 400)
+
+
+@api.exception_handler(NinjaValidationError)
+def handle_bad_request_ninja(request, _):
+    return ErrorContent(BAD_REQUEST, None).build_response(request, 400)
 
 
 @api.exception_handler(InvalidToken)
@@ -67,6 +76,6 @@ def handle_project_error(request, e):
     return ErrorContent(e.slug, None).build_response(request, 400)
 
 
-# @api.exception_handler(Exception)
-# def handle_exception(request, _):
-#     return ErrorContent(UNKNOWN_ERROR, None).build_response(request, 500)
+@api.exception_handler(Exception)
+def handle_exception(request, _):
+    return ErrorContent(UNKNOWN_ERROR, None).build_response(request, 500)

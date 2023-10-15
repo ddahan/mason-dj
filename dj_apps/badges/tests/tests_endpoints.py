@@ -109,8 +109,9 @@ def test_create_badge_ok(badges, db, client, auth_headers, payload, expected):
 @pytest.mark.parametrize(
     "payload, expected_status_code",
     [
-        [{}, 200],  # no data, no change
-        [{"sid": "123"}, 200],  # sid won't be changed
+        [{}, 200],
+        [{"sid": "123"}, 400],  # this field is not allowed to be changed
+        [{"is_active": "123"}, 400],  # wrong value format
         [{"is_active": False}, 200],  # is_active will be changed
     ],
 )
