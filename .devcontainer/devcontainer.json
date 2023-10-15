@@ -111,7 +111,37 @@
                     "editor.codeActionsOnSave": {
                         "source.organizeImports": true
                     }
-                }
+                },
+                //*********************************************************************
+                // VSCODE icons
+                //*********************************************************************
+                "vsicons.presets.folders": false,
+                "vsicons.associations.folders": [
+                    {
+                        "icon": "src",
+                        "extensions": [
+                            "dj_apps"
+                        ],
+                        "format": "svg",
+                        "overrides": "new"
+                    },
+                    {
+                        "icon": "db",
+                        "extensions": [
+                            "backup_data"
+                        ],
+                        "format": "svg",
+                        "overrides": "new"
+                    },
+                    {
+                        "icon": "git",
+                        "extensions": [
+                            ".githooks"
+                        ],
+                        "format": "svg",
+                        "overrides": "new"
+                    }
+                ]
             }
         }
     }
