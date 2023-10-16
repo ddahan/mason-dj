@@ -131,12 +131,25 @@ def test_update_badge(badges, db, client, auth_headers, payload, expected_status
 ##########################################################################################
 
 
-# def test_update_badge_activity(db):
-#     ...
+def test_update_badge_activity(db, badges, client, auth_headers):
+    old_badge_activity = Badge.objects.get(sid="12345").is_active
+    response = client.patch(
+        api_url("update_badge_activity", sid="12345"), headers=auth_headers
+    )
+    assert response.status_code == 200
+    assert Badge.objects.get(sid="12345").is_active != old_badge_activity
+
 
 ##########################################################################################
 # DESTROY BADGE
 ##########################################################################################
 
-# def test_destroy_badge(db):
-#     ...
+
+def test_destroy_badge(db, badges, client, auth_headers):
+    Badge.objects.get(sid="12345")
+    response = client.delete(
+        api_url("destroy_badge", sid="12345"), headers=auth_headers
+    )
+    assert response.status_code == 200
+    with pytest.raises(Badge.DoesNotExist):
+        Badge.objects.get(sid="12345")
