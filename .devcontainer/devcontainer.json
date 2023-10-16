@@ -77,10 +77,11 @@
                     "*"
                 ], // disable linting as it would be redundant with Ruff 
                 "python.pythonPath": "/usr/local/bin/python",
-                "python.envFile": "${workspaceFolder}/.env",
+                "python.envFile": "${workspaceFolder}/config/.env",
                 "python.analysis.autoImportCompletions": true,
                 "python.analysis.importFormat": "relative",
                 "python.analysis.indexing": true,
+                "python.analysis.typeCheckingMode": "basic",
                 "python.analysis.packageIndexDepths": [
                     {
                         "name": "django",
