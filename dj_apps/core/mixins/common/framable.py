@@ -13,8 +13,8 @@ class FramableQueryset(models.query.QuerySet):
         """
 
         return self.filter(
-            # condition1: any overlap between frames
             (
+                # condition1: any overlap between frames
                 Q(start__lte=i_start, end__gte=i_start)
                 | Q(start__lte=i_end, end__gte=i_end)
                 | Q(start__gte=i_start, start__lte=i_end)

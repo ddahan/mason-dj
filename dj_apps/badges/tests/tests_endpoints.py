@@ -147,9 +147,7 @@ def test_update_badge_activity(db, badges, client, auth_headers):
 
 def test_destroy_badge(db, badges, client, auth_headers):
     Badge.objects.get(sid="12345")
-    response = client.delete(
-        api_url("destroy_badge", sid="12345"), headers=auth_headers
-    )
+    response = client.delete(api_url("destroy_badge", sid="12345"), headers=auth_headers)
     assert response.status_code == 200
     with pytest.raises(Badge.DoesNotExist):
         Badge.objects.get(sid="12345")

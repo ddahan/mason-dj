@@ -39,7 +39,6 @@
             "extensions": [
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "ms-python.black-formatter@prerelease",
                 "charliermarsh.ruff",
                 "tamasfe.even-better-toml"
             ],
@@ -99,15 +98,9 @@
                     "${workspaceFolder}/dj_apps/token_auth"
                 ],
                 "python.testing.pytestEnabled": true,
-                //*********************************************************************
-                // black
-                //*********************************************************************
-                "black-formatter.args": [
-                    "--config",
-                    "pyproject.toml"
-                ],
+                "ruff.enableExperimentalFormatter": true,
                 "[python]": {
-                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.defaultFormatter": "charliermarsh.ruff",
                     "editor.formatOnSave": true,
                     "editor.codeActionsOnSave": {
                         "source.organizeImports": true
