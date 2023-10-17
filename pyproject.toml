@@ -66,9 +66,6 @@ pytest-django = "*"        # https://github.com/pytest-dev/pytest-django/
 factory-boy = "*"          # https://github.com/FactoryBoy/factory_boy/
 
 
-[tool.black]
-target-version = ["py311"]
-
 [tool.ruff]
 line-length = 90
 target-version = "py311"
