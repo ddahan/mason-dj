@@ -1,21 +1,77 @@
-User: {
-  shape: sql_table
+profiles: {
+  User: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    password: CharField 
+    last_login: DateTimeField 
+    is_superuser: BooleanField 
+    is_active: BooleanField 
+    sid: CharField 
+    created: DateTimeField 
+    modified: DateTimeField 
+    email: EmailField 
+    title: CharField 
+    first_name: CharField 
+    last_name: CharField 
+    phone_number: PhoneNumberField 
+    birth_date: DateField 
+    is_staff: BooleanField 
+  }
 }
-MailSkeleton: {
-  shape: sql_table
+mailing: {
+  MailSkeleton: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    slug: CharField 
+    subject: CharField 
+    html_body: TextField 
+    send_mode: CharField 
+  }
 }
-Badge: {
-  shape: sql_table
+badges: {
+  Badge: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    is_active: BooleanField 
+    sid: CharField 
+    created: DateTimeField 
+    modified: DateTimeField 
+    expiration: DateTimeField 
+    owner: ForeignKey → User 
+  }
 }
-AppParameters: {
-  shape: sql_table
+core: {
+  AppParameters: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    CONTACT_EMAIL: CharField 
+  }
 }
-APIToken: {
-  shape: sql_table
-}
-MagicLinkToken: {
-  shape: sql_table
-}
-PasswordLessToken: {
-  shape: sql_table
+token_auth: {
+  APIToken: {
+    shape: sql_table
+    created: DateTimeField 
+    modified: DateTimeField 
+    key: CharField {constraint: 🔑}
+    user: 0neToOne → User 
+  }
+  MagicLinkToken: {
+    shape: sql_table
+    created: DateTimeField 
+    modified: DateTimeField 
+    key: CharField {constraint: 🔑}
+    end_of_validity: DateTimeField 
+    user: ForeignKey → User 
+    usage: CharField 
+  }
+  PasswordLessToken: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    sid: CharField 
+    created: DateTimeField 
+    modified: DateTimeField 
+    end_of_validity: DateTimeField 
+    key: CharField 
+    user: ForeignKey → User 
+  }
 }

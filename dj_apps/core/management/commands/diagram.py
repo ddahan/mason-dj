@@ -7,11 +7,10 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import models
 
-# from django.db.models.fields import Field
 from core.management.commands.d2 import D2Diagram, D2Shape
 from core.utils.shell_utils import sh
 
-from .d2.shape import Shape
+from .d2.shape import D2SQLRow, Shape
 
 ##########################################################################################
 # CONFIG
@@ -42,14 +41,14 @@ class ProjectForD2:
             if a.name not in excluded_apps
         ]
 
-    def show(self) -> None:
-        """Used for debug purpose only"""
+    def debug(self) -> None:
+        """Show a CLI reprensentation (for debug purpose only)"""
         for app in self.apps:
             print(f"[{app.name}]")
             for model in app.models:
                 print(f"  {model.name}")
                 for f in model.fields:
-                    print(f"    - {f.name} - {f.description} {f.emojis}")
+                    print(f"    - {f.name} - {f.description} {f.constraint}")
             print("\n")
 
 
@@ -88,6 +87,7 @@ class FieldForD2:
     dj_field: models.Field
     name: str
     description: str
+    constraint: str
 
     def _get_related_prefix(self) -> str | None:
         if self.dj_field.one_to_one:
@@ -100,7 +100,7 @@ class FieldForD2:
             raise ValueError("A relation should at least be one of provided field")
 
     @property
-    def _emojis(self) -> str:
+    def _constraint(self) -> str:
         s = ""
         if self.dj_field.primary_key:
             s += "🔑"
@@ -122,7 +122,7 @@ class FieldForD2:
         self.dj_field = dj_field  # not very useful as is, except for future inspection
         self.name = dj_field.name
         self.description = self._description
-        self.emojis = self._emojis
+        self.constraint = self._constraint
 
 
 ##########################################################################################
@@ -137,14 +137,32 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Contructing a simple graph...")
 
+        # TODO: this logic can live in the dataclasses too!
+
         project = ProjectForD2()
-        project.show()
 
         shapes = []
         for app in project.apps:
-            # TODO HERE: container!
-            for model in app.models:
-                shapes.append(D2Shape(name=model.name, shape=Shape.sql_table))
+            shapes.append(
+                D2Shape(
+                    name=app.name,
+                    shapes=[
+                        D2Shape(
+                            name=model.name,
+                            shape=Shape.sql_table,
+                            sql_rows=[
+                                D2SQLRow(
+                                    identifier=field.name,
+                                    description=field.description,
+                                    constraint=field.constraint,
+                                )
+                                for field in model.fields
+                            ],
+                        )
+                        for model in app.models
+                    ],
+                )
+            )
 
         connections = []  # TODO
 
@@ -155,4 +173,4 @@ class Command(BaseCommand):
             f.write(str(diagram))
             self.stdout.write(f"Done! ({OUTPUT_D2_FILE})")
         self.stdout.write("Converting to svg and opening browser...")
-        sh(f"d2 --sketch --theme 5 --center {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")
+        sh(f"d2 --watch  --sketch --theme 5 --center {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")

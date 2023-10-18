@@ -1,6 +1,6 @@
 from .connection import D2Connection, Direction
 from .diagram import D2Diagram
-from .shape import D2Shape, D2Text
+from .shape import D2Shape
 from .style import D2Style
 
 __all__ = [
@@ -8,6 +8,5 @@ __all__ = [
     "D2Connection",
     "D2Diagram",
     "D2Shape",
-    "D2Text",
     "D2Style",
 ]

@@ -3,7 +3,7 @@ from __future__ import annotations
 from enum import Enum
 
 from .connection import D2Connection
-from .helpers import add_label_and_properties, flatten, indent
+from .helpers import add_label_and_properties, flatten
 from .style import D2Style
 
 
@@ -33,26 +33,20 @@ class Shape(Enum):
     sequence_diagram = "sequence_diagram"
 
 
-class D2Text:
-    def __init__(
-        self,
-        # The actual text body (multiline is fine)
-        text: str,
-        # The format, eg) md, tex, html, css etc
-        formatting: str,
-        # The number of pipes to use
-        pipes: int = 1,
-    ):
-        self.text = text
-        self.formatting = formatting
-        self.pipes = pipes
+class D2SQLRow:
+    def __init__(self, identifier: str, description: str, constraint: str | None = None):
+        self.identifier = identifier
+        self.description = description
+        self.constraint = constraint
 
-    def lines(self) -> list[str]:
-        sep = "|" * self.pipes
-        return [f"{sep}{self.formatting}", *self.text.split("\n"), sep]
+    def line(self) -> str:
+        constraint_str = (
+            "{constraint: " + self.constraint + "}" if self.constraint else ""
+        )
+        return f"{self.identifier}: {self.description} {constraint_str}"
 
     def __repr__(self) -> str:
-        return "\n".join(self.lines())
+        return self.line()
 
 
 class D2Shape:
@@ -71,7 +65,8 @@ class D2Shape:
         connections: list[D2Connection] | None = None,
         # A shape this is near
         near: str | None = None,
-        **kwargs: D2Text,
+        # SQL rows (only for sql_table)
+        sql_rows: list[D2SQLRow] | None = None,
     ):
         self.name = name
         self.label = label
@@ -80,7 +75,7 @@ class D2Shape:
         self.style = style
         self.connections = connections or []
         self.near = near
-        self.kwargs = kwargs
+        self.sql_rows = sql_rows
 
     def add_shape(self, shape: D2Shape):
         self.shapes.append(shape)
@@ -96,22 +91,15 @@ class D2Shape:
         if self.shape:
             properties.append(f"shape: {self.shape.value}")
 
+        if self.sql_rows:
+            for row in self.sql_rows:
+                properties.append(row)
+
         if self.near:
             properties.append(f"near: {self.near}")
 
         if self.style:
             properties += self.style.lines()
-
-        for key, value in self.kwargs.items():
-            other_property = value.lines()
-            other_property_line_1 = other_property[0]
-            other_property_lines_other = other_property[1:-1]
-            other_property_line_end = other_property[-1]
-            properties += [
-                f"{key}: {other_property_line_1}",
-                *indent(other_property_lines_other),
-                other_property_line_end,
-            ]
 
         lines = add_label_and_properties(self.name, self.label, properties)
 
