@@ -89,13 +89,7 @@
                     }
                 ],
                 "python.analysis.extraPaths": [
-                    // TODO: find a "DRYer" way
-                    "${workspaceFolder}/dj_apps",
-                    "${workspaceFolder}/dj_apps/badges",
-                    "${workspaceFolder}/dj_apps/core",
-                    "${workspaceFolder}/dj_apps/mailing",
-                    "${workspaceFolder}/dj_apps/profiles",
-                    "${workspaceFolder}/dj_apps/token_auth"
+                    "${workspaceFolder}/dj_apps"
                 ],
                 "python.testing.pytestEnabled": true,
                 "ruff.enableExperimentalFormatter": true,
