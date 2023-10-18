@@ -6,7 +6,7 @@ profiles: {
     last_login: DateTimeField 
     is_superuser: BooleanField 
     is_active: BooleanField 
-    sid: CharField 
+    sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
     email: EmailField 
@@ -17,6 +17,7 @@ profiles: {
     birth_date: DateField 
     is_staff: BooleanField 
   }
+  shape: rectangle
 }
 mailing: {
   MailSkeleton: {
@@ -27,18 +28,20 @@ mailing: {
     html_body: TextField 
     send_mode: CharField 
   }
+  shape: rectangle
 }
 badges: {
   Badge: {
     shape: sql_table
     id: BigAutoField {constraint: 🔑🤖}
     is_active: BooleanField 
-    sid: CharField 
+    sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
     expiration: DateTimeField 
-    owner: ForeignKey → User 
+    owner: ForeignKey → User {constraint: 🔍}
   }
+  shape: rectangle
 }
 core: {
   AppParameters: {
@@ -46,6 +49,7 @@ core: {
     id: BigAutoField {constraint: 🔑🤖}
     CONTACT_EMAIL: CharField 
   }
+  shape: rectangle
 }
 token_auth: {
   APIToken: {
@@ -53,7 +57,7 @@ token_auth: {
     created: DateTimeField 
     modified: DateTimeField 
     key: CharField {constraint: 🔑}
-    user: 0neToOne → User 
+    user: 0neToOne → User {constraint: 🔍}
   }
   MagicLinkToken: {
     shape: sql_table
@@ -61,17 +65,18 @@ token_auth: {
     modified: DateTimeField 
     key: CharField {constraint: 🔑}
     end_of_validity: DateTimeField 
-    user: ForeignKey → User 
+    user: ForeignKey → User {constraint: 🔍}
     usage: CharField 
   }
   PasswordLessToken: {
     shape: sql_table
     id: BigAutoField {constraint: 🔑🤖}
-    sid: CharField 
+    sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
     end_of_validity: DateTimeField 
     key: CharField 
-    user: ForeignKey → User 
+    user: ForeignKey → User {constraint: 🔍}
   }
+  shape: rectangle
 }

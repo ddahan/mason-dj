@@ -1,45 +1,50 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-
 from django.apps import AppConfig, apps
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import models
 
-from core.management.commands.d2 import D2Diagram, D2Shape
 from core.utils.shell_utils import sh
 
-from .d2.shape import D2SQLRow, Shape
+from .d2 import D2Diagram, D2Shape, D2SQLRow
+from .d2.shape import Shape
 
-##########################################################################################
-# CONFIG
-##########################################################################################
+"""
+These classes are used to organize and build Django D2 schemas using introspection.
 
-OUTPUT_FOLDER = "docs/"
-OUTPUT_D2_FILE = OUTPUT_FOLDER + "diagram.d2"
-OUTPUT_SVG_FILE = OUTPUT_FOLDER + "diagram.svg"
+Some random notes:
+- classes (ProjectD2, AppD2, ModelD2, FieldD2) mirror Django structures
+- __init__ methods create classes that introspect and save useful data
+- build_<...> methods generate actual D2 classes (D2Shape, D2Connection, D2SQLRow, etc.)
+- dj_<...> attributes are used to pass Django full object to keep context
 
-##########################################################################################
-# DATA ORGANIZATION LAYER
-# Select and organize relevant data in order to use them later for rendering
-##########################################################################################
+Usage:
+1 - Create a ProjectD2 instance
+2 - Call build method on this instance to build the diagram
+"""
 
 
-@dataclass
-class ProjectForD2:
-    """Contains all data for D2"""
-
-    apps: list[AppForD2]
+class ProjectD2:
+    apps: list[AppD2]
 
     def __init__(
-        self, excluded_apps: list = settings.DJANGO_APPS + settings.THIRD_PARTY_APPS
+        self,
+        excluded_apps: list[AppConfig] = settings.DJANGO_APPS + settings.THIRD_PARTY_APPS,
     ) -> None:
         self.apps = [
-            AppForD2(dj_app=a)
+            AppD2(dj_app=a)
             for a in list(apps.get_app_configs())
             if a.name not in excluded_apps
         ]
+
+    def build_shapes(self) -> list[D2Shape]:
+        return [app.build_shape() for app in self.apps]
+
+    def build(self) -> D2Diagram:
+        connections = []  # FIXME
+        diagram = D2Diagram(shapes=self.build_shapes(), connections=connections)
+        return diagram
 
     def debug(self) -> None:
         """Show a CLI reprensentation (for debug purpose only)"""
@@ -52,52 +57,47 @@ class ProjectForD2:
             print("\n")
 
 
-@dataclass
-class AppForD2:
-    """Used to create a D2 container"""
-
+class AppD2:
     dj_app: AppConfig
     name: str
-    models: list[ModelForD2]
+    models: list[ModelD2]
 
     def __init__(self, dj_app) -> None:
         self.dj_app = dj_app
         self.name = dj_app.name
-        self.models = [ModelForD2(dj_model=m) for m in self.dj_app.get_models()]
+        self.models = [ModelD2(dj_model=m) for m in self.dj_app.get_models()]
+
+    def build_shape(self) -> D2Shape:
+        return D2Shape(  # this shape is a container
+            name=self.name,
+            shape=Shape.rectangle,
+            shapes=[model.build_shape() for model in self.models],
+        )
 
 
-@dataclass
-class ModelForD2:
-    """Used to create a SQLTable D2 shape"""
-
+class ModelD2:
     dj_model: models.Model
     name: str
-    fields: list[FieldForD2]
+    fields: list[FieldD2]
 
     def __init__(self, dj_model) -> None:
         self.dj_model = dj_model
         self.name = dj_model._meta.object_name
-        self.fields = [FieldForD2(dj_field=f) for f in dj_model._meta.fields]
+        self.fields = [FieldD2(dj_field=f) for f in dj_model._meta.fields]
+
+    def build_shape(self) -> D2Shape:
+        return D2Shape(
+            name=self.name,
+            shape=Shape.sql_table,
+            sql_rows=[field.build_sql_row() for field in self.fields],
+        )
 
 
-@dataclass
-class FieldForD2:
-    """Used to create a D2 entry in a SQLTable shape"""
-
+class FieldD2:
     dj_field: models.Field
     name: str
     description: str
     constraint: str
-
-    def _get_related_prefix(self) -> str | None:
-        if self.dj_field.one_to_one:
-            return "0neToOne"
-        if self.dj_field.many_to_one:
-            return "ForeignKey"
-        if self.dj_field.many_to_many:
-            return "ManyToMany"
-        else:
-            raise ValueError("A relation should at least be one of provided field")
 
     @property
     def _constraint(self) -> str:
@@ -106,14 +106,23 @@ class FieldForD2:
             s += "🔑"
         if self.dj_field.auto_created:
             s += "🤖"
+        if self.dj_field.db_index:
+            s += "🔍"
         return s
 
     @property
     def _description(self) -> str:
-        """Display the relation to the model if it's a related field, or the type of the
+        """Return the relation to the model if it's a related field, or the type of the
         field if it's a normal field."""
-        if self.dj_field.related_model:
-            prefix = self._get_related_prefix()
+        if self.dj_field.related_model:  # FK / M2M / 1T1
+            if self.dj_field.one_to_one:
+                prefix = "0neToOne"
+            elif self.dj_field.many_to_one:
+                prefix = "ForeignKey"
+            elif self.dj_field.many_to_many:
+                prefix = "ManyToMany"
+            else:
+                raise ValueError("A relation should at least be one of provided field")
             return f"{prefix} → {self.dj_field.related_model._meta.object_name}"
         else:
             return type(self.dj_field).__name__
@@ -124,53 +133,28 @@ class FieldForD2:
         self.description = self._description
         self.constraint = self._constraint
 
-
-##########################################################################################
-# COMMAND FOR D2 GENERATION THEN SVG RENDERING
-# Use organized data to fill
-##########################################################################################
+    def build_sql_row(self) -> D2SQLRow:
+        return D2SQLRow(
+            identifier=self.name,
+            description=self.description,
+            constraint=self.constraint,
+        )
 
 
 class Command(BaseCommand):
     help = "Generate a diagram view of Django models, using d2."
 
     def handle(self, *args, **options):
-        self.stdout.write("Contructing a simple graph...")
+        OUTPUT_FOLDER = "docs/"
+        OUTPUT_D2_FILE = OUTPUT_FOLDER + "diagram.d2"
+        OUTPUT_SVG_FILE = OUTPUT_FOLDER + "diagram.svg"
 
-        # TODO: this logic can live in the dataclasses too!
-
-        project = ProjectForD2()
-
-        shapes = []
-        for app in project.apps:
-            shapes.append(
-                D2Shape(
-                    name=app.name,
-                    shapes=[
-                        D2Shape(
-                            name=model.name,
-                            shape=Shape.sql_table,
-                            sql_rows=[
-                                D2SQLRow(
-                                    identifier=field.name,
-                                    description=field.description,
-                                    constraint=field.constraint,
-                                )
-                                for field in model.fields
-                            ],
-                        )
-                        for model in app.models
-                    ],
-                )
-            )
-
-        connections = []  # TODO
-
-        diagram = D2Diagram(shapes=shapes, connections=connections)
+        self.stdout.write("Contructing graph from Django apps...")
+        diagram = ProjectD2().build()
 
         self.stdout.write("Writing graph to file...")
         with open(OUTPUT_D2_FILE, "w", encoding="utf-8") as f:
             f.write(str(diagram))
             self.stdout.write(f"Done! ({OUTPUT_D2_FILE})")
-        self.stdout.write("Converting to svg and opening browser...")
-        sh(f"d2 --watch  --sketch --theme 5 --center {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")
+        self.stdout.write("Converting d2 file to svg and opening browser...")
+        sh(f"d2 --watch  --sketch --theme 5 {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")
