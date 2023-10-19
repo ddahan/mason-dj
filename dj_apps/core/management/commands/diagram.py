@@ -31,7 +31,10 @@ Usage:
 class ProjectD2:
     apps: list[AppD2]
 
-    def __init__(self, excluded_apps: list[AppConfig] = []) -> None:
+    def __init__(self, excluded_apps: list[AppConfig] = None) -> None:
+        if excluded_apps is None:
+            excluded_apps = []
+
         self.apps = [
             AppD2(dj_app=a)
             for a in list(apps.get_app_configs())
