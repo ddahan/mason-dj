@@ -42,15 +42,13 @@ class ProjectD2:
         ]
 
     def build(self) -> D2Diagram:
-        shapes = self.build_shapes()
-        connections = self.build_connections(shapes)
-        return D2Diagram(shapes=shapes, connections=connections)
+        return D2Diagram(shapes=self.build_shapes(), connections=self.build_connections())
 
     def build_shapes(self) -> list[D2Shape]:
         return [app.build_shape() for app in self.apps]
 
-    def build_connections(self, shapes: list[D2Shape]) -> list[D2Connection]:
-        return flatten([app.build_connections(shapes) for app in self.apps])
+    def build_connections(self) -> list[D2Connection]:
+        return flatten([app.build_connections() for app in self.apps])
 
     def debug(self) -> None:
         """Show a CLI reprensentation (for debug purpose only)"""
@@ -84,8 +82,8 @@ class AppD2:
             shapes=[model.build_shape() for model in self.models],
         )
 
-    def build_connections(self, shapes) -> list[D2Connection]:
-        return flatten([model.build_connections(shapes) for model in self.models])
+    def build_connections(self) -> list[D2Connection]:
+        return flatten([model.build_connections() for model in self.models])
 
 
 class ModelD2:
@@ -111,8 +109,8 @@ class ModelD2:
             sql_rows=[field.build_sql_row() for field in self.fields],
         )
 
-    def build_connections(self, shapes) -> list[D2Connection]:
-        return flatten([field.build_connections(shapes) for field in self.fields])
+    def build_connections(self) -> list[D2Connection]:
+        return flatten([field.build_connections() for field in self.fields])
 
 
 class FieldD2:
@@ -141,6 +139,7 @@ class FieldD2:
     def description(self) -> str:
         """Return the relation to the model if it's a related field, or the type of the
         field if it's a normal field."""
+
         if self.dj_field.related_model:  # FK / M2M / 1T1
             if self.dj_field.one_to_one:
                 prefix = "0neToOne"
@@ -161,8 +160,9 @@ class FieldD2:
             constraint=self.constraint,
         )
 
-    def build_connections(self, shapes) -> list[D2Connection]:
+    def build_connections(self) -> list[D2Connection]:
         """Build potential connections between existing shapes."""
+
         if not any(
             [
                 self.dj_field.one_to_one,
@@ -172,16 +172,11 @@ class FieldD2:
         ):
             return []
 
-        if self.dj_field.one_to_one or self.dj_field.many_to_one:
-            direction = Direction.TO
-        elif self.dj_field.many_to_many:
-            direction = Direction.BOTH
-
         return [
             D2Connection(
                 shape_1=app_model_display(self.parent_model.dj_model),
                 shape_2=app_model_display(self.dj_field.related_model),
-                direction=direction,
+                direction=Direction.BOTH if self.dj_field.many_to_many else Direction.TO,
             )
         ]
 
