@@ -8,22 +8,23 @@ from django.db import models
 from core.utils.shell_utils import sh
 
 from .d2 import D2Diagram, D2Shape, D2SQLRow
+from .d2.connection import D2Connection, Direction
+from .d2.helpers import app_model_display, flatten
 from .d2.shape import Shape
 
 """
 These classes are used to organize and build Django D2 schemas using introspection.
 
 Some random notes:
-- classes (ProjectD2, AppD2, ModelD2, FieldD2) mirror Django structures
+- classes (ProjectD2, AppD2, ModelD2, FieldD2) mirror Django structures, they are holders
+for these classes.
 - __init__ methods create classes that introspect and organize useful data
 - build_<...> methods generate actual D2 classes (D2Shape, D2Connection, D2SQLRow, etc.)
-- dj_<...> attributes are used to pass Django full object to keep context
+- dj_<...> attributes are used to pass Django full object to keep the context
 
 Usage:
 1 - Create a ProjectD2 instance
-2 - Call build method on this instance to build the diagram
-  2.1 - Build the shapes
-  2.2 - Build the connections
+2 - Call build method on this instance to build the diagram (this will build the shapes first, then the connections).
 """
 
 
@@ -40,17 +41,16 @@ class ProjectD2:
             if a.name not in excluded_apps
         ]
 
+    def build(self) -> D2Diagram:
+        shapes = self.build_shapes()
+        connections = self.build_connections(shapes)
+        return D2Diagram(shapes=shapes, connections=connections)
+
     def build_shapes(self) -> list[D2Shape]:
         return [app.build_shape() for app in self.apps]
 
-    # def build_connections(self, shapes: list[D2Shape]) -> list[D2Connection]:
-    #     return [app.build_connections(shapes) for app in self.apps]
-
-    def build(self) -> D2Diagram:
-        shapes = self.build_shapes()
-        return D2Diagram(shapes=shapes, connections=[])
-        # connections = self.build_connections(shapes)
-        # return D2Diagram(shapes=shapes, connections=connections)
+    def build_connections(self, shapes: list[D2Shape]) -> list[D2Connection]:
+        return flatten([app.build_connections(shapes) for app in self.apps])
 
     def debug(self) -> None:
         """Show a CLI reprensentation (for debug purpose only)"""
@@ -69,7 +69,9 @@ class AppD2:
 
     def __init__(self, dj_app) -> None:
         self.dj_app = dj_app
-        self.models = [ModelD2(dj_model=m) for m in self.dj_app.get_models()]
+        self.models = [
+            ModelD2(dj_model=m, parent_app=self) for m in self.dj_app.get_models()
+        ]
 
     @property
     def name(self) -> str:  # sugar
@@ -82,17 +84,21 @@ class AppD2:
             shapes=[model.build_shape() for model in self.models],
         )
 
-    # def build_connections(self, shapes) -> list[D2Connection]:
-    #     return [model.build_connections(shapes) for model in self.models]
+    def build_connections(self, shapes) -> list[D2Connection]:
+        return flatten([model.build_connections(shapes) for model in self.models])
 
 
 class ModelD2:
+    parent_app: AppD2
     dj_model: models.Model
     fields: list[FieldD2]
 
-    def __init__(self, dj_model) -> None:
+    def __init__(self, parent_app, dj_model) -> None:
         self.dj_model = dj_model
-        self.fields = [FieldD2(dj_field=f) for f in dj_model._meta.fields]
+        self.parent_app = parent_app
+        self.fields = [
+            FieldD2(dj_field=f, parent_model=self) for f in dj_model._meta.fields
+        ]
 
     @property
     def name(self) -> str:  # sugar
@@ -105,15 +111,17 @@ class ModelD2:
             sql_rows=[field.build_sql_row() for field in self.fields],
         )
 
-    # def build_connections(self, shapes) -> list[D2Connection]:
-    #     return todo
+    def build_connections(self, shapes) -> list[D2Connection]:
+        return flatten([field.build_connections(shapes) for field in self.fields])
 
 
 class FieldD2:
+    parent_model: ModelD2
     dj_field: models.Field
 
-    def __init__(self, dj_field) -> None:
+    def __init__(self, parent_model, dj_field) -> None:
         self.dj_field = dj_field  # not very useful as is, except for future inspection
+        self.parent_model = parent_model
 
     @property
     def name(self) -> str:
@@ -153,6 +161,30 @@ class FieldD2:
             constraint=self.constraint,
         )
 
+    def build_connections(self, shapes) -> list[D2Connection]:
+        """Build potential connections between existing shapes."""
+        if not any(
+            [
+                self.dj_field.one_to_one,
+                self.dj_field.many_to_one,
+                self.dj_field.many_to_many,
+            ]
+        ):
+            return []
+
+        if self.dj_field.one_to_one or self.dj_field.many_to_one:
+            direction = Direction.TO
+        elif self.dj_field.many_to_many:
+            direction = Direction.BOTH
+
+        return [
+            D2Connection(
+                shape_1=app_model_display(self.parent_model.dj_model),
+                shape_2=app_model_display(self.dj_field.related_model),
+                direction=direction,
+            )
+        ]
+
 
 class Command(BaseCommand):
     help = "Generate a diagram view of Django models, using d2."
@@ -163,7 +195,8 @@ class Command(BaseCommand):
         OUTPUT_SVG_FILE = OUTPUT_FOLDER + "diagram.svg"
 
         self.stdout.write("Contructing graph from Django apps...")
-        diagram = ProjectD2().build()
+        project = ProjectD2()
+        diagram = project.build()
 
         self.stdout.write("Writing graph to file...")
         with open(OUTPUT_D2_FILE, "w", encoding="utf-8") as f:

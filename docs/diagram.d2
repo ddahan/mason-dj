@@ -80,3 +80,7 @@ token_auth: {
   }
   shape: rectangle
 }
+badges.Badge -> profiles.User
+token_auth.APIToken -> profiles.User
+token_auth.MagicLinkToken -> profiles.User
+token_auth.PasswordLessToken -> profiles.User
