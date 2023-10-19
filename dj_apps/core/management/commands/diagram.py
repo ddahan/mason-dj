@@ -15,13 +15,15 @@ These classes are used to organize and build Django D2 schemas using introspecti
 
 Some random notes:
 - classes (ProjectD2, AppD2, ModelD2, FieldD2) mirror Django structures
-- __init__ methods create classes that introspect and save useful data
+- __init__ methods create classes that introspect and organize useful data
 - build_<...> methods generate actual D2 classes (D2Shape, D2Connection, D2SQLRow, etc.)
 - dj_<...> attributes are used to pass Django full object to keep context
 
 Usage:
 1 - Create a ProjectD2 instance
 2 - Call build method on this instance to build the diagram
+  2.1 - Build the shapes
+  2.2 - Build the connections
 """
 
 
@@ -41,10 +43,14 @@ class ProjectD2:
     def build_shapes(self) -> list[D2Shape]:
         return [app.build_shape() for app in self.apps]
 
+    # def build_connections(self, shapes: list[D2Shape]) -> list[D2Connection]:
+    #     return [app.build_connections(shapes) for app in self.apps]
+
     def build(self) -> D2Diagram:
-        connections = []  # FIXME
-        diagram = D2Diagram(shapes=self.build_shapes(), connections=connections)
-        return diagram
+        shapes = self.build_shapes()
+        return D2Diagram(shapes=shapes, connections=[])
+        # connections = self.build_connections(shapes)
+        # return D2Diagram(shapes=shapes, connections=connections)
 
     def debug(self) -> None:
         """Show a CLI reprensentation (for debug purpose only)"""
@@ -59,13 +65,15 @@ class ProjectD2:
 
 class AppD2:
     dj_app: AppConfig
-    name: str
     models: list[ModelD2]
 
     def __init__(self, dj_app) -> None:
         self.dj_app = dj_app
-        self.name = dj_app.name
         self.models = [ModelD2(dj_model=m) for m in self.dj_app.get_models()]
+
+    @property
+    def name(self) -> str:  # sugar
+        return self.dj_app.name
 
     def build_shape(self) -> D2Shape:
         return D2Shape(  # this shape is a container
@@ -74,16 +82,21 @@ class AppD2:
             shapes=[model.build_shape() for model in self.models],
         )
 
+    # def build_connections(self, shapes) -> list[D2Connection]:
+    #     return [model.build_connections(shapes) for model in self.models]
+
 
 class ModelD2:
     dj_model: models.Model
-    name: str
     fields: list[FieldD2]
 
     def __init__(self, dj_model) -> None:
         self.dj_model = dj_model
-        self.name = dj_model._meta.object_name
         self.fields = [FieldD2(dj_field=f) for f in dj_model._meta.fields]
+
+    @property
+    def name(self) -> str:  # sugar
+        return self.dj_model._meta.object_name
 
     def build_shape(self) -> D2Shape:
         return D2Shape(
@@ -92,26 +105,32 @@ class ModelD2:
             sql_rows=[field.build_sql_row() for field in self.fields],
         )
 
+    # def build_connections(self, shapes) -> list[D2Connection]:
+    #     return todo
+
 
 class FieldD2:
     dj_field: models.Field
-    name: str
-    description: str
-    constraint: str
+
+    def __init__(self, dj_field) -> None:
+        self.dj_field = dj_field  # not very useful as is, except for future inspection
 
     @property
-    def _constraint(self) -> str:
-        s = ""
-        if self.dj_field.primary_key:
-            s += "🔑"
-        if self.dj_field.auto_created:
-            s += "🤖"
-        if self.dj_field.db_index:
-            s += "🔍"
-        return s
+    def name(self) -> str:
+        return self.dj_field.name
 
     @property
-    def _description(self) -> str:
+    def constraint(self) -> str:
+        return "".join(
+            [
+                "🔑" if self.dj_field.primary_key else "",
+                "🤖" if self.dj_field.auto_created else "",
+                "🔍" if self.dj_field.db_index else "",
+            ]
+        )
+
+    @property
+    def description(self) -> str:
         """Return the relation to the model if it's a related field, or the type of the
         field if it's a normal field."""
         if self.dj_field.related_model:  # FK / M2M / 1T1
@@ -126,12 +145,6 @@ class FieldD2:
             return f"{prefix} → {self.dj_field.related_model._meta.object_name}"
         else:
             return type(self.dj_field).__name__
-
-    def __init__(self, dj_field) -> None:
-        self.dj_field = dj_field  # not very useful as is, except for future inspection
-        self.name = dj_field.name
-        self.description = self._description
-        self.constraint = self._constraint
 
     def build_sql_row(self) -> D2SQLRow:
         return D2SQLRow(
