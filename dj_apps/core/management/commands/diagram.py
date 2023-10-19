@@ -9,7 +9,7 @@ from core.utils.shell_utils import sh
 
 from .d2 import D2Diagram, D2Shape, D2SQLRow
 from .d2.connection import D2Connection, Direction
-from .d2.helpers import app_model_display, flatten
+from .d2.helpers import flatten
 from .d2.shape import Shape
 
 """
@@ -31,10 +31,7 @@ Usage:
 class ProjectD2:
     apps: list[AppD2]
 
-    def __init__(
-        self,
-        excluded_apps: list[AppConfig] = settings.DJANGO_APPS + settings.THIRD_PARTY_APPS,
-    ) -> None:
+    def __init__(self, excluded_apps: list[AppConfig] = []) -> None:
         self.apps = [
             AppD2(dj_app=a)
             for a in list(apps.get_app_configs())
@@ -181,16 +178,25 @@ class FieldD2:
         ]
 
 
+def app_model_display(dj_model) -> str:
+    """Get a string formatted as <app_name>.<Model>
+    This is used to describe D2 connections"""
+    return f"{dj_model._meta.app_label}.{dj_model._meta.object_name}"
+
+
 class Command(BaseCommand):
     help = "Generate a diagram view of Django models, using d2."
 
     def handle(self, *args, **options):
+        # Config
         OUTPUT_FOLDER = "docs/"
         OUTPUT_D2_FILE = OUTPUT_FOLDER + "diagram.d2"
         OUTPUT_SVG_FILE = OUTPUT_FOLDER + "diagram.svg"
+        EXCLUDED_APPS = settings.DJANGO_APPS + settings.THIRD_PARTY_APPS
 
+        # Script
         self.stdout.write("Contructing graph from Django apps...")
-        project = ProjectD2()
+        project = ProjectD2(excluded_apps=EXCLUDED_APPS)
         diagram = project.build()
 
         self.stdout.write("Writing graph to file...")

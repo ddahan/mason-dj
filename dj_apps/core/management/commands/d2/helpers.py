@@ -25,9 +25,3 @@ def add_label_and_properties(
 
 def flatten(items: list[list[str]]) -> list[str]:
     return [item for sublist in items for item in sublist]
-
-
-def app_model_display(dj_model) -> str:
-    """Get a string formatted as <app_name>.<Model>
-    This is used to describe D2 connections"""
-    return f"{dj_model._meta.app_label}.{dj_model._meta.object_name}"
