@@ -41,7 +41,8 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "charliermarsh.ruff",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "terrastruct.d2"
             ],
             "settings": {
                 //*********************************************************************
