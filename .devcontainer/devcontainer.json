@@ -32,7 +32,8 @@
         "ghcr.io/ddahan/feature-starter/poetry:latest": {
             "version": "1.6.1"
         },
-        "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
+        "ghcr.io/ddahan/feature-starter/d2": {},
+        "ghcr.io/ddahan/feature-starter/custom_bashrc": {}
     },
     "customizations": {
         "vscode": {
