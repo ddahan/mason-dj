@@ -14,6 +14,7 @@ class Digit6KeyMixin(models.Model):
     key = models.CharField(
         max_length=6,
         validators=[MinLengthValidator(6), MaxLengthValidator(6), NumericValidator],
+        verbose_name="clé",
     )
 
     def _build_key(self, size=6) -> str:

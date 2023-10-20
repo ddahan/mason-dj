@@ -16,7 +16,10 @@ class APIToken(UniqueSecretKeyMixin, RevocableMixin, BaseToken):
         db_table = "tb_api_tokens"
 
     user = models.OneToOneField(
-        settings.AUTH_USER_MODEL, on_delete=CASCADE, related_name="api_token"
+        settings.AUTH_USER_MODEL,
+        on_delete=CASCADE,
+        related_name="api_token",
+        verbose_name="utilisateur",
     )
 
     def __str__(self):

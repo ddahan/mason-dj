@@ -24,10 +24,9 @@ class TimeStampable(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        We don't use auto_now not auto_now_add as they prevent to have the exact same
-        value for created and modified.
+        We don't use auto_now nor auto_now_add as this prevent to get the exact same
+        value for created and modified fields.
         """
-        # TODO: unit test
         now = timezone.now()
         if self._state.adding:
             self.created = now

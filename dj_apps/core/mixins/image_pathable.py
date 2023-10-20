@@ -1,22 +1,17 @@
 from django.db import models
 
 
-class InvertableOnDark(models.Model):
+class ImagePathable(models.Model):
     class Meta:
         abstract = True
 
-    invert_on_dark = models.BooleanField(default=False)
+    image_path = models.CharField(max_length=512, verbose_name="chemin")
 
 
-class ImagePathable(InvertableOnDark, models.Model):
+class OptionalImagePathable(models.Model):
     class Meta:
         abstract = True
 
-    image_path = models.CharField(max_length=512)
-
-
-class OptionalImagePathable(InvertableOnDark, models.Model):
-    class Meta:
-        abstract = True
-
-    image_path = models.CharField(max_length=512, blank=True, null=False)
+    image_path = models.CharField(
+        max_length=512, blank=True, null=False, verbose_name="chemin"
+    )

@@ -18,7 +18,7 @@ class Deactivable(models.Model):
     class Meta:
         abstract = True
 
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True, verbose_name="actif ?")
 
     def invert_activity(self):
         self.is_active = not self.is_active

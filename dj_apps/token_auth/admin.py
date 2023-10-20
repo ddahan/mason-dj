@@ -27,10 +27,6 @@ class MagicLinkTokenAdmin(admin.ModelAdmin):
 @admin.register(PasswordLessToken)
 class PasswordLessTokenAdmin(admin.ModelAdmin):
     list_display = (
-        "id",
-        "sid",
-        "created",
-        "modified",
         "end_of_validity",
         "key",
         "user",

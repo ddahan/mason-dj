@@ -25,7 +25,7 @@ class UneditSetable(models.Model):
     class Meta:
         abstract = True
 
-    editable = models.BooleanField(default=True)
+    editable = models.BooleanField(default=True, verbose_name="éditable")
 
     def make_uneditable(self, *args, **kwargs):
         if self.editable:

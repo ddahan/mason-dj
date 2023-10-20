@@ -18,9 +18,11 @@ class ItemFlavour(models.TextChoices):
 
 
 class MailSkeleton(Slugable, models.Model):
-    subject = models.CharField(max_length=998)
-    html_body = models.TextField()
-    send_mode = models.CharField(max_length=512, choices=ItemFlavour.choices)
+    subject = models.CharField(max_length=998, verbose_name="sujet")
+    html_body = models.TextField(verbose_name="body HTML")
+    send_mode = models.CharField(
+        max_length=512, choices=ItemFlavour.choices, verbose_name="mode d'envoi"
+    )
 
     class Meta:
         db_table = "tb_mail_datas"

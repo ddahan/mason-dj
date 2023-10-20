@@ -28,7 +28,10 @@ class PasswordLessToken(
     objects = Manager.from_queryset(PasswordLessTokenQuerySet)()
 
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=CASCADE, related_name="passwordless_tokens"
+        settings.AUTH_USER_MODEL,
+        on_delete=CASCADE,
+        related_name="passwordless_tokens",
+        verbose_name="utilisateur",
     )
 
     VALIDITY_TIME = td(minutes=20)

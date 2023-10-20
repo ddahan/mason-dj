@@ -22,7 +22,7 @@ class EndableMixin(models.Model):
     class Meta:
         abstract = True
 
-    end_of_validity = models.DateTimeField()
+    end_of_validity = models.DateTimeField(verbose_name="fin de validité")
 
     def save(self, *args, **kwargs):
         if not hasattr(self, "VALIDITY_TIME"):

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 
 class Slugable(models.Model):
@@ -9,7 +10,7 @@ class Slugable(models.Model):
 
     slug = models.CharField(max_length=512, unique=True)
 
-    # Uncomment if the slug should be automatically modified
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.name)
-    #     super().save(*args, **kwargs)
+    # Remove if the slug should not be automatically created/modified
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
