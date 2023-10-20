@@ -10,7 +10,7 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 - [x] [VS Code devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) to share the same local environment between all team members with 1-click install
 - [x] docker-compose for multiple services (Django, Postgres, Redis, etc.)
 - [x] Debug: ipdb + VS Code debug + [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar/)
-- [x] VS Code tests, and tasks configured
+- [x] VS Code tests, tasks, and built-in terminal with clean prompt, colors, and aliases.
 - [x] Multi linting + auto-formatting + import sorting using [Ruff](https://github.com/charliermarsh/ruff) and its VS Code [extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
 - [x] [ipython](https://ipython.org/) and [django-extensions](https://github.com/django-extensions/django-extensions) for using Python in CLI
 - [x] Pre-commit githook to ensure code quality
@@ -19,8 +19,9 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 
 ### 🫙 Database
 - [x] [PostgreSQL](https://www.postgresql.org/) + [dj-database-url](https://github.com/jazzband/dj-database-url)
-- [x] Local custom tools (data loading/dumping)
 - [x] Custom database UML generation command using [D2](https://d2lang.com/)
+- [x] [Django safe delete](https://github.com/makinacorpus/django-safedelete) to soft delete objects
+- [x] Custom commands (data loading/dumping)
 
 
 ### ✅ Django best practices
@@ -51,7 +52,6 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 
 #### Django features
 - [ ] User groups and permissions examples
-- [ ] [Django safe delete](https://github.com/makinacorpus/django-safedelete) to soft delete objects
 - [ ] [Django Hijack](https://github.com/django-hijack/django-hijack) to work on behalf of others
 - [ ] [Django-fsm](https://github.com/viewflow/django-fsm) (finite state machines)
 - [ ] Cache mechanisms
@@ -96,6 +96,11 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 
 ## Related project
 - [ ] 🧱 **Nuxt Mason Starter**: the front-end counterpart of this template, using [Nuxt.js](https://nuxt.com/) (vue.js), and [Nuxt UI](https://ui.nuxt.com/).
+
+## Current used versions
+- Python 3.11.* _(waiting some package compatibility to migrate to  3.12)_
+- Django 4.*
+- Celery 5.*
 
 
 ## FAQ

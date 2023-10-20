@@ -34,11 +34,13 @@ badges: {
   Badge: {
     shape: sql_table
     id: BigAutoField {constraint: 🔑🤖}
+    deleted: DateTimeField {constraint: 🔍}
+    deleted_by_cascade: BooleanField 
     is_active: BooleanField 
-    sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
     expiration: DateTimeField 
+    identifier: CharField 
     owner: ForeignKey → User {constraint: 🔍}
   }
   shape: rectangle

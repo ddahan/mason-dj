@@ -6,12 +6,9 @@ from .models.badge import Badge
 @admin.register(Badge)
 class BadgeAdmin(admin.ModelAdmin):
     list_display = (
-        "id",
+        "identifier",
         "is_active",
-        "sid",
-        "created",
-        "modified",
         "expiration",
         "owner",
     )
-    list_filter = ("is_active", "created", "modified", "expiration", "owner")
+    list_filter = ("is_active", "created", "expiration", "owner")

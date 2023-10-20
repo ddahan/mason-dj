@@ -52,6 +52,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "corsheaders",
+    "safedelete",
     "django_celery_results",
     "django_celery_beat",
     "django_extensions",  # shell_plus, ...

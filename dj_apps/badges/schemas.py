@@ -10,13 +10,13 @@ class BadgeSchemaOut(ModelSchema):
 
     class Config:
         model = Badge
-        model_fields = ("sid", "expiration", "is_active")
+        model_fields = ("identifier", "expiration", "is_active")
 
 
 class BadgeSchemaInCreate(ModelSchema):
     class Config:
         model = Badge
-        model_fields = ("sid", "expiration", "is_active")
+        model_fields = ("identifier", "expiration", "is_active")
         extra = "forbid"
 
 

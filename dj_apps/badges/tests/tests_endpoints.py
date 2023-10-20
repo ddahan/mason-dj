@@ -17,7 +17,7 @@ User = get_user_model()
 @pytest.fixture
 def badges(db) -> list[Badge]:
     return [
-        BadgeFactory(sid="12345", is_active=True),
+        BadgeFactory(identifier="12345", is_active=True),
         BadgeFactory(),
     ]
 
@@ -54,22 +54,22 @@ def test_list_badges_ok(badges, auth_headers, client):
 
 
 def test_retrieve_badge_unauthenticated(badges, client):
-    response = client.get(api_url("retrieve_badge", sid="some_sid"))
+    response = client.get(api_url("retrieve_badge", identifier="some_identifier"))
     assert response.status_code == 401
 
 
 def test_retrieve_unexisting_badge(badges, auth_headers, client):
-    url = api_url("retrieve_badge", sid="wrong_sid")
+    url = api_url("retrieve_badge", identifier="wrong_identifier")
     response = client.get(url, headers=auth_headers)
     assert response.status_code == 404
 
 
 def test_retrieve_badge_ok(badges, auth_headers, client):
-    existing_sid = badges[0].sid
-    url = api_url("retrieve_badge", sid=existing_sid)
+    existing_identifier = badges[0].identifier
+    url = api_url("retrieve_badge", identifier=existing_identifier)
     response = client.get(url, headers=auth_headers)
     assert response.status_code == 200
-    assert response.json()["sid"] == existing_sid
+    assert response.json()["identifier"] == existing_identifier
 
 
 ##########################################################################################
@@ -81,13 +81,14 @@ def test_retrieve_badge_ok(badges, auth_headers, client):
     "payload, expected",
     [
         [{}, 200],  # no data
-        [{"sid": "LnM915Qf3DdavBeCjZUSwk"}, 200],  # correct sid
+        [{"identifier": "LnM915Qf3DdavBeCjZUSwk"}, 200],  # correct identifier
         [{"is_active": False}, 200],  # correct is_active
-        [{"sid": "12345"}, 400],  # already existing badge
+        [{"identifier": "12345"}, 400],  # already existing badge
     ],
 )
 def test_create_badge_ok(badges, db, client, auth_headers, payload, expected):
     nb_badges = Badge.objects.count()
+
     response = client.post(
         api_url("create_badge"),
         data=payload,
@@ -110,14 +111,14 @@ def test_create_badge_ok(badges, db, client, auth_headers, payload, expected):
     "payload, expected_status_code",
     [
         [{}, 200],
-        [{"sid": "123"}, 400],  # this field is not allowed to be changed
+        [{"identifier": "123"}, 400],  # this field is not allowed to be changed
         [{"is_active": "123"}, 400],  # wrong value format
         [{"is_active": False}, 200],  # is_active will be changed
     ],
 )
 def test_update_badge(badges, db, client, auth_headers, payload, expected_status_code):
     response = client.put(
-        api_url("update_badge", sid="12345"),
+        api_url("update_badge", identifier="12345"),
         data=payload,
         headers=auth_headers,
         content_type="application/json",
@@ -132,12 +133,12 @@ def test_update_badge(badges, db, client, auth_headers, payload, expected_status
 
 
 def test_update_badge_activity(db, badges, client, auth_headers):
-    old_badge_activity = Badge.objects.get(sid="12345").is_active
+    old_badge_activity = Badge.objects.get(identifier="12345").is_active
     response = client.patch(
-        api_url("update_badge_activity", sid="12345"), headers=auth_headers
+        api_url("update_badge_activity", identifier="12345"), headers=auth_headers
     )
     assert response.status_code == 200
-    assert Badge.objects.get(sid="12345").is_active != old_badge_activity
+    assert Badge.objects.get(identifier="12345").is_active != old_badge_activity
 
 
 ##########################################################################################
@@ -146,8 +147,10 @@ def test_update_badge_activity(db, badges, client, auth_headers):
 
 
 def test_destroy_badge(db, badges, client, auth_headers):
-    Badge.objects.get(sid="12345")
-    response = client.delete(api_url("destroy_badge", sid="12345"), headers=auth_headers)
+    Badge.objects.get(identifier="12345")
+    response = client.delete(
+        api_url("destroy_badge", identifier="12345"), headers=auth_headers
+    )
     assert response.status_code == 200
     with pytest.raises(Badge.DoesNotExist):
-        Badge.objects.get(sid="12345")
+        Badge.objects.get(identifier="12345")

@@ -1,27 +1,22 @@
 - model: badges.badge
   pk: 1
   fields:
+    deleted: null
+    deleted_by_cascade: false
     is_active: true
-    sid: ZBpp1mkxUFi3pXrd_sn0Ew
-    created: 2023-10-10 17:06:55.055095+00:00
-    modified: 2023-10-10 17:06:55.055095+00:00
-    expiration: 2024-01-01 11:00:00+00:00
+    created: 2023-10-20 21:12:25.803709+00:00
+    modified: 2023-10-20 21:38:55.180058+00:00
+    expiration: 2023-10-20 21:12:25+00:00
+    identifier: VUZlunmZyx1BmKUfENB3tg
     owner: 1
 - model: badges.badge
   pk: 2
   fields:
+    deleted: null
+    deleted_by_cascade: false
     is_active: true
-    sid: X8emBAV482ZEK2gxVcnRzQ
-    created: 2023-10-10 17:07:10.682011+00:00
-    modified: 2023-10-10 17:07:10.682011+00:00
-    expiration: 2022-10-10 10:00:00+00:00
-    owner: null
-- model: badges.badge
-  pk: 3
-  fields:
-    is_active: true
-    sid: 0LnM915Qf3DdavBeCjZUSw
-    created: 2023-10-11 20:45:13.245637+00:00
-    modified: 2023-10-11 20:45:13.245637+00:00
-    expiration: null
+    created: 2023-10-20 21:19:57.974077+00:00
+    modified: 2023-10-20 21:19:57.974077+00:00
+    expiration: 2023-10-20 21:19:57+00:00
+    identifier: 7-Y7Iz_V32PRHElZ3f-tFQ
     owner: null

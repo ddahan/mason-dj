@@ -1,13 +1,13 @@
 - model: profiles.user
   pk: 1
   fields:
-    password: pbkdf2_sha256$600000$6s5cj5pW8jkP33x3VZ0d0o$Nn1l99OGuKrqh2eaCyNUrw5vzWN4SLQ8uDoLAccNAL0=
-    last_login: 2023-10-12 19:54:27.081582+00:00
+    password: pbkdf2_sha256$600000$pisQg84iyeuijOuPaaezuN$9SFMnti4ZOkY0j9VjB5JXyRLwXIBRkuB4kjWZ5D9mwk=
+    last_login: 2023-10-20 21:12:12.910777+00:00
     is_superuser: true
     is_active: true
-    sid: l11jWp07B6YekOYB7UzlHQ
-    created: 2023-10-10 17:05:05.689458+00:00
-    modified: 2023-10-10 17:05:05.692672+00:00
+    sid: yW4dQqqD1T-IlGVgIMu0xA
+    created: 2023-10-20 21:11:58.735973+00:00
+    modified: 2023-10-20 21:11:58.739175+00:00
     email: david.dahan3@gmail.com
     title: M
     first_name: David
