@@ -1,11 +1,6 @@
 # 🧱 Django Mason Starter
 
-A fully-featured and __opinionated__ Back-End Django Starter Template for __medium-sized SaaS__ _(work in Progress)_.
-
-## Why?
-
-When starting a project from scratch, there is a lot of boilerplate to write to setup tech aspects. The purpose is to split the technical aspects to be able to work almost only in business logic then. 
-It also acts as a collection of personal knowledge that can be reused.
+A __modern__, fully-featured and __opinionated__ Back-End Django Starter Template for __medium-sized SaaS__ _(work in Progress)_.
 
 
 ## Features
@@ -24,7 +19,7 @@ It also acts as a collection of personal knowledge that can be reused.
 
 ### 🫙 Database
 - [x] [PostgreSQL](https://www.postgresql.org/) + [dj-database-url](https://github.com/jazzband/dj-database-url)
-- [x] Local tools (custom data loading/dumping)
+- [x] Local custom tools (data loading/dumping)
 - [x] Custom database UML generation command using [D2](https://d2lang.com/)
 
 
@@ -37,61 +32,74 @@ It also acts as a collection of personal knowledge that can be reused.
 - [x] Applicative Parameters (in-db parameters to configure app without pushing code)
 - [x] Custom User, custom Exceptions
 
-### 🦄 CRUD App
+### 🪪 CRUD App (a badge management system)
 - [x] REST API using [django-ninja](https://github.com/vitalik/django-ninja), with built-in OpenAPI documentation. Uses token-based authentication.
 - [x] Unit tests with [pytest](https://github.com/pytest-dev/pytest-django/) and [factory boy](https://github.com/FactoryBoy/factory_boy/)
 - [x] Admin
 
 
-### 🔨 Custom utils
-- [x] various utility functions
-- [x] custom mixins/fields for Compositional Model Behaviours
-- [x] custom decorators
-
-
-### 🦄 Other features
-- [x] Full [Celery](https://docs.celeryq.dev/en/stable/) setup, including [django-celery-beat](https://github.com/celery/django-celery-beat) and [django-celery-results](https://github.com/celery/django-celery-results)
-- [x] Soketi server (Open-source Pusher-like for realtime bi-directional messages)
+### 🔨 Other features and custom utils
+- [x] Full [Celery](https://docs.celeryq.dev/en/stable/), including [django-celery-beat](https://github.com/celery/django-celery-beat) and [django-celery-results](https://github.com/celery/django-celery-results)
+- [x] [Soketi](https://docs.soketi.app/) websockets server (realtime bi-directional messages)
 - [x] Mailing integration with SMTP
-- [x] More models & fields (PriceField, PositionField, PhoneNumberField, etc.)
+- [x] More custom fields (PriceField, PositionField, PhoneNumberField, etc.)
+- [x] Custom models and querysets for Compositional Model Behaviours
+- [x] Custom utility functions and decorators
 
 
 ## Todo
+
+#### Django features
+- [ ] User groups and permissions examples
 - [ ] [Django safe delete](https://github.com/makinacorpus/django-safedelete) to soft delete objects
 - [ ] [Django Hijack](https://github.com/django-hijack/django-hijack) to work on behalf of others
-- [ ] Python 3.11 -> Python 3.12
-- [ ] Full Stack Monitoring with Highlight.io (Errors, logs, performance monitoring)
-- [ ] User groups and permissions examples
-- [ ] Test coverage tool
+- [ ] [Django-fsm](https://github.com/viewflow/django-fsm) (finite state machines)
 - [ ] Cache mechanisms
 - [ ] Feature flags
-- [ ] Social-auth integration  
+- [ ] Social-auth integration
+
+#### API
+- [ ] More advanced API features (pagination, other auth, etc.)
+- [ ] GraphQL example with [Strawberry](https://github.com/strawberry-graphql/strawberry-graphql-django)
+
+#### Testing
+- [ ] Add a test coverage tool
+- [ ] 100% test coverage
+
+#### DX and code quality
 - [ ] Type hints with [django-stubs](https://github.com/typeddjango/django-stubs) and strict mode on.
+- [ ] Python 3.11 -> Python 3.12
+- [ ] `shell_plus` autoreload
+
+#### Monitoring / hosting
+- [ ] Full Stack Monitoring with Highlight.io (Errors, logs, performance monitoring)
 - [ ] docker-compose production example (differs from the local one)
 - [ ] S3 storage management with [boto3](https://github.com/boto/boto3) and [django-storages](https://github.com/jschneier/django-storages/)
-- [ ] [Django-fsm](https://github.com/viewflow/django-fsm) (finite state machines)
-- [ ] GraphQL integration with [Strawberry](https://github.com/strawberry-graphql/strawberry-graphql-django)
+
+#### User Communication
 - [ ] Mail templates using [Maizzle](https://maizzle.com/)
-- [ ] DX: `shell_plus` autoreload
-- [ ] More advanced API features (pagination, other auth, etc.)
-- [ ] Integrations with other SaaS (_it could take some time 😅_) :
-  - [ ] Payment → [Stripe](https://stripe.com)
-  - [ ] Customer Service → [Freshdesk](https://www.freshworks.com/freshdesk/) or [Intercom](https://www.intercom.com/)
-  - [ ] Basic Analytics → [Plausible](https://plausible.io/)
-  - [ ] Advanced Product Analytics → [Mixpanel](https://mixpanel.com/)
-  - [ ] SMS/Phone → [Twilio](https://www.twilio.com/)
-  - [ ] CRM: [Hubspot](https://www.hubspot.com/)
-  - [ ] Intelligent Search → [Algolia](https://www.algolia.com/)
-  - [ ] Enterprise chat → [Slack](https://slack.com/)
-  - [ ] Team Projects → [Notion](https://www.notion.so/)
-  - [ ] Business Inteligence → [Metabase](https://www.metabase.com/)
-- [ ] Add a documentation to this template using a tool like [Gitbook](https://www.gitbook.com/)
+
+#### Integrations with other SaaS (_it could take some time 😅_)
+- [ ] Payment → [Stripe](https://stripe.com)
+- [ ] Customer Service → [Freshdesk](https://www.freshworks.com/freshdesk/) or [Intercom](https://www.intercom.com/)
+- [ ] Basic Analytics → [Plausible](https://plausible.io/)
+- [ ] Advanced Product Analytics → [Mixpanel](https://mixpanel.com/)
+- [ ] SMS/Phone → [Twilio](https://www.twilio.com/)
+- [ ] CRM: [Hubspot](https://www.hubspot.com/)
+- [ ] Intelligent Search → [Algolia](https://www.algolia.com/)
+- [ ] Enterprise chat → [Slack](https://slack.com/)
+- [ ] Team Projects → [Notion](https://www.notion.so/)
+- [ ] Business Inteligence → [Metabase](https://www.metabase.com/)
+
+#### Documentation
+- [ ] Add a full documentation to this template (either using a tool like [Gitbook](https://www.gitbook.com/) or directly in the code)
 
 ## Related project
 - [ ] 🧱 **Nuxt Mason Starter**: the front-end counterpart of this template, using [Nuxt.js](https://nuxt.com/) (vue.js), and [Nuxt UI](https://ui.nuxt.com/).
 
 
 ## FAQ
+
 
 > Why not using the front-end part of Django?
 
@@ -112,3 +120,9 @@ The whole DX part of this template is focused on VS Code so you would lose these
 - When adding integrations, I try to pick the ones that are **broadly used** rather than the "best" ones.
 
 - I try to **avoid in-progress work** that should change (That's the reason I prefer using Soeti to django-channels or anything async with Django).
+
+> Why Django rather than fullstack JS?
+
+If you're here, you might already be convinced, but let me share my thoughts regardless. While the appeal of full-stack JavaScript lies in using a single language, there's currently no equivalent to feature-rich frameworks like Django, Rails (Ruby), or Laravel (PHP) in the JavaScript world. Building a complex back-end becomes significantly more complicated, as you have to integrate multiple tools. Contrary to what they advertise, frameworks like Next.js are not "full-stack" as they don't offer essential backend building blocks like an ORM, authentication system, or validation.
+
+Furthermore, Python is increasingly being used in projects for data analysis and machine learning, areas where JavaScript doesn't offer an equivalent. In such cases, the "single language" benefit loses its validity.
