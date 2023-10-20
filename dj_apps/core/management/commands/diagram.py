@@ -207,4 +207,12 @@ class Command(BaseCommand):
             f.write(str(diagram))
             self.stdout.write(f"Done! ({OUTPUT_D2_FILE})")
         self.stdout.write("Converting d2 file to svg and opening browser...")
-        sh(f"d2 --watch  --sketch --theme 5 {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")
+
+        process = sh(
+            f"d2 --watch  --sketch --theme 5 {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}",
+            blocking=False,
+        )
+        # NOTE: this is dirty code as there is no option to automatic closing
+        self.stdout.write("Waiting a few seconds before killing the process..")
+        sh("sleep 2")
+        sh(f"kill -9 {process.pid}")

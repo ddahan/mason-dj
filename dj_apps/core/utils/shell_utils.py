@@ -1,4 +1,4 @@
-from subprocess import call
+import subprocess
 
 
 def yes_or_no(question) -> bool:
@@ -9,10 +9,15 @@ def yes_or_no(question) -> bool:
     return bool(reply == "y")
 
 
-def sh(command):
+def sh(command, blocking=True) -> subprocess.Popen:
     """
     Execute the given command in a shell.
+    If blocking is True, it will behave like `call` command.
+    Return the process (for example to get the pid to kill it later).
     TODO: remove quotes from args otherwise it does not work in that case
     """
     args = command.split()
-    call(args)
+    process = subprocess.Popen(args)
+    if blocking is True:
+        process.wait()
+    return process
