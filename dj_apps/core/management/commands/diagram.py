@@ -216,3 +216,10 @@ class Command(BaseCommand):
         self.stdout.write("Waiting a few seconds before killing the process..")
         sh("sleep 2")
         sh(f"kill -9 {process.pid}")
+
+        # # self.stdout.write("Converting d2 file to svg...")
+        # sh(f"d2  --sketch --theme 5 {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}")
+
+        # self.stdout.write("Opening svg file into the browser...")
+        # browser = os.getenv("BROWSER")
+        # sh(f"{browser} file:///{OUTPUT_SVG_FILE}")

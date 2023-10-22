@@ -60,7 +60,7 @@ class Badge(Expirable, Deactivable, TimeStampable, AutoValidable, SafeDeleteMode
         self.save()
 
     def release(self):
-        """Release a badge. Raise no error if already released."""
+        """Release a badge. No error raised if already released."""
         self.owner = None
         self.save()
 

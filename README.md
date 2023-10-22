@@ -44,15 +44,13 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 - [x] [Soketi](https://docs.soketi.app/) websockets server (realtime bi-directional messages)
 - [x] Mailing integration with SMTP
 - [x] More custom fields (PriceField, PositionField, PhoneNumberField, etc.)
-- [x] Custom models and querysets for Compositional Model Behaviours
+- [x] Custom models and querysets for Compositional Model Behaviours, Global Permission
 - [x] Custom utility functions and decorators
 
 
 ## Todo
 
 #### Django features
-- [ ] User groups and permissions examples
-- [ ] [Django Hijack](https://github.com/django-hijack/django-hijack) to work on behalf of others
 - [ ] [Django-fsm](https://github.com/viewflow/django-fsm) (finite state machines)
 - [ ] Cache mechanisms
 - [ ] Feature flags
@@ -75,9 +73,6 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 - [ ] Full Stack Monitoring with Highlight.io (Errors, logs, performance monitoring)
 - [ ] docker-compose production example (differs from the local one)
 - [ ] S3 storage management with [boto3](https://github.com/boto/boto3) and [django-storages](https://github.com/jschneier/django-storages/)
-
-#### User Communication
-- [ ] Mail templates using [Maizzle](https://maizzle.com/)
 
 #### Integrations with other SaaS (_it could take some time 😅_)
 - [ ] Payment → [Stripe](https://stripe.com)

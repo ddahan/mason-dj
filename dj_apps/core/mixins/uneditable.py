@@ -8,13 +8,14 @@ class UneditableException(ValueError):
 class Uneditable(models.Model):
     """Mixin to prevent an object to be changed.
     It is just for the save() method, not the delete one.
+    force can be set, sothat methods can use save()
     """
 
     class Meta:
         abstract = True
 
-    def save(self, *args, **kwargs):
-        if not self._state.adding:
+    def save(self, force=False, *args, **kwargs):
+        if force is False and not self._state.adding:
             raise UneditableException
         super().save(*args, **kwargs)
 
