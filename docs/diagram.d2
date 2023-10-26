@@ -51,6 +51,13 @@ core: {
     id: BigAutoField {constraint: 🔑🤖}
     CONTACT_EMAIL: CharField 
   }
+  GlobalPermission: {
+    shape: sql_table
+    id: AutoField {constraint: 🔑🤖}
+    name: CharField 
+    content_type: ForeignKey → ContentType {constraint: 🔍}
+    codename: CharField 
+  }
   shape: rectangle
 }
 token_auth: {
@@ -83,6 +90,7 @@ token_auth: {
   shape: rectangle
 }
 badges.Badge -> profiles.User
+core.GlobalPermission -> contenttypes.ContentType
 token_auth.APIToken -> profiles.User
 token_auth.MagicLinkToken -> profiles.User
 token_auth.PasswordLessToken -> profiles.User
