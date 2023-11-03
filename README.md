@@ -77,7 +77,7 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 
 #### Hosting
 - [ ] Heroku example (Procfile, documentation : architecture, deployment)
-- [ ] AWS example using ECS (docker-compose) with EC2, S3, RDS and SQS
+- [ ] AWS example using ECS and Docker with EC2, S3, RDS and SQS
 
 
 #### Integrations with other SaaS (_it could take some time 😅_)
