@@ -1,5 +1,5 @@
 {
-    "name": "🧱 mason-dj",
+    "name": "🧱🟨 mason-dj",
     "dockerComposeFile": "docker-compose.yml",
     "service": "srv_django",
     "workspaceFolder": "/workspace",
@@ -94,7 +94,6 @@
                     "${workspaceFolder}/dj_apps"
                 ],
                 "python.testing.pytestEnabled": true,
-                "ruff.enableExperimentalFormatter": true,
                 "[python]": {
                     "editor.defaultFormatter": "charliermarsh.ruff",
                     "editor.formatOnSave": true,

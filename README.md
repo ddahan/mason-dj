@@ -69,10 +69,16 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 - [ ] Python 3.11 -> Python 3.12
 - [ ] `shell_plus` autoreload
 
-#### Monitoring / hosting
+#### Monitoring
 - [ ] Full Stack Monitoring with Highlight.io (Errors, logs, performance monitoring)
-- [ ] docker-compose production example (differs from the local one)
+
+#### Object Storage
 - [ ] S3 storage management with [boto3](https://github.com/boto/boto3) and [django-storages](https://github.com/jschneier/django-storages/)
+
+#### Hosting
+- [ ] Heroku example (Procfile, documentation : architecture, deployment)
+- [ ] AWS example using ECS (docker-compose) with EC2, S3, RDS and SQS
+
 
 #### Integrations with other SaaS (_it could take some time 😅_)
 - [ ] Payment → [Stripe](https://stripe.com)
