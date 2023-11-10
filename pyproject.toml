@@ -11,7 +11,7 @@ authors = ["David Dahan <david.dahan3@gmail.com>"]
 ##########################################################################################
 # Main
 ##########################################################################################
-python = "3.11.6"
+python = "3.12.0"
 Django = "4.*"       # https://github.com/django/django
 django-environ = "*" # https://github.com/joke2k/django-environ
 

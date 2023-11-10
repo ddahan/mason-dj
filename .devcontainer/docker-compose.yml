@@ -5,7 +5,7 @@ services:
   srv_django:
     container_name: "mason_ctn_django"
     # vars are injected at runtime, so no need to specify env_var value here.
-    image: 'python:3.11.6-bookworm'
+    image: 'python:3.12.0-bookworm'
     volumes:
       - ..:/workspaces:delegated
     # Overrides default command so things don't shut down after the process ends.

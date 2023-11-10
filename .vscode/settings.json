@@ -31,7 +31,7 @@
     "python.analysis.ignore": [
         "*"
     ], // disable linting as it would be redundant with Ruff 
-    "python.pythonPath": "/usr/local/bin/python",
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
     "python.envFile": "${workspaceFolder}/config/.env",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.importFormat": "relative",
@@ -58,7 +58,6 @@
     //*********************************************************************
     // VSCODE icons
     //*********************************************************************
-    "vsicons.presets.folders": false,
     "vsicons.associations.folders": [
         {
             "icon": "src",
