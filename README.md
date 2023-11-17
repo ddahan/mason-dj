@@ -42,7 +42,7 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 ### 🔨 Other features and custom utils
 - [x] Full [Celery](https://docs.celeryq.dev/en/stable/), including [django-celery-beat](https://github.com/celery/django-celery-beat) and [django-celery-results](https://github.com/celery/django-celery-results)
 - [x] [Soketi](https://docs.soketi.app/) websockets server (realtime bi-directional messages)
-- [x] Mailing integration with SMTP
+- [x] Mailing integration with SMTP using Amazon SES
 - [x] More custom fields (PriceField, PositionField, PhoneNumberField, etc.)
 - [x] Custom models and querysets for Compositional Model Behaviours, Global Permission
 - [x] Custom utility functions and decorators
@@ -66,18 +66,21 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 
 #### DX and code quality
 - [ ] Type hints with [django-stubs](https://github.com/typeddjango/django-stubs) and strict mode on.
-- [ ] Python 3.11 -> Python 3.12
 - [ ] `shell_plus` autoreload
+
+
+#### CI/CD, Hosting, DNS, Object Storage, Mailing
+- [ ] All-in-one AWS example
+    - [ ] AWS serious deployment example using ECS + Fargate with Django / Nuxt / Celery / Redis container + managed services : S3 / RDS (or λ for task execution ?)
+    - [ ] CI/CD with CodePipeline
+    - [ ] Route 53 DNS
+    - [ ] S3 storage management with [boto3](https://github.com/boto/boto3) and [django-storages](https://github.com/jschneier/django-storages/)
+    - [ ] SES for mails
+- [ ] Simpler PaaS alternative using Heroku
 
 #### Monitoring
 - [ ] Full Stack Monitoring with Highlight.io (Errors, logs, performance monitoring)
-
-#### Object Storage
-- [ ] S3 storage management with [boto3](https://github.com/boto/boto3) and [django-storages](https://github.com/jschneier/django-storages/)
-
-#### Hosting
-- [ ] Heroku example (Procfile, documentation : architecture, deployment)
-- [ ] AWS example using ECS and Docker with EC2, S3, RDS and SQS
+- [] CloudWatch (logging / monitoring)
 
 
 #### Integrations with other SaaS (_it could take some time 😅_)
