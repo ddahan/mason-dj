@@ -4,6 +4,11 @@ from typing import Literal
 class ProjectException(Exception):
     """
     Raise for specific exceptions related to this project.
+    Additional data can be binded to allow front-end to deal with the exception.
+    Parameters:
+    * message: the message which should be displayed
+    * error_level: to know how to display the error: globally in a toast, or locally
+    * field_name: if error_level is field, provide the field name
     """
 
     def __init__(
@@ -15,7 +20,7 @@ class ProjectException(Exception):
         if type(self) == ProjectException:
             raise Exception("<ProjectException> must be subclassed.")
 
-        if bool(field_name) != bool(error_level == "field"):
+        if bool(field_name) != (error_level == "field"):
             raise Exception("field_name must be defined when error_level is field")
 
         self.message = message

@@ -10,7 +10,7 @@ User = get_user_model()
 router = Router()
 
 
-@router.post("signup", response=UserSchemaOut, auth=None)
+@router.post("signup", response=UserSchemaOut)
 def signup(request, payload: UserSchemaInCreate):
     if User.objects.filter(email=payload.email).exists():
         raise EmailAlreadyExists(

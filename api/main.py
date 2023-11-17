@@ -72,7 +72,7 @@ def handle_invalid_token(request, _):
     return api.create_response(
         request,
         dict(
-            msg_slug="Vous n'êtes pas autorisés à effectuer cette opération.",
+            message="Vous n'êtes pas autorisés à effectuer cette opération.",
             error_level="global",
         ),
         status=401,
