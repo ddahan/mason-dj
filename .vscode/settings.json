@@ -18,8 +18,9 @@
     "editor.indentSize": "tabSize",
     "editor.formatOnSave": true,
     //*********************************************************************
-    // color customizations
+    // workbench
     //*********************************************************************
+    "workbench.editor.labelFormat": "short",
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#9b543d",
         "titleBar.activeForeground": "#ffd242"
