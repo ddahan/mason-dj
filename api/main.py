@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.http.response import Http404
 
-from ninja import NinjaAPI, Redoc
+from ninja import NinjaAPI, Swagger
 from ninja.errors import ValidationError as NinjaValidationError
 
 from core.exceptions import ProjectException
@@ -14,7 +14,7 @@ api = NinjaAPI(
     renderer=ORJSONRenderer(),
     auth=ApiKeyAuth(),
     urls_namespace="api",
-    docs=Redoc({"persistAuthorization": True}),
+    docs=Swagger({"persistAuthorization": True}),
 )
 
 # Add routers here

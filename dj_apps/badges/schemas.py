@@ -1,4 +1,4 @@
-from ninja import ModelSchema, Schema
+from ninja import ModelSchema
 
 from profiles.schemas import UserSchema
 
@@ -26,5 +26,4 @@ class BadgeSchemaInUpdate(ModelSchema):
         fields = ("expiration", "is_active")
         fields_optional = ("expiration", "is_active")
 
-    class Config(Schema.Config):
-        extra = "forbid"
+    model_config = {"extra": "forbid"}
