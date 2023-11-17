@@ -40,7 +40,7 @@ no matter the type of error raised by the back-end:
 def handle_not_found(request, _):
     return api.create_response(
         request,
-        dict(message="L'objet demandé n'a pas été trouvé.", error_level="global"),
+        dict(message="The requested resource has not been found.", error_level="global"),
         status=404,
     )
 
@@ -49,9 +49,7 @@ def handle_not_found(request, _):
 def handle_bad_request(request, e):
     return api.create_response(
         request,
-        dict(
-            message="La requête a échoué pour une raison inconnue.", error_level="global"
-        ),
+        dict(message="The request is not correctly formatted.", error_level="global"),
         status=400,
     )
 
@@ -60,9 +58,7 @@ def handle_bad_request(request, e):
 def handle_bad_request_ninja(request, _):
     return api.create_response(
         request,
-        dict(
-            message="La requête a échoué pour une raison inconnue.", error_level="global"
-        ),
+        dict(message="The request is not correctly formatted.", error_level="global"),
         status=400,
     )
 
@@ -72,7 +68,7 @@ def handle_invalid_token(request, _):
     return api.create_response(
         request,
         dict(
-            message="Vous n'êtes pas autorisés à effectuer cette opération.",
+            message="You are not authorized to perform this operation.",
             error_level="global",
         ),
         status=401,
@@ -92,6 +88,6 @@ def handle_project_error(request, e):
 def handle_exception(request, _):
     return api.create_response(
         request,
-        dict(message="Une erreur inconnue est survenue.", error_level="global"),
+        dict(message="An unknown servor error has occurred.", error_level="global"),
         status=500,
     )

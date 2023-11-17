@@ -98,7 +98,7 @@ DATABASES = {"default": dj_database_url.config(env="DJ_DATABASE_URL", conn_max_a
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 ##########################################################################################
 
-LANGUAGE_CODE = "fr"
+LANGUAGE_CODE = "en"
 TIME_ZONE = "Europe/Paris"
 USE_I18N = True
 USE_L10N = True

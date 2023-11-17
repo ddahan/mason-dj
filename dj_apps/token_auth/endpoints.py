@@ -10,11 +10,11 @@ User = get_user_model()
 router = Router()
 
 
-@router.post("signup", response=UserSchemaOut)
+@router.post("signup", response=UserSchemaOut, auth=None)
 def signup(request, payload: UserSchemaInCreate):
     if User.objects.filter(email=payload.email).exists():
         raise EmailAlreadyExists(
-            message="Cette adresse e-mail est déjà utilisée.",
+            message="This email already exists.",
             error_level="field",
             field_name="email",
         )
