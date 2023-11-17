@@ -6,6 +6,6 @@ User = get_user_model()
 
 
 class UserSchema(ModelSchema):
-    class Config:
+    class Meta:
         model = User
-        model_fields = ("id", "email")
+        fields = ("id", "email")

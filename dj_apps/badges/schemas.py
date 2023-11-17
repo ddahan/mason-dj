@@ -1,4 +1,4 @@
-from ninja import ModelSchema
+from ninja import ModelSchema, Schema
 
 from profiles.schemas import UserSchema
 
@@ -6,23 +6,25 @@ from .models import Badge
 
 
 class BadgeSchemaOut(ModelSchema):
-    owner = UserSchema
+    owner: UserSchema
 
-    class Config:
+    class Meta:
         model = Badge
-        model_fields = ("identifier", "expiration", "is_active")
+        fields = ("identifier", "expiration", "is_active")
 
 
 class BadgeSchemaInCreate(ModelSchema):
-    class Config:
+    class Meta:
         model = Badge
-        model_fields = ("identifier", "expiration", "is_active")
+        fields = ("identifier", "expiration", "is_active")
         extra = "forbid"
 
 
 class BadgeSchemaInUpdate(ModelSchema):
-    class Config:
+    class Meta:
         model = Badge
-        model_fields = ("expiration", "is_active")
-        model_fields_optional = ("expiration", "is_active")
+        fields = ("expiration", "is_active")
+        fields_optional = ("expiration", "is_active")
+
+    class Config(Schema.Config):
         extra = "forbid"

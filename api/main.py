@@ -1,12 +1,10 @@
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.http.response import Http404
 
-from ninja import NinjaAPI
+from ninja import NinjaAPI, Redoc
 from ninja.errors import ValidationError as NinjaValidationError
 
-from badges.endpoints import router as badges_router
 from core.exceptions import ProjectException
-from token_auth.endpoints import router as auth_router
 
 from .authentication import ApiKeyAuth, InvalidToken
 from .renderers import ORJSONRenderer
@@ -16,11 +14,12 @@ api = NinjaAPI(
     renderer=ORJSONRenderer(),
     auth=ApiKeyAuth(),
     urls_namespace="api",
+    docs=Redoc({"persistAuthorization": True}),
 )
 
 # Add routers here
-api.add_router("badges", badges_router)
-api.add_router("auth", auth_router)
+api.add_router("badges", "badges.endpoints.router")
+api.add_router("auth", "token_auth.endpoints.router")
 
 """
 Exception handling is handled here otherwise it's not taken into account

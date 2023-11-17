@@ -6,13 +6,13 @@ User = get_user_model()
 
 
 class UserSchemaInCreate(ModelSchema):
-    class Config:
+    class Meta:
         model = User
-        model_fields = ("title", "first_name", "last_name", "email", "password")
+        fields = ("title", "first_name", "last_name", "email", "password")
         extra = "forbid"
 
 
 class UserSchemaOut(ModelSchema):
-    class Config:
+    class Meta:
         model = User
-        model_fields = ("sid", "email")
+        fields = ("sid", "email")
