@@ -1,10 +1,10 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth import authenticate, get_user_model
 
 from ninja import Router
 
-from profiles.exceptions import EmailAlreadyExists
+from profiles.exceptions import EmailAlreadyExists, InvalidLogin
 
-from .schemas import UserSchemaInCreate, UserSchemaOut
+from .schemas import UserSchemaInCreate, UserSchemaInLogin, UserSchemaOut
 
 User = get_user_model()
 router = Router()
@@ -23,9 +23,16 @@ def signup(request, payload: UserSchemaInCreate):
     return new_user
 
 
-@router.post("login")
-def login(request):
-    return {"login": "ok"}
+@router.post("login", response=UserSchemaOut, auth=None)
+def login(request, payload: UserSchemaInLogin):
+    """NOTE: logout does not require an endpoint, as it's just a front-end operation"""
+    user = authenticate(request, email=payload.email, password=payload.password)
+    if user is not None:
+        return user
+    else:
+        raise InvalidLogin(
+            message="Wrong given credentials. Please try again.", error_level="global"
+        )
 
 
 @router.post("reset-password")

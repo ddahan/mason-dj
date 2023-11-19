@@ -7,3 +7,7 @@ class ProfilesException(ProjectException):
 
 class EmailAlreadyExists(ProjectException):
     pass
+
+
+class InvalidLogin(ProjectException):
+    pass

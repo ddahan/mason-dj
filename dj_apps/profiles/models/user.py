@@ -92,5 +92,9 @@ class User(
     def small_name(self) -> str:
         return f"{self.first_name[0]}. {self.last_name}"
 
+    @property
+    def api_token_key(self) -> str:
+        return self.api_token.key
+
     def __str__(self):
         return self.name
