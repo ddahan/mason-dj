@@ -31,7 +31,7 @@ def login(request, payload: UserSchemaInLogin):
         return user
     else:
         raise InvalidLogin(
-            message="Wrong given credentials. Please try again.", error_level="global"
+            message="Wrong given credentials. Please try again.", error_level="non_field"
         )
 
 
