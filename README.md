@@ -51,7 +51,7 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 ## Todo
 
 #### Django features
-- [ ] Django all auth / social-auth 
+- [ ] Django social-auth 
 - [ ] [Django-fsm](https://github.com/viewflow/django-fsm) (finite state machines)
 - [ ] Cache mechanisms
 - [ ] Feature flags
