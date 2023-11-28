@@ -1,6 +1,5 @@
 from datetime import timedelta as td
 from posixpath import join
-from urllib.parse import urljoin
 
 from django.conf import settings
 from django.db import models
