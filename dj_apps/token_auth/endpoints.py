@@ -47,3 +47,8 @@ def send_reset_password_link(request, payload: EmailSchemaIn):
         )
     else:
         user.send_reset_password_magic_link()
+
+
+# @router.post("use-magic-link", auth=None)
+# def use_magic_link(request, payload: ResetPasswordIn):
+#     ...  # FIXME

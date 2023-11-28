@@ -1,5 +1,6 @@
 from datetime import timedelta as td
 from posixpath import join
+from urllib.parse import urlencode
 
 from django.conf import settings
 from django.db import models
@@ -51,9 +52,6 @@ class MagicLinkToken(
         """
         Build a magic link url to be used with any an external front-end app
         """
-        return join(
-            settings.FRONT_HOST,
-            settings.FRONT_ROUTE_USE_MAGIC_LINK,
-            self.usage.value,
-            self.key,
-        )
+        base_url = join(settings.FRONT_HOST, "use-magic-link")
+        query_params = dict(usage=self.usage.value, key=self.key)
+        return f"{base_url}?{urlencode(query_params)}"

@@ -196,7 +196,6 @@ if EMAIL_BACKEND_SLUG == "smtp":
 ##########################################################################################
 
 FRONT_HOST = env("DJ_FRONT_HOST")
-FRONT_ROUTE_USE_MAGIC_LINK = "use-magic-link"
 
 ##########################################################################################
 # Media files / Object storage
