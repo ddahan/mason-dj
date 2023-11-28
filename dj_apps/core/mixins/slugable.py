@@ -12,5 +12,6 @@ class Slugable(models.Model):
 
     # Remove if the slug should not be automatically created/modified
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if hasattr(self, "name"):
+            self.slug = slugify(self.name)
         super().save(*args, **kwargs)

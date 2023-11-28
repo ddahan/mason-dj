@@ -2,9 +2,9 @@ from django.contrib.auth import authenticate, get_user_model
 
 from ninja import Router
 
-from profiles.exceptions import EmailAlreadyExists, InvalidLogin
+from profiles.exceptions import EmailAlreadyExists, InvalidLogin, UnexistingUser
 
-from .schemas import UserSchemaInCreate, UserSchemaInLogin, UserSchemaOut
+from .schemas import EmailSchemaIn, UserSchemaInCreate, UserSchemaInLogin, UserSchemaOut
 
 User = get_user_model()
 router = Router()
@@ -35,6 +35,15 @@ def login(request, payload: UserSchemaInLogin):
         )
 
 
-@router.post("reset-password")
-def reset_password(request):
-    return {"reset": "ok"}
+@router.post("send-reset-password-link", auth=None)
+def send_reset_password_link(request, payload: EmailSchemaIn):
+    try:
+        user = User.objects.get(email=payload.email)
+    except User.DoesNotExist:
+        raise UnexistingUser(
+            message="This user does not exist in our database.",
+            error_level="field",
+            field_name="email",
+        )
+    else:
+        user.send_reset_password_magic_link()

@@ -11,3 +11,7 @@ class EmailAlreadyExists(ProjectException):
 
 class InvalidLogin(ProjectException):
     pass
+
+
+class UnexistingUser(ProjectException):
+    pass

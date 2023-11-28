@@ -25,3 +25,10 @@ class UserSchemaOut(ModelSchema):
         fields = ("sid", "email")
 
     api_token_key: str
+
+
+class EmailSchemaIn(ModelSchema):
+    class Meta:
+        model = User
+        fields = ("email",)
+        extra = "forbid"

@@ -13,6 +13,7 @@ from core.mixins.auto_validable import AutoValidable
 from core.mixins.deactivable import Deactivable
 from core.mixins.secret_id import SecretID
 from core.mixins.time_stampable import TimeStampable
+from mailing.models.mail_skeleton import MailSkeleton
 
 
 class UserManager(BaseUserManager):
@@ -98,3 +99,15 @@ class User(
 
     def __str__(self):
         return self.name
+
+    def send_reset_password_magic_link(self):
+        MagicLinkToken = apps.get_model("token_auth", "MagicLinkToken")
+        from token_auth.models.magic_link_token import MagicLinkUsage
+
+        magic_link_token = MagicLinkToken.objects.create(
+            user=self, usage=MagicLinkUsage.RESET_PASSWORD
+        )
+        MailSkeleton.send_with(
+            "SEND_RESET_PASSWORD_LINK",
+            {self.email: {"magic_link": magic_link_token.as_front_url}},
+        )
