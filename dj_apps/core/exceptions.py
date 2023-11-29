@@ -1,44 +1,59 @@
 from typing import Literal
 
-from django.core.exceptions import ImproperlyConfigured
-
 
 class ProjectException(Exception):
     """
     Raise for specific exceptions related to this project.
     Additional data can be binded to allow front-end to deal with the exception.
+
     Parameters:
     * message: the message which should be displayed
-    * error_level: to know how to display the error: globally in a toast, or locally
-    * field_name: if error_level is field, provide the field name
+    * error_level: to know how to display the error:
+        - 'global' -> in a toast
+        - 'non_field' -> at the top of the form
+        - 'field' -> on a specific field
+    * field_name: if error_level is 'field', provide the field name
+
+    Note that every exception can be overrided when instanciated. This can be handful to adapt the error the context.
+
     """
 
     def __init__(
         self,
         message: str | None = None,
-        error_level: Literal["global", "non_field", "field"] = "global",
+        error_level: Literal["global", "non_field", "field"] = None,
         field_name: str | None = None,
     ):
-        if type(self) == ProjectException:
-            raise Exception("<ProjectException> must be subclassed.")
+        if self.__class__.__subclasses__():
+            raise NotImplementedError(
+                f"{self.__class__.__name__} should not be instanciated directly."
+            )
 
-        if bool(field_name) != (error_level == "field"):
-            raise Exception("field_name must be defined when error_level is 'field'")
+        # Define attributes from class definition or object instanciation
+        for attr_name, attr_value in {
+            "message": message,
+            "error_level": error_level,
+            "field_name": field_name,
+        }.items():
+            setattr(
+                self,
+                attr_name,
+                attr_value
+                if attr_value is not None
+                else getattr(self.__class__, attr_name, None),
+            )
 
-        # Use default exception message if it exists, otherwise, rely on an initialiation
-        if message:
-            self.message = message
-        else:
-            if not self.message:
-                raise ImproperlyConfigured(
-                    "No message is given at all. Please provide a message in the exception itself, or in the endpoint."
-                )
-            # This might seem an error, but what this line does is essentially take the message from the class level (if it exists) and creates an instance-level attribute with the same value. This ensures that message is in the instance's __dict__. If this line is removed and no message is passed during initialization, there won't be an instance attribute message created. The message will still be accessible through the class, but it won't appear in the instance's __dict__ because __dict__ only shows attributes set at the instance level.
-            self.message = self.message
+        # Verification Checks
+        if not self.message or not self.error_level:
+            raise InconsistencyException(
+                "A 'message' and an 'error_level' must be defined, either in class definition, either in object instanciation."
+            )
 
-        self.error_level = error_level
-        self.field_name = field_name
+        if bool(self.error_level == "field") != bool(self.field_name):
+            raise InconsistencyException(
+                "'field_name' must be defined when error_level is 'field'"
+            )
 
 
-class InconsistencyException(ProjectException):
+class InconsistencyException(Exception):
     pass

@@ -6,12 +6,17 @@ class ProfilesException(ProjectException):
 
 
 class EmailAlreadyExists(ProfilesException):
-    pass
+    message = "This email already exists."
+    error_level = "field"
+    field_name = "email"
 
 
 class InvalidLogin(ProfilesException):
-    pass
+    message = "Wrong given credentials. Please try again."
+    error_level = "non_field"
 
 
 class UnexistingUser(ProfilesException):
-    pass
+    message = "This user does not exist in our database."
+    error_level = "field"
+    field_name = "email"

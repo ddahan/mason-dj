@@ -22,11 +22,7 @@ router = Router()
 @router.post("signup", response=UserSchemaOut, auth=None)
 def signup(request, payload: UserSchemaInCreate):
     if User.objects.filter(email=payload.email).exists():
-        raise EmailAlreadyExists(
-            message="This email already exists.",
-            error_level="field",
-            field_name="email",
-        )
+        raise EmailAlreadyExists()
 
     new_user = User.objects.create_user(**payload.dict(exclude_unset=True))
     return new_user
@@ -39,9 +35,7 @@ def login(request, payload: UserSchemaInLogin):
     if user is not None:
         return user
     else:
-        raise InvalidLogin(
-            message="Wrong given credentials. Please try again.", error_level="non_field"
-        )
+        raise InvalidLogin()
 
 
 @router.post("send-reset-password-link", auth=None)
@@ -49,11 +43,7 @@ def send_reset_password_link(request, payload: EmailSchemaIn):
     try:
         user = User.objects.get(email=payload.email)
     except User.DoesNotExist:
-        raise UnexistingUser(
-            message="This user does not exist in our database.",
-            error_level="field",
-            field_name="email",
-        )
+        raise UnexistingUser()
     else:
         user.send_reset_password_magic_link()
 
