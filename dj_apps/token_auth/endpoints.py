@@ -21,6 +21,8 @@ router = Router()
 
 @router.post("signup", response=UserSchemaOut, auth=None)
 def signup(request, payload: UserSchemaInCreate):
+    """By Design, the signup will also log the user in, that's why it return the same schema"""
+
     if User.objects.filter(email=payload.email).exists():
         raise EmailAlreadyExists()
 
