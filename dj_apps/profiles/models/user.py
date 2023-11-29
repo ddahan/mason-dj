@@ -109,5 +109,9 @@ class User(
         )
         MailSkeleton.send_with(
             "SEND_RESET_PASSWORD_LINK",
-            {self.email: {"magic_link": magic_link_token.as_front_url}},
+            {
+                self.email: {
+                    "magic_link": magic_link_token.as_front_url(key=magic_link_token.key)
+                }
+            },
         )

@@ -16,9 +16,11 @@ from .base_token import BaseToken
 
 
 class MagicLinkUsage(models.TextChoices):
-    RESET_PASSWORD = "reset-password", "Reset Password"
-    # SIGNUP = "signup", "Sign up"
-    # LOGIN = "login", "Log in"
+    """Usage value is the front-url to access"""
+
+    RESET_PASSWORD = "auth/classic/reset-password", "Reset Password"
+    # SIGNUP = "auth/passwordless/signup", "Sign up"
+    # LOGIN = "auth/passwordless/login", "Log in"
 
 
 class MagicLinkTokenQuerySet(EndableMixinQuerySet):
@@ -47,11 +49,9 @@ class MagicLinkToken(
 
     objects = Manager.from_queryset(MagicLinkTokenQuerySet)()
 
-    @property
-    def as_front_url(self) -> str:
+    def as_front_url(self, **query_params) -> str:
         """
         Build a magic link url to be used with any an external front-end app
         """
-        base_url = join(settings.FRONT_HOST, "use-magic-link")
-        query_params = dict(usage=self.usage.value, key=self.key)
+        base_url = join(settings.FRONT_HOST, self.usage.value)
         return f"{base_url}?{urlencode(query_params)}"

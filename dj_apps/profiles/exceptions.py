@@ -5,13 +5,13 @@ class ProfilesException(ProjectException):
     pass
 
 
-class EmailAlreadyExists(ProjectException):
+class EmailAlreadyExists(ProfilesException):
     pass
 
 
-class InvalidLogin(ProjectException):
+class InvalidLogin(ProfilesException):
     pass
 
 
-class UnexistingUser(ProjectException):
+class UnexistingUser(ProfilesException):
     pass

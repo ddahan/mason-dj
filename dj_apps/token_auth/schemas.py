@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 
-from ninja import ModelSchema
+from ninja import ModelSchema, Schema
 
 User = get_user_model()
 
@@ -32,3 +32,8 @@ class EmailSchemaIn(ModelSchema):
         model = User
         fields = ("email",)
         extra = "forbid"
+
+
+class ResetPasswordSchemaIn(Schema):
+    key: str
+    new_password: str

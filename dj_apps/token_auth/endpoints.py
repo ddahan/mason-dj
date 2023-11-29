@@ -1,10 +1,19 @@
 from django.contrib.auth import authenticate, get_user_model
+from django.db import transaction
 
 from ninja import Router
 
 from profiles.exceptions import EmailAlreadyExists, InvalidLogin, UnexistingUser
 
-from .schemas import EmailSchemaIn, UserSchemaInCreate, UserSchemaInLogin, UserSchemaOut
+from .exceptions import MagicLinkNotFound
+from .models.magic_link_token import MagicLinkToken, MagicLinkUsage
+from .schemas import (
+    EmailSchemaIn,
+    ResetPasswordSchemaIn,
+    UserSchemaInCreate,
+    UserSchemaInLogin,
+    UserSchemaOut,
+)
 
 User = get_user_model()
 router = Router()
@@ -49,6 +58,16 @@ def send_reset_password_link(request, payload: EmailSchemaIn):
         user.send_reset_password_magic_link()
 
 
-# @router.post("use-magic-link", auth=None)
-# def use_magic_link(request, payload: ResetPasswordIn):
-#     ...  # FIXME
+@router.post("reset-password", auth=None)
+def reset_password(request, payload: ResetPasswordSchemaIn):
+    try:
+        magic_link = MagicLinkToken.objects.get(key=payload.key)
+    except MagicLinkToken.DoesNotExist:
+        raise MagicLinkNotFound()
+    else:
+        assert magic_link.usage == MagicLinkUsage.RESET_PASSWORD
+        user = magic_link.user
+        with transaction.atomic():
+            user.set_password(payload.new_password)  # WARN: unchecked
+            user.save()
+            magic_link.consume()
