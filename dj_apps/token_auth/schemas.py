@@ -1,3 +1,5 @@
+from typing import Literal
+
 from django.contrib.auth import get_user_model
 
 from ninja import ModelSchema, Schema
@@ -27,11 +29,13 @@ class UserSchemaOut(ModelSchema):
     api_token_key: str
 
 
-class EmailSchemaIn(ModelSchema):
-    class Meta:
-        model = User
-        fields = ("email",)
-        extra = "forbid"
+class EmailSchemaIn(Schema):
+    email: str  # we could use EmailStr
+
+
+class EnterVerificationCodeSchemaIn(Schema):
+    email: str
+    code: str  # no need to add extra validation here
 
 
 class ResetPasswordSchemaIn(Schema):
