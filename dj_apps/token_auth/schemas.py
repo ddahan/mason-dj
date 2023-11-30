@@ -1,5 +1,3 @@
-from typing import Literal
-
 from django.contrib.auth import get_user_model
 
 from ninja import ModelSchema, Schema
