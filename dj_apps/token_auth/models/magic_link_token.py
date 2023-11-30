@@ -8,6 +8,7 @@ from django.db.models.deletion import CASCADE
 from django.db.models.manager import Manager
 
 from core.mixins.auto_validable import AutoValidable
+from mailing.models.mail_skeleton import MailSkeleton
 
 from ..mixins.consumable import ConsumableMixin
 from ..mixins.endable import EndableMixin, EndableMixinQuerySet
@@ -19,8 +20,6 @@ class MagicLinkUsage(models.TextChoices):
     """Usage value is the front-url to access"""
 
     RESET_PASSWORD = "auth/classic/reset-password", "Reset Password"
-    # SIGNUP = "auth/passwordless/signup", "Sign up"
-    # LOGIN = "auth/passwordless/login", "Log in"
 
 
 class MagicLinkTokenQuerySet(EndableMixinQuerySet):
@@ -55,3 +54,11 @@ class MagicLinkToken(
         """
         base_url = join(settings.FRONT_HOST, self.usage.value)
         return f"{base_url}?{urlencode(query_params)}"
+
+    @classmethod
+    def send_new_to(cls, user, usage: MagicLinkUsage.choices):
+        new_token = cls.objects.create(user=user, usage=usage)
+        MailSkeleton.send_with(
+            "SEND_RESET_PASSWORD_LINK",
+            {user.email: {"magic_link": new_token.as_front_url(key=new_token.key)}},
+        )

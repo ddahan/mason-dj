@@ -6,6 +6,7 @@ from django.db.models.deletion import CASCADE
 from django.db.models.manager import Manager
 
 from core.mixins.secret_id import SecretID
+from mailing.models.mail_skeleton import MailSkeleton
 
 from ..mixins.consumable import ConsumableMixin
 from ..mixins.digit_6_key import Digit6KeyMixin
@@ -17,27 +18,16 @@ class PasswordLessTokenQuerySet(EndableMixinQuerySet):
     pass
 
 
-class PasswordLessToken(
+class BasePasswordLessToken(
     SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
 ):
     """
-    6-digit token received by a user to validate its identity when signin or signup.
-    Many tokens with the same key can co-exist.
+    6-digit token received  to validate identity. Many tokens with the same key can co-exist.
     """
 
     objects = Manager.from_queryset(PasswordLessTokenQuerySet)()
 
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=CASCADE,
-        related_name="passwordless_tokens",
-        verbose_name="utilisateur",
-    )
-
     VALIDITY_TIME = td(minutes=20)
-
-    class Meta:
-        db_table = "tb_password_less_tokens"
 
     @classmethod
     def challenge(cls, input_code, user) -> bool:
@@ -52,3 +42,36 @@ class PasswordLessToken(
             return True
 
         return False
+
+
+class LoginPasswordLessToken(BasePasswordLessToken):
+    class Meta:
+        db_table = "tb_login_password_less_tokens"
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=CASCADE,
+        related_name="passwordless_tokens",
+        verbose_name="utilisateur",
+    )
+
+    @classmethod
+    def send_new_to(cls, user):
+        new_token = cls.objects.create(user=user)
+        MailSkeleton.send_with(
+            "SEND_LOGIN_PASSWORDLESS_CODE", {user.email: {"code": new_token.key}}
+        )
+
+
+class SignupPasswordLessToken(BasePasswordLessToken):
+    class Meta:
+        db_table = "tb_signup_password_less_tokens"
+
+    email = models.EmailField()
+
+    @classmethod
+    def send_new_to(cls, email: str):
+        new_token = cls.objects.create(email=email)
+        MailSkeleton.send_with(
+            "SEND_SIGNUP_PASSWORDLESS_CODE", {email: {"code": new_token.key}}
+        )
