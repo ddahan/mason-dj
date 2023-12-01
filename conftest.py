@@ -16,6 +16,6 @@ from token_auth.models.api_token import APIAccessToken
 def auth_headers(db) -> dict:
     # TODO: ensure it's called once per session to speed tests up
     user = UserFactory()
-    token = APIAccessToken.objects.get(user=user)
+    token = APIAccessToken.objects.create(user=user)
     headers = {"X-API-Key": token.key}
     return headers
