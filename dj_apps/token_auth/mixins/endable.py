@@ -9,12 +9,6 @@ class EndableMixinQuerySet(query.QuerySet):
         now = timezone.now()
         return self.filter(end_of_validity__gte=now)
 
-    def valids_for_user(self, user):  # TODO: Move, belong to children class
-        return self.valids().filter(user=user)
-
-    def valids_for_email(self, email):  # TODO: Move, belong to children class
-        return self.valids().filter(email=email)
-
     def invalids(self):
         now = timezone.now()
         return self.filter(end_of_validity__lt=now)

@@ -34,8 +34,6 @@ class BasePasswordLessToken(
 
     objects = Manager.from_queryset(PasswordLessTokenQuerySet)()
 
-    VALIDITY_TIME = td(minutes=20)
-
     @classmethod
     def challenge(cls, input_code, filtering: dict, consume=True) -> bool:
         """
@@ -52,11 +50,11 @@ class BasePasswordLessToken(
         return False
 
 
-class LoginPasswordLessToken(
-    SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
-):
+class LoginPasswordLessToken(BasePasswordLessToken):
     class Meta:
         db_table = "tb_login_password_less_tokens"
+
+    VALIDITY_TIME = td(minutes=20)
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -78,11 +76,11 @@ class LoginPasswordLessToken(
         )
 
 
-class SignupPasswordLessToken(
-    SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
-):
+class SignupPasswordLessToken(BasePasswordLessToken):
     class Meta:
         db_table = "tb_signup_password_less_tokens"
+
+    VALIDITY_TIME = td(minutes=20)
 
     email = models.EmailField()
 
