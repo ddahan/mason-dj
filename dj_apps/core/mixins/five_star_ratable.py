@@ -6,6 +6,4 @@ class FiveStarRatable(models.Model):
     class Meta:
         abstract = True
 
-    rating = models.PositiveSmallIntegerField(
-        validators=[MaxValueValidator(5)], verbose_name="note"
-    )
+    rating = models.PositiveSmallIntegerField(validators=[MaxValueValidator(5)])

@@ -246,3 +246,139 @@
     date_done: 2023-12-01 16:33:00.007255+00:00
     traceback: null
     meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 19
+  fields:
+    task_id: 0f1bd74b-b91d-452c-8871-dd67b8f965e6
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:34:00.013703+00:00
+    date_done: 2023-12-01 16:34:00.013715+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 20
+  fields:
+    task_id: f6d911db-1c9a-4f17-986c-39f248cc81f7
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:35:00.005502+00:00
+    date_done: 2023-12-01 16:35:00.005508+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 21
+  fields:
+    task_id: 4d46606e-9b57-482e-babc-f0f6551587a9
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:36:00.029594+00:00
+    date_done: 2023-12-01 16:36:00.029607+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 22
+  fields:
+    task_id: d996e421-df62-4db1-adf3-8f6fea125553
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:37:00.006314+00:00
+    date_done: 2023-12-01 16:37:00.006321+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 23
+  fields:
+    task_id: 5683f064-86de-4f90-b1eb-aa41ea9e5e1b
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:38:00.012078+00:00
+    date_done: 2023-12-01 16:38:00.012085+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 24
+  fields:
+    task_id: 007582d3-9f1f-4ca1-aaf1-92905a043516
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:39:00.025167+00:00
+    date_done: 2023-12-01 16:39:00.025179+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 25
+  fields:
+    task_id: b6229224-56fd-4d6a-bda9-44a683e78a65
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:40:00.006241+00:00
+    date_done: 2023-12-01 16:40:00.006247+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 26
+  fields:
+    task_id: 4efa8e60-e798-4bb5-872b-ed0d854e7ab8
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:41:00.005809+00:00
+    date_done: 2023-12-01 16:41:00.005831+00:00
+    traceback: null
+    meta: '{"children": []}'

@@ -12,9 +12,7 @@ class UniqueSecretKeyMixin(models.Model):
 
     """Add fields and features related to a unique key generated """
 
-    key = models.CharField(
-        primary_key=True, max_length=512, unique=True, editable=False, verbose_name="clé"
-    )
+    key = models.CharField(primary_key=True, max_length=512, unique=True, editable=False)
 
     def _build_key(self) -> str:
         return secrets.token_urlsafe(32)

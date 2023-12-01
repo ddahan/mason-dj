@@ -19,8 +19,8 @@ class TimeStampable(models.Model):
     class Meta:
         abstract = True
 
-    created = models.DateTimeField(editable=False, verbose_name="Création")
-    modified = models.DateTimeField(editable=False, verbose_name="Modification")
+    created = models.DateTimeField(editable=False)
+    modified = models.DateTimeField(editable=False)
 
     def save(self, *args, **kwargs):
         """

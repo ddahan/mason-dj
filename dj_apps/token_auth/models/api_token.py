@@ -16,7 +16,7 @@ User = get_user_model()
 
 
 class APIAccessTokenQuerySet(ExpirableMixinQuerySet):
-    ...
+    pass
 
 
 class APIAccessToken(UniqueSecretKeyMixin, ExpirableMixin, RevocableMixin, BaseToken):
@@ -32,10 +32,7 @@ class APIAccessToken(UniqueSecretKeyMixin, ExpirableMixin, RevocableMixin, BaseT
     VALIDITY_TIME = td(weeks=1)
 
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=CASCADE,
-        related_name="api_access_tokens",
-        verbose_name="utilisateur",
+        settings.AUTH_USER_MODEL, on_delete=CASCADE, related_name="api_access_tokens"
     )
 
     def __str__(self):

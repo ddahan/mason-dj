@@ -37,19 +37,11 @@ class Badge(Expirable, Deactivable, TimeStampable, AutoValidable, SafeDeleteMode
     _safedelete_policy = SOFT_DELETE
 
     identifier = models.CharField(
-        max_length=2048,
-        unique=True,
-        default=get_secret_id,
-        editable=False,
-        verbose_name="identifiant",
+        max_length=2048, unique=True, default=get_secret_id, editable=False
     )
 
     owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        blank=True,
-        null=True,
-        on_delete=models.PROTECT,
-        verbose_name="propriétaire",
+        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.PROTECT
     )
 
     def assign(self, user):

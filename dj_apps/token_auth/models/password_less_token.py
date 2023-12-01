@@ -57,10 +57,7 @@ class LoginPasswordLessToken(BasePasswordLessToken):
     VALIDITY_TIME = td(minutes=20)
 
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=CASCADE,
-        related_name="passwordless_tokens",
-        verbose_name="utilisateur",
+        settings.AUTH_USER_MODEL, on_delete=CASCADE, related_name="passwordless_tokens"
     )
 
     @classmethod

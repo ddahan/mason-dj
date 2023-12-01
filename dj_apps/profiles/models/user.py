@@ -53,7 +53,6 @@ class User(
 ):
     class Meta:
         db_table = "tb_users"
-        verbose_name = "utilisateur"
         ordering = ["-created"]
         get_latest_by = "created"
 

@@ -3,10 +3,9 @@
   fields:
     slug: SEND_RESET_PASSWORD_LINK
     subject: Réinitialisation de votre mot de passe
-    html_body: "<p>Vous avez demandé à réinitialiser votre mot de passe.</p>\r\n\r\n<p>Cliquez
-      sur <a href=\"{{magic_link|safe}}\">ce lien</a> pour accéder à la page de réinitialisation
-      de votre mot de passe.</p>\r\n\r\n<p>Si la demande ne provient pas de vous,
-      veuillez ignorer ce message.</p>"
+    html_body: "<p>Click on <a href=\"{{magic_link|safe}}\">this link</a> to reinitialize
+      your password.</p>\r\n\r\n<p>If the request does not come from you, please ignore
+      this message.</p>"
     send_mode: to
 - model: mailing.mailskeleton
   pk: 3

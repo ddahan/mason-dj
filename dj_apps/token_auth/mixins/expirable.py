@@ -20,7 +20,7 @@ class ExpirableMixin(models.Model):
     class Meta:
         abstract = True
 
-    expiration = models.DateTimeField(verbose_name="fin de validité")
+    expiration = models.DateTimeField()
 
     def save(self, *args, **kwargs):
         if not hasattr(self, "VALIDITY_TIME"):

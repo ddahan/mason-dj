@@ -7,8 +7,8 @@ class DateFramable(models.Model):
     class Meta:
         abstract = True
 
-    start = models.DateField(verbose_name="début")
-    end = models.DateField(verbose_name="fin")
+    start = models.DateField()
+    end = models.DateField()
 
     def save(self, *args, **kwargs):
         if self.end < self.start:

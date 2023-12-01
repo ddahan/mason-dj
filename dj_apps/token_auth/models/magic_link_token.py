@@ -34,10 +34,7 @@ class MagicLinkToken(
     """
 
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=CASCADE,
-        related_name="magiclink_tokens",
-        verbose_name="utilisateur",
+        settings.AUTH_USER_MODEL, on_delete=CASCADE, related_name="magiclink_tokens"
     )
     usage = models.CharField(max_length=1024, choices=MagicLinkUsage.choices)
 

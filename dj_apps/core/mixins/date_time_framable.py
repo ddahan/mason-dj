@@ -39,8 +39,8 @@ class DateTimeFramable(Framable, models.Model):
     class Meta:
         abstract = True
 
-    start = models.DateTimeField(verbose_name="début")
-    end = models.DateTimeField(verbose_name="fin")
+    start = models.DateTimeField()
+    end = models.DateTimeField()
 
     @property
     def is_current(self):

@@ -18,5 +18,5 @@ class TimeFramable(Framable, models.Model):
     class Meta:
         abstract = True
 
-    start = models.TimeField(verbose_name="début")
-    end = models.TimeField(verbose_name="fin")
+    start = models.TimeField()
+    end = models.TimeField()
