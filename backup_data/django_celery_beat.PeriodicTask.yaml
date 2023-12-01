@@ -19,20 +19,20 @@
     one_off: false
     start_time: null
     enabled: true
-    last_run_at: 2023-11-25 01:29:46.824879+00:00
-    total_run_count: 3
-    date_changed: 2023-11-25 01:29:46.836393+00:00
+    last_run_at: 2023-12-01 16:21:18.805843+00:00
+    total_run_count: 4
+    date_changed: 2023-12-01 16:31:39.954396+00:00
     description: ''
 - model: django_celery_beat.periodictask
   pk: 2
   fields:
-    name: Add
-    task: core.tasks.add
+    name: delete expired tokens
+    task: token_auth.tasks.delete_expired_tokens
     interval: null
     crontab: 2
     solar: null
     clocked: null
-    args: '[3,2]'
+    args: '[]'
     kwargs: '{}'
     queue: null
     exchange: null
@@ -44,7 +44,7 @@
     one_off: false
     start_time: null
     enabled: true
-    last_run_at: 2023-11-25 01:29:46.837652+00:00
-    total_run_count: 1327
-    date_changed: 2023-11-25 01:29:53.446612+00:00
+    last_run_at: 2023-12-01 16:31:39.957979+00:00
+    total_run_count: 1337
+    date_changed: 2023-12-01 16:31:39.966272+00:00
     description: ''

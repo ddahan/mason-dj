@@ -3,9 +3,6 @@ from django.utils.timezone import is_naive, make_aware, now
 
 
 class ExpirableQueryset(models.query.QuerySet):
-    class Meta:
-        abstract = True
-
     def expired(self):
         return self.filter(expiration__lte=now())
 

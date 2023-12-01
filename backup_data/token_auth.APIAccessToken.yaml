@@ -1,1 +1,7 @@
-[]
+- model: token_auth.apiaccesstoken
+  pk: ZBjmEFCAEogqmq8jFv28xHO5kUgODBlU8-8OwyhBEeY
+  fields:
+    created: 2023-12-01 16:20:31.472010+00:00
+    modified: 2023-12-01 16:20:31.472010+00:00
+    expiration: 2023-12-08 16:20:31.472003+00:00
+    user: 1

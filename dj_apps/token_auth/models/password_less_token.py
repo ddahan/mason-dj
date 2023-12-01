@@ -10,18 +10,18 @@ from mailing.models.mail_skeleton import MailSkeleton
 
 from ..mixins.consumable import ConsumableMixin
 from ..mixins.digit_6_key import Digit6KeyMixin
-from ..mixins.endable import EndableMixin, EndableMixinQuerySet
+from ..mixins.expirable import ExpirableMixin, ExpirableMixinQuerySet
 from .base_token import BaseToken
 
 
-class PasswordLessTokenQuerySet(EndableMixinQuerySet):
+class BasePasswordLessTokenQuerySet(ExpirableMixinQuerySet):
     pass
 
 
 class BasePasswordLessToken(
     SecretID,
     Digit6KeyMixin,
-    EndableMixin,
+    ExpirableMixin,
     ConsumableMixin,
     BaseToken,
 ):
@@ -32,7 +32,7 @@ class BasePasswordLessToken(
     class Meta:
         abstract = True
 
-    objects = Manager.from_queryset(PasswordLessTokenQuerySet)()
+    objects = Manager.from_queryset(BasePasswordLessTokenQuerySet)()
 
     @classmethod
     def challenge(cls, input_code, filtering: dict, consume=True) -> bool:

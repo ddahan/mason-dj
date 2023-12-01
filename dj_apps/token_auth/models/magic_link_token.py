@@ -11,7 +11,7 @@ from core.mixins.auto_validable import AutoValidable
 from mailing.models.mail_skeleton import MailSkeleton
 
 from ..mixins.consumable import ConsumableMixin
-from ..mixins.endable import EndableMixin, EndableMixinQuerySet
+from ..mixins.expirable import ExpirableMixin, ExpirableMixinQuerySet
 from ..mixins.unique_secret_key import UniqueSecretKeyMixin
 from .base_token import BaseToken
 
@@ -22,12 +22,12 @@ class MagicLinkUsage(models.TextChoices):
     RESET_PASSWORD = "auth/classic/reset-password", "Reset Password"
 
 
-class MagicLinkTokenQuerySet(EndableMixinQuerySet):
+class MagicLinkTokenQuerySet(ExpirableMixinQuerySet):
     pass
 
 
 class MagicLinkToken(
-    UniqueSecretKeyMixin, EndableMixin, ConsumableMixin, BaseToken, AutoValidable
+    UniqueSecretKeyMixin, ExpirableMixin, ConsumableMixin, BaseToken, AutoValidable
 ):
     """
     Token received by a user to validate its email

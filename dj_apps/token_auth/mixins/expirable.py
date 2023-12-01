@@ -4,27 +4,27 @@ from django.db.models import query
 from django.utils import timezone
 
 
-class EndableMixinQuerySet(query.QuerySet):
-    def valids(self):
+class ExpirableMixinQuerySet(query.QuerySet):
+    def unexpired(self):
         now = timezone.now()
-        return self.filter(end_of_validity__gte=now)
+        return self.filter(expiration__gte=now)
 
-    def invalids(self):
+    def expired(self):
         now = timezone.now()
-        return self.filter(end_of_validity__lt=now)
+        return self.filter(expiration__lt=now)
 
 
-class EndableMixin(models.Model):
+class ExpirableMixin(models.Model):
     """Add fields and end of validity feature to a token"""
 
     class Meta:
         abstract = True
 
-    end_of_validity = models.DateTimeField(verbose_name="fin de validité")
+    expiration = models.DateTimeField(verbose_name="fin de validité")
 
     def save(self, *args, **kwargs):
         if not hasattr(self, "VALIDITY_TIME"):
             raise ImproperlyConfigured("VALIDITY_TIME attribute must be defined")
         if self._state.adding:
-            self.end_of_validity = timezone.now() + self.VALIDITY_TIME
+            self.expiration = timezone.now() + self.VALIDITY_TIME
         super().save(*args, **kwargs)

@@ -7,8 +7,8 @@ from .models.password_less_token import LoginPasswordLessToken, SignupPasswordLe
 
 @admin.register(APIAccessToken)
 class APIAccessTokenAdmin(admin.ModelAdmin):
-    list_display = ("end_of_validity", "key", "user")
-    list_filter = ("end_of_validity", "user")
+    list_display = ("expiration", "key", "user")
+    list_filter = ("expiration", "user")
 
 
 @admin.register(MagicLinkToken)
@@ -16,12 +16,12 @@ class MagicLinkTokenAdmin(admin.ModelAdmin):
     list_display = (
         "created",
         "modified",
-        "end_of_validity",
+        "expiration",
         "key",
         "user",
         "usage",
     )
-    list_filter = ("end_of_validity", "user")
+    list_filter = ("expiration", "user")
 
 
 @admin.register(LoginPasswordLessToken)
@@ -31,11 +31,11 @@ class LoginPasswordLessTokenAdmin(admin.ModelAdmin):
         "sid",
         "created",
         "modified",
-        "end_of_validity",
+        "expiration",
         "key",
         "user",
     )
-    list_filter = ("end_of_validity", "user")
+    list_filter = ("expiration", "user")
 
 
 @admin.register(SignupPasswordLessToken)
@@ -45,8 +45,8 @@ class SignupPasswordLessTokenAdmin(admin.ModelAdmin):
         "sid",
         "created",
         "modified",
-        "end_of_validity",
+        "expiration",
         "key",
         "email",
     )
-    list_filter = ("end_of_validity",)
+    list_filter = ("expiration",)

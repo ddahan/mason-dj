@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models.deletion import CASCADE
 
-from ..mixins.endable import EndableMixin, EndableMixinQuerySet
+from ..mixins.expirable import ExpirableMixin, ExpirableMixinQuerySet
 from ..mixins.revocable import RevocableMixin
 from ..mixins.unique_secret_key import UniqueSecretKeyMixin
 from .base_token import BaseToken
@@ -15,11 +15,11 @@ from .base_token import BaseToken
 User = get_user_model()
 
 
-class APIAccessTokenQuerySet(EndableMixinQuerySet):
+class APIAccessTokenQuerySet(ExpirableMixinQuerySet):
     ...
 
 
-class APIAccessToken(UniqueSecretKeyMixin, EndableMixin, RevocableMixin, BaseToken):
+class APIAccessToken(UniqueSecretKeyMixin, ExpirableMixin, RevocableMixin, BaseToken):
     """
     Token to access programming API, develired after a successful login.
     It will be stored on front-end (e.g. in local storage).
@@ -47,7 +47,7 @@ class APIAccessToken(UniqueSecretKeyMixin, EndableMixin, RevocableMixin, BaseTok
         This is used everytime the front-end is passing a token key in a request which requires authentication.
         """
         try:
-            token = cls.objects.valids().get(key=key)
+            token = cls.objects.unexpired().get(key=key)
         except cls.DoesNotExist:
             return None
         else:

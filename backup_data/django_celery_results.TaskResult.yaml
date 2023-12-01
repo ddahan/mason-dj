@@ -1,34 +1,248 @@
 - model: django_celery_results.taskresult
-  pk: 5
+  pk: 7
   fields:
-    task_id: 6f44e023-0b10-4294-b84e-5a474f98ccf0
-    periodic_task_name: Add
-    task_name: core.tasks.add
-    task_args: '"[3, 2]"'
-    task_kwargs: '"{}"'
-    status: SUCCESS
-    worker: celery@01a31d6b8539
+    task_id: cc03e771-1056-4f97-80e8-b07e45de20bb
+    periodic_task_name: null
+    task_name: null
+    task_args: null
+    task_kwargs: null
+    status: FAILURE
+    worker: null
     content_type: application/json
     content_encoding: utf-8
-    result: '5'
-    date_created: 2023-11-25 01:29:47.276933+00:00
-    date_done: 2023-11-25 01:29:47.276988+00:00
+    result: '{"exc_type": "NotRegistered", "exc_message": ["core.tasks.add"], "exc_module":
+      "celery.exceptions"}'
+    date_created: 2023-12-01 16:21:19.165497+00:00
+    date_done: 2023-12-01 16:21:19.165524+00:00
     traceback: null
     meta: '{"children": []}'
 - model: django_celery_results.taskresult
-  pk: 6
+  pk: 8
   fields:
-    task_id: 029c0ff2-c7c6-4904-9758-7f4cb586faa0
+    task_id: ad466074-e5a3-4ef8-9c3e-c49f3c197cd3
     periodic_task_name: celery.backend_cleanup
     task_name: celery.backend_cleanup
     task_args: '"()"'
     task_kwargs: '"{}"'
     status: SUCCESS
-    worker: celery@01a31d6b8539
+    worker: celery@5769a7e750b1
     content_type: application/json
     content_encoding: utf-8
     result: 'null'
-    date_created: 2023-11-25 01:29:47.279884+00:00
-    date_done: 2023-11-25 01:29:47.279894+00:00
+    date_created: 2023-12-01 16:21:19.168875+00:00
+    date_done: 2023-12-01 16:21:19.168885+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 9
+  fields:
+    task_id: 889ca1f5-173a-4738-a188-bf16778b4ed7
+    periodic_task_name: null
+    task_name: null
+    task_args: null
+    task_kwargs: null
+    status: FAILURE
+    worker: null
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "NotRegistered", "exc_message": ["core.tasks.add"], "exc_module":
+      "celery.exceptions"}'
+    date_created: 2023-12-01 16:22:00.019667+00:00
+    date_done: 2023-12-01 16:22:00.019697+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 10
+  fields:
+    task_id: 14fa88b1-a072-42e6-b451-b87c2c85d1a0
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:24:00.044974+00:00
+    date_done: 2023-12-01 16:24:00.044986+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 11
+  fields:
+    task_id: e3684fed-a22b-4281-97ce-2037de23dfbc
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:25:00.018448+00:00
+    date_done: 2023-12-01 16:25:00.018470+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 12
+  fields:
+    task_id: 6196533a-ad01-470e-9add-e6e488076940
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:26:00.031495+00:00
+    date_done: 2023-12-01 16:26:00.031525+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 13
+  fields:
+    task_id: d8ea7efa-6dab-4428-adbe-7215617e6028
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:27:00.006017+00:00
+    date_done: 2023-12-01 16:27:00.006026+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 14
+  fields:
+    task_id: 7450000f-1ac1-43f9-86c0-fa166d068b58
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:28:00.016899+00:00
+    date_done: 2023-12-01 16:28:00.016910+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 15
+  fields:
+    task_id: f0d675f9-197e-416a-9775-e8d054909a90
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: FAILURE
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: '{"exc_type": "AttributeError", "exc_message": ["type object ''SignupPasswordLessToken''
+      has no attribute ''expired''"], "exc_module": "builtins"}'
+    date_created: 2023-12-01 16:29:00.026095+00:00
+    date_done: 2023-12-01 16:29:00.026112+00:00
+    traceback: "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\",
+      line 477, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/usr/local/lib/python3.12/site-packages/celery/app/trace.py\", line
+      760, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n
+      \ File \"/workspaces/mason-dj/dj_apps/token_auth/tasks.py\", line 10, in delete_expired_tokens\n
+      \   SignupPasswordLessToken.expired().delete()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError:
+      type object 'SignupPasswordLessToken' has no attribute 'expired'\n"
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 16
+  fields:
+    task_id: 41a982e6-2e74-4a83-834c-239854e94cdf
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:31:40.155072+00:00
+    date_done: 2023-12-01 16:31:40.155081+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 17
+  fields:
+    task_id: 334b6d2c-1f03-4aaa-b63d-1acd78bf9de6
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:32:00.028777+00:00
+    date_done: 2023-12-01 16:32:00.028791+00:00
+    traceback: null
+    meta: '{"children": []}'
+- model: django_celery_results.taskresult
+  pk: 18
+  fields:
+    task_id: baa7e97f-8989-4116-9319-a2661ab15bbb
+    periodic_task_name: delete expired tokens
+    task_name: token_auth.tasks.delete_expired_tokens
+    task_args: '"()"'
+    task_kwargs: '"{}"'
+    status: SUCCESS
+    worker: celery@5769a7e750b1
+    content_type: application/json
+    content_encoding: utf-8
+    result: 'null'
+    date_created: 2023-12-01 16:33:00.007249+00:00
+    date_done: 2023-12-01 16:33:00.007255+00:00
     traceback: null
     meta: '{"children": []}'

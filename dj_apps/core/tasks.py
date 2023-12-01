@@ -1,7 +1,3 @@
-from config.celery import app
+from config.celery import app  # noqa
 
-
-@app.task()
-def add(a, b):
-    """This dumb task is used for testing purposes"""
-    return a + b
+# Tasks can be added here.
