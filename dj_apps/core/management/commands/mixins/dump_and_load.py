@@ -13,7 +13,7 @@ class DumpAndLoadMixin:
         """Return all installed models using introspection, except the one specified
         because they are useless and can create integrity errors during deserialization.
         """
-        BLACKLISTED_APPS = ["contenttypes", "sessions", "admin"]
+        BLACKLISTED_APPS = ["sessions", "admin"]
         return [
             model
             for model in apps.get_models()
