@@ -5,10 +5,10 @@
     deleted_by_cascade: false
     is_active: true
     created: 2023-10-20 21:12:25.803709+00:00
-    modified: 2023-10-20 21:38:55.180058+00:00
+    modified: 2023-10-22 13:24:50.623149+00:00
     expiration: 2023-10-20 21:12:25+00:00
     identifier: VUZlunmZyx1BmKUfENB3tg
-    owner: 1
+    owner: null
 - model: badges.badge
   pk: 2
   fields:

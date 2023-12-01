@@ -193,27 +193,27 @@
 - model: auth.permission
   pk: 33
   fields:
-    name: Can add crontab
+    name: Can add solar event
     content_type: 9
-    codename: add_crontabschedule
+    codename: add_solarschedule
 - model: auth.permission
   pk: 34
   fields:
-    name: Can change crontab
+    name: Can change solar event
     content_type: 9
-    codename: change_crontabschedule
+    codename: change_solarschedule
 - model: auth.permission
   pk: 35
   fields:
-    name: Can delete crontab
+    name: Can delete solar event
     content_type: 9
-    codename: delete_crontabschedule
+    codename: delete_solarschedule
 - model: auth.permission
   pk: 36
   fields:
-    name: Can view crontab
+    name: Can view solar event
     content_type: 9
-    codename: view_crontabschedule
+    codename: view_solarschedule
 - model: auth.permission
   pk: 37
   fields:
@@ -241,99 +241,99 @@
 - model: auth.permission
   pk: 41
   fields:
-    name: Can add periodic task
+    name: Can add clocked
     content_type: 11
-    codename: add_periodictask
+    codename: add_clockedschedule
 - model: auth.permission
   pk: 42
   fields:
-    name: Can change periodic task
+    name: Can change clocked
     content_type: 11
-    codename: change_periodictask
+    codename: change_clockedschedule
 - model: auth.permission
   pk: 43
   fields:
-    name: Can delete periodic task
+    name: Can delete clocked
     content_type: 11
-    codename: delete_periodictask
+    codename: delete_clockedschedule
 - model: auth.permission
   pk: 44
   fields:
-    name: Can view periodic task
+    name: Can view clocked
     content_type: 11
-    codename: view_periodictask
+    codename: view_clockedschedule
 - model: auth.permission
   pk: 45
   fields:
-    name: Can add periodic tasks
+    name: Can add crontab
     content_type: 12
-    codename: add_periodictasks
+    codename: add_crontabschedule
 - model: auth.permission
   pk: 46
   fields:
-    name: Can change periodic tasks
+    name: Can change crontab
     content_type: 12
-    codename: change_periodictasks
+    codename: change_crontabschedule
 - model: auth.permission
   pk: 47
   fields:
-    name: Can delete periodic tasks
+    name: Can delete crontab
     content_type: 12
-    codename: delete_periodictasks
+    codename: delete_crontabschedule
 - model: auth.permission
   pk: 48
   fields:
-    name: Can view periodic tasks
+    name: Can view crontab
     content_type: 12
-    codename: view_periodictasks
+    codename: view_crontabschedule
 - model: auth.permission
   pk: 49
   fields:
-    name: Can add solar event
+    name: Can add periodic tasks
     content_type: 13
-    codename: add_solarschedule
+    codename: add_periodictasks
 - model: auth.permission
   pk: 50
   fields:
-    name: Can change solar event
+    name: Can change periodic tasks
     content_type: 13
-    codename: change_solarschedule
+    codename: change_periodictasks
 - model: auth.permission
   pk: 51
   fields:
-    name: Can delete solar event
+    name: Can delete periodic tasks
     content_type: 13
-    codename: delete_solarschedule
+    codename: delete_periodictasks
 - model: auth.permission
   pk: 52
   fields:
-    name: Can view solar event
+    name: Can view periodic tasks
     content_type: 13
-    codename: view_solarschedule
+    codename: view_periodictasks
 - model: auth.permission
   pk: 53
   fields:
-    name: Can add clocked
+    name: Can add periodic task
     content_type: 14
-    codename: add_clockedschedule
+    codename: add_periodictask
 - model: auth.permission
   pk: 54
   fields:
-    name: Can change clocked
+    name: Can change periodic task
     content_type: 14
-    codename: change_clockedschedule
+    codename: change_periodictask
 - model: auth.permission
   pk: 55
   fields:
-    name: Can delete clocked
+    name: Can delete periodic task
     content_type: 14
-    codename: delete_clockedschedule
+    codename: delete_periodictask
 - model: auth.permission
   pk: 56
   fields:
-    name: Can view clocked
+    name: Can view periodic task
     content_type: 14
-    codename: view_clockedschedule
+    codename: view_periodictask
 - model: auth.permission
   pk: 57
   fields:
@@ -433,72 +433,126 @@
 - model: auth.permission
   pk: 73
   fields:
-    name: Can add password less token
+    name: Can add global_permission
     content_type: 19
-    codename: add_passwordlesstoken
+    codename: add_globalpermission
 - model: auth.permission
   pk: 74
   fields:
-    name: Can change password less token
+    name: Can change global_permission
     content_type: 19
-    codename: change_passwordlesstoken
+    codename: change_globalpermission
 - model: auth.permission
   pk: 75
   fields:
-    name: Can delete password less token
+    name: Can delete global_permission
     content_type: 19
-    codename: delete_passwordlesstoken
+    codename: delete_globalpermission
 - model: auth.permission
   pk: 76
   fields:
-    name: Can view password less token
+    name: Can view global_permission
     content_type: 19
-    codename: view_passwordlesstoken
+    codename: view_globalpermission
 - model: auth.permission
   pk: 77
   fields:
-    name: Can add magic link token
+    name: Can add api access token
     content_type: 20
-    codename: add_magiclinktoken
+    codename: add_apiaccesstoken
 - model: auth.permission
   pk: 78
   fields:
-    name: Can change magic link token
+    name: Can change api access token
     content_type: 20
-    codename: change_magiclinktoken
+    codename: change_apiaccesstoken
 - model: auth.permission
   pk: 79
   fields:
-    name: Can delete magic link token
+    name: Can delete api access token
     content_type: 20
-    codename: delete_magiclinktoken
+    codename: delete_apiaccesstoken
 - model: auth.permission
   pk: 80
   fields:
-    name: Can view magic link token
+    name: Can view api access token
     content_type: 20
-    codename: view_magiclinktoken
+    codename: view_apiaccesstoken
 - model: auth.permission
   pk: 81
   fields:
-    name: Can add api token
+    name: Can add magic link token
     content_type: 21
-    codename: add_apitoken
+    codename: add_magiclinktoken
 - model: auth.permission
   pk: 82
   fields:
-    name: Can change api token
+    name: Can change magic link token
     content_type: 21
-    codename: change_apitoken
+    codename: change_magiclinktoken
 - model: auth.permission
   pk: 83
   fields:
-    name: Can delete api token
+    name: Can delete magic link token
     content_type: 21
-    codename: delete_apitoken
+    codename: delete_magiclinktoken
 - model: auth.permission
   pk: 84
   fields:
-    name: Can view api token
+    name: Can view magic link token
     content_type: 21
-    codename: view_apitoken
+    codename: view_magiclinktoken
+- model: auth.permission
+  pk: 85
+  fields:
+    name: Can add login password less token
+    content_type: 22
+    codename: add_loginpasswordlesstoken
+- model: auth.permission
+  pk: 86
+  fields:
+    name: Can change login password less token
+    content_type: 22
+    codename: change_loginpasswordlesstoken
+- model: auth.permission
+  pk: 87
+  fields:
+    name: Can delete login password less token
+    content_type: 22
+    codename: delete_loginpasswordlesstoken
+- model: auth.permission
+  pk: 88
+  fields:
+    name: Can view login password less token
+    content_type: 22
+    codename: view_loginpasswordlesstoken
+- model: auth.permission
+  pk: 89
+  fields:
+    name: Can add signup password less token
+    content_type: 23
+    codename: add_signuppasswordlesstoken
+- model: auth.permission
+  pk: 90
+  fields:
+    name: Can change signup password less token
+    content_type: 23
+    codename: change_signuppasswordlesstoken
+- model: auth.permission
+  pk: 91
+  fields:
+    name: Can delete signup password less token
+    content_type: 23
+    codename: delete_signuppasswordlesstoken
+- model: auth.permission
+  pk: 92
+  fields:
+    name: Can view signup password less token
+    content_type: 23
+    codename: view_signuppasswordlesstoken
+- model: auth.permission
+  pk: 93
+  fields:
+    name: Can Access Section Foo
+    content_type: 24
+    codename: can_access_foo

@@ -1,7 +1,24 @@
 - model: mailing.mailskeleton
-  pk: 1
+  pk: 2
   fields:
-    slug: RESET_PASSWORD
-    subject: Mot de passe oublié ?
-    html_body: Tant pis pour vous !
+    slug: SEND_RESET_PASSWORD_LINK
+    subject: Réinitialisation de votre mot de passe
+    html_body: "<p>Vous avez demandé à réinitialiser votre mot de passe.</p>\r\n\r\n<p>Cliquez
+      sur <a href=\"{{magic_link|safe}}\">ce lien</a> pour accéder à la page de réinitialisation
+      de votre mot de passe.</p>\r\n\r\n<p>Si la demande ne provient pas de vous,
+      veuillez ignorer ce message.</p>"
+    send_mode: to
+- model: mailing.mailskeleton
+  pk: 3
+  fields:
+    slug: SEND_SIGNUP_PASSWORDLESS_CODE
+    subject: Signup verification code
+    html_body: '<p>Here is your code: {{ code|safe }}</p>'
+    send_mode: to
+- model: mailing.mailskeleton
+  pk: 4
+  fields:
+    slug: SEND_LOGIN_PASSWORDLESS_CODE
+    subject: Login verification code
+    html_body: '<p>Here is your code: {{ code|safe }}</p>'
     send_mode: to

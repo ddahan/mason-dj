@@ -1,1 +1,6 @@
-[]
+- model: auth.group
+  pk: 1
+  fields:
+    name: supervisors
+    permissions:
+    - 93

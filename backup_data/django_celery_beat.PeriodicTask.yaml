@@ -19,9 +19,9 @@
     one_off: false
     start_time: null
     enabled: true
-    last_run_at: 2023-10-12 02:00:00.017108+00:00
-    total_run_count: 1
-    date_changed: 2023-10-12 02:03:05.031325+00:00
+    last_run_at: 2023-11-25 01:29:46.824879+00:00
+    total_run_count: 3
+    date_changed: 2023-11-25 01:29:46.836393+00:00
     description: ''
 - model: django_celery_beat.periodictask
   pk: 2
@@ -44,7 +44,7 @@
     one_off: false
     start_time: null
     enabled: true
-    last_run_at: 2023-10-12 16:39:00.004761+00:00
-    total_run_count: 1323
-    date_changed: 2023-10-12 16:39:32.682152+00:00
+    last_run_at: 2023-11-25 01:29:46.837652+00:00
+    total_run_count: 1327
+    date_changed: 2023-11-25 01:29:53.446612+00:00
     description: ''
