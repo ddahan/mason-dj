@@ -7,11 +7,12 @@ from django.db import models, transaction
 
 from phonenumber_field.modelfields import PhoneNumberField
 
-from core.enums.title import Title
 from core.mixins.auto_validable import AutoValidable
 from core.mixins.deactivable import Deactivable
 from core.mixins.secret_id import SecretID
 from core.mixins.time_stampable import TimeStampable
+
+from ..enums.title import Title
 
 
 class UserManager(BaseUserManager):
@@ -56,13 +57,13 @@ class User(
         ordering = ["-created"]
         get_latest_by = "created"
 
-    email = models.EmailField("e-mail", unique=True)
-    title = models.CharField("civilité", choices=Title.choices)
-    first_name = models.CharField("prénom")
-    last_name = models.CharField("nom")
-    phone_number = PhoneNumberField("téléphone", blank=True, null=True)
-    birth_date = models.DateField("date de naissance", blank=True, null=True)
-    is_staff = models.BooleanField("staff ?", default=False)
+    email = models.EmailField(unique=True)
+    title = models.CharField(choices=Title.choices)
+    first_name = models.CharField()
+    last_name = models.CharField()
+    phone_number = PhoneNumberField(blank=True, null=True)
+    birth_date = models.DateField(blank=True, null=True)
+    is_staff = models.BooleanField(default=False)
 
     objects = UserManager()
 

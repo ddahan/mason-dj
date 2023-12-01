@@ -65,7 +65,7 @@ token_auth: {
     shape: sql_table
     created: DateTimeField 
     modified: DateTimeField 
-    end_of_validity: DateTimeField 
+    expiration: DateTimeField 
     key: CharField {constraint: 🔑}
     user: ForeignKey → User {constraint: 🔍}
   }
@@ -73,7 +73,7 @@ token_auth: {
     shape: sql_table
     created: DateTimeField 
     modified: DateTimeField 
-    end_of_validity: DateTimeField 
+    expiration: DateTimeField 
     key: CharField {constraint: 🔑}
     user: ForeignKey → User {constraint: 🔍}
     usage: CharField 
@@ -84,7 +84,7 @@ token_auth: {
     sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
-    end_of_validity: DateTimeField 
+    expiration: DateTimeField 
     key: CharField 
     user: ForeignKey → User {constraint: 🔍}
   }
@@ -94,7 +94,7 @@ token_auth: {
     sid: CharField {constraint: 🔍}
     created: DateTimeField 
     modified: DateTimeField 
-    end_of_validity: DateTimeField 
+    expiration: DateTimeField 
     key: CharField 
     email: EmailField 
   }
