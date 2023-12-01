@@ -19,32 +19,42 @@ class PasswordLessTokenQuerySet(EndableMixinQuerySet):
 
 
 class BasePasswordLessToken(
-    SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
+    SecretID,
+    Digit6KeyMixin,
+    EndableMixin,
+    ConsumableMixin,
+    BaseToken,
 ):
     """
-    6-digit token received  to validate identity. Many tokens with the same key can co-exist.
+    6-digit token received to validate identity. Many tokens with the same key can co-exist.
     """
+
+    class Meta:
+        abstract = True
 
     objects = Manager.from_queryset(PasswordLessTokenQuerySet)()
 
     VALIDITY_TIME = td(minutes=20)
 
     @classmethod
-    def challenge(cls, input_code, user) -> bool:
-        """Return True if the challenge is successful after consuming the token,
-        False otherwise."""
-
-        # Technically, there could be multiple tokens with the same code for a single user
-        valid_tokens = cls.objects.valids_for_user(user).filter(key=input_code)
+    def challenge(cls, input_code, filtering: dict, consume=True) -> bool:
+        """
+        Generic challenge method. 'filtering' is a dictionary that specifies
+        additional filtering criteria for the valid tokens, to be used by children methods.
+        """
+        valid_tokens = cls.objects.filter(key=input_code, **filtering)
         if valid_tokens.exists():
-            token_to_consume = valid_tokens[0]
-            token_to_consume.consume()
+            token = valid_tokens[0]
+            if consume:
+                token.consume()
             return True
 
         return False
 
 
-class LoginPasswordLessToken(BasePasswordLessToken):
+class LoginPasswordLessToken(
+    SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
+):
     class Meta:
         db_table = "tb_login_password_less_tokens"
 
@@ -56,6 +66,11 @@ class LoginPasswordLessToken(BasePasswordLessToken):
     )
 
     @classmethod
+    def challenge(cls, input_code, user) -> bool:
+        """Specific challenge logic for LoginPasswordLessToken."""
+        return super().challenge(input_code, {"user": user})
+
+    @classmethod
     def send_new_to(cls, user):
         new_token = cls.objects.create(user=user)
         MailSkeleton.send_with(
@@ -63,11 +78,18 @@ class LoginPasswordLessToken(BasePasswordLessToken):
         )
 
 
-class SignupPasswordLessToken(BasePasswordLessToken):
+class SignupPasswordLessToken(
+    SecretID, Digit6KeyMixin, EndableMixin, ConsumableMixin, BaseToken
+):
     class Meta:
         db_table = "tb_signup_password_less_tokens"
 
     email = models.EmailField()
+
+    @classmethod
+    def challenge(cls, input_code, email, consume=True) -> bool:
+        """Specific challenge logic for SignupPasswordLessToken."""
+        return super().challenge(input_code, {"email": email}, consume)
 
     @classmethod
     def send_new_to(cls, email: str):

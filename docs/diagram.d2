@@ -61,23 +61,24 @@ core: {
   shape: rectangle
 }
 token_auth: {
-  APIToken: {
+  APIAccessToken: {
     shape: sql_table
     created: DateTimeField 
     modified: DateTimeField 
+    end_of_validity: DateTimeField 
     key: CharField {constraint: 🔑}
-    user: 0neToOne → User {constraint: 🔍}
+    user: ForeignKey → User {constraint: 🔍}
   }
   MagicLinkToken: {
     shape: sql_table
     created: DateTimeField 
     modified: DateTimeField 
-    key: CharField {constraint: 🔑}
     end_of_validity: DateTimeField 
+    key: CharField {constraint: 🔑}
     user: ForeignKey → User {constraint: 🔍}
     usage: CharField 
   }
-  PasswordLessToken: {
+  LoginPasswordLessToken: {
     shape: sql_table
     id: BigAutoField {constraint: 🔑🤖}
     sid: CharField {constraint: 🔍}
@@ -87,10 +88,20 @@ token_auth: {
     key: CharField 
     user: ForeignKey → User {constraint: 🔍}
   }
+  SignupPasswordLessToken: {
+    shape: sql_table
+    id: BigAutoField {constraint: 🔑🤖}
+    sid: CharField {constraint: 🔍}
+    created: DateTimeField 
+    modified: DateTimeField 
+    end_of_validity: DateTimeField 
+    key: CharField 
+    email: EmailField 
+  }
   shape: rectangle
 }
 badges.Badge -> profiles.User
 core.GlobalPermission -> contenttypes.ContentType
-token_auth.APIToken -> profiles.User
+token_auth.APIAccessToken -> profiles.User
 token_auth.MagicLinkToken -> profiles.User
-token_auth.PasswordLessToken -> profiles.User
+token_auth.LoginPasswordLessToken -> profiles.User

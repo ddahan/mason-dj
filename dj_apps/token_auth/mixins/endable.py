@@ -1,3 +1,4 @@
+from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 from django.db.models import query
 from django.utils import timezone
@@ -8,8 +9,11 @@ class EndableMixinQuerySet(query.QuerySet):
         now = timezone.now()
         return self.filter(end_of_validity__gte=now)
 
-    def valids_for_user(self, user):
+    def valids_for_user(self, user):  # TODO: Move, belong to children class
         return self.valids().filter(user=user)
+
+    def valids_for_email(self, email):  # TODO: Move, belong to children class
+        return self.valids().filter(email=email)
 
     def invalids(self):
         now = timezone.now()
@@ -26,7 +30,7 @@ class EndableMixin(models.Model):
 
     def save(self, *args, **kwargs):
         if not hasattr(self, "VALIDITY_TIME"):
-            raise NotImplementedError("VALIDITY_TIME attribute must be defined")
+            raise ImproperlyConfigured("VALIDITY_TIME attribute must be defined")
         if self._state.adding:
             self.end_of_validity = timezone.now() + self.VALIDITY_TIME
         super().save(*args, **kwargs)

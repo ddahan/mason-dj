@@ -9,13 +9,13 @@ define fixtures, hooks, and plugins in this file.
 import pytest
 
 from profiles.tests.factories import UserFactory
-from token_auth.models.api_token import APIToken
+from token_auth.models.api_token import APIAccessToken
 
 
 @pytest.fixture()
 def auth_headers(db) -> dict:
     # TODO: ensure it's called once per session to speed tests up
     user = UserFactory()
-    token = APIToken.objects.get(user=user)
+    token = APIAccessToken.objects.get(user=user)
     headers = {"X-API-Key": token.key}
     return headers

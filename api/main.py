@@ -67,7 +67,7 @@ def handle_invalid_token(request, _):
     return api.create_response(
         request,
         dict(
-            message="You are not authorized to perform this operation.",
+            message="Your session has expired. Please log in again.",
             error_level="global",
         ),
         status=401,

@@ -19,11 +19,9 @@ class UserSchemaInLogin(ModelSchema):
         extra = "forbid"
 
 
-class UserSchemaOut(ModelSchema):
-    class Meta:
-        model = User
-        fields = ("sid", "email")
-
+class UserSchemaOut(Schema):
+    sid: str
+    email: str
     api_token_key: str
 
 

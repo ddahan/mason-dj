@@ -1,10 +1,10 @@
-from typing import Any, Optional
+from typing import Any
 
 from django.http.request import HttpRequest
 
 from ninja.security import APIKeyHeader
 
-from token_auth.models import APIToken
+from token_auth.models import APIAccessToken
 
 
 class InvalidToken(Exception):
@@ -14,11 +14,9 @@ class InvalidToken(Exception):
 class ApiKeyAuth(APIKeyHeader):
     param_name = "X-API-Key"
 
-    def authenticate(self, request: HttpRequest, key: Optional[str]) -> Optional[Any]:
-        try:
-            user = APIToken.objects.get(key=key).user
-        except APIToken.DoesNotExist:
-            raise InvalidToken  # will allow a custom 401 exception
-        else:
-            # NOTE: we could log api usage here
+    def authenticate(self, request: HttpRequest, key: str | None) -> Any:
+        user = APIAccessToken.challenge(key)
+        if user:
             return user
+        else:
+            raise InvalidToken  # will allow a custom 401 exception

@@ -1,4 +1,3 @@
-from django.apps import apps
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -27,9 +26,6 @@ class UserManager(BaseUserManager):
         )
         user.set_password(password)
         user.save(using=self._db)
-
-        APIToken = apps.get_model("token_auth", "APIToken")
-        APIToken.objects.create(user=user)
 
         return user
 
@@ -91,10 +87,6 @@ class User(
     @property
     def small_name(self) -> str:
         return f"{self.first_name[0]}. {self.last_name}"
-
-    @property
-    def api_token_key(self) -> str:
-        return self.api_token.key
 
     def __str__(self):
         return self.name
