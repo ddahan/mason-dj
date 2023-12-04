@@ -35,6 +35,12 @@ def check(request):
     pass  # will return a 401 if a valid token can't be found.
 
 
+@router.get("revoque-access-tokens")
+def revoque_access_tokens(request):
+    """Logout operation requires a back-end part to revoque all user access tokens. This implies the user will be logged out from all devices. This favors safety over experience, and can be changed accordingly."""
+    APIAccessToken.revoque_all_for_user(request.auth)
+
+
 ##########################################################################################
 # Classical Authentication
 ##########################################################################################
@@ -87,9 +93,10 @@ def reset_password(request, payload: ResetPasswordSchemaIn):
         assert magic_link.usage == MagicLinkUsage.RESET_PASSWORD
         user = magic_link.user
         with transaction.atomic():
-            user.set_password(payload.new_password)  # WARN: unchecked
+            user.set_password(payload.new_password)
             user.save()
             magic_link.consume()
+            # NOTE: in front-end, logout() will be called to clear access tokens
 
 
 ##########################################################################################
