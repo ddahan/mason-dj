@@ -13,6 +13,7 @@ from .schemas import (
     EmailSchemaIn,
     EnterVerificationCodeSchemaIn,
     ResetPasswordSchemaIn,
+    UserProfileOut,
     UserSchemaInCreate,
     UserSchemaInLogin,
     UserSchemaOut,
@@ -26,13 +27,14 @@ router = Router()
 ##########################################################################################
 
 
-@router.get("check")
-def check(request):
-    """This is the most basic credentials check for current access token validity.
-    Example of usage: on homepage if there is no other backend check, it will help to
-    log out the user from the front-end.
+@router.get("user-profile", response=UserProfileOut)
+def user_profile(request):
     """
-    pass  # will return a 401 if a valid token can't be found.
+    Get the user profile from an authenticated request. This can be used to rehydrate the client after the user has closed its browser for example.
+    Note that this could be use as a simple check too, juste to ensure token validity.
+    It would return a 401 if the token is not valid.
+    """
+    return request.auth
 
 
 @router.get("revoque-access-tokens")

@@ -25,6 +25,12 @@ class UserSchemaOut(Schema):
     api_token_key: str
 
 
+class UserProfileOut(ModelSchema):
+    class Meta:
+        model = User
+        fields = ("sid", "email")
+
+
 class EmailSchemaIn(Schema):
     email: str  # we could use EmailStr
 
