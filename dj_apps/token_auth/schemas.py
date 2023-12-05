@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 
 from ninja import ModelSchema, Schema
+from pydantic import validator
 
 User = get_user_model()
 
@@ -12,11 +13,14 @@ class UserSchemaInCreate(ModelSchema):
         extra = "forbid"
 
 
-class UserSchemaInLogin(ModelSchema):
-    class Meta:
-        model = User
-        fields = ("email", "password")
-        extra = "forbid"
+class UserSchemaInLogin(Schema):
+    email: str
+    password: str
+
+    @validator("email")
+    def normalize_email(cls, value):
+        """Normalize the email address to lowercase. This is not required for signup as it is done at Django validation level."""
+        return value.lower()
 
 
 class UserSchemaOut(Schema):
@@ -32,7 +36,12 @@ class UserProfileOut(ModelSchema):
 
 
 class EmailSchemaIn(Schema):
-    email: str  # we could use EmailStr
+    email: str
+
+    @validator("email")
+    def normalize_email(cls, value):
+        """Normalize the email address to lowercase. This is not required for signup as it is done at Django validation level."""
+        return value.lower()
 
 
 class EnterVerificationCodeSchemaIn(Schema):
