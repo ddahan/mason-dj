@@ -15,11 +15,21 @@ class BaseNormalizedEmail(Schema):
         return value.lower()
 
 
-class UserSchemaInCreate(ModelSchema):
+class BaseUserSchemaIn(ModelSchema):
     class Meta:
         model = User
-        fields = ("title", "first_name", "last_name", "email", "password")
+        fields = ("email", "title", "first_name", "last_name")
+
+
+class UserSchemaInClassicCreate(BaseUserSchemaIn, ModelSchema):
+    class Meta:
+        model = User
+        fields = ("password",)
         extra = "forbid"
+
+
+class UserSchemaInPasswordLessCreate(BaseUserSchemaIn, Schema):
+    code: str
 
 
 class UserSchemaInLogin(BaseNormalizedEmail, Schema):

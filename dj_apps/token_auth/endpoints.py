@@ -3,6 +3,7 @@ from django.db import transaction
 
 from ninja import Router
 
+from core.utils.data_structure_utils import remove_keys
 from profiles.exceptions import EmailAlreadyExists, InvalidLogin, UnexistingUser
 
 from .exceptions import CodeNotFound, MagicLinkNotFound
@@ -14,8 +15,9 @@ from .schemas import (
     EnterVerificationCodeSchemaIn,
     ResetPasswordSchemaIn,
     UserProfileOut,
-    UserSchemaInCreate,
+    UserSchemaInClassicCreate,
     UserSchemaInLogin,
+    UserSchemaInPasswordLessCreate,
     UserSchemaOut,
 )
 
@@ -61,7 +63,7 @@ def login(request, payload: UserSchemaInLogin):
 
 
 @router.post("classic/signup", response=UserSchemaOut, auth=None)
-def signup(request, payload: UserSchemaInCreate):
+def signup(request, payload: UserSchemaInClassicCreate):
     """Create a new user and acts as a login too (2-in-1)"""
 
     if User.objects.filter(email=payload.email).exists():
@@ -153,3 +155,25 @@ def enter_verif_login_code(request, payload: EnterVerificationCodeSchemaIn):
         raise CodeNotFound()
 
     return dict(sid=user.sid, email=user.email, api_token_key=api_access_token.key)
+
+
+@router.post("passwordless/signup", response=UserSchemaOut, auth=None)
+def signup_passwordless(request, payload: UserSchemaInPasswordLessCreate):
+    """Create a new user and acts as a login too (2-in-1)"""
+
+    if User.objects.filter(email=payload.email).exists():
+        raise EmailAlreadyExists()
+
+    if (
+        SignupPasswordLessToken.challenge(input_code=payload.code, email=payload.email)
+        is True
+    ):
+        cleaned_dict = remove_keys(payload.dict(), "code")  # no need anymore
+        new_user = User.objects.create_user(**cleaned_dict)
+        api_access_token = APIAccessToken.objects.create(user=new_user)
+    else:
+        raise CodeNotFound()
+
+    return dict(
+        sid=new_user.sid, email=new_user.email, api_token_key=api_access_token.key
+    )

@@ -1,4 +1,5 @@
 from functools import reduce
+from typing import Iterable
 
 
 def as_dict(o, skip_empty=False):
@@ -19,3 +20,10 @@ def recursive_getattr(obj, attr, *args):
         return getattr(obj, attr, *args)
 
     return reduce(_getattr, [obj] + attr.split("."))
+
+
+def remove_keys(dico: dict, keys: str | Iterable) -> dict:
+    """Return a new dict without the given key(s)."""
+    if isinstance(keys, str):
+        keys = [keys]
+    return {k: v for k, v in dico.items() if k not in keys}
