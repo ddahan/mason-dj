@@ -6,6 +6,15 @@ from pydantic import validator
 User = get_user_model()
 
 
+class BaseNormalizedEmail(Schema):
+    email: str
+
+    @validator("email")
+    def normalize_email(cls, value):
+        """Normalize the email address to lowercase. This is not required for signup as it is done at Django validation level."""
+        return value.lower()
+
+
 class UserSchemaInCreate(ModelSchema):
     class Meta:
         model = User
@@ -13,14 +22,8 @@ class UserSchemaInCreate(ModelSchema):
         extra = "forbid"
 
 
-class UserSchemaInLogin(Schema):
-    email: str
+class UserSchemaInLogin(BaseNormalizedEmail, Schema):
     password: str
-
-    @validator("email")
-    def normalize_email(cls, value):
-        """Normalize the email address to lowercase. This is not required for signup as it is done at Django validation level."""
-        return value.lower()
 
 
 class UserSchemaOut(Schema):
@@ -35,18 +38,12 @@ class UserProfileOut(ModelSchema):
         fields = ("sid", "email")
 
 
-class EmailSchemaIn(Schema):
-    email: str
-
-    @validator("email")
-    def normalize_email(cls, value):
-        """Normalize the email address to lowercase. This is not required for signup as it is done at Django validation level."""
-        return value.lower()
+class EmailSchemaIn(BaseNormalizedEmail):
+    ...
 
 
-class EnterVerificationCodeSchemaIn(Schema):
-    email: str
-    code: str  # no need to add extra validation here
+class EnterVerificationCodeSchemaIn(BaseNormalizedEmail, Schema):
+    code: str
 
 
 class ResetPasswordSchemaIn(Schema):
