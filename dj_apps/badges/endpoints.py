@@ -1,19 +1,23 @@
 from django.shortcuts import get_object_or_404
 
 from ninja import Router
+from ninja.pagination import PageNumberPagination, paginate
 
 from .models.badge import Badge
 from .schemas import BadgeSchemaInCreate, BadgeSchemaInUpdate, BadgeSchemaOut
 
 router = Router()
 
+# There is no authentication here to help trying not mixing and coupling concepts together, as there is already a specifing app dealing with quathentication.
 
-@router.get("", response=list[BadgeSchemaOut])
+
+@router.get("", response=list[BadgeSchemaOut], auth=None)
+@paginate(PageNumberPagination, page_size=10)
 def list_badges(request):
     return Badge.objects.all()
 
 
-@router.get("{identifier}", response=BadgeSchemaOut)
+@router.get("{identifier}", response=BadgeSchemaOut, auth=None)
 def retrieve_badge(request, identifier: str):
     return get_object_or_404(Badge, identifier=identifier)
 
