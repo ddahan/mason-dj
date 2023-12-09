@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.http.response import Http404
 
@@ -84,9 +85,11 @@ def handle_project_error(request, e):
 
 
 @api.exception_handler(Exception)
-def handle_exception(request, _):
+def handle_exception(request, e):
+    # Gives server exception info only in debug mode to help developer
+    message = repr(e) if settings.DEBUG else "An unknown servor error has occurred."
     return api.create_response(
         request,
-        dict(message="An unknown servor error has occurred.", error_level="global"),
+        dict(message=message, error_level="global"),
         status=500,
     )
