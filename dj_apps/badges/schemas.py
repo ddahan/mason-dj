@@ -1,12 +1,10 @@
-from ninja import ModelSchema
-
-from profiles.schemas import UserSchema
+from ninja import Field, ModelSchema
 
 from .models import Badge
 
 
 class BadgeSchemaOut(ModelSchema):
-    owner: UserSchema
+    owner_name: str = Field(None, alias="owner.name")
 
     class Meta:
         model = Badge
