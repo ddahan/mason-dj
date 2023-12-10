@@ -1,7 +1,9 @@
 from django.shortcuts import get_object_or_404
 
 from ninja import Router
-from ninja.pagination import PageNumberPagination, paginate
+from ninja.pagination import paginate
+
+from api.pagination import MyPageNumberPagination
 
 from .models.badge import Badge
 from .schemas import BadgeSchemaInCreate, BadgeSchemaInUpdate, BadgeSchemaOut
@@ -12,7 +14,7 @@ router = Router()
 
 
 @router.get("", response=list[BadgeSchemaOut], auth=None)
-@paginate(PageNumberPagination, page_size=10)
+@paginate(MyPageNumberPagination, page_size=10)
 def list_badges(request):
     return Badge.objects.all()
 
