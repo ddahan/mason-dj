@@ -36,6 +36,11 @@ no matter the type of error raised by the back-end:
 # TODO: Unit tests to see if we got the same output for all errors, with all data in it
 
 
+def set_message(message, e):
+    """Set the given message only if not in debug mode."""
+    return repr(e) if settings.DEBUG else message
+
+
 @api.exception_handler(Http404)
 def handle_not_found(request, _):
     return api.create_response(
@@ -49,16 +54,22 @@ def handle_not_found(request, _):
 def handle_bad_request(request, e):
     return api.create_response(
         request,
-        dict(message="The request is not correctly formatted.", error_level="global"),
+        dict(
+            message=set_message("The request is not correctly formatted.", e),
+            error_level="global",
+        ),
         status=400,
     )
 
 
 @api.exception_handler(NinjaValidationError)
-def handle_bad_request_ninja(request, _):
+def handle_bad_request_ninja(request, e):
     return api.create_response(
         request,
-        dict(message="The request is not correctly formatted.", error_level="global"),
+        dict(
+            message=set_message("The request is not correctly formatted.", e),
+            error_level="global",
+        ),
         status=400,
     )
 
@@ -86,10 +97,11 @@ def handle_project_error(request, e):
 
 @api.exception_handler(Exception)
 def handle_exception(request, e):
-    # Gives server exception info only in debug mode to help developer
-    message = repr(e) if settings.DEBUG else "An unknown servor error has occurred."
     return api.create_response(
         request,
-        dict(message=message, error_level="global"),
+        dict(
+            message=set_message("An unknown servor error has occurred.", e),
+            error_level="global",
+        ),
         status=500,
     )

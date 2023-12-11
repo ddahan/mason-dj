@@ -1,41 +1,40 @@
 from typing import Any
 
+from django.core.exceptions import FieldError
+
 from ninja import Field, Schema
 from ninja.pagination import PaginationBase
+
+from core.exceptions import APIFieldException
 
 
 class MyPageNumberPagination(PaginationBase):
     class Input(Schema):
         page: int = Field(1, ge=1)
+        order_by: str = None  # contains both the sorting field AND the direction
 
     class Output(Schema):
-        nb_items: int
-        nb_pages: int
-        page: int
-        previous_page: str | None
-        next_page: str | None
+        nb_items: int = Field(1, ge=1)
+        nb_pages: int = Field(1, ge=1)
+        page: int = Field(1, ge=1)
 
-    def __init__(self, page_size: int = 100, **kwargs):
+    def __init__(self, page_size: int = 20, **kwargs):
         self.page_size = page_size
         super().__init__(**kwargs)
 
     def paginate_queryset(self, queryset, pagination: Input, request) -> Any:
+        if pagination.order_by:
+            try:
+                queryset = queryset.order_by(pagination.order_by)
+            except FieldError:
+                raise APIFieldException(wrong_field=pagination.order_by)
+
         offset = (pagination.page - 1) * self.page_size
         nb_items = self._items_count(queryset)
-        next_page, previous_page = None, None
-        if pagination.page > 1:
-            previous_page = request.build_absolute_uri(
-                request.path + "?page=" + str(pagination.page - 1)
-            )
-        if offset + self.page_size < nb_items:
-            next_page = request.build_absolute_uri(
-                request.path + "?page=" + str(pagination.page + 1)
-            )
+
         return {
             "nb_items": nb_items,
             "nb_pages": (nb_items + self.page_size - 1) // self.page_size,
             "page": pagination.page,
-            "previous_page": previous_page,
-            "next_page": next_page,
             "items": queryset[offset : offset + self.page_size],
         }

@@ -23,6 +23,7 @@ class ProjectException(Exception):
         message: str | None = None,
         error_level: Literal["global", "non_field", "field"] = None,
         field_name: str | None = None,
+        **message_values: str,  # to inject values in error messages
     ):
         if self.__class__.__subclasses__():
             raise NotImplementedError(
@@ -31,7 +32,6 @@ class ProjectException(Exception):
 
         # Define attributes from class definition or object instanciation
         for attr_name, attr_value in {
-            "message": message,
             "error_level": error_level,
             "field_name": field_name,
         }.items():
@@ -43,6 +43,12 @@ class ProjectException(Exception):
                 else getattr(self.__class__, attr_name, None),
             )
 
+        # message is handled separately as the logic is more complex
+        if message is not None:
+            self.message = message.format(**message_values)
+        else:
+            self.message = self.__class__.message.format(**message_values)
+
         # Verification Checks
         if not self.message or not self.error_level:
             raise InconsistencyException(
@@ -53,6 +59,11 @@ class ProjectException(Exception):
             raise InconsistencyException(
                 "'field_name' must be defined when error_level is 'field'"
             )
+
+
+class APIFieldException(ProjectException):
+    message = "The field {wrong_field} does not exist and can't be used for ordering."
+    error_level = "global"
 
 
 class InconsistencyException(Exception):
