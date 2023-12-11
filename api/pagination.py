@@ -16,6 +16,7 @@ class MyPageNumberPagination(PaginationBase):
     class Output(Schema):
         nb_items: int = Field(1, ge=1)
         nb_pages: int = Field(1, ge=1)
+        page_size: int = Field(1, ge=1)
         page: int = Field(1, ge=1)
 
     def __init__(self, page_size: int = 20, **kwargs):
@@ -35,6 +36,7 @@ class MyPageNumberPagination(PaginationBase):
         return {
             "nb_items": nb_items,
             "nb_pages": (nb_items + self.page_size - 1) // self.page_size,
+            "page_size": self.page_size,
             "page": pagination.page,
             "items": queryset[offset : offset + self.page_size],
         }

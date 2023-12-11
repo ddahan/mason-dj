@@ -16,6 +16,9 @@ router = Router()
 @router.get("", response=list[BadgeSchemaOut], auth=None)  # TODO: wrong type
 @paginate(MyPageNumberPagination, page_size=10)
 def list_badges(request):
+    # from time import sleep
+
+    # sleep(0.15)
     return Badge.objects.all()
 
 
