@@ -4,7 +4,7 @@ from .models import Badge
 
 
 class BadgeSchemaOut(ModelSchema):
-    owner_name: str = Field(None, alias="owner.name")
+    owner_name: str = Field(None, alias="owner.name")  # 🤔 How to sort by this field?
 
     class Meta:
         model = Badge

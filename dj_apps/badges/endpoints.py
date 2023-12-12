@@ -14,6 +14,7 @@ router = Router()
 
 
 @router.get("", response=list[BadgeSchemaOut], auth=None)
+# note than page_size could be passed here if we need to prevent front-end to change it
 @paginate(MyPageNumberPagination)
 def list_badges(request):
     return Badge.objects.all()
