@@ -5,6 +5,7 @@ from ninja.pagination import paginate
 
 from api.ordering import Ordering, ordering
 from api.pagination import MyPageNumberPagination
+from api.searching import Searching, searching
 
 from .models.badge import Badge
 from .schemas import BadgeSchemaInCreate, BadgeSchemaInUpdate, BadgeSchemaOut
@@ -17,6 +18,7 @@ router = Router()
 @router.get("", response=list[BadgeSchemaOut], auth=None)
 @paginate(MyPageNumberPagination)
 @ordering(Ordering)
+@searching(Searching, search_fields=["owner__first_name", "owner__last_name"])
 def list_badges(request):
     return Badge.objects.all()
 

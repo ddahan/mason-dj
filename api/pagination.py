@@ -13,12 +13,12 @@ class MyPageNumberPagination(PaginationBase):
         page_size: int = Field(10, ge=1, le=50)
 
     class Output(Schema):
-        nb_items: int = Field(ge=1)
-        item_start: int = Field(ge=1)
-        item_end: int = Field(ge=1)
-        nb_pages: int = Field(ge=1)
-        page_size: int = Field(ge=1)
-        page: int = Field(ge=1)
+        nb_items: int
+        item_start: int
+        item_end: int
+        nb_pages: int
+        page_size: int
+        page: int
 
     def paginate_queryset(self, queryset, pagination: Input, request, **kwargs) -> Any:
         offset = (pagination.page - 1) * pagination.page_size

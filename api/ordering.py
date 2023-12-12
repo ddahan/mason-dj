@@ -1,5 +1,6 @@
 """
 inspired by https://eadwincode.github.io/django-ninja-extra/tutorial/ordering/
+(typing updated to 3.12 + async removed)
 """
 
 import inspect
@@ -143,7 +144,7 @@ def ordering(
     isfunction = inspect.isfunction(func_or_ordering_class)
     isnotset = func_or_ordering_class == NOT_SET
 
-    ordering_class: Type[OrderingBase] = "ninja_extra.ordering.Ordering"
+    ordering_class: Type[OrderingBase] = "Ordering"
 
     if isfunction:
         return _inject_orderator(func_or_ordering_class, ordering_class)
