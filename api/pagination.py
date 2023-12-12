@@ -1,18 +1,16 @@
 from typing import Any
 
-from django.core.exceptions import FieldError
-
 from ninja import Field, Schema
 from ninja.pagination import PaginationBase
 
-from core.exceptions import APIFieldException
-
 
 class MyPageNumberPagination(PaginationBase):
+    """This is inspirated by
+    https://github.com/vitalik/django-ninja/issues/993#issuecomment-1848605438"""
+
     class Input(Schema):
         page: int = Field(1, ge=1)
         page_size: int = Field(10, ge=1, le=50)
-        order_by: str = None  # contains both the sorting field AND the direction
 
     class Output(Schema):
         nb_items: int = Field(ge=1)
@@ -22,13 +20,7 @@ class MyPageNumberPagination(PaginationBase):
         page_size: int = Field(ge=1)
         page: int = Field(ge=1)
 
-    def paginate_queryset(self, queryset, pagination: Input, request) -> Any:
-        if pagination.order_by:
-            try:
-                queryset = queryset.order_by(pagination.order_by)
-            except FieldError:
-                raise APIFieldException(wrong_field=pagination.order_by)
-
+    def paginate_queryset(self, queryset, pagination: Input, request, **kwargs) -> Any:
         offset = (pagination.page - 1) * pagination.page_size
         nb_items = self._items_count(queryset)
 

@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from ninja import Router
 from ninja.pagination import paginate
 
+from api.ordering import Ordering, ordering
 from api.pagination import MyPageNumberPagination
 
 from .models.badge import Badge
@@ -14,8 +15,8 @@ router = Router()
 
 
 @router.get("", response=list[BadgeSchemaOut], auth=None)
-# note than page_size could be passed here if we need to prevent front-end to change it
 @paginate(MyPageNumberPagination)
+@ordering(Ordering)
 def list_badges(request):
     return Badge.objects.all()
 
