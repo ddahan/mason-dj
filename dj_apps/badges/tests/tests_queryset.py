@@ -1,8 +1,8 @@
 from core.utils.testing_utils import same_items
-from profiles.tests.factories import UserFactory
+from profiles.factories import UserFactory
 
+from ..factories import BadgeFactory, ExpiredBadgeFactory, UnexpiredBadgeFactory
 from ..models.badge import Badge
-from .factories import BadgeFactory, ExpiredBadgeFactory, UnexpiredBadgeFactory
 
 
 def test_unassigned_and_assigned_to(db):

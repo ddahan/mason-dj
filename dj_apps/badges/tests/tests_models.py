@@ -2,11 +2,11 @@ from django.contrib.auth import get_user_model
 
 import pytest
 
-from profiles.tests.factories import UserFactory
+from profiles.factories import UserFactory
 
 from ..exceptions import BadgeAlreadyAssigned
+from ..factories import BadgeFactory
 from ..models.badge import Badge
-from .factories import BadgeFactory
 
 User = get_user_model()
 

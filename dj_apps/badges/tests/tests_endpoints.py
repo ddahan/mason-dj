@@ -4,8 +4,8 @@ import pytest
 
 from core.utils.testing_utils import api_url
 
+from ..factories import BadgeFactory
 from ..models.badge import Badge
-from .factories import BadgeFactory
 
 User = get_user_model()
 

@@ -8,7 +8,7 @@ define fixtures, hooks, and plugins in this file.
 
 import pytest
 
-from profiles.tests.factories import UserFactory
+from profiles.factories import UserFactory
 from token_auth.models.api_token import APIAccessToken
 
 

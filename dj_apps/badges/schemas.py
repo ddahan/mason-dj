@@ -5,6 +5,7 @@ from .models import Badge
 
 class BadgeSchemaOut(ModelSchema):
     owner_name: str = Field(None, alias="owner.name")  # 🤔 How to sort by this field?
+    expired: bool = Field(None, alias="expired")
 
     class Meta:
         model = Badge
