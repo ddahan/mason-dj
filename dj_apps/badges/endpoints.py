@@ -13,12 +13,9 @@ router = Router()
 # There is no authentication here to help trying not mixing and coupling concepts together, as there is already a specifing app dealing with quathentication.
 
 
-@router.get("", response=list[BadgeSchemaOut], auth=None)  # TODO: wrong type
-@paginate(MyPageNumberPagination, page_size=10)
+@router.get("", response=list[BadgeSchemaOut], auth=None)
+@paginate(MyPageNumberPagination)
 def list_badges(request):
-    # from time import sleep
-
-    # sleep(0.15)
     return Badge.objects.all()
 
 
