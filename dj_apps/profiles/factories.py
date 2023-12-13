@@ -9,10 +9,12 @@ class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    email = factory.LazyAttribute(lambda obj: f"{obj.first_name}@fakemail.com")
     title = "MR"
-    first_name = factory.Sequence(lambda n: f"User_{n + 1}")
-    last_name = "fake"
+    first_name = factory.Faker("first_name")
+    last_name = factory.Faker("last_name")
+    email = factory.LazyAttribute(
+        lambda obj: f"{obj.first_name}.{obj.last_name}@mail.com"
+    )
 
     @classmethod
     def _create(cls, model_class, *args, **kwargs) -> User:
