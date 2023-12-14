@@ -21,6 +21,7 @@ api = NinjaAPI(
 # Add routers here
 api.add_router("badges", "badges.endpoints.router")
 api.add_router("auth", "token_auth.endpoints.router")
+api.add_router("profiles", "profiles.endpoints.router")
 
 """
 Exception handling is handled here otherwise it's not taken into account

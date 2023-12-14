@@ -28,7 +28,7 @@ def retrieve_badge(request, identifier: str):
     return get_object_or_404(Badge, identifier=identifier)
 
 
-@router.post("", response=BadgeSchemaOut)
+@router.post("", response=BadgeSchemaOut, auth=None)
 def create_badge(request, payload: BadgeSchemaInCreate):
     return Badge.objects.create(owner=request.auth, **payload.dict())
 

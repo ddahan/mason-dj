@@ -1,11 +1,13 @@
 from django.contrib.auth import get_user_model
 
-from ninja import ModelSchema
+from ninja import Field, ModelSchema
 
 User = get_user_model()
 
 
-class UserSchema(ModelSchema):
+class OwnerBadgeSchemaOut(ModelSchema):
+    name: str = Field(None, alias="name")
+
     class Meta:
         model = User
-        fields = ("id", "email")
+        fields = ("sid",)
