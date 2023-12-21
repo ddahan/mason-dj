@@ -1,10 +1,12 @@
 from ninja import Field, ModelSchema
 
+from profiles.schemas import OwnerBadgeSchemaOut
+
 from .models import Badge
 
 
 class BadgeSchemaOut(ModelSchema):
-    owner_name: str = Field(None, alias="owner.name")  # 🤔 How to sort by this field?
+    owner: OwnerBadgeSchemaOut
     expired: bool = Field(None, alias="expired")
 
     class Meta:
@@ -12,14 +14,9 @@ class BadgeSchemaOut(ModelSchema):
         fields = ("identifier", "expiration", "is_active")
 
 
-class BadgeSchemaInCreate(ModelSchema):
-    class Meta:
-        model = Badge
-        fields = ("identifier", "expiration", "is_active")
-        extra = "forbid"
+class BadgeSchemaIn(ModelSchema):
+    owner_sid: str
 
-
-class BadgeSchemaInUpdate(ModelSchema):
     class Meta:
         model = Badge
         fields = ("expiration", "is_active")

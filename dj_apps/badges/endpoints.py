@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 
 from ninja import Router
@@ -8,9 +9,11 @@ from api.pagination import MyPageNumberPagination
 from api.searching import Searching, searching
 
 from .models.badge import Badge
-from .schemas import BadgeSchemaInCreate, BadgeSchemaInUpdate, BadgeSchemaOut
+from .schemas import BadgeSchemaIn, BadgeSchemaOut
 
 router = Router()
+
+User = get_user_model()
 
 # There is no authentication here to help trying not mixing and coupling concepts together, as there is already a specifing app dealing with quathentication.
 
@@ -29,17 +32,21 @@ def retrieve_badge(request, identifier: str):
 
 
 @router.post("", response=BadgeSchemaOut, auth=None)
-def create_badge(request, payload: BadgeSchemaInCreate):
-    return Badge.objects.create(owner=request.auth, **payload.dict())
+def create_badge(request, payload: BadgeSchemaIn):
+    owner = get_object_or_404(User, sid=payload.owner_sid)
+    return Badge.objects.create(
+        owner=owner, expiration=payload.expiration, is_active=payload.is_active
+    )
 
 
-@router.put("{identifier}", response=BadgeSchemaOut)
-def update_badge(request, identifier: str, payload: BadgeSchemaInUpdate):
+@router.put("{identifier}", response=BadgeSchemaOut, auth=None)
+def update_badge(request, identifier: str, payload: BadgeSchemaIn):
     """This accept partial updates by excluding unset fields."""
 
     badge = get_object_or_404(Badge, identifier=identifier)
-    for field, value in payload.dict(exclude_unset=True).items():
+    for field, value in payload.dict().items():  # TODO: remove owner_sid ?
         setattr(badge, field, value)
+    badge.owner = User.objects.get(sid=payload.owner_sid)
     badge.save()
     return badge
 
@@ -47,7 +54,7 @@ def update_badge(request, identifier: str, payload: BadgeSchemaInUpdate):
 # TODO: here: add update_badge_partiel but let the user choose the field
 
 
-@router.patch("{identifier}/activity", response=BadgeSchemaOut)
+@router.patch("{identifier}/activity", response=BadgeSchemaOut, auth=None)
 def update_badge_activity(request, identifier: str):
     """Example of a more RPC-Like endpoint which perform a specific mutation, without
     providing a payload"""
@@ -57,7 +64,7 @@ def update_badge_activity(request, identifier: str):
     return badge
 
 
-@router.delete("{identifier}")
+@router.delete("{identifier}", auth=None)
 def destroy_badge(request, identifier: str):
     badge = get_object_or_404(Badge, identifier=identifier)
     badge.delete()

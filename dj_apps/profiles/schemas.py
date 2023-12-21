@@ -6,7 +6,7 @@ User = get_user_model()
 
 
 class OwnerBadgeSchemaOut(ModelSchema):
-    name: str = Field(None, alias="name")
+    label: str = Field(None, alias="name")
 
     class Meta:
         model = User
