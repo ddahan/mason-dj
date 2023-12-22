@@ -20,7 +20,7 @@ class Expirable(models.Model):
 
     @property
     def expired(self) -> bool:
-        return self.expiration and now() > self.expiration
+        return bool(self.expiration and now() > self.expiration)
 
     def save(self, *args, **kwargs):
         if self.expiration and is_naive(self.expiration):

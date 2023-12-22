@@ -10,4 +10,4 @@ class OwnerBadgeSchemaOut(ModelSchema):
 
     class Meta:
         model = User
-        fields = ("sid",)
+        fields = ("id",)

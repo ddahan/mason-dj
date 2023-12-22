@@ -33,25 +33,30 @@ def retrieve_badge(request, identifier: str):
 
 @router.post("", response=BadgeSchemaOut, auth=None)
 def create_badge(request, payload: BadgeSchemaIn):
-    owner = get_object_or_404(User, sid=payload.owner_sid)
-    return Badge.objects.create(
-        owner=owner, expiration=payload.expiration, is_active=payload.is_active
-    )
+    return Badge.objects.create(**payload.dict())
 
 
 @router.put("{identifier}", response=BadgeSchemaOut, auth=None)
 def update_badge(request, identifier: str, payload: BadgeSchemaIn):
-    """This accept partial updates by excluding unset fields."""
+    """Update a badge entirely"""
 
     badge = get_object_or_404(Badge, identifier=identifier)
-    for field, value in payload.dict().items():  # TODO: remove owner_sid ?
+    for field, value in payload.dict().items():
         setattr(badge, field, value)
-    badge.owner = User.objects.get(sid=payload.owner_sid)
     badge.save()
     return badge
 
 
-# TODO: here: add update_badge_partiel but let the user choose the field
+@router.patch("{identifier}", response=BadgeSchemaOut, auth=None)
+def update_badge_partial(request, identifier: str, payload: BadgeSchemaIn):
+    """Update a badge by patching provided fields only"""
+    # NOTE: untested/unused - could require to update BadgeSchemaIn accordingly
+
+    badge = get_object_or_404(Badge, identifier=identifier)
+    for field, value in payload.dict(exclude_unset=True).items():
+        setattr(badge, field, value)
+    badge.save()
+    return badge
 
 
 @router.patch("{identifier}/activity", response=BadgeSchemaOut, auth=None)

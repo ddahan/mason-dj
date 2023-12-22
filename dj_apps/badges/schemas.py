@@ -15,7 +15,7 @@ class BadgeSchemaOut(ModelSchema):
 
 
 class BadgeSchemaIn(ModelSchema):
-    owner_sid: str
+    owner_id: int
 
     class Meta:
         model = Badge
