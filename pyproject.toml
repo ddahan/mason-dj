@@ -68,7 +68,7 @@ factory-boy = "*"          # https://github.com/FactoryBoy/factory_boy/
 
 [tool.ruff]
 line-length = 90
-target-version = "py311"
+target-version = "py312"
 extend-exclude = ["migrations", "__pycache__"]
 per-file-ignores = {}
 
