@@ -12,5 +12,4 @@ class MagicLinkNotFound(TokenAuthException):
 
 class CodeNotFound(TokenAuthException):
     message = "The entered code is wrong or may have already been used."
-    error_level = "field"
-    field_name = "code"
+    error_level = "non_field"
