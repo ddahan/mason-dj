@@ -1,4 +1,4 @@
 - model: django_celery_beat.periodictasks
   pk: 1
   fields:
-    last_update: 2023-12-01 17:14:08.346802+00:00
+    last_update: 2024-01-04 15:47:29.299204+00:00

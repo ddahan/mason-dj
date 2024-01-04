@@ -113,8 +113,3 @@
   fields:
     app_label: token_auth
     model: signuppasswordlesstoken
-- model: contenttypes.contenttype
-  pk: 24
-  fields:
-    app_label: core
-    model: global_permission

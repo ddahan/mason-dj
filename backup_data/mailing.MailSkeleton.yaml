@@ -12,12 +12,12 @@
   fields:
     slug: SEND_SIGNUP_PASSWORDLESS_CODE
     subject: Signup verification code
-    html_body: '<p>Here is your code: {{ code|safe }}</p>'
+    html_body: '<p>Here is your code: {{ code|safe }}</p>'
     send_mode: to
 - model: mailing.mailskeleton
   pk: 4
   fields:
     slug: SEND_LOGIN_PASSWORDLESS_CODE
     subject: Login verification code
-    html_body: '<p>Here is your code: {{ code|safe }}</p>'
+    html_body: '<p>Here is your code: {{ code|safe }}</p>'
     send_mode: to

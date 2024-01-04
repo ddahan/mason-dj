@@ -13,6 +13,8 @@ unrelated to any model.
 # https://stackoverflow.com/questions/13932774/
 # how-can-i-use-django-permissions-without-defining-a-content-type-or-model
 
+# ❌ WARNING: the usage of this model breaks the loaddata/dumpdata commands because  dumpdata command does not include proxy models.
+
 """
 
 

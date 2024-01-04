@@ -4,19 +4,5486 @@
     deleted: null
     deleted_by_cascade: false
     is_active: true
-    created: 2023-10-20 21:12:25.803709+00:00
-    modified: 2023-10-22 13:24:50.623149+00:00
-    expiration: 2023-10-20 21:12:25+00:00
-    identifier: VUZlunmZyx1BmKUfENB3tg
-    owner: null
+    created: 2024-01-04 15:51:09.851661+00:00
+    modified: 2024-01-04 15:51:09.851661+00:00
+    expiration: 2023-11-10 20:15:09.851540+00:00
+    identifier: EQbaAU1DMvogA00T8OKGRw
+    owner: 2
 - model: badges.badge
   pk: 2
   fields:
     deleted: null
     deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.855272+00:00
+    modified: 2024-01-04 15:51:09.855272+00:00
+    expiration: 2023-12-20 11:26:09.855216+00:00
+    identifier: ZyD7q1aHjfUI0ZiaL9UFmw
+    owner: 3
+- model: badges.badge
+  pk: 3
+  fields:
+    deleted: null
+    deleted_by_cascade: false
     is_active: true
-    created: 2023-10-20 21:19:57.974077+00:00
-    modified: 2023-10-20 21:19:57.974077+00:00
-    expiration: 2023-10-20 21:19:57+00:00
-    identifier: 7-Y7Iz_V32PRHElZ3f-tFQ
-    owner: null
+    created: 2024-01-04 15:51:09.857908+00:00
+    modified: 2024-01-04 15:51:09.857908+00:00
+    expiration: 2024-02-12 15:47:09.857858+00:00
+    identifier: 9XLx_fynIkp3yYmz-FuQzw
+    owner: 4
+- model: badges.badge
+  pk: 4
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.860456+00:00
+    modified: 2024-01-04 15:51:09.860456+00:00
+    expiration: 2023-12-08 17:41:09.860395+00:00
+    identifier: lBSejmy7eSL8xaWOQu8GAQ
+    owner: 5
+- model: badges.badge
+  pk: 5
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.862777+00:00
+    modified: 2024-01-04 15:51:09.862777+00:00
+    expiration: 2023-11-08 11:43:09.862732+00:00
+    identifier: iW8qN7lTKiImtW8fvX5Z6g
+    owner: 6
+- model: badges.badge
+  pk: 6
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.864732+00:00
+    modified: 2024-01-04 15:51:09.864732+00:00
+    expiration: 2023-12-03 22:41:09.864690+00:00
+    identifier: -Guvj4TMfAq9koHMtfmtbg
+    owner: 7
+- model: badges.badge
+  pk: 7
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.866651+00:00
+    modified: 2024-01-04 15:51:09.866651+00:00
+    expiration: 2024-02-20 19:32:09.866609+00:00
+    identifier: mokPXroJec2u-OL8JR-OoQ
+    owner: 8
+- model: badges.badge
+  pk: 8
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.868711+00:00
+    modified: 2024-01-04 15:51:09.868711+00:00
+    expiration: 2024-01-09 12:41:09.868670+00:00
+    identifier: JTIdZ7wWkhobMYPv_uKh3g
+    owner: 9
+- model: badges.badge
+  pk: 9
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.870679+00:00
+    modified: 2024-01-04 15:51:09.870679+00:00
+    expiration: 2023-12-04 13:25:09.870629+00:00
+    identifier: W8N2utApgQrBjJv2tNNHig
+    owner: 10
+- model: badges.badge
+  pk: 10
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.874024+00:00
+    modified: 2024-01-04 15:51:09.874024+00:00
+    expiration: 2023-11-09 08:20:09.873948+00:00
+    identifier: kPCyUXm4BZZBygz1N2MjnA
+    owner: 11
+- model: badges.badge
+  pk: 11
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.877270+00:00
+    modified: 2024-01-04 15:51:09.877270+00:00
+    expiration: 2024-03-07 01:41:09.877202+00:00
+    identifier: NlgrD667E3nuLGshHEiT5g
+    owner: 12
+- model: badges.badge
+  pk: 12
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.879728+00:00
+    modified: 2024-01-04 15:51:09.879728+00:00
+    expiration: 2023-12-22 10:55:09.879678+00:00
+    identifier: BOnXe9QGsrcapaM6aHQfWw
+    owner: 13
+- model: badges.badge
+  pk: 13
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.882179+00:00
+    modified: 2024-01-04 15:51:09.882179+00:00
+    expiration: 2023-11-27 11:15:09.882129+00:00
+    identifier: uVjiW6KCOJgmLT1cRIc55g
+    owner: 14
+- model: badges.badge
+  pk: 14
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.884329+00:00
+    modified: 2024-01-04 15:51:09.884329+00:00
+    expiration: 2024-01-20 12:11:09.884263+00:00
+    identifier: 3_VOzvwp__oYSUcimAWylA
+    owner: 15
+- model: badges.badge
+  pk: 15
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.886465+00:00
+    modified: 2024-01-04 15:51:09.886465+00:00
+    expiration: 2023-11-16 03:57:09.886420+00:00
+    identifier: HLfS-CJnren4WrXprGiHXQ
+    owner: 16
+- model: badges.badge
+  pk: 16
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.888398+00:00
+    modified: 2024-01-04 15:51:09.888398+00:00
+    expiration: 2024-02-20 21:20:09.888352+00:00
+    identifier: U5Qu5tGfzLZoDmaO20Z3xw
+    owner: 17
+- model: badges.badge
+  pk: 17
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.890521+00:00
+    modified: 2024-01-04 15:51:09.890521+00:00
+    expiration: 2023-11-04 01:40:09.890466+00:00
+    identifier: Zi5Y8n-rlrEB1GFhJlm5eA
+    owner: 18
+- model: badges.badge
+  pk: 18
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.892658+00:00
+    modified: 2024-01-04 15:51:09.892658+00:00
+    expiration: 2024-03-14 00:42:09.892612+00:00
+    identifier: vom34_4RrZAQfDgt7-xT7w
+    owner: 19
+- model: badges.badge
+  pk: 19
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.894561+00:00
+    modified: 2024-01-04 15:51:09.894561+00:00
+    expiration: 2024-01-21 20:15:09.894515+00:00
+    identifier: Oews9hGymVekeUXxMGUVtQ
+    owner: 20
+- model: badges.badge
+  pk: 20
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.896463+00:00
+    modified: 2024-01-04 15:51:09.896463+00:00
+    expiration: 2023-11-06 03:20:09.896414+00:00
+    identifier: 1gnNHkPJV-HBBvaNfzKvVQ
+    owner: 21
+- model: badges.badge
+  pk: 21
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.898502+00:00
+    modified: 2024-01-04 15:51:09.898502+00:00
+    expiration: 2023-12-24 03:11:09.898457+00:00
+    identifier: EhVr0wMOcokoIE69qqEV6g
+    owner: 22
+- model: badges.badge
+  pk: 22
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.900460+00:00
+    modified: 2024-01-04 15:51:09.900460+00:00
+    expiration: 2023-11-11 17:19:09.900415+00:00
+    identifier: yCGJqTCmHIuY2C2rzx6xHw
+    owner: 23
+- model: badges.badge
+  pk: 23
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.902407+00:00
+    modified: 2024-01-04 15:51:09.902407+00:00
+    expiration: 2023-12-14 02:33:09.902363+00:00
+    identifier: vIR7Gv9qMsFhW5v-zJ6qZg
+    owner: 24
+- model: badges.badge
+  pk: 24
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.904312+00:00
+    modified: 2024-01-04 15:51:09.904312+00:00
+    expiration: 2023-11-01 19:48:09.904252+00:00
+    identifier: w3WBZX_9VQTboI_3AhFqRQ
+    owner: 25
+- model: badges.badge
+  pk: 25
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.906200+00:00
+    modified: 2024-01-04 15:51:09.906200+00:00
+    expiration: 2023-12-20 02:04:09.906157+00:00
+    identifier: 7k5eQFvk4zDm7BaNiJq0mg
+    owner: 26
+- model: badges.badge
+  pk: 26
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.908086+00:00
+    modified: 2024-01-04 15:51:09.908086+00:00
+    expiration: 2023-11-05 18:52:09.908043+00:00
+    identifier: DThK59PPiKN_jd2eRi9KJA
+    owner: 27
+- model: badges.badge
+  pk: 27
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.909941+00:00
+    modified: 2024-01-04 15:51:09.909941+00:00
+    expiration: 2024-01-05 15:19:09.909898+00:00
+    identifier: nc0CvQJMxVmmJfsLTdMmAA
+    owner: 28
+- model: badges.badge
+  pk: 28
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.911882+00:00
+    modified: 2024-01-04 15:51:09.911882+00:00
+    expiration: 2023-12-16 09:37:09.911840+00:00
+    identifier: vzzzN2nUSAr3t6VIovO1sg
+    owner: 29
+- model: badges.badge
+  pk: 29
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.913797+00:00
+    modified: 2024-01-04 15:51:09.913797+00:00
+    expiration: 2023-11-06 20:45:09.913749+00:00
+    identifier: DGwQHdXQkdkSZdfjX9HPsA
+    owner: 30
+- model: badges.badge
+  pk: 30
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.916123+00:00
+    modified: 2024-01-04 15:51:09.916123+00:00
+    expiration: 2023-12-16 04:28:09.916079+00:00
+    identifier: N8F7gEJFHZzCJ1h_IewOhQ
+    owner: 31
+- model: badges.badge
+  pk: 31
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.918262+00:00
+    modified: 2024-01-04 15:51:09.918262+00:00
+    expiration: 2024-02-16 01:58:09.918217+00:00
+    identifier: V-2_zE0QIlcPSjyOcgH4tQ
+    owner: 32
+- model: badges.badge
+  pk: 32
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.920276+00:00
+    modified: 2024-01-04 15:51:09.920276+00:00
+    expiration: 2024-01-16 22:51:09.920232+00:00
+    identifier: xfVQos3smShezlKO6s1NgQ
+    owner: 33
+- model: badges.badge
+  pk: 33
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.922205+00:00
+    modified: 2024-01-04 15:51:09.922205+00:00
+    expiration: 2024-02-02 07:53:09.922160+00:00
+    identifier: SzUbjRNvgO90ookyrWzdKg
+    owner: 34
+- model: badges.badge
+  pk: 34
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.924138+00:00
+    modified: 2024-01-04 15:51:09.924138+00:00
+    expiration: 2023-11-28 19:16:09.924093+00:00
+    identifier: QgbrLFPDSJSkB3sOamXNmA
+    owner: 35
+- model: badges.badge
+  pk: 35
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.926017+00:00
+    modified: 2024-01-04 15:51:09.926017+00:00
+    expiration: 2024-01-26 19:24:09.925973+00:00
+    identifier: 3Z1zyD3UrKlDyLI1V0aUcQ
+    owner: 36
+- model: badges.badge
+  pk: 36
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.927952+00:00
+    modified: 2024-01-04 15:51:09.927952+00:00
+    expiration: 2023-11-11 20:03:09.927909+00:00
+    identifier: 5uOtwxajCyLc67c8U_Pv3A
+    owner: 37
+- model: badges.badge
+  pk: 37
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.929866+00:00
+    modified: 2024-01-04 15:51:09.929866+00:00
+    expiration: 2023-11-08 20:14:09.929823+00:00
+    identifier: lmZ9sQYTYiBzfxZl6nSIPQ
+    owner: 38
+- model: badges.badge
+  pk: 38
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.931734+00:00
+    modified: 2024-01-04 15:51:09.931734+00:00
+    expiration: 2024-01-19 08:33:09.931690+00:00
+    identifier: KoKGb7VrB7xx8W_NEBlkNA
+    owner: 39
+- model: badges.badge
+  pk: 39
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.933788+00:00
+    modified: 2024-01-04 15:51:09.933788+00:00
+    expiration: 2024-03-05 00:50:09.933745+00:00
+    identifier: vmanExUFyrxT5fwy1cMRvQ
+    owner: 40
+- model: badges.badge
+  pk: 40
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.935814+00:00
+    modified: 2024-01-04 15:51:09.935814+00:00
+    expiration: 2023-11-07 22:57:09.935768+00:00
+    identifier: 5iAtKDuiTsF_y1sJULgD8w
+    owner: 41
+- model: badges.badge
+  pk: 41
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.937811+00:00
+    modified: 2024-01-04 15:51:09.937811+00:00
+    expiration: 2023-11-22 15:10:09.937766+00:00
+    identifier: DrM-SyvmCy7InnkMt3lf_A
+    owner: 42
+- model: badges.badge
+  pk: 42
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.939833+00:00
+    modified: 2024-01-04 15:51:09.939833+00:00
+    expiration: 2024-02-27 21:57:09.939788+00:00
+    identifier: hpLKmtNtkY-_frd8OVduiA
+    owner: 43
+- model: badges.badge
+  pk: 43
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.941960+00:00
+    modified: 2024-01-04 15:51:09.941960+00:00
+    expiration: 2023-11-22 07:55:09.941916+00:00
+    identifier: PtrcR3brfFB3UrpJAXpqwQ
+    owner: 44
+- model: badges.badge
+  pk: 44
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.943912+00:00
+    modified: 2024-01-04 15:51:09.943912+00:00
+    expiration: 2024-03-05 11:21:09.943870+00:00
+    identifier: mU4GHEdKaGt7EkSMI2BwjA
+    owner: 45
+- model: badges.badge
+  pk: 45
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.945923+00:00
+    modified: 2024-01-04 15:51:09.945923+00:00
+    expiration: 2023-11-18 00:17:09.945879+00:00
+    identifier: MmbdbmmVDgsy851oL1hkZw
+    owner: 46
+- model: badges.badge
+  pk: 46
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.947838+00:00
+    modified: 2024-01-04 15:51:09.947838+00:00
+    expiration: 2024-02-08 07:50:09.947796+00:00
+    identifier: ZCZoiqXcud-mi04MWl4xzw
+    owner: 47
+- model: badges.badge
+  pk: 47
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.949731+00:00
+    modified: 2024-01-04 15:51:09.949731+00:00
+    expiration: 2023-11-23 05:44:09.949688+00:00
+    identifier: Jtuy0Qlf48wGSakhFuoHww
+    owner: 48
+- model: badges.badge
+  pk: 48
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.951634+00:00
+    modified: 2024-01-04 15:51:09.951634+00:00
+    expiration: 2024-01-22 05:46:09.951591+00:00
+    identifier: X0jp6A1xacT2hHTfmZbCkw
+    owner: 49
+- model: badges.badge
+  pk: 49
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.953510+00:00
+    modified: 2024-01-04 15:51:09.953510+00:00
+    expiration: 2024-01-16 15:39:09.953461+00:00
+    identifier: z5bppMNWJCIbsGgVvuVivQ
+    owner: 50
+- model: badges.badge
+  pk: 50
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.955503+00:00
+    modified: 2024-01-04 15:51:09.955503+00:00
+    expiration: 2023-12-23 22:19:09.955459+00:00
+    identifier: Qd6E0E-FTbpalIPukiCfGA
+    owner: 51
+- model: badges.badge
+  pk: 51
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.957423+00:00
+    modified: 2024-01-04 15:51:09.957423+00:00
+    expiration: 2023-12-22 05:17:09.957379+00:00
+    identifier: 7VeYP-xH-PYi5u0Jdb9JxQ
+    owner: 52
+- model: badges.badge
+  pk: 52
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.959301+00:00
+    modified: 2024-01-04 15:51:09.959301+00:00
+    expiration: 2024-01-03 06:47:09.959246+00:00
+    identifier: OmZj6LrJ7VLSCcZb0OQ-sA
+    owner: 53
+- model: badges.badge
+  pk: 53
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.961187+00:00
+    modified: 2024-01-04 15:51:09.961187+00:00
+    expiration: 2023-12-09 07:25:09.961140+00:00
+    identifier: YCW7aHttqhEckGUuckSpEQ
+    owner: 54
+- model: badges.badge
+  pk: 54
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.963231+00:00
+    modified: 2024-01-04 15:51:09.963231+00:00
+    expiration: 2023-11-11 09:08:09.963186+00:00
+    identifier: 2o76uPRSSOfe9aj3vJftQw
+    owner: 55
+- model: badges.badge
+  pk: 55
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.965207+00:00
+    modified: 2024-01-04 15:51:09.965207+00:00
+    expiration: 2023-12-15 01:36:09.965163+00:00
+    identifier: 0BJvl0i5-a1fLnZhInSoZQ
+    owner: 56
+- model: badges.badge
+  pk: 56
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.967127+00:00
+    modified: 2024-01-04 15:51:09.967127+00:00
+    expiration: 2024-02-24 04:45:09.967081+00:00
+    identifier: ew3flbCJf2G5qbC220Dqyw
+    owner: 57
+- model: badges.badge
+  pk: 57
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.970128+00:00
+    modified: 2024-01-04 15:51:09.970128+00:00
+    expiration: 2024-01-26 07:24:09.970070+00:00
+    identifier: lxBvYdhG7CsHY9yg5uHCdg
+    owner: 58
+- model: badges.badge
+  pk: 58
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.972629+00:00
+    modified: 2024-01-04 15:51:09.972629+00:00
+    expiration: 2024-02-23 21:40:09.972563+00:00
+    identifier: _g8UUPdwUPEifvqDw1qPjA
+    owner: 59
+- model: badges.badge
+  pk: 59
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.975243+00:00
+    modified: 2024-01-04 15:51:09.975243+00:00
+    expiration: 2024-01-06 04:02:09.975192+00:00
+    identifier: 09gqNDEt6J-fP57mRQKoHQ
+    owner: 60
+- model: badges.badge
+  pk: 60
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.977401+00:00
+    modified: 2024-01-04 15:51:09.977401+00:00
+    expiration: 2024-03-09 07:06:09.977350+00:00
+    identifier: WsNcf5T7yF8b4_5s3LntZQ
+    owner: 61
+- model: badges.badge
+  pk: 61
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.979394+00:00
+    modified: 2024-01-04 15:51:09.979394+00:00
+    expiration: 2024-01-27 06:07:09.979346+00:00
+    identifier: vpaRP5xsr1yKMNX_IBrv2Q
+    owner: 62
+- model: badges.badge
+  pk: 62
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.981410+00:00
+    modified: 2024-01-04 15:51:09.981410+00:00
+    expiration: 2023-12-20 04:21:09.981362+00:00
+    identifier: 0Q4zIUGPCPCUWuYW8pWHlg
+    owner: 63
+- model: badges.badge
+  pk: 63
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.983350+00:00
+    modified: 2024-01-04 15:51:09.983350+00:00
+    expiration: 2024-02-02 00:46:09.983306+00:00
+    identifier: XrzDqAnmqBPozADQbUGuug
+    owner: 64
+- model: badges.badge
+  pk: 64
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.985305+00:00
+    modified: 2024-01-04 15:51:09.985305+00:00
+    expiration: 2023-12-12 12:17:09.985247+00:00
+    identifier: 0Prd5s4_q6_dyhie_gZQig
+    owner: 65
+- model: badges.badge
+  pk: 65
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.987311+00:00
+    modified: 2024-01-04 15:51:09.987311+00:00
+    expiration: 2024-01-22 02:00:09.987247+00:00
+    identifier: 5Kt1_YtSV-g_hz6rzJc3Rg
+    owner: 66
+- model: badges.badge
+  pk: 66
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.989530+00:00
+    modified: 2024-01-04 15:51:09.989530+00:00
+    expiration: 2023-12-28 15:38:09.989477+00:00
+    identifier: sJUOeKhzLz1rrXlK5j8kng
+    owner: 67
+- model: badges.badge
+  pk: 67
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.991632+00:00
+    modified: 2024-01-04 15:51:09.991632+00:00
+    expiration: 2024-01-28 23:29:09.991587+00:00
+    identifier: l4y5bmJFDRd5h8twCfdPIQ
+    owner: 68
+- model: badges.badge
+  pk: 68
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.993620+00:00
+    modified: 2024-01-04 15:51:09.993620+00:00
+    expiration: 2024-01-26 05:25:09.993573+00:00
+    identifier: 2ayjuBgC1kqDA9-btdddQA
+    owner: 69
+- model: badges.badge
+  pk: 69
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.995649+00:00
+    modified: 2024-01-04 15:51:09.995649+00:00
+    expiration: 2024-03-13 15:46:09.995604+00:00
+    identifier: GrLsL1EeJvBmCdOcUvlyBQ
+    owner: 70
+- model: badges.badge
+  pk: 70
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:09.997883+00:00
+    modified: 2024-01-04 15:51:09.997883+00:00
+    expiration: 2024-02-08 02:09:09.997839+00:00
+    identifier: jhQ7ARuX5bvgCine6uSlYQ
+    owner: 71
+- model: badges.badge
+  pk: 71
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:09.999811+00:00
+    modified: 2024-01-04 15:51:09.999811+00:00
+    expiration: 2023-11-20 01:08:09.999765+00:00
+    identifier: maIRuCcUd7yQwyhW3bKyrA
+    owner: 72
+- model: badges.badge
+  pk: 72
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.001714+00:00
+    modified: 2024-01-04 15:51:10.001714+00:00
+    expiration: 2024-01-05 13:19:10.001670+00:00
+    identifier: xva7XyFFEoJEVvbIK7Buug
+    owner: 73
+- model: badges.badge
+  pk: 73
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.003570+00:00
+    modified: 2024-01-04 15:51:10.003570+00:00
+    expiration: 2023-11-29 01:49:10.003525+00:00
+    identifier: mLnkrFCFxe_RyuIn5tt-Rw
+    owner: 74
+- model: badges.badge
+  pk: 74
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.005498+00:00
+    modified: 2024-01-04 15:51:10.005498+00:00
+    expiration: 2023-12-08 06:37:10.005453+00:00
+    identifier: D_5A-fZdotPfja-4r6yr4w
+    owner: 75
+- model: badges.badge
+  pk: 75
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.007340+00:00
+    modified: 2024-01-04 15:51:10.007340+00:00
+    expiration: 2024-02-07 13:25:10.007278+00:00
+    identifier: ZeMnpJyFWfyulThs7HrxKQ
+    owner: 76
+- model: badges.badge
+  pk: 76
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.009335+00:00
+    modified: 2024-01-04 15:51:10.009335+00:00
+    expiration: 2023-12-04 16:37:10.009276+00:00
+    identifier: yWaNcCgceLGsWrQVkVSLYQ
+    owner: 77
+- model: badges.badge
+  pk: 77
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.011462+00:00
+    modified: 2024-01-04 15:51:10.011462+00:00
+    expiration: 2023-11-20 17:50:10.011415+00:00
+    identifier: ibhA94FxJWyGEVhPqfQIVA
+    owner: 78
+- model: badges.badge
+  pk: 78
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.013412+00:00
+    modified: 2024-01-04 15:51:10.013412+00:00
+    expiration: 2023-12-07 10:49:10.013369+00:00
+    identifier: sIDeTINe86vnnuiuippCRQ
+    owner: 79
+- model: badges.badge
+  pk: 79
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.015340+00:00
+    modified: 2024-01-04 15:51:10.015340+00:00
+    expiration: 2023-11-16 12:28:10.015295+00:00
+    identifier: 4UlyuJGgpF6gxOO4yIUYdA
+    owner: 80
+- model: badges.badge
+  pk: 80
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.017170+00:00
+    modified: 2024-01-04 15:51:10.017170+00:00
+    expiration: 2023-11-15 06:55:10.017127+00:00
+    identifier: h-sKBXzmsvZ0wv5hlhzZ5A
+    owner: 81
+- model: badges.badge
+  pk: 81
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.018959+00:00
+    modified: 2024-01-04 15:51:10.018959+00:00
+    expiration: 2023-11-09 22:45:10.018916+00:00
+    identifier: 4lD8sVdzmIjGjncMEMcVlA
+    owner: 82
+- model: badges.badge
+  pk: 82
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.020973+00:00
+    modified: 2024-01-04 15:51:10.020973+00:00
+    expiration: 2023-12-02 02:56:10.020928+00:00
+    identifier: xJouGqI4Dp7hodg__sSgvw
+    owner: 83
+- model: badges.badge
+  pk: 83
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.022987+00:00
+    modified: 2024-01-04 15:51:10.022987+00:00
+    expiration: 2023-10-29 07:24:10.022943+00:00
+    identifier: K-f_I0oT2cycHyq8kQfF0g
+    owner: 84
+- model: badges.badge
+  pk: 84
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.025119+00:00
+    modified: 2024-01-04 15:51:10.025119+00:00
+    expiration: 2023-12-31 04:56:10.025073+00:00
+    identifier: mpVaoGVmUPbguif03slT1g
+    owner: 85
+- model: badges.badge
+  pk: 85
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.027130+00:00
+    modified: 2024-01-04 15:51:10.027130+00:00
+    expiration: 2023-12-24 06:19:10.027086+00:00
+    identifier: C4USGm_-yRz-uHEf52S2Xw
+    owner: 86
+- model: badges.badge
+  pk: 86
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.029094+00:00
+    modified: 2024-01-04 15:51:10.029094+00:00
+    expiration: 2024-02-20 09:25:10.029051+00:00
+    identifier: NOtMmkPVKkI4mTRVV9KDYw
+    owner: 87
+- model: badges.badge
+  pk: 87
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.031172+00:00
+    modified: 2024-01-04 15:51:10.031172+00:00
+    expiration: 2024-02-11 02:08:10.031127+00:00
+    identifier: q7jDIzxoQofHfI5ixqjiLA
+    owner: 88
+- model: badges.badge
+  pk: 88
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.033082+00:00
+    modified: 2024-01-04 15:51:10.033082+00:00
+    expiration: 2023-12-26 12:11:10.033039+00:00
+    identifier: l06DAcDGo9qVtpmooHsAxw
+    owner: 89
+- model: badges.badge
+  pk: 89
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.034985+00:00
+    modified: 2024-01-04 15:51:10.034985+00:00
+    expiration: 2024-02-28 21:09:10.034942+00:00
+    identifier: Gdornao8bIfoCL1e3oaHmg
+    owner: 90
+- model: badges.badge
+  pk: 90
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.036973+00:00
+    modified: 2024-01-04 15:51:10.036973+00:00
+    expiration: 2023-12-19 11:45:10.036930+00:00
+    identifier: i9WbDc-7B-EaVkvrDogzqQ
+    owner: 91
+- model: badges.badge
+  pk: 91
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.038869+00:00
+    modified: 2024-01-04 15:51:10.038869+00:00
+    expiration: 2024-02-09 16:30:10.038827+00:00
+    identifier: ksWmHuXSzLonGxb-kMBPbA
+    owner: 92
+- model: badges.badge
+  pk: 92
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.040851+00:00
+    modified: 2024-01-04 15:51:10.040851+00:00
+    expiration: 2024-02-24 15:52:10.040803+00:00
+    identifier: VLYBFf4pQRWtu-05WPAXfA
+    owner: 93
+- model: badges.badge
+  pk: 93
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.042928+00:00
+    modified: 2024-01-04 15:51:10.042928+00:00
+    expiration: 2023-12-31 17:09:10.042886+00:00
+    identifier: NA76ZYmTVpNSq9yhdGPjtg
+    owner: 94
+- model: badges.badge
+  pk: 94
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.044740+00:00
+    modified: 2024-01-04 15:51:10.044740+00:00
+    expiration: 2023-11-19 23:37:10.044699+00:00
+    identifier: 2V9O0JZQJ-vlsrXkJ1ItWw
+    owner: 95
+- model: badges.badge
+  pk: 95
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.046518+00:00
+    modified: 2024-01-04 15:51:10.046518+00:00
+    expiration: 2024-02-26 05:56:10.046478+00:00
+    identifier: x8khJrQvbxymY_nihl-TWQ
+    owner: 96
+- model: badges.badge
+  pk: 96
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.048840+00:00
+    modified: 2024-01-04 15:51:10.048840+00:00
+    expiration: 2023-12-06 07:50:10.048799+00:00
+    identifier: adZzfBJNIkMaW_BFVo1Anw
+    owner: 97
+- model: badges.badge
+  pk: 97
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.050899+00:00
+    modified: 2024-01-04 15:51:10.050899+00:00
+    expiration: 2024-01-15 01:32:10.050854+00:00
+    identifier: I2C8xp8VgpoaOyG0qt_7FA
+    owner: 98
+- model: badges.badge
+  pk: 98
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.052768+00:00
+    modified: 2024-01-04 15:51:10.052768+00:00
+    expiration: 2023-12-29 12:25:10.052729+00:00
+    identifier: ut4dZwpLkAe0990ReONoZg
+    owner: 99
+- model: badges.badge
+  pk: 99
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.054596+00:00
+    modified: 2024-01-04 15:51:10.054596+00:00
+    expiration: 2024-01-12 06:02:10.054556+00:00
+    identifier: JbeW3nWNm4uybCkHPc70Pw
+    owner: 100
+- model: badges.badge
+  pk: 100
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.056545+00:00
+    modified: 2024-01-04 15:51:10.056545+00:00
+    expiration: 2024-01-09 00:58:10.056498+00:00
+    identifier: d3_ieO6j6_dtNPXPg-8pTw
+    owner: 101
+- model: badges.badge
+  pk: 101
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.058630+00:00
+    modified: 2024-01-04 15:51:10.058630+00:00
+    expiration: 2023-11-21 20:38:10.058588+00:00
+    identifier: irbYpo5Jap2ki0qfQvGrpQ
+    owner: 102
+- model: badges.badge
+  pk: 102
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.060627+00:00
+    modified: 2024-01-04 15:51:10.060627+00:00
+    expiration: 2023-11-11 14:11:10.060582+00:00
+    identifier: _k_UCO3P2-xfaQZ93ym7Wg
+    owner: 103
+- model: badges.badge
+  pk: 103
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.062633+00:00
+    modified: 2024-01-04 15:51:10.062633+00:00
+    expiration: 2023-12-29 15:31:10.062591+00:00
+    identifier: c9Dhc6WRalm2X51j34GeMQ
+    owner: 104
+- model: badges.badge
+  pk: 104
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.064514+00:00
+    modified: 2024-01-04 15:51:10.064514+00:00
+    expiration: 2023-11-03 17:03:10.064473+00:00
+    identifier: YrKrsqUQOTpugbY5q-waoQ
+    owner: 105
+- model: badges.badge
+  pk: 105
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.066339+00:00
+    modified: 2024-01-04 15:51:10.066339+00:00
+    expiration: 2023-11-11 03:56:10.066298+00:00
+    identifier: exX-MwbaeTcLKf3WbLEwmg
+    owner: 106
+- model: badges.badge
+  pk: 106
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.068143+00:00
+    modified: 2024-01-04 15:51:10.068143+00:00
+    expiration: 2024-02-01 04:15:10.068102+00:00
+    identifier: QtbWUoT0F03JPIss4TVJGA
+    owner: 107
+- model: badges.badge
+  pk: 107
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.069960+00:00
+    modified: 2024-01-04 15:51:10.069960+00:00
+    expiration: 2023-12-11 01:31:10.069920+00:00
+    identifier: cMSAqLfaWuf4N4FNGQSU6A
+    owner: 108
+- model: badges.badge
+  pk: 108
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.071755+00:00
+    modified: 2024-01-04 15:51:10.071755+00:00
+    expiration: 2024-02-23 23:45:10.071717+00:00
+    identifier: bKeeDO15J5XQkSfrYQwgKg
+    owner: 109
+- model: badges.badge
+  pk: 109
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.073823+00:00
+    modified: 2024-01-04 15:51:10.073823+00:00
+    expiration: 2023-11-03 05:30:10.073780+00:00
+    identifier: tEpRB6g9czVkk2limuYBdg
+    owner: 110
+- model: badges.badge
+  pk: 110
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.075879+00:00
+    modified: 2024-01-04 15:51:10.075879+00:00
+    expiration: 2024-01-07 08:07:10.075837+00:00
+    identifier: 8DqwTS5XPjOzzUJY24A4qg
+    owner: 111
+- model: badges.badge
+  pk: 111
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.077717+00:00
+    modified: 2024-01-04 15:51:10.077717+00:00
+    expiration: 2024-01-20 17:34:10.077673+00:00
+    identifier: BefMZilmc4M6VOGYQNVcbw
+    owner: 112
+- model: badges.badge
+  pk: 112
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.079529+00:00
+    modified: 2024-01-04 15:51:10.079529+00:00
+    expiration: 2024-02-04 18:19:10.079489+00:00
+    identifier: yzqmJtikmohQMRa5MywERQ
+    owner: 113
+- model: badges.badge
+  pk: 113
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.081355+00:00
+    modified: 2024-01-04 15:51:10.081355+00:00
+    expiration: 2024-03-09 16:25:10.081312+00:00
+    identifier: Vufrs1I8Wk6rdYM1Tty4uw
+    owner: 114
+- model: badges.badge
+  pk: 114
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.083278+00:00
+    modified: 2024-01-04 15:51:10.083278+00:00
+    expiration: 2023-12-21 22:18:10.083229+00:00
+    identifier: b-PnQw7ICbc5wRQe62H6EQ
+    owner: 115
+- model: badges.badge
+  pk: 115
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.085312+00:00
+    modified: 2024-01-04 15:51:10.085312+00:00
+    expiration: 2024-03-05 03:39:10.085258+00:00
+    identifier: 8lQm8oyUe3Wes6GrOtONkQ
+    owner: 116
+- model: badges.badge
+  pk: 116
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.087140+00:00
+    modified: 2024-01-04 15:51:10.087140+00:00
+    expiration: 2024-01-29 17:09:10.087100+00:00
+    identifier: PFgT9f85ZRqtttSxB7r-xQ
+    owner: 117
+- model: badges.badge
+  pk: 117
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.089004+00:00
+    modified: 2024-01-04 15:51:10.089004+00:00
+    expiration: 2024-01-19 05:53:10.088965+00:00
+    identifier: QCwdGSJPtL_acNkFIGbJnA
+    owner: 118
+- model: badges.badge
+  pk: 118
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.090835+00:00
+    modified: 2024-01-04 15:51:10.090835+00:00
+    expiration: 2023-11-03 16:37:10.090796+00:00
+    identifier: NEBHfg3fIElVzTB-wE0RRg
+    owner: 119
+- model: badges.badge
+  pk: 119
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.092629+00:00
+    modified: 2024-01-04 15:51:10.092629+00:00
+    expiration: 2024-02-05 05:43:10.092584+00:00
+    identifier: ZRoOZyyGGjVWyBTnRh0mZQ
+    owner: 120
+- model: badges.badge
+  pk: 120
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.094606+00:00
+    modified: 2024-01-04 15:51:10.094606+00:00
+    expiration: 2024-01-23 05:28:10.094564+00:00
+    identifier: 05HBuJt4ljyqrWJKF_OfJg
+    owner: 121
+- model: badges.badge
+  pk: 121
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.096427+00:00
+    modified: 2024-01-04 15:51:10.096427+00:00
+    expiration: 2024-01-17 20:25:10.096388+00:00
+    identifier: NENq6XM7RiEU_rdD6WQCOg
+    owner: 122
+- model: badges.badge
+  pk: 122
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.098305+00:00
+    modified: 2024-01-04 15:51:10.098305+00:00
+    expiration: 2024-02-17 22:29:10.098252+00:00
+    identifier: AfVvJh6L6wQbwwglDtpfFA
+    owner: 123
+- model: badges.badge
+  pk: 123
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.100111+00:00
+    modified: 2024-01-04 15:51:10.100111+00:00
+    expiration: 2024-01-25 10:27:10.100070+00:00
+    identifier: 7ALsFVQLXKB2UExFY81gSg
+    owner: 124
+- model: badges.badge
+  pk: 124
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.102153+00:00
+    modified: 2024-01-04 15:51:10.102153+00:00
+    expiration: 2024-01-16 20:21:10.102111+00:00
+    identifier: tc5Gz24uxZI_2kHoqnRFBw
+    owner: 125
+- model: badges.badge
+  pk: 125
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.104339+00:00
+    modified: 2024-01-04 15:51:10.104339+00:00
+    expiration: 2024-03-09 13:26:10.104269+00:00
+    identifier: ebQaJTwwNSkzHb_Hfi43pw
+    owner: 126
+- model: badges.badge
+  pk: 126
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.106609+00:00
+    modified: 2024-01-04 15:51:10.106609+00:00
+    expiration: 2024-01-09 20:55:10.106564+00:00
+    identifier: _hh7l36iEO3J3n_lSzO1IA
+    owner: 127
+- model: badges.badge
+  pk: 127
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.108729+00:00
+    modified: 2024-01-04 15:51:10.108729+00:00
+    expiration: 2023-11-19 18:49:10.108683+00:00
+    identifier: OHNWRPaIflbLqWSqHj-ldg
+    owner: 128
+- model: badges.badge
+  pk: 128
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.110704+00:00
+    modified: 2024-01-04 15:51:10.110704+00:00
+    expiration: 2024-01-31 21:29:10.110656+00:00
+    identifier: 6gdS3UK0VxNtFivqLOexNA
+    owner: 129
+- model: badges.badge
+  pk: 129
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.112576+00:00
+    modified: 2024-01-04 15:51:10.112576+00:00
+    expiration: 2023-11-27 15:26:10.112532+00:00
+    identifier: RSA4NUjjk4__efXRyOmYxQ
+    owner: 130
+- model: badges.badge
+  pk: 130
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.114564+00:00
+    modified: 2024-01-04 15:51:10.114564+00:00
+    expiration: 2023-11-19 01:00:10.114519+00:00
+    identifier: PqSPrun1b--uqKSAYo6A0g
+    owner: 131
+- model: badges.badge
+  pk: 131
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.116432+00:00
+    modified: 2024-01-04 15:51:10.116432+00:00
+    expiration: 2023-11-27 13:24:10.116378+00:00
+    identifier: Y523_X_BZlF_uyiaJCuMXw
+    owner: 132
+- model: badges.badge
+  pk: 132
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.118299+00:00
+    modified: 2024-01-04 15:51:10.118299+00:00
+    expiration: 2024-03-13 20:02:10.118242+00:00
+    identifier: hVn37aii-jpULkWxr89Dzg
+    owner: 133
+- model: badges.badge
+  pk: 133
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.120232+00:00
+    modified: 2024-01-04 15:51:10.120232+00:00
+    expiration: 2024-03-08 20:31:10.120189+00:00
+    identifier: cg2thO2NUfLdvX4Hy0Aqlw
+    owner: 134
+- model: badges.badge
+  pk: 134
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.122106+00:00
+    modified: 2024-01-04 15:51:10.122106+00:00
+    expiration: 2023-11-06 12:43:10.122063+00:00
+    identifier: ZIAEo7gvCzm1l5etolnNLg
+    owner: 135
+- model: badges.badge
+  pk: 135
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.124070+00:00
+    modified: 2024-01-04 15:51:10.124070+00:00
+    expiration: 2024-02-17 11:25:10.124027+00:00
+    identifier: 0o0AA2sjCg9QqP3x48329g
+    owner: 136
+- model: badges.badge
+  pk: 136
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.126058+00:00
+    modified: 2024-01-04 15:51:10.126058+00:00
+    expiration: 2023-10-31 22:07:10.126011+00:00
+    identifier: tkLxWfmBobt69fn4MrkJmw
+    owner: 137
+- model: badges.badge
+  pk: 137
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.128223+00:00
+    modified: 2024-01-04 15:51:10.128223+00:00
+    expiration: 2023-12-14 14:16:10.128180+00:00
+    identifier: s1Ezp8xtrlyFEfi61mR2MQ
+    owner: 138
+- model: badges.badge
+  pk: 138
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.130123+00:00
+    modified: 2024-01-04 15:51:10.130123+00:00
+    expiration: 2023-11-21 13:28:10.130080+00:00
+    identifier: d_allGnPXHMr0Ejz50woRw
+    owner: 139
+- model: badges.badge
+  pk: 139
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.132193+00:00
+    modified: 2024-01-04 15:51:10.132193+00:00
+    expiration: 2023-11-22 02:32:10.132150+00:00
+    identifier: A2T3oGgzU6kMbi8hwzwTiA
+    owner: 140
+- model: badges.badge
+  pk: 140
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.134127+00:00
+    modified: 2024-01-04 15:51:10.134127+00:00
+    expiration: 2024-01-17 20:50:10.134085+00:00
+    identifier: r9plJszbyqtdlniZqgiUjA
+    owner: 141
+- model: badges.badge
+  pk: 141
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.135991+00:00
+    modified: 2024-01-04 15:51:10.135991+00:00
+    expiration: 2024-02-25 06:30:10.135949+00:00
+    identifier: tv48zGX1_6OgxIaz9-aMmQ
+    owner: 142
+- model: badges.badge
+  pk: 142
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.137862+00:00
+    modified: 2024-01-04 15:51:10.137862+00:00
+    expiration: 2024-01-06 05:24:10.137820+00:00
+    identifier: v3rvIJGCIxIl1KDiSN6JAQ
+    owner: 143
+- model: badges.badge
+  pk: 143
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.139732+00:00
+    modified: 2024-01-04 15:51:10.139732+00:00
+    expiration: 2023-11-08 03:35:10.139690+00:00
+    identifier: _ueBAcu7HJ8QzjnkD-5zfw
+    owner: 144
+- model: badges.badge
+  pk: 144
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.141674+00:00
+    modified: 2024-01-04 15:51:10.141674+00:00
+    expiration: 2024-01-18 02:34:10.141632+00:00
+    identifier: DxmUd0fGjXxAsb4TW507Zg
+    owner: 145
+- model: badges.badge
+  pk: 145
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.143486+00:00
+    modified: 2024-01-04 15:51:10.143486+00:00
+    expiration: 2024-01-03 18:16:10.143444+00:00
+    identifier: QMmb1mqKYnrnln_q1n6pmw
+    owner: 146
+- model: badges.badge
+  pk: 146
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.145291+00:00
+    modified: 2024-01-04 15:51:10.145291+00:00
+    expiration: 2024-01-02 16:08:10.145236+00:00
+    identifier: TxGxUpb3D5gbtMNWjIEqrQ
+    owner: 147
+- model: badges.badge
+  pk: 147
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.147148+00:00
+    modified: 2024-01-04 15:51:10.147148+00:00
+    expiration: 2023-12-04 05:36:10.147105+00:00
+    identifier: wPGd9obQTKOCCmy-8TryKA
+    owner: 148
+- model: badges.badge
+  pk: 148
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.149096+00:00
+    modified: 2024-01-04 15:51:10.149096+00:00
+    expiration: 2023-10-28 20:09:10.149052+00:00
+    identifier: 8bhVKtYC3E3XQnFVkKRFOw
+    owner: 149
+- model: badges.badge
+  pk: 149
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.151162+00:00
+    modified: 2024-01-04 15:51:10.151162+00:00
+    expiration: 2023-12-01 17:14:10.151118+00:00
+    identifier: xNQoTN-VGMQocaMSnoDbdw
+    owner: 150
+- model: badges.badge
+  pk: 150
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.153271+00:00
+    modified: 2024-01-04 15:51:10.153271+00:00
+    expiration: 2023-11-10 06:20:10.153227+00:00
+    identifier: qfAJOz0HcDiJY4-Y2Q0FqQ
+    owner: 151
+- model: badges.badge
+  pk: 151
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.155158+00:00
+    modified: 2024-01-04 15:51:10.155158+00:00
+    expiration: 2023-11-04 15:03:10.155115+00:00
+    identifier: CUo_IvLWLsJnGs8LFZ8XoQ
+    owner: 152
+- model: badges.badge
+  pk: 152
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.157249+00:00
+    modified: 2024-01-04 15:51:10.157249+00:00
+    expiration: 2024-01-02 22:03:10.157205+00:00
+    identifier: 04qkzDAeVUuk2DJWLXCMjw
+    owner: 153
+- model: badges.badge
+  pk: 153
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.159153+00:00
+    modified: 2024-01-04 15:51:10.159153+00:00
+    expiration: 2023-11-11 14:52:10.159111+00:00
+    identifier: rIlvSR38UFUGwzbcKWHDjw
+    owner: 154
+- model: badges.badge
+  pk: 154
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.161037+00:00
+    modified: 2024-01-04 15:51:10.161037+00:00
+    expiration: 2024-02-17 04:02:10.160994+00:00
+    identifier: hAt3vhye6D1XMO-teQzy-Q
+    owner: 155
+- model: badges.badge
+  pk: 155
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.162907+00:00
+    modified: 2024-01-04 15:51:10.162907+00:00
+    expiration: 2024-01-23 12:20:10.162865+00:00
+    identifier: DiT6URyZnpB2uuL3Gm02NA
+    owner: 156
+- model: badges.badge
+  pk: 156
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.164780+00:00
+    modified: 2024-01-04 15:51:10.164780+00:00
+    expiration: 2023-11-01 12:06:10.164738+00:00
+    identifier: DYmmd1znMFWo5Yxj9tVu6A
+    owner: 157
+- model: badges.badge
+  pk: 157
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.166638+00:00
+    modified: 2024-01-04 15:51:10.166638+00:00
+    expiration: 2023-11-27 00:06:10.166596+00:00
+    identifier: Hh2tKfkmnaf8khWkBBykfg
+    owner: 158
+- model: badges.badge
+  pk: 158
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.168410+00:00
+    modified: 2024-01-04 15:51:10.168410+00:00
+    expiration: 2024-01-14 00:27:10.168367+00:00
+    identifier: r2S8kKxl5hutW1y0f42clA
+    owner: 159
+- model: badges.badge
+  pk: 159
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.170228+00:00
+    modified: 2024-01-04 15:51:10.170228+00:00
+    expiration: 2024-02-21 08:38:10.170186+00:00
+    identifier: S94fk1yckMtY1MUDcUY2NA
+    owner: 160
+- model: badges.badge
+  pk: 160
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.172091+00:00
+    modified: 2024-01-04 15:51:10.172091+00:00
+    expiration: 2024-01-24 10:35:10.172050+00:00
+    identifier: 9ZPxkpdflx4w-ujwtZQsrg
+    owner: 161
+- model: badges.badge
+  pk: 161
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.174114+00:00
+    modified: 2024-01-04 15:51:10.174114+00:00
+    expiration: 2024-01-22 05:48:10.174071+00:00
+    identifier: o7lGGDGBKuNqkGsqazoZVg
+    owner: 162
+- model: badges.badge
+  pk: 162
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.175972+00:00
+    modified: 2024-01-04 15:51:10.175972+00:00
+    expiration: 2024-02-28 10:36:10.175930+00:00
+    identifier: K2pjjrbMxffS6THQTYfgzw
+    owner: 163
+- model: badges.badge
+  pk: 163
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.178214+00:00
+    modified: 2024-01-04 15:51:10.178214+00:00
+    expiration: 2024-02-11 10:50:10.178166+00:00
+    identifier: YubdpGw-1HqL1fGO51IxZQ
+    owner: 164
+- model: badges.badge
+  pk: 164
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.180412+00:00
+    modified: 2024-01-04 15:51:10.180412+00:00
+    expiration: 2023-12-05 15:33:10.180363+00:00
+    identifier: LICLzM4LwhtVaSkcxne2oQ
+    owner: 165
+- model: badges.badge
+  pk: 165
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.182477+00:00
+    modified: 2024-01-04 15:51:10.182477+00:00
+    expiration: 2024-01-02 12:53:10.182431+00:00
+    identifier: S23bfBNGYB1p8U6AIBj9-Q
+    owner: 166
+- model: badges.badge
+  pk: 166
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.184381+00:00
+    modified: 2024-01-04 15:51:10.184381+00:00
+    expiration: 2024-02-10 11:08:10.184337+00:00
+    identifier: -aCUHg8pRYSOIdLrFV09hw
+    owner: 167
+- model: badges.badge
+  pk: 167
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.186394+00:00
+    modified: 2024-01-04 15:51:10.186394+00:00
+    expiration: 2023-11-05 18:30:10.186350+00:00
+    identifier: 0Q-uiSXPaFPGcdNv-x1Ghg
+    owner: 168
+- model: badges.badge
+  pk: 168
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.188357+00:00
+    modified: 2024-01-04 15:51:10.188357+00:00
+    expiration: 2023-12-19 10:35:10.188309+00:00
+    identifier: on--BB77ZaSRS88JMC3QYA
+    owner: 169
+- model: badges.badge
+  pk: 169
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.190249+00:00
+    modified: 2024-01-04 15:51:10.190249+00:00
+    expiration: 2023-11-05 01:45:10.190205+00:00
+    identifier: 5KrC2GV8B3RyHkFBfFIa1A
+    owner: 170
+- model: badges.badge
+  pk: 170
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.192216+00:00
+    modified: 2024-01-04 15:51:10.192216+00:00
+    expiration: 2024-01-17 19:41:10.192172+00:00
+    identifier: _umXigXfgsFIuBFBZwo6HA
+    owner: 171
+- model: badges.badge
+  pk: 171
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.194161+00:00
+    modified: 2024-01-04 15:51:10.194161+00:00
+    expiration: 2023-12-31 14:57:10.194113+00:00
+    identifier: wyWSJ9xAqKRFznnjyxfVIg
+    owner: 172
+- model: badges.badge
+  pk: 172
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.196267+00:00
+    modified: 2024-01-04 15:51:10.196267+00:00
+    expiration: 2023-12-26 20:12:10.196221+00:00
+    identifier: KDY9rXVUfYcD53enZXI41w
+    owner: 173
+- model: badges.badge
+  pk: 173
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.198299+00:00
+    modified: 2024-01-04 15:51:10.198299+00:00
+    expiration: 2024-02-16 15:09:10.198242+00:00
+    identifier: ZND24Yi8nXsD6tHwmm0Piw
+    owner: 174
+- model: badges.badge
+  pk: 174
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.200369+00:00
+    modified: 2024-01-04 15:51:10.200369+00:00
+    expiration: 2023-11-24 14:24:10.200323+00:00
+    identifier: guhJlYT9H_OwgUkikCIgKw
+    owner: 175
+- model: badges.badge
+  pk: 175
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.202329+00:00
+    modified: 2024-01-04 15:51:10.202329+00:00
+    expiration: 2023-11-24 10:03:10.202271+00:00
+    identifier: WJJbsdCXJijI0Uqn13fvng
+    owner: 176
+- model: badges.badge
+  pk: 176
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.204238+00:00
+    modified: 2024-01-04 15:51:10.204238+00:00
+    expiration: 2023-12-05 07:30:10.204194+00:00
+    identifier: rHUo_XIuSVaIaNv9UNlOEA
+    owner: 177
+- model: badges.badge
+  pk: 177
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.206387+00:00
+    modified: 2024-01-04 15:51:10.206387+00:00
+    expiration: 2024-01-09 17:58:10.206343+00:00
+    identifier: W2xPYxIBoqmUciZbizwD0g
+    owner: 178
+- model: badges.badge
+  pk: 178
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.208305+00:00
+    modified: 2024-01-04 15:51:10.208305+00:00
+    expiration: 2023-12-02 05:14:10.208250+00:00
+    identifier: e6SpzN7ILiplsyPixCaXkQ
+    owner: 179
+- model: badges.badge
+  pk: 179
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.210307+00:00
+    modified: 2024-01-04 15:51:10.210307+00:00
+    expiration: 2023-11-15 18:21:10.210250+00:00
+    identifier: KIjbRe_2odjw0vRDHOL44A
+    owner: 180
+- model: badges.badge
+  pk: 180
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.212198+00:00
+    modified: 2024-01-04 15:51:10.212198+00:00
+    expiration: 2023-12-27 01:33:10.212156+00:00
+    identifier: 6bBcVYkqZxVtal2ynuAf5w
+    owner: 181
+- model: badges.badge
+  pk: 181
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.214072+00:00
+    modified: 2024-01-04 15:51:10.214072+00:00
+    expiration: 2024-02-29 01:53:10.214026+00:00
+    identifier: zhhRcZJltWyCMdbchZ0l7w
+    owner: 182
+- model: badges.badge
+  pk: 182
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.215984+00:00
+    modified: 2024-01-04 15:51:10.215984+00:00
+    expiration: 2023-10-31 13:54:10.215941+00:00
+    identifier: nHc4fUFDB_BRlzuQlw8QcA
+    owner: 183
+- model: badges.badge
+  pk: 183
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.217849+00:00
+    modified: 2024-01-04 15:51:10.217849+00:00
+    expiration: 2023-12-11 06:56:10.217808+00:00
+    identifier: 4xAWJ_oyMY_p_1_GwENjew
+    owner: 184
+- model: badges.badge
+  pk: 184
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.219711+00:00
+    modified: 2024-01-04 15:51:10.219711+00:00
+    expiration: 2024-01-27 20:45:10.219670+00:00
+    identifier: zRlaniOh1MLZXEbAkMwnMQ
+    owner: 185
+- model: badges.badge
+  pk: 185
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.221569+00:00
+    modified: 2024-01-04 15:51:10.221569+00:00
+    expiration: 2023-12-30 17:28:10.221527+00:00
+    identifier: UMRCfChjGHauF3aZUhFaqA
+    owner: 186
+- model: badges.badge
+  pk: 186
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.224702+00:00
+    modified: 2024-01-04 15:51:10.224702+00:00
+    expiration: 2023-11-26 07:15:10.224643+00:00
+    identifier: ozDKAKwQgtoCZmqiR_YN4Q
+    owner: 187
+- model: badges.badge
+  pk: 187
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.227164+00:00
+    modified: 2024-01-04 15:51:10.227164+00:00
+    expiration: 2024-01-12 23:01:10.227114+00:00
+    identifier: MAW_3lPyoGi8a3MaN8FFqg
+    owner: 188
+- model: badges.badge
+  pk: 188
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.229230+00:00
+    modified: 2024-01-04 15:51:10.229230+00:00
+    expiration: 2023-11-09 06:30:10.229185+00:00
+    identifier: 5rARxw29ppSVla7D6YngVg
+    owner: 189
+- model: badges.badge
+  pk: 189
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.231154+00:00
+    modified: 2024-01-04 15:51:10.231154+00:00
+    expiration: 2024-03-08 20:43:10.231109+00:00
+    identifier: UEANhwDyHFrsYqlSbwAO-A
+    owner: 190
+- model: badges.badge
+  pk: 190
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.233503+00:00
+    modified: 2024-01-04 15:51:10.233503+00:00
+    expiration: 2024-01-28 02:30:10.233458+00:00
+    identifier: Jd4gs-loqBFPUhXHYB7RCA
+    owner: 191
+- model: badges.badge
+  pk: 191
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.235401+00:00
+    modified: 2024-01-04 15:51:10.235401+00:00
+    expiration: 2024-02-13 15:50:10.235357+00:00
+    identifier: JHPq_UnOScVmRBkjXPtZFg
+    owner: 192
+- model: badges.badge
+  pk: 192
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.237399+00:00
+    modified: 2024-01-04 15:51:10.237399+00:00
+    expiration: 2023-11-09 18:16:10.237355+00:00
+    identifier: -8gixIrYHFm0nD7sXwUOjw
+    owner: 193
+- model: badges.badge
+  pk: 193
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.239395+00:00
+    modified: 2024-01-04 15:51:10.239395+00:00
+    expiration: 2023-12-10 07:34:10.239353+00:00
+    identifier: YEt7SBcWFyOgjgWY--FE_w
+    owner: 194
+- model: badges.badge
+  pk: 194
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.241345+00:00
+    modified: 2024-01-04 15:51:10.241345+00:00
+    expiration: 2024-02-08 12:12:10.241301+00:00
+    identifier: QH-vYTPfq5J_UWCSkzlD2g
+    owner: 195
+- model: badges.badge
+  pk: 195
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.243389+00:00
+    modified: 2024-01-04 15:51:10.243389+00:00
+    expiration: 2024-03-12 14:23:10.243342+00:00
+    identifier: HJYz8sANmiSwWieqzeFGwg
+    owner: 196
+- model: badges.badge
+  pk: 196
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.245412+00:00
+    modified: 2024-01-04 15:51:10.245412+00:00
+    expiration: 2024-02-17 13:34:10.245369+00:00
+    identifier: zo-i3aetnaL3YMFKXcNUxQ
+    owner: 197
+- model: badges.badge
+  pk: 197
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:10.247499+00:00
+    modified: 2024-01-04 15:51:10.247499+00:00
+    expiration: 2024-02-06 11:24:10.247452+00:00
+    identifier: DZWg5Z3gtOxkK9Dl-NstDg
+    owner: 198
+- model: badges.badge
+  pk: 198
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:10.249514+00:00
+    modified: 2024-01-04 15:51:10.249514+00:00
+    expiration: 2024-01-19 00:33:10.249471+00:00
+    identifier: 3l6Ot1kE0QG6LrSm2asULA
+    owner: 199
+- model: badges.badge
+  pk: 199
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.083070+00:00
+    modified: 2024-01-04 15:51:14.083070+00:00
+    expiration: 2024-03-11 06:52:14.082829+00:00
+    identifier: Zc12dpy5OYflkHlId70chg
+    owner: 200
+- model: badges.badge
+  pk: 200
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.092692+00:00
+    modified: 2024-01-04 15:51:14.092692+00:00
+    expiration: 2023-11-02 06:45:14.092556+00:00
+    identifier: rPrh4cHW-9WBsi_8ZW4bLw
+    owner: 201
+- model: badges.badge
+  pk: 201
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.100012+00:00
+    modified: 2024-01-04 15:51:14.100012+00:00
+    expiration: 2023-12-13 11:35:14.099843+00:00
+    identifier: ONLTqYh1zfFgRZ2ODQMUYA
+    owner: 202
+- model: badges.badge
+  pk: 202
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.106708+00:00
+    modified: 2024-01-04 15:51:14.106708+00:00
+    expiration: 2023-12-27 08:54:14.106559+00:00
+    identifier: AkczofVOjG6_cvelGay8XQ
+    owner: 203
+- model: badges.badge
+  pk: 203
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.112355+00:00
+    modified: 2024-01-04 15:51:14.112355+00:00
+    expiration: 2023-11-29 15:54:14.112237+00:00
+    identifier: trkIfND756F1LEUhkP5u2Q
+    owner: 204
+- model: badges.badge
+  pk: 204
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.116390+00:00
+    modified: 2024-01-04 15:51:14.116390+00:00
+    expiration: 2024-03-09 17:43:14.116315+00:00
+    identifier: Y8BuDC2GIEflIyLIskLZfQ
+    owner: 205
+- model: badges.badge
+  pk: 205
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.120200+00:00
+    modified: 2024-01-04 15:51:14.120200+00:00
+    expiration: 2023-11-21 18:49:14.120125+00:00
+    identifier: lv0vwY38M1EDMf1K4nmpMQ
+    owner: 206
+- model: badges.badge
+  pk: 206
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.124014+00:00
+    modified: 2024-01-04 15:51:14.124014+00:00
+    expiration: 2024-01-24 18:43:14.123915+00:00
+    identifier: 2IoYAD5ZLfCDLQNC8mXU2w
+    owner: 207
+- model: badges.badge
+  pk: 207
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.128258+00:00
+    modified: 2024-01-04 15:51:14.128258+00:00
+    expiration: 2023-11-01 06:38:14.128179+00:00
+    identifier: gxBD2jXWHDrk36S-51j5Ng
+    owner: 208
+- model: badges.badge
+  pk: 208
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.131350+00:00
+    modified: 2024-01-04 15:51:14.131350+00:00
+    expiration: 2023-11-12 04:00:14.131271+00:00
+    identifier: sSIexBuTHFqOCPz6YHVugw
+    owner: 209
+- model: badges.badge
+  pk: 209
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.134029+00:00
+    modified: 2024-01-04 15:51:14.134029+00:00
+    expiration: 2023-11-06 20:44:14.133973+00:00
+    identifier: H_UH5OmGuPuEGmlBBfuPTw
+    owner: 210
+- model: badges.badge
+  pk: 210
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.136760+00:00
+    modified: 2024-01-04 15:51:14.136760+00:00
+    expiration: 2024-01-18 19:00:14.136704+00:00
+    identifier: G6YhlJOJEODka8phA-G29A
+    owner: 211
+- model: badges.badge
+  pk: 211
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.139265+00:00
+    modified: 2024-01-04 15:51:14.139265+00:00
+    expiration: 2023-11-18 13:36:14.139211+00:00
+    identifier: Ee9Y7mk0cuDAWFGZtKqEHw
+    owner: 212
+- model: badges.badge
+  pk: 212
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.141828+00:00
+    modified: 2024-01-04 15:51:14.141828+00:00
+    expiration: 2024-02-25 12:26:14.141774+00:00
+    identifier: jsNcpgUSY3w9lPZoEkwHfg
+    owner: 213
+- model: badges.badge
+  pk: 213
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.145060+00:00
+    modified: 2024-01-04 15:51:14.145060+00:00
+    expiration: 2024-01-25 07:03:14.144993+00:00
+    identifier: ciWj18gYmtuv8crdP3K-XQ
+    owner: 214
+- model: badges.badge
+  pk: 214
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.147657+00:00
+    modified: 2024-01-04 15:51:14.147657+00:00
+    expiration: 2024-02-14 18:37:14.147602+00:00
+    identifier: wHCvhANAgjlAAQ75mkMMUw
+    owner: 215
+- model: badges.badge
+  pk: 215
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.150145+00:00
+    modified: 2024-01-04 15:51:14.150145+00:00
+    expiration: 2023-11-14 03:33:14.150097+00:00
+    identifier: HQ4_oJBZzpFszlDZXxePJw
+    owner: 216
+- model: badges.badge
+  pk: 216
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.152311+00:00
+    modified: 2024-01-04 15:51:14.152311+00:00
+    expiration: 2024-02-02 19:30:14.152253+00:00
+    identifier: NtajTIkKpLzW79-hHEOqqg
+    owner: 217
+- model: badges.badge
+  pk: 217
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.154371+00:00
+    modified: 2024-01-04 15:51:14.154371+00:00
+    expiration: 2024-02-08 09:27:14.154325+00:00
+    identifier: 8jwfhb19nlompcoRFPOkYA
+    owner: 218
+- model: badges.badge
+  pk: 218
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.156691+00:00
+    modified: 2024-01-04 15:51:14.156691+00:00
+    expiration: 2024-01-13 21:57:14.156639+00:00
+    identifier: H_mAdilYIROjJc0ffXYxkQ
+    owner: 219
+- model: badges.badge
+  pk: 219
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.158916+00:00
+    modified: 2024-01-04 15:51:14.158916+00:00
+    expiration: 2024-01-23 11:43:14.158870+00:00
+    identifier: 4Vy_VaDID-GIxEFI7dSwGQ
+    owner: 220
+- model: badges.badge
+  pk: 220
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.161262+00:00
+    modified: 2024-01-04 15:51:14.161262+00:00
+    expiration: 2024-01-11 05:38:14.161216+00:00
+    identifier: 95PCO5N20BYI8j9lz0pGag
+    owner: 221
+- model: badges.badge
+  pk: 221
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.163539+00:00
+    modified: 2024-01-04 15:51:14.163539+00:00
+    expiration: 2023-12-27 20:53:14.163496+00:00
+    identifier: loB2WBy4VfFUCibquv97NA
+    owner: 222
+- model: badges.badge
+  pk: 222
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.165821+00:00
+    modified: 2024-01-04 15:51:14.165821+00:00
+    expiration: 2023-12-30 00:14:14.165771+00:00
+    identifier: FZjDyQQlu8oiJG8BubI_fQ
+    owner: 223
+- model: badges.badge
+  pk: 223
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.167963+00:00
+    modified: 2024-01-04 15:51:14.167963+00:00
+    expiration: 2023-11-17 17:37:14.167920+00:00
+    identifier: o9ezYvE9ujibVUQZ8n8pZQ
+    owner: 224
+- model: badges.badge
+  pk: 224
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.170259+00:00
+    modified: 2024-01-04 15:51:14.170259+00:00
+    expiration: 2024-01-11 15:18:14.170199+00:00
+    identifier: WZWFZpnzecqyyzx4I-mBfg
+    owner: 225
+- model: badges.badge
+  pk: 225
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.172382+00:00
+    modified: 2024-01-04 15:51:14.172382+00:00
+    expiration: 2024-01-02 17:03:14.172336+00:00
+    identifier: 6tnKl937WEk-kwcX81BHjw
+    owner: 226
+- model: badges.badge
+  pk: 226
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.174694+00:00
+    modified: 2024-01-04 15:51:14.174694+00:00
+    expiration: 2024-01-31 05:27:14.174647+00:00
+    identifier: 877HL5eYBoW4RNUgQX2yiQ
+    owner: 227
+- model: badges.badge
+  pk: 227
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.177116+00:00
+    modified: 2024-01-04 15:51:14.177116+00:00
+    expiration: 2024-03-09 05:31:14.177070+00:00
+    identifier: dsVMQN3kSaF-5nXihUUnJg
+    owner: 228
+- model: badges.badge
+  pk: 228
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.180245+00:00
+    modified: 2024-01-04 15:51:14.180245+00:00
+    expiration: 2023-12-25 18:19:14.180191+00:00
+    identifier: eySKgARKBxhcn2naEQtXhQ
+    owner: 229
+- model: badges.badge
+  pk: 229
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.182685+00:00
+    modified: 2024-01-04 15:51:14.182685+00:00
+    expiration: 2023-12-07 11:28:14.182638+00:00
+    identifier: 2UF1w2XTu0fRXvcPKYeD5w
+    owner: 230
+- model: badges.badge
+  pk: 230
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.184950+00:00
+    modified: 2024-01-04 15:51:14.184950+00:00
+    expiration: 2023-12-21 22:53:14.184905+00:00
+    identifier: HpQLXFAra4cr2eAiR0Ff-w
+    owner: 231
+- model: badges.badge
+  pk: 231
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.187170+00:00
+    modified: 2024-01-04 15:51:14.187170+00:00
+    expiration: 2024-01-16 20:50:14.187118+00:00
+    identifier: 5X13QuGqhAEP0wzVOGD7hw
+    owner: 232
+- model: badges.badge
+  pk: 232
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.189342+00:00
+    modified: 2024-01-04 15:51:14.189342+00:00
+    expiration: 2023-11-03 07:20:14.189276+00:00
+    identifier: PrRWE2KKO-xgWMp9JX9buA
+    owner: 233
+- model: badges.badge
+  pk: 233
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.191467+00:00
+    modified: 2024-01-04 15:51:14.191467+00:00
+    expiration: 2023-12-03 09:21:14.191421+00:00
+    identifier: 3uPeKLGL1eaNEPoLO5BIvg
+    owner: 234
+- model: badges.badge
+  pk: 234
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.193648+00:00
+    modified: 2024-01-04 15:51:14.193648+00:00
+    expiration: 2023-11-15 03:30:14.193604+00:00
+    identifier: 5Has9kNKeIrSDtqKe47sKw
+    owner: 235
+- model: badges.badge
+  pk: 235
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.195918+00:00
+    modified: 2024-01-04 15:51:14.195918+00:00
+    expiration: 2024-01-08 04:43:14.195872+00:00
+    identifier: QcRjn8WAkueDd50mafgD_A
+    owner: 236
+- model: badges.badge
+  pk: 236
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.198067+00:00
+    modified: 2024-01-04 15:51:14.198067+00:00
+    expiration: 2023-12-04 23:59:14.198022+00:00
+    identifier: cf8giXiLM6RaRKpqj1UJJw
+    owner: 237
+- model: badges.badge
+  pk: 237
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.200089+00:00
+    modified: 2024-01-04 15:51:14.200089+00:00
+    expiration: 2023-11-11 10:52:14.200040+00:00
+    identifier: QCnXcFb2G3BLF2zqxDSaig
+    owner: 238
+- model: badges.badge
+  pk: 238
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.202153+00:00
+    modified: 2024-01-04 15:51:14.202153+00:00
+    expiration: 2023-12-06 01:59:14.202109+00:00
+    identifier: dp9-hCezFioFAMhoYk06Cw
+    owner: 239
+- model: badges.badge
+  pk: 239
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.204412+00:00
+    modified: 2024-01-04 15:51:14.204412+00:00
+    expiration: 2024-02-06 17:17:14.204367+00:00
+    identifier: a-GIBvubpTVn1m9bdlKIMA
+    owner: 240
+- model: badges.badge
+  pk: 240
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.206512+00:00
+    modified: 2024-01-04 15:51:14.206512+00:00
+    expiration: 2023-12-14 15:51:14.206466+00:00
+    identifier: hvE1jHpSJs-LnAEAHnRVGQ
+    owner: 241
+- model: badges.badge
+  pk: 241
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.208862+00:00
+    modified: 2024-01-04 15:51:14.208862+00:00
+    expiration: 2023-12-10 06:02:14.208815+00:00
+    identifier: 7LEMZ55N716exXKpZ1GZNA
+    owner: 242
+- model: badges.badge
+  pk: 242
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.211118+00:00
+    modified: 2024-01-04 15:51:14.211118+00:00
+    expiration: 2024-02-06 04:22:14.211064+00:00
+    identifier: f-zcgMrhaaeNRV6Kxpvy1Q
+    owner: 243
+- model: badges.badge
+  pk: 243
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.213645+00:00
+    modified: 2024-01-04 15:51:14.213645+00:00
+    expiration: 2024-01-23 02:08:14.213598+00:00
+    identifier: MwZKslnSyLmJR1gOrPuyPg
+    owner: 244
+- model: badges.badge
+  pk: 244
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.215809+00:00
+    modified: 2024-01-04 15:51:14.215809+00:00
+    expiration: 2024-01-26 20:51:14.215764+00:00
+    identifier: KVVAecQhpJKTWtBKOKGyGA
+    owner: 245
+- model: badges.badge
+  pk: 245
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.217939+00:00
+    modified: 2024-01-04 15:51:14.217939+00:00
+    expiration: 2024-01-26 17:00:14.217893+00:00
+    identifier: 31zSSpSxlGJb_ofI4aYbgg
+    owner: 246
+- model: badges.badge
+  pk: 246
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.220372+00:00
+    modified: 2024-01-04 15:51:14.220372+00:00
+    expiration: 2023-12-26 18:54:14.220326+00:00
+    identifier: _817eEBdYdwlnImJ_BDIRw
+    owner: 247
+- model: badges.badge
+  pk: 247
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.222564+00:00
+    modified: 2024-01-04 15:51:14.222564+00:00
+    expiration: 2023-10-28 21:10:14.222516+00:00
+    identifier: eCsVDJT0wryz4hilenTdDA
+    owner: 248
+- model: badges.badge
+  pk: 248
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.224744+00:00
+    modified: 2024-01-04 15:51:14.224744+00:00
+    expiration: 2023-11-29 04:00:14.224698+00:00
+    identifier: 1iOTWstfaaJu5DQYohrNAw
+    owner: 249
+- model: badges.badge
+  pk: 249
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.226970+00:00
+    modified: 2024-01-04 15:51:14.226970+00:00
+    expiration: 2023-11-10 15:13:14.226924+00:00
+    identifier: inhrwKVpBQC8rryWodqSBQ
+    owner: 250
+- model: badges.badge
+  pk: 250
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.229086+00:00
+    modified: 2024-01-04 15:51:14.229086+00:00
+    expiration: 2023-11-16 02:57:14.229041+00:00
+    identifier: Q-MoFxftK43J-p-jClkX5g
+    owner: 251
+- model: badges.badge
+  pk: 251
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.231635+00:00
+    modified: 2024-01-04 15:51:14.231635+00:00
+    expiration: 2023-11-10 15:51:14.231589+00:00
+    identifier: rGGyhSf856pofsQlKmFKOA
+    owner: 252
+- model: badges.badge
+  pk: 252
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.233806+00:00
+    modified: 2024-01-04 15:51:14.233806+00:00
+    expiration: 2024-01-25 21:14:14.233763+00:00
+    identifier: RcoJjkRUg_TfBZPpMJHpbQ
+    owner: 253
+- model: badges.badge
+  pk: 253
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.235899+00:00
+    modified: 2024-01-04 15:51:14.235899+00:00
+    expiration: 2023-12-10 19:49:14.235855+00:00
+    identifier: bfLaYNn0vWk095vUjlTCaA
+    owner: 254
+- model: badges.badge
+  pk: 254
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.238229+00:00
+    modified: 2024-01-04 15:51:14.238229+00:00
+    expiration: 2024-03-08 17:43:14.238182+00:00
+    identifier: ZXV64A_3b97erpV6uzOOGA
+    owner: 255
+- model: badges.badge
+  pk: 255
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.240346+00:00
+    modified: 2024-01-04 15:51:14.240346+00:00
+    expiration: 2024-02-06 16:17:14.240301+00:00
+    identifier: gL7TWkNL2nKff_S6QIQy6w
+    owner: 256
+- model: badges.badge
+  pk: 256
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.242461+00:00
+    modified: 2024-01-04 15:51:14.242461+00:00
+    expiration: 2024-03-08 06:24:14.242416+00:00
+    identifier: Bgnkh2PaVdlGu_8ELVTKMw
+    owner: 257
+- model: badges.badge
+  pk: 257
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.244554+00:00
+    modified: 2024-01-04 15:51:14.244554+00:00
+    expiration: 2023-10-29 07:08:14.244508+00:00
+    identifier: 4AvNgRdw9Ft0_3fCeYvihw
+    owner: 258
+- model: badges.badge
+  pk: 258
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.246659+00:00
+    modified: 2024-01-04 15:51:14.246659+00:00
+    expiration: 2024-01-15 03:18:14.246615+00:00
+    identifier: 8b_31Jphuv2zdvkS7mUSFA
+    owner: 259
+- model: badges.badge
+  pk: 259
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.248848+00:00
+    modified: 2024-01-04 15:51:14.248848+00:00
+    expiration: 2023-11-17 23:46:14.248801+00:00
+    identifier: 341khpYm94_oBoo6n29wEg
+    owner: 260
+- model: badges.badge
+  pk: 260
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.251047+00:00
+    modified: 2024-01-04 15:51:14.251047+00:00
+    expiration: 2024-02-08 11:12:14.251002+00:00
+    identifier: ZxsLi1vvSxJkY1h51G5ByQ
+    owner: 261
+- model: badges.badge
+  pk: 261
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.253344+00:00
+    modified: 2024-01-04 15:51:14.253344+00:00
+    expiration: 2023-11-02 20:55:14.253298+00:00
+    identifier: Fd10_30y2DGeq4051N0N1A
+    owner: 262
+- model: badges.badge
+  pk: 262
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.255405+00:00
+    modified: 2024-01-04 15:51:14.255405+00:00
+    expiration: 2024-01-10 03:39:14.255353+00:00
+    identifier: 9vfdpc4KUSahbQTH9omNjg
+    owner: 263
+- model: badges.badge
+  pk: 263
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.257454+00:00
+    modified: 2024-01-04 15:51:14.257454+00:00
+    expiration: 2023-11-22 08:44:14.257405+00:00
+    identifier: HWmcFNmh-Ub7xGgsClPvHA
+    owner: 264
+- model: badges.badge
+  pk: 264
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.259623+00:00
+    modified: 2024-01-04 15:51:14.259623+00:00
+    expiration: 2023-11-18 19:04:14.259577+00:00
+    identifier: evkeY_nUsYGrVAQiBk2XXA
+    owner: 265
+- model: badges.badge
+  pk: 265
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.261780+00:00
+    modified: 2024-01-04 15:51:14.261780+00:00
+    expiration: 2024-02-03 18:49:14.261736+00:00
+    identifier: pY0NU4QPAjVC1xM3ky-y7A
+    owner: 266
+- model: badges.badge
+  pk: 266
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.263959+00:00
+    modified: 2024-01-04 15:51:14.263959+00:00
+    expiration: 2023-11-03 10:04:14.263914+00:00
+    identifier: CmNBRhW1f-6lxkSUFQe9NA
+    owner: 267
+- model: badges.badge
+  pk: 267
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.266322+00:00
+    modified: 2024-01-04 15:51:14.266322+00:00
+    expiration: 2024-02-10 14:00:14.266263+00:00
+    identifier: JnF5pFtxcyKlQhm3U4DDPA
+    owner: 268
+- model: badges.badge
+  pk: 268
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.268607+00:00
+    modified: 2024-01-04 15:51:14.268607+00:00
+    expiration: 2024-01-31 05:31:14.268562+00:00
+    identifier: 32ncZlSLQ7Y_Rtoeurcy2Q
+    owner: 269
+- model: badges.badge
+  pk: 269
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.270784+00:00
+    modified: 2024-01-04 15:51:14.270784+00:00
+    expiration: 2024-02-04 08:00:14.270739+00:00
+    identifier: -ZrBuHzzn5--fgev3yAykQ
+    owner: 270
+- model: badges.badge
+  pk: 270
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.272949+00:00
+    modified: 2024-01-04 15:51:14.272949+00:00
+    expiration: 2024-01-18 10:09:14.272906+00:00
+    identifier: lJHOiMQCGN1aV44QjSqBww
+    owner: 271
+- model: badges.badge
+  pk: 271
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.275063+00:00
+    modified: 2024-01-04 15:51:14.275063+00:00
+    expiration: 2023-12-10 09:38:14.275019+00:00
+    identifier: 5QH-D4NGUn4XnTWOg58tiA
+    owner: 272
+- model: badges.badge
+  pk: 272
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.277118+00:00
+    modified: 2024-01-04 15:51:14.277118+00:00
+    expiration: 2023-11-11 17:11:14.277074+00:00
+    identifier: cX0KjUKkexZTpTIGn9dN0A
+    owner: 273
+- model: badges.badge
+  pk: 273
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.279160+00:00
+    modified: 2024-01-04 15:51:14.279160+00:00
+    expiration: 2024-01-23 21:20:14.279116+00:00
+    identifier: CEZw7CFu03YYWEEjUOch3A
+    owner: 274
+- model: badges.badge
+  pk: 274
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.281493+00:00
+    modified: 2024-01-04 15:51:14.281493+00:00
+    expiration: 2023-12-18 23:19:14.281445+00:00
+    identifier: LhLCCCkrseuoKyccLHtdLQ
+    owner: 275
+- model: badges.badge
+  pk: 275
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.283654+00:00
+    modified: 2024-01-04 15:51:14.283654+00:00
+    expiration: 2023-12-02 12:06:14.283610+00:00
+    identifier: 2UsMx3JCJgDTr9OhIcwagw
+    owner: 276
+- model: badges.badge
+  pk: 276
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.285762+00:00
+    modified: 2024-01-04 15:51:14.285762+00:00
+    expiration: 2024-02-13 11:52:14.285719+00:00
+    identifier: 32Gyg4FDQm7tvAmuQ7oJPA
+    owner: 277
+- model: badges.badge
+  pk: 277
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.287870+00:00
+    modified: 2024-01-04 15:51:14.287870+00:00
+    expiration: 2024-02-29 07:48:14.287825+00:00
+    identifier: 08LXBYUhbv0gbIWfsC5DnA
+    owner: 278
+- model: badges.badge
+  pk: 278
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.289946+00:00
+    modified: 2024-01-04 15:51:14.289946+00:00
+    expiration: 2024-02-27 10:51:14.289902+00:00
+    identifier: vW6_XJuWySGRq9SVt2iB-A
+    owner: 279
+- model: badges.badge
+  pk: 279
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.292102+00:00
+    modified: 2024-01-04 15:51:14.292102+00:00
+    expiration: 2023-11-18 09:45:14.292058+00:00
+    identifier: 8Q6dAyqPhY4FMFoCdmFx1w
+    owner: 280
+- model: badges.badge
+  pk: 280
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.294329+00:00
+    modified: 2024-01-04 15:51:14.294329+00:00
+    expiration: 2023-11-06 02:44:14.294271+00:00
+    identifier: usV2tHccCkzX1wXUc7GOGA
+    owner: 281
+- model: badges.badge
+  pk: 281
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.296489+00:00
+    modified: 2024-01-04 15:51:14.296489+00:00
+    expiration: 2023-11-19 16:01:14.296445+00:00
+    identifier: vfjrztsbD312qUIsebsF6g
+    owner: 282
+- model: badges.badge
+  pk: 282
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.298673+00:00
+    modified: 2024-01-04 15:51:14.298673+00:00
+    expiration: 2024-01-19 02:23:14.298626+00:00
+    identifier: S38gluWEz8XV_63fJVi8cQ
+    owner: 283
+- model: badges.badge
+  pk: 283
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.300778+00:00
+    modified: 2024-01-04 15:51:14.300778+00:00
+    expiration: 2024-01-19 14:19:14.300732+00:00
+    identifier: ce6BN9x1aWbQbjjQjXkPfw
+    owner: 284
+- model: badges.badge
+  pk: 284
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.302901+00:00
+    modified: 2024-01-04 15:51:14.302901+00:00
+    expiration: 2024-01-05 09:17:14.302856+00:00
+    identifier: O_R1umRigogcWeWlOSv3Pw
+    owner: 285
+- model: badges.badge
+  pk: 285
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.304918+00:00
+    modified: 2024-01-04 15:51:14.304918+00:00
+    expiration: 2024-03-07 11:05:14.304872+00:00
+    identifier: h3WIgxODMrciga3t-D2mug
+    owner: 286
+- model: badges.badge
+  pk: 286
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.306944+00:00
+    modified: 2024-01-04 15:51:14.306944+00:00
+    expiration: 2024-02-20 01:02:14.306900+00:00
+    identifier: p8qxOlN0Rer6IsPLhi4R7g
+    owner: 287
+- model: badges.badge
+  pk: 287
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.309272+00:00
+    modified: 2024-01-04 15:51:14.309272+00:00
+    expiration: 2023-11-15 13:30:14.309226+00:00
+    identifier: Q_yFRA13DV0xu60TXr7P2A
+    owner: 288
+- model: badges.badge
+  pk: 288
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.311331+00:00
+    modified: 2024-01-04 15:51:14.311331+00:00
+    expiration: 2024-01-29 07:28:14.311274+00:00
+    identifier: WZYtURMASsGBOXjxMnG4Jg
+    owner: 289
+- model: badges.badge
+  pk: 289
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.313505+00:00
+    modified: 2024-01-04 15:51:14.313505+00:00
+    expiration: 2024-01-29 18:53:14.313459+00:00
+    identifier: 9o6qffjmzgPQhTmYBMbsQQ
+    owner: 290
+- model: badges.badge
+  pk: 290
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.315556+00:00
+    modified: 2024-01-04 15:51:14.315556+00:00
+    expiration: 2023-10-27 13:37:14.315511+00:00
+    identifier: g467Ep9wGLVtOZgioo-suQ
+    owner: 291
+- model: badges.badge
+  pk: 291
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.317572+00:00
+    modified: 2024-01-04 15:51:14.317572+00:00
+    expiration: 2023-12-01 11:30:14.317529+00:00
+    identifier: SCmjbw2D0CtWAtlovSdmZw
+    owner: 292
+- model: badges.badge
+  pk: 292
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.319627+00:00
+    modified: 2024-01-04 15:51:14.319627+00:00
+    expiration: 2024-01-02 09:55:14.319583+00:00
+    identifier: kxZAplv89cZI7rCYozjhFw
+    owner: 293
+- model: badges.badge
+  pk: 293
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.321919+00:00
+    modified: 2024-01-04 15:51:14.321919+00:00
+    expiration: 2023-11-06 05:20:14.321874+00:00
+    identifier: d93krVhOisExNa_XeeSTRA
+    owner: 294
+- model: badges.badge
+  pk: 294
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.323931+00:00
+    modified: 2024-01-04 15:51:14.323931+00:00
+    expiration: 2023-12-06 22:06:14.323886+00:00
+    identifier: kLTuEUWjYR1yimYGY7-daA
+    owner: 295
+- model: badges.badge
+  pk: 295
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.325902+00:00
+    modified: 2024-01-04 15:51:14.325902+00:00
+    expiration: 2023-12-19 15:17:14.325858+00:00
+    identifier: 3-kTRK3rQ73lKWlOXzwkLw
+    owner: 296
+- model: badges.badge
+  pk: 296
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.327860+00:00
+    modified: 2024-01-04 15:51:14.327860+00:00
+    expiration: 2024-01-28 07:12:14.327817+00:00
+    identifier: sNs7YvqvD-sPhAhS2kJdOw
+    owner: 297
+- model: badges.badge
+  pk: 297
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.329874+00:00
+    modified: 2024-01-04 15:51:14.329874+00:00
+    expiration: 2024-01-03 03:35:14.329831+00:00
+    identifier: mMIE-e3KM121-tAm_fq8hw
+    owner: 298
+- model: badges.badge
+  pk: 298
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.331954+00:00
+    modified: 2024-01-04 15:51:14.331954+00:00
+    expiration: 2024-01-22 12:57:14.331907+00:00
+    identifier: U9UkIA50OBKag_4Nnt5nxg
+    owner: 299
+- model: badges.badge
+  pk: 299
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.334102+00:00
+    modified: 2024-01-04 15:51:14.334102+00:00
+    expiration: 2024-01-29 11:19:14.334056+00:00
+    identifier: SRUqnloSzkLDM0PcZdb5jg
+    owner: 300
+- model: badges.badge
+  pk: 300
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.336133+00:00
+    modified: 2024-01-04 15:51:14.336133+00:00
+    expiration: 2023-10-30 11:49:14.336088+00:00
+    identifier: idXsMd7OK-3DQm8DTRAFyg
+    owner: 301
+- model: badges.badge
+  pk: 301
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.338435+00:00
+    modified: 2024-01-04 15:51:14.338435+00:00
+    expiration: 2024-02-06 15:34:14.338387+00:00
+    identifier: MhSbvqsf_f7IA45b-u_XkQ
+    owner: 302
+- model: badges.badge
+  pk: 302
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.340639+00:00
+    modified: 2024-01-04 15:51:14.340639+00:00
+    expiration: 2023-11-17 00:47:14.340593+00:00
+    identifier: qlkoKHkQkkCab4_czo10_A
+    owner: 303
+- model: badges.badge
+  pk: 303
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.342786+00:00
+    modified: 2024-01-04 15:51:14.342786+00:00
+    expiration: 2023-11-05 15:56:14.342740+00:00
+    identifier: ePYXTT5VN2pDjLOa_02Www
+    owner: 304
+- model: badges.badge
+  pk: 304
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.344853+00:00
+    modified: 2024-01-04 15:51:14.344853+00:00
+    expiration: 2023-11-15 16:35:14.344808+00:00
+    identifier: dAzw2O4jYqkcwGVf1gZHSA
+    owner: 305
+- model: badges.badge
+  pk: 305
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.346975+00:00
+    modified: 2024-01-04 15:51:14.346975+00:00
+    expiration: 2024-01-27 07:38:14.346932+00:00
+    identifier: SGb1aH-VlHWj5-CfReJ3Lg
+    owner: 306
+- model: badges.badge
+  pk: 306
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.349099+00:00
+    modified: 2024-01-04 15:51:14.349099+00:00
+    expiration: 2024-02-06 03:12:14.349056+00:00
+    identifier: g5TDtZC5vH8WXpzyZn6t5Q
+    owner: 307
+- model: badges.badge
+  pk: 307
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.351130+00:00
+    modified: 2024-01-04 15:51:14.351130+00:00
+    expiration: 2023-12-15 00:57:14.351084+00:00
+    identifier: mHPzThpgzIcU1z7pZ_CBHQ
+    owner: 308
+- model: badges.badge
+  pk: 308
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.353169+00:00
+    modified: 2024-01-04 15:51:14.353169+00:00
+    expiration: 2024-01-12 11:27:14.353124+00:00
+    identifier: 2gi-XVPIy4ikkKjq9dOZcw
+    owner: 309
+- model: badges.badge
+  pk: 309
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.355102+00:00
+    modified: 2024-01-04 15:51:14.355102+00:00
+    expiration: 2023-12-08 10:15:14.355058+00:00
+    identifier: Mizh_zms7bHiDsJMmSXKRA
+    owner: 310
+- model: badges.badge
+  pk: 310
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.357075+00:00
+    modified: 2024-01-04 15:51:14.357075+00:00
+    expiration: 2024-01-31 22:21:14.357032+00:00
+    identifier: SQqaiPtKr9R1jSlQmKYpTg
+    owner: 311
+- model: badges.badge
+  pk: 311
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.359102+00:00
+    modified: 2024-01-04 15:51:14.359102+00:00
+    expiration: 2023-10-30 05:07:14.359056+00:00
+    identifier: c-WRUdC7putIYvySRGK1AQ
+    owner: 312
+- model: badges.badge
+  pk: 312
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.361159+00:00
+    modified: 2024-01-04 15:51:14.361159+00:00
+    expiration: 2023-12-19 09:42:14.361115+00:00
+    identifier: WO2HY4EeLYisfMXE9n-J7Q
+    owner: 313
+- model: badges.badge
+  pk: 313
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.363225+00:00
+    modified: 2024-01-04 15:51:14.363225+00:00
+    expiration: 2023-11-21 22:27:14.363180+00:00
+    identifier: 5b5qEOg_oM7Q9pWECuDlbQ
+    owner: 314
+- model: badges.badge
+  pk: 314
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.365528+00:00
+    modified: 2024-01-04 15:51:14.365528+00:00
+    expiration: 2023-11-18 17:33:14.365482+00:00
+    identifier: PsSrDeeqyDLnBwpjl5iW_g
+    owner: 315
+- model: badges.badge
+  pk: 315
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.367636+00:00
+    modified: 2024-01-04 15:51:14.367636+00:00
+    expiration: 2024-02-01 10:24:14.367592+00:00
+    identifier: miwmILdRGQ0yn9HAU7zS1Q
+    owner: 316
+- model: badges.badge
+  pk: 316
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.369740+00:00
+    modified: 2024-01-04 15:51:14.369740+00:00
+    expiration: 2024-02-11 23:14:14.369696+00:00
+    identifier: fntlziTAYbumnhgLCL4T8g
+    owner: 317
+- model: badges.badge
+  pk: 317
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.371835+00:00
+    modified: 2024-01-04 15:51:14.371835+00:00
+    expiration: 2023-11-01 15:22:14.371792+00:00
+    identifier: q_c222YS4KQA-mCRkUjWMA
+    owner: 318
+- model: badges.badge
+  pk: 318
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.373942+00:00
+    modified: 2024-01-04 15:51:14.373942+00:00
+    expiration: 2023-11-16 06:24:14.373898+00:00
+    identifier: q9MkYJ_aE3b2uTMq3AaFgg
+    owner: 319
+- model: badges.badge
+  pk: 319
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.376108+00:00
+    modified: 2024-01-04 15:51:14.376108+00:00
+    expiration: 2023-11-16 08:48:14.376064+00:00
+    identifier: e5BdTydwUkGsKGBXFxNuSQ
+    owner: 320
+- model: badges.badge
+  pk: 320
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.378123+00:00
+    modified: 2024-01-04 15:51:14.378123+00:00
+    expiration: 2023-12-16 18:30:14.378078+00:00
+    identifier: 1DHsG59bQz2GYcUHukOAbg
+    owner: 321
+- model: badges.badge
+  pk: 321
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.380164+00:00
+    modified: 2024-01-04 15:51:14.380164+00:00
+    expiration: 2023-12-17 07:01:14.380121+00:00
+    identifier: AlpeFddduyuIc-nJlv35ew
+    owner: 322
+- model: badges.badge
+  pk: 322
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.382186+00:00
+    modified: 2024-01-04 15:51:14.382186+00:00
+    expiration: 2023-11-21 21:14:14.382142+00:00
+    identifier: 7ZBTc_UbZwogBOZmTp-OlQ
+    owner: 323
+- model: badges.badge
+  pk: 323
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.384279+00:00
+    modified: 2024-01-04 15:51:14.384279+00:00
+    expiration: 2024-01-26 23:49:14.384230+00:00
+    identifier: KROzYapC0UyWm91Vujg0VA
+    owner: 324
+- model: badges.badge
+  pk: 324
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.386365+00:00
+    modified: 2024-01-04 15:51:14.386365+00:00
+    expiration: 2023-12-30 16:59:14.386321+00:00
+    identifier: FXAZMXG5idtZpj1zNvyo_A
+    owner: 325
+- model: badges.badge
+  pk: 325
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.388452+00:00
+    modified: 2024-01-04 15:51:14.388452+00:00
+    expiration: 2023-11-11 20:56:14.388409+00:00
+    identifier: EMdz3rwWTyD5Xe5TbgcFAg
+    owner: 326
+- model: badges.badge
+  pk: 326
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.390547+00:00
+    modified: 2024-01-04 15:51:14.390547+00:00
+    expiration: 2023-11-02 04:45:14.390504+00:00
+    identifier: R44RC8d4j-0f2yxAhKVdGw
+    owner: 327
+- model: badges.badge
+  pk: 327
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.392583+00:00
+    modified: 2024-01-04 15:51:14.392583+00:00
+    expiration: 2024-02-22 20:06:14.392542+00:00
+    identifier: 3HE1ZizgEwu6pacr8e4iLA
+    owner: 328
+- model: badges.badge
+  pk: 328
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.394917+00:00
+    modified: 2024-01-04 15:51:14.394917+00:00
+    expiration: 2024-03-06 17:47:14.394873+00:00
+    identifier: dKxARlIsX8mFqooAh3TV8w
+    owner: 329
+- model: badges.badge
+  pk: 329
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.396940+00:00
+    modified: 2024-01-04 15:51:14.396940+00:00
+    expiration: 2023-12-23 11:43:14.396898+00:00
+    identifier: 6scZgXo86GwOCkDXYvaf7Q
+    owner: 330
+- model: badges.badge
+  pk: 330
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.398929+00:00
+    modified: 2024-01-04 15:51:14.398929+00:00
+    expiration: 2023-11-22 22:41:14.398886+00:00
+    identifier: bM6JqLI5nLwU5YrzHKjvfA
+    owner: 331
+- model: badges.badge
+  pk: 331
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.400938+00:00
+    modified: 2024-01-04 15:51:14.400938+00:00
+    expiration: 2023-11-28 00:38:14.400895+00:00
+    identifier: poN0XyD3doDam2IqLN9IhA
+    owner: 332
+- model: badges.badge
+  pk: 332
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.403025+00:00
+    modified: 2024-01-04 15:51:14.403025+00:00
+    expiration: 2024-02-19 05:50:14.402982+00:00
+    identifier: GxCG570rLNipqsGIiEhtmw
+    owner: 333
+- model: badges.badge
+  pk: 333
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.405103+00:00
+    modified: 2024-01-04 15:51:14.405103+00:00
+    expiration: 2023-11-20 23:32:14.405059+00:00
+    identifier: JvhTurTCfajfucW0uz5mjg
+    owner: 334
+- model: badges.badge
+  pk: 334
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.407162+00:00
+    modified: 2024-01-04 15:51:14.407162+00:00
+    expiration: 2023-12-12 21:20:14.407119+00:00
+    identifier: yNZNHLdnT8m4ePI2F5YUDQ
+    owner: 335
+- model: badges.badge
+  pk: 335
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.409196+00:00
+    modified: 2024-01-04 15:51:14.409196+00:00
+    expiration: 2024-01-01 17:48:14.409153+00:00
+    identifier: e9iDL2jL58gk_8SFUH924Q
+    owner: 336
+- model: badges.badge
+  pk: 336
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.411201+00:00
+    modified: 2024-01-04 15:51:14.411201+00:00
+    expiration: 2024-03-04 15:37:14.411158+00:00
+    identifier: Egea61ItZfU9fz8qvknoaQ
+    owner: 337
+- model: badges.badge
+  pk: 337
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.413493+00:00
+    modified: 2024-01-04 15:51:14.413493+00:00
+    expiration: 2024-02-07 08:06:14.413428+00:00
+    identifier: 3jFcs32D_yRZJtTcH1f8Qg
+    owner: 338
+- model: badges.badge
+  pk: 338
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.415798+00:00
+    modified: 2024-01-04 15:51:14.415798+00:00
+    expiration: 2024-03-09 19:07:14.415753+00:00
+    identifier: Hdis_swbcM9S5SptBcbSuQ
+    owner: 339
+- model: badges.badge
+  pk: 339
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.417937+00:00
+    modified: 2024-01-04 15:51:14.417937+00:00
+    expiration: 2024-02-02 19:51:14.417894+00:00
+    identifier: GLCqcektgAJ-6lOmzdzRIA
+    owner: 340
+- model: badges.badge
+  pk: 340
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.420048+00:00
+    modified: 2024-01-04 15:51:14.420048+00:00
+    expiration: 2024-01-05 04:48:14.420001+00:00
+    identifier: SGPpTLRGRHk5Xn_ZCF0_kQ
+    owner: 341
+- model: badges.badge
+  pk: 341
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.422460+00:00
+    modified: 2024-01-04 15:51:14.422460+00:00
+    expiration: 2023-12-05 23:15:14.422386+00:00
+    identifier: SDxYJZ4McKXi0mfB_hl-aQ
+    owner: 342
+- model: badges.badge
+  pk: 342
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.424962+00:00
+    modified: 2024-01-04 15:51:14.424962+00:00
+    expiration: 2024-03-05 09:35:14.424907+00:00
+    identifier: Au7Zcj8e5QA0qayBM2g7Bw
+    owner: 343
+- model: badges.badge
+  pk: 343
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.427094+00:00
+    modified: 2024-01-04 15:51:14.427094+00:00
+    expiration: 2024-03-09 18:48:14.427048+00:00
+    identifier: W3ZLAvBNCireTNqVqDqxLw
+    owner: 344
+- model: badges.badge
+  pk: 344
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.429141+00:00
+    modified: 2024-01-04 15:51:14.429141+00:00
+    expiration: 2023-11-18 19:55:14.429097+00:00
+    identifier: 5rD0Xv2hcERetDPnydr95A
+    owner: 345
+- model: badges.badge
+  pk: 345
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.431482+00:00
+    modified: 2024-01-04 15:51:14.431482+00:00
+    expiration: 2024-01-02 18:15:14.431440+00:00
+    identifier: Q3YwhjLiKv5avRtfGnbyjw
+    owner: 346
+- model: badges.badge
+  pk: 346
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.433693+00:00
+    modified: 2024-01-04 15:51:14.433693+00:00
+    expiration: 2023-12-06 10:32:14.433650+00:00
+    identifier: Q1Lw0wQygIQQhYt4Xyb9WA
+    owner: 347
+- model: badges.badge
+  pk: 347
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.435824+00:00
+    modified: 2024-01-04 15:51:14.435824+00:00
+    expiration: 2023-12-26 20:10:14.435775+00:00
+    identifier: Ty5WUUrF7_w1Ms0DHHstSQ
+    owner: 348
+- model: badges.badge
+  pk: 348
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.437969+00:00
+    modified: 2024-01-04 15:51:14.437969+00:00
+    expiration: 2024-02-20 09:10:14.437921+00:00
+    identifier: 9MQZ7yPDaWYt_Pwv9hysnQ
+    owner: 349
+- model: badges.badge
+  pk: 349
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.440066+00:00
+    modified: 2024-01-04 15:51:14.440066+00:00
+    expiration: 2024-01-08 02:17:14.440022+00:00
+    identifier: ZiORyuVt6DmrYuqJU_HNkg
+    owner: 350
+- model: badges.badge
+  pk: 350
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.442126+00:00
+    modified: 2024-01-04 15:51:14.442126+00:00
+    expiration: 2024-01-06 09:45:14.442081+00:00
+    identifier: Cx0OiUNo_nniJ_O7T0-9wg
+    owner: 351
+- model: badges.badge
+  pk: 351
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.444341+00:00
+    modified: 2024-01-04 15:51:14.444341+00:00
+    expiration: 2024-01-02 00:55:14.444295+00:00
+    identifier: ajhhTJ2i48BtV2ZgrYUtYQ
+    owner: 352
+- model: badges.badge
+  pk: 352
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.446398+00:00
+    modified: 2024-01-04 15:51:14.446398+00:00
+    expiration: 2024-01-23 05:49:14.446348+00:00
+    identifier: _k8DkkGDt5c-EMR8IwJYBw
+    owner: 353
+- model: badges.badge
+  pk: 353
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.448438+00:00
+    modified: 2024-01-04 15:51:14.448438+00:00
+    expiration: 2024-02-06 23:39:14.448391+00:00
+    identifier: ym8h2FJaSwA7z_rO2ShWiQ
+    owner: 354
+- model: badges.badge
+  pk: 354
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.450737+00:00
+    modified: 2024-01-04 15:51:14.450737+00:00
+    expiration: 2023-12-02 01:04:14.450693+00:00
+    identifier: 3EJC8Um7WBvko8cgikG_9g
+    owner: 355
+- model: badges.badge
+  pk: 355
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.452824+00:00
+    modified: 2024-01-04 15:51:14.452824+00:00
+    expiration: 2024-01-29 19:24:14.452780+00:00
+    identifier: g6Jra7HGijiqV4HLgp8p8A
+    owner: 356
+- model: badges.badge
+  pk: 356
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.454858+00:00
+    modified: 2024-01-04 15:51:14.454858+00:00
+    expiration: 2024-01-14 17:29:14.454815+00:00
+    identifier: t08ctk-z8pRlrdmcts-Xew
+    owner: 357
+- model: badges.badge
+  pk: 357
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.456919+00:00
+    modified: 2024-01-04 15:51:14.456919+00:00
+    expiration: 2023-12-15 17:54:14.456872+00:00
+    identifier: r4tFfqUY8KGJ9-tKc-1v9g
+    owner: 358
+- model: badges.badge
+  pk: 358
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.459163+00:00
+    modified: 2024-01-04 15:51:14.459163+00:00
+    expiration: 2024-02-11 13:55:14.459102+00:00
+    identifier: qaVhtqdWruPjUkCIF2ppHg
+    owner: 359
+- model: badges.badge
+  pk: 359
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.461549+00:00
+    modified: 2024-01-04 15:51:14.461549+00:00
+    expiration: 2023-12-26 19:21:14.461500+00:00
+    identifier: 1xotVKRx3_Cq8P8YmMyL4w
+    owner: 360
+- model: badges.badge
+  pk: 360
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.463772+00:00
+    modified: 2024-01-04 15:51:14.463772+00:00
+    expiration: 2023-11-01 21:25:14.463726+00:00
+    identifier: l1RIxqfrwmWPM4G57zfq7A
+    owner: 361
+- model: badges.badge
+  pk: 361
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.465968+00:00
+    modified: 2024-01-04 15:51:14.465968+00:00
+    expiration: 2023-10-29 13:17:14.465924+00:00
+    identifier: JejZCnuRTrPWIsXFLlGihg
+    owner: 362
+- model: badges.badge
+  pk: 362
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.468051+00:00
+    modified: 2024-01-04 15:51:14.468051+00:00
+    expiration: 2024-01-17 09:23:14.468004+00:00
+    identifier: UT9aj8Pbms-c9-WPQ7fnNA
+    owner: 363
+- model: badges.badge
+  pk: 363
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.470095+00:00
+    modified: 2024-01-04 15:51:14.470095+00:00
+    expiration: 2023-12-29 23:51:14.470051+00:00
+    identifier: K392fd5jwD7zgJK5DlbL6A
+    owner: 364
+- model: badges.badge
+  pk: 364
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.472178+00:00
+    modified: 2024-01-04 15:51:14.472178+00:00
+    expiration: 2024-01-05 13:29:14.472131+00:00
+    identifier: jXYecE-U1uRf-2RZFn7uQg
+    owner: 365
+- model: badges.badge
+  pk: 365
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.474247+00:00
+    modified: 2024-01-04 15:51:14.474247+00:00
+    expiration: 2023-11-17 08:40:14.474202+00:00
+    identifier: j5ThfG9OpjSVKIAYzL8Xyw
+    owner: 366
+- model: badges.badge
+  pk: 366
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.476348+00:00
+    modified: 2024-01-04 15:51:14.476348+00:00
+    expiration: 2024-02-09 17:39:14.476305+00:00
+    identifier: xo4UnTJkAkKHHrWK3Pj8gQ
+    owner: 367
+- model: badges.badge
+  pk: 367
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.478427+00:00
+    modified: 2024-01-04 15:51:14.478427+00:00
+    expiration: 2023-12-03 01:07:14.478384+00:00
+    identifier: SKOw764wHBp2mQ4jSGJfSw
+    owner: 368
+- model: badges.badge
+  pk: 368
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.480694+00:00
+    modified: 2024-01-04 15:51:14.480694+00:00
+    expiration: 2023-11-14 04:33:14.480649+00:00
+    identifier: XGCDwHgADYLSH86oha5Kbw
+    owner: 369
+- model: badges.badge
+  pk: 369
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.482789+00:00
+    modified: 2024-01-04 15:51:14.482789+00:00
+    expiration: 2024-01-11 03:09:14.482747+00:00
+    identifier: rpGP5hZ4cl-pWTyRzmRyfw
+    owner: 370
+- model: badges.badge
+  pk: 370
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.484906+00:00
+    modified: 2024-01-04 15:51:14.484906+00:00
+    expiration: 2023-12-20 12:54:14.484861+00:00
+    identifier: C7Bxnnbk44jwdOje3DwuPw
+    owner: 371
+- model: badges.badge
+  pk: 371
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.487150+00:00
+    modified: 2024-01-04 15:51:14.487150+00:00
+    expiration: 2023-12-05 14:31:14.487106+00:00
+    identifier: VFyu8K4f8eWdXSsfmnZa_Q
+    owner: 372
+- model: badges.badge
+  pk: 372
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.489201+00:00
+    modified: 2024-01-04 15:51:14.489201+00:00
+    expiration: 2023-12-23 05:42:14.489156+00:00
+    identifier: igHvOrVzBW4XJM_ooFvMGQ
+    owner: 373
+- model: badges.badge
+  pk: 373
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.491193+00:00
+    modified: 2024-01-04 15:51:14.491193+00:00
+    expiration: 2023-11-03 15:59:14.491143+00:00
+    identifier: 19apI2BzLRBKwhoqWTZ95Q
+    owner: 374
+- model: badges.badge
+  pk: 374
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.493488+00:00
+    modified: 2024-01-04 15:51:14.493488+00:00
+    expiration: 2023-11-08 19:53:14.493440+00:00
+    identifier: Lw_Jo4ZatSfONCRvvnb2_w
+    owner: 375
+- model: badges.badge
+  pk: 375
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.495554+00:00
+    modified: 2024-01-04 15:51:14.495554+00:00
+    expiration: 2024-01-22 00:48:14.495507+00:00
+    identifier: OOFJwhyb_HUmJ1j_E818Mw
+    owner: 376
+- model: badges.badge
+  pk: 376
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.497700+00:00
+    modified: 2024-01-04 15:51:14.497700+00:00
+    expiration: 2023-12-05 04:16:14.497651+00:00
+    identifier: JrM1HucuOPkjuyZ2MA84ig
+    owner: 377
+- model: badges.badge
+  pk: 377
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.499806+00:00
+    modified: 2024-01-04 15:51:14.499806+00:00
+    expiration: 2024-02-23 15:58:14.499760+00:00
+    identifier: wGqmx-hxNh6HDexlpws47w
+    owner: 378
+- model: badges.badge
+  pk: 378
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.501846+00:00
+    modified: 2024-01-04 15:51:14.501846+00:00
+    expiration: 2024-02-29 20:48:14.501802+00:00
+    identifier: _jqJHvuqcsw_0AibSoN3BA
+    owner: 379
+- model: badges.badge
+  pk: 379
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.504105+00:00
+    modified: 2024-01-04 15:51:14.504105+00:00
+    expiration: 2023-11-29 12:44:14.504059+00:00
+    identifier: DA7flNwhJech1LTTJKJPbA
+    owner: 380
+- model: badges.badge
+  pk: 380
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.506090+00:00
+    modified: 2024-01-04 15:51:14.506090+00:00
+    expiration: 2023-11-14 15:36:14.506046+00:00
+    identifier: S-bGpC135Gw1tKMROsRxuA
+    owner: 381
+- model: badges.badge
+  pk: 381
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.508441+00:00
+    modified: 2024-01-04 15:51:14.508441+00:00
+    expiration: 2024-02-24 04:24:14.508395+00:00
+    identifier: ptFfngGMa8hhpd78kyM9nQ
+    owner: 382
+- model: badges.badge
+  pk: 382
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.510481+00:00
+    modified: 2024-01-04 15:51:14.510481+00:00
+    expiration: 2024-01-13 02:21:14.510435+00:00
+    identifier: V4NaINxxRd3EtU-EUbwBfw
+    owner: 383
+- model: badges.badge
+  pk: 383
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.512556+00:00
+    modified: 2024-01-04 15:51:14.512556+00:00
+    expiration: 2023-12-02 10:33:14.512514+00:00
+    identifier: _2u0ri41QYLR0sb8DY1JuQ
+    owner: 384
+- model: badges.badge
+  pk: 384
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.514830+00:00
+    modified: 2024-01-04 15:51:14.514830+00:00
+    expiration: 2024-03-10 04:23:14.514785+00:00
+    identifier: tOGS9XOr6Hppw8SCTg_pKg
+    owner: 385
+- model: badges.badge
+  pk: 385
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.516932+00:00
+    modified: 2024-01-04 15:51:14.516932+00:00
+    expiration: 2023-10-30 16:02:14.516888+00:00
+    identifier: 4BIpmiNUMJB8-JNfePn7fQ
+    owner: 386
+- model: badges.badge
+  pk: 386
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.518963+00:00
+    modified: 2024-01-04 15:51:14.518963+00:00
+    expiration: 2023-11-09 11:11:14.518919+00:00
+    identifier: ucyb3Zb7vfCWOOPUT_09Mw
+    owner: 387
+- model: badges.badge
+  pk: 387
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.521031+00:00
+    modified: 2024-01-04 15:51:14.521031+00:00
+    expiration: 2023-12-14 02:09:14.520989+00:00
+    identifier: UUYec7RoDeOs0BANGLAUZg
+    owner: 388
+- model: badges.badge
+  pk: 388
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.523076+00:00
+    modified: 2024-01-04 15:51:14.523076+00:00
+    expiration: 2023-12-12 19:16:14.523033+00:00
+    identifier: IsOANJgRhXhOI2mqZvsH-w
+    owner: 389
+- model: badges.badge
+  pk: 389
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.525131+00:00
+    modified: 2024-01-04 15:51:14.525131+00:00
+    expiration: 2024-03-09 04:00:14.525088+00:00
+    identifier: xOOOaqD_rvmd3bWSOGu21A
+    owner: 390
+- model: badges.badge
+  pk: 390
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.527189+00:00
+    modified: 2024-01-04 15:51:14.527189+00:00
+    expiration: 2023-12-27 14:54:14.527147+00:00
+    identifier: XAs5EXoyBC3h4aUYpy4JgA
+    owner: 391
+- model: badges.badge
+  pk: 391
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.529237+00:00
+    modified: 2024-01-04 15:51:14.529237+00:00
+    expiration: 2024-01-31 11:56:14.529194+00:00
+    identifier: JFq1jt65n1UNmkP5Do7Zlw
+    owner: 392
+- model: badges.badge
+  pk: 392
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.531300+00:00
+    modified: 2024-01-04 15:51:14.531300+00:00
+    expiration: 2024-03-10 17:55:14.531244+00:00
+    identifier: wB9xYFKhen9Px_Vjf7tsaQ
+    owner: 393
+- model: badges.badge
+  pk: 393
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.533327+00:00
+    modified: 2024-01-04 15:51:14.533327+00:00
+    expiration: 2024-01-17 10:26:14.533270+00:00
+    identifier: Z0mHmj8-PZPHvMq29qIQoQ
+    owner: 394
+- model: badges.badge
+  pk: 394
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.535613+00:00
+    modified: 2024-01-04 15:51:14.535613+00:00
+    expiration: 2023-12-28 06:27:14.535570+00:00
+    identifier: FzlKM-YvrwPRTQV2bwur4g
+    owner: 395
+- model: badges.badge
+  pk: 395
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.537709+00:00
+    modified: 2024-01-04 15:51:14.537709+00:00
+    expiration: 2023-11-23 08:16:14.537665+00:00
+    identifier: c8fGYBkUuv-jwle4Sbp9eg
+    owner: 396
+- model: badges.badge
+  pk: 396
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.539767+00:00
+    modified: 2024-01-04 15:51:14.539767+00:00
+    expiration: 2024-02-28 12:20:14.539725+00:00
+    identifier: xo3VFj634hPtZ0IZtukwHw
+    owner: 397
+- model: badges.badge
+  pk: 397
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.541966+00:00
+    modified: 2024-01-04 15:51:14.541966+00:00
+    expiration: 2024-01-25 23:38:14.541921+00:00
+    identifier: t_A92uWx_6QhBykZyT_blA
+    owner: 398
+- model: badges.badge
+  pk: 398
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.544244+00:00
+    modified: 2024-01-04 15:51:14.544244+00:00
+    expiration: 2023-12-27 13:09:14.544200+00:00
+    identifier: rV42Q8GHkM1grybISSckZw
+    owner: 399
+- model: badges.badge
+  pk: 399
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.546338+00:00
+    modified: 2024-01-04 15:51:14.546338+00:00
+    expiration: 2023-12-07 10:08:14.546293+00:00
+    identifier: hAA5g3q6ehR-ywKqV-lglQ
+    owner: 400
+- model: badges.badge
+  pk: 400
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.548434+00:00
+    modified: 2024-01-04 15:51:14.548434+00:00
+    expiration: 2023-12-23 21:24:14.548383+00:00
+    identifier: rhXPqT-gmuxLGcRyRQ9p8A
+    owner: 401
+- model: badges.badge
+  pk: 401
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.550508+00:00
+    modified: 2024-01-04 15:51:14.550508+00:00
+    expiration: 2024-02-15 00:49:14.550462+00:00
+    identifier: dgXbpr3KE9scj-lYwYK5cA
+    owner: 402
+- model: badges.badge
+  pk: 402
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.552539+00:00
+    modified: 2024-01-04 15:51:14.552539+00:00
+    expiration: 2023-11-20 22:19:14.552493+00:00
+    identifier: jwOl4h-2oeRpWdJKrizz_A
+    owner: 403
+- model: badges.badge
+  pk: 403
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.554638+00:00
+    modified: 2024-01-04 15:51:14.554638+00:00
+    expiration: 2023-12-05 15:37:14.554594+00:00
+    identifier: 1RLI9LlsqoNfbDaxk7J-_w
+    owner: 404
+- model: badges.badge
+  pk: 404
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.556686+00:00
+    modified: 2024-01-04 15:51:14.556686+00:00
+    expiration: 2024-01-11 16:10:14.556642+00:00
+    identifier: RwdwWk7g9d7V7116LHrFCg
+    owner: 405
+- model: badges.badge
+  pk: 405
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.558778+00:00
+    modified: 2024-01-04 15:51:14.558778+00:00
+    expiration: 2023-12-03 18:15:14.558735+00:00
+    identifier: pIzi6PEm5SIpRXUkCWEKIA
+    owner: 406
+- model: badges.badge
+  pk: 406
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.560875+00:00
+    modified: 2024-01-04 15:51:14.560875+00:00
+    expiration: 2024-01-11 12:47:14.560828+00:00
+    identifier: 96kyn9wxnwWgotef5saWCw
+    owner: 407
+- model: badges.badge
+  pk: 407
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.563247+00:00
+    modified: 2024-01-04 15:51:14.563247+00:00
+    expiration: 2023-12-17 04:03:14.563203+00:00
+    identifier: klsnPYbtbwgwDX8V6beRXg
+    owner: 408
+- model: badges.badge
+  pk: 408
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.565313+00:00
+    modified: 2024-01-04 15:51:14.565313+00:00
+    expiration: 2023-12-26 16:35:14.565256+00:00
+    identifier: NBF3AFiqprM3Nqf6URhkiA
+    owner: 409
+- model: badges.badge
+  pk: 409
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.567466+00:00
+    modified: 2024-01-04 15:51:14.567466+00:00
+    expiration: 2024-01-10 04:07:14.567422+00:00
+    identifier: wybutSt97hOAfq65qk0Mog
+    owner: 410
+- model: badges.badge
+  pk: 410
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.569646+00:00
+    modified: 2024-01-04 15:51:14.569646+00:00
+    expiration: 2023-11-27 10:00:14.569602+00:00
+    identifier: MJL9GPxjvrhVDo-3RXToIg
+    owner: 411
+- model: badges.badge
+  pk: 411
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.571781+00:00
+    modified: 2024-01-04 15:51:14.571781+00:00
+    expiration: 2024-02-18 02:35:14.571734+00:00
+    identifier: yj66TKW0tWx-uOvoF3GW5Q
+    owner: 412
+- model: badges.badge
+  pk: 412
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.573937+00:00
+    modified: 2024-01-04 15:51:14.573937+00:00
+    expiration: 2024-02-17 11:02:14.573893+00:00
+    identifier: l1mSW1Dl524LfJ749yJ4UQ
+    owner: 413
+- model: badges.badge
+  pk: 413
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.576037+00:00
+    modified: 2024-01-04 15:51:14.576037+00:00
+    expiration: 2024-02-15 18:09:14.575989+00:00
+    identifier: W4GqkPttcL08Q6I8lizUsw
+    owner: 414
+- model: badges.badge
+  pk: 414
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.578256+00:00
+    modified: 2024-01-04 15:51:14.578256+00:00
+    expiration: 2024-02-04 13:36:14.578212+00:00
+    identifier: Ktfw0JqSTiRVOTVDKoZoJw
+    owner: 415
+- model: badges.badge
+  pk: 415
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.580186+00:00
+    modified: 2024-01-04 15:51:14.580186+00:00
+    expiration: 2024-02-15 10:41:14.580142+00:00
+    identifier: 3f1TN2vwF7-SsR6G0gcfEw
+    owner: 416
+- model: badges.badge
+  pk: 416
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.582199+00:00
+    modified: 2024-01-04 15:51:14.582199+00:00
+    expiration: 2024-02-09 16:10:14.582154+00:00
+    identifier: oUV_vcxZLGMytYlh4i3Nnw
+    owner: 417
+- model: badges.badge
+  pk: 417
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.584231+00:00
+    modified: 2024-01-04 15:51:14.584231+00:00
+    expiration: 2023-12-19 06:22:14.584180+00:00
+    identifier: 2zFXYnwrk5FZsJlJoosHzg
+    owner: 418
+- model: badges.badge
+  pk: 418
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.586354+00:00
+    modified: 2024-01-04 15:51:14.586354+00:00
+    expiration: 2023-12-11 13:02:14.586309+00:00
+    identifier: qQFYhwwIZjW8KECxb5T8KA
+    owner: 419
+- model: badges.badge
+  pk: 419
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.590353+00:00
+    modified: 2024-01-04 15:51:14.590353+00:00
+    expiration: 2023-11-14 01:54:14.590264+00:00
+    identifier: kM-6Og5qEMsTk67vNtF1Bg
+    owner: 420
+- model: badges.badge
+  pk: 420
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.593022+00:00
+    modified: 2024-01-04 15:51:14.593022+00:00
+    expiration: 2023-11-28 03:30:14.592972+00:00
+    identifier: 2zoV1IkzBRjio85_S5p-wQ
+    owner: 421
+- model: badges.badge
+  pk: 421
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.595544+00:00
+    modified: 2024-01-04 15:51:14.595544+00:00
+    expiration: 2023-11-04 21:36:14.595488+00:00
+    identifier: SRM3pJ8LrfYZLQghoshuiQ
+    owner: 422
+- model: badges.badge
+  pk: 422
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.597871+00:00
+    modified: 2024-01-04 15:51:14.597871+00:00
+    expiration: 2023-11-18 20:34:14.597824+00:00
+    identifier: N86aMo3zyuXYagIXD3kqLQ
+    owner: 423
+- model: badges.badge
+  pk: 423
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.600259+00:00
+    modified: 2024-01-04 15:51:14.600259+00:00
+    expiration: 2024-02-10 17:53:14.600211+00:00
+    identifier: bR99Qdq5H7rRnAtFJvIiTQ
+    owner: 424
+- model: badges.badge
+  pk: 424
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.602560+00:00
+    modified: 2024-01-04 15:51:14.602560+00:00
+    expiration: 2023-12-19 19:12:14.602513+00:00
+    identifier: IK-mKgUeL6cdArAf7h7a4g
+    owner: 425
+- model: badges.badge
+  pk: 425
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.604705+00:00
+    modified: 2024-01-04 15:51:14.604705+00:00
+    expiration: 2023-12-23 21:00:14.604656+00:00
+    identifier: J7myvxJzBWvp4rs56bA0eA
+    owner: 426
+- model: badges.badge
+  pk: 426
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.606932+00:00
+    modified: 2024-01-04 15:51:14.606932+00:00
+    expiration: 2023-11-13 17:08:14.606886+00:00
+    identifier: h45kDtmo26YValJbYFS00g
+    owner: 427
+- model: badges.badge
+  pk: 427
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.609072+00:00
+    modified: 2024-01-04 15:51:14.609072+00:00
+    expiration: 2024-03-12 02:14:14.609025+00:00
+    identifier: ZZO-Tpnph1nntHXA-a88BQ
+    owner: 428
+- model: badges.badge
+  pk: 428
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.611117+00:00
+    modified: 2024-01-04 15:51:14.611117+00:00
+    expiration: 2024-01-12 18:37:14.611073+00:00
+    identifier: Vr8mLWG5r7BVLgCdCBR8xA
+    owner: 429
+- model: badges.badge
+  pk: 429
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.613505+00:00
+    modified: 2024-01-04 15:51:14.613505+00:00
+    expiration: 2024-01-31 00:29:14.613449+00:00
+    identifier: YIGYsfo0im69qyLpreYQow
+    owner: 430
+- model: badges.badge
+  pk: 430
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.615623+00:00
+    modified: 2024-01-04 15:51:14.615623+00:00
+    expiration: 2023-11-08 18:10:14.615578+00:00
+    identifier: _v5k9M1sUQHfcZPqN-g-Kw
+    owner: 431
+- model: badges.badge
+  pk: 431
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.618469+00:00
+    modified: 2024-01-04 15:51:14.618469+00:00
+    expiration: 2023-11-09 06:54:14.618402+00:00
+    identifier: YtG6dbhXmULSToIoaJe9mw
+    owner: 432
+- model: badges.badge
+  pk: 432
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.621568+00:00
+    modified: 2024-01-04 15:51:14.621568+00:00
+    expiration: 2023-11-10 21:55:14.621512+00:00
+    identifier: yLoher4Y3MQcAx-KuUcPyA
+    owner: 433
+- model: badges.badge
+  pk: 433
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.624408+00:00
+    modified: 2024-01-04 15:51:14.624408+00:00
+    expiration: 2024-01-02 11:31:14.624356+00:00
+    identifier: t2FYX_P8taxJapXH8A_7cw
+    owner: 434
+- model: badges.badge
+  pk: 434
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.628714+00:00
+    modified: 2024-01-04 15:51:14.628714+00:00
+    expiration: 2024-01-04 19:44:14.628645+00:00
+    identifier: yembb7ClRJUkiLylz8PxVA
+    owner: 435
+- model: badges.badge
+  pk: 435
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.631788+00:00
+    modified: 2024-01-04 15:51:14.631788+00:00
+    expiration: 2024-01-22 09:42:14.631717+00:00
+    identifier: kPKJ9Sj7iMWsp2eqHpkuKQ
+    owner: 436
+- model: badges.badge
+  pk: 436
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.635044+00:00
+    modified: 2024-01-04 15:51:14.635044+00:00
+    expiration: 2023-11-06 00:23:14.634962+00:00
+    identifier: RtVPXjEPb0vA75gppO8daw
+    owner: 437
+- model: badges.badge
+  pk: 437
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.638375+00:00
+    modified: 2024-01-04 15:51:14.638375+00:00
+    expiration: 2024-01-23 18:04:14.638310+00:00
+    identifier: 2inXsPFd8QEwBu7tVccNVw
+    owner: 438
+- model: badges.badge
+  pk: 438
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.641071+00:00
+    modified: 2024-01-04 15:51:14.641071+00:00
+    expiration: 2024-01-18 12:21:14.641011+00:00
+    identifier: q7Xq_dtOFPq7DurwnLrWKw
+    owner: 439
+- model: badges.badge
+  pk: 439
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.643760+00:00
+    modified: 2024-01-04 15:51:14.643760+00:00
+    expiration: 2023-12-20 22:49:14.643702+00:00
+    identifier: jL8ymnfJ0Ub6IgoDHbnWwg
+    owner: 440
+- model: badges.badge
+  pk: 440
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.646546+00:00
+    modified: 2024-01-04 15:51:14.646546+00:00
+    expiration: 2024-02-28 12:32:14.646494+00:00
+    identifier: 2X8SvPyecfJN1cMrKtFQsw
+    owner: 441
+- model: badges.badge
+  pk: 441
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.649117+00:00
+    modified: 2024-01-04 15:51:14.649117+00:00
+    expiration: 2023-12-23 16:53:14.649066+00:00
+    identifier: HJbVdn95MoaJlctEfyKQGw
+    owner: 442
+- model: badges.badge
+  pk: 442
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.651821+00:00
+    modified: 2024-01-04 15:51:14.651821+00:00
+    expiration: 2024-02-11 14:50:14.651763+00:00
+    identifier: xmO0rYVykgUKLNvZ_Vwlbg
+    owner: 443
+- model: badges.badge
+  pk: 443
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.654504+00:00
+    modified: 2024-01-04 15:51:14.654504+00:00
+    expiration: 2024-03-12 15:39:14.654443+00:00
+    identifier: zJs07kIUpUoSPNiPd_wvXQ
+    owner: 444
+- model: badges.badge
+  pk: 444
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.656809+00:00
+    modified: 2024-01-04 15:51:14.656809+00:00
+    expiration: 2023-11-07 05:14:14.656761+00:00
+    identifier: 7Ua6nCt76lUVutufSX5vgw
+    owner: 445
+- model: badges.badge
+  pk: 445
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.659115+00:00
+    modified: 2024-01-04 15:51:14.659115+00:00
+    expiration: 2024-01-10 08:47:14.659059+00:00
+    identifier: 8sBR3wRLfWNzBDiE8RhWCg
+    owner: 446
+- model: badges.badge
+  pk: 446
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.661665+00:00
+    modified: 2024-01-04 15:51:14.661665+00:00
+    expiration: 2024-02-23 02:33:14.661619+00:00
+    identifier: j3WAvZh-kSAnoP9QOa_ucg
+    owner: 447
+- model: badges.badge
+  pk: 447
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.663846+00:00
+    modified: 2024-01-04 15:51:14.663846+00:00
+    expiration: 2023-12-29 19:01:14.663801+00:00
+    identifier: IhN4e8LCqFkuKrRs0Va0mw
+    owner: 448
+- model: badges.badge
+  pk: 448
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.666417+00:00
+    modified: 2024-01-04 15:51:14.666417+00:00
+    expiration: 2024-02-12 15:20:14.666370+00:00
+    identifier: 6sv7NTQBA9pw0TTmk_ZAag
+    owner: 449
+- model: badges.badge
+  pk: 449
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.668598+00:00
+    modified: 2024-01-04 15:51:14.668598+00:00
+    expiration: 2024-01-31 03:49:14.668553+00:00
+    identifier: pw6Ldc5SOJw4_6D-5_YiOQ
+    owner: 450
+- model: badges.badge
+  pk: 450
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.670761+00:00
+    modified: 2024-01-04 15:51:14.670761+00:00
+    expiration: 2024-01-28 16:14:14.670718+00:00
+    identifier: R2QeumQLbZGA6sWM-J4Aqg
+    owner: 451
+- model: badges.badge
+  pk: 451
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.672983+00:00
+    modified: 2024-01-04 15:51:14.672983+00:00
+    expiration: 2024-03-07 09:14:14.672937+00:00
+    identifier: sASPf26Hxu4kC0C_bsoXTA
+    owner: 452
+- model: badges.badge
+  pk: 452
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.675297+00:00
+    modified: 2024-01-04 15:51:14.675297+00:00
+    expiration: 2024-03-07 06:08:14.675240+00:00
+    identifier: KFs6bdIB3bKjBezDZtHvIw
+    owner: 453
+- model: badges.badge
+  pk: 453
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.677442+00:00
+    modified: 2024-01-04 15:51:14.677442+00:00
+    expiration: 2023-11-29 22:28:14.677396+00:00
+    identifier: SuhVsDmf01PJ1StU5-w9Iw
+    owner: 454
+- model: badges.badge
+  pk: 454
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.679592+00:00
+    modified: 2024-01-04 15:51:14.679592+00:00
+    expiration: 2024-03-12 05:58:14.679548+00:00
+    identifier: N8ZHvqVc4omcAmING2Jumw
+    owner: 455
+- model: badges.badge
+  pk: 455
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.681703+00:00
+    modified: 2024-01-04 15:51:14.681703+00:00
+    expiration: 2024-03-13 10:05:14.681658+00:00
+    identifier: 0BxOYPNjnN_5-IkMwl1p_g
+    owner: 456
+- model: badges.badge
+  pk: 456
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.683836+00:00
+    modified: 2024-01-04 15:51:14.683836+00:00
+    expiration: 2023-11-05 17:09:14.683791+00:00
+    identifier: u5ZPCx1CS-9-a-Bw8gt2aA
+    owner: 457
+- model: badges.badge
+  pk: 457
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.685910+00:00
+    modified: 2024-01-04 15:51:14.685910+00:00
+    expiration: 2023-11-21 20:24:14.685866+00:00
+    identifier: edC9fABBldpw56MMVQ8K3Q
+    owner: 458
+- model: badges.badge
+  pk: 458
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.688028+00:00
+    modified: 2024-01-04 15:51:14.688028+00:00
+    expiration: 2024-01-08 16:29:14.687983+00:00
+    identifier: GoMAiyaESGPGNH7FQVVzkA
+    owner: 459
+- model: badges.badge
+  pk: 459
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.690416+00:00
+    modified: 2024-01-04 15:51:14.690416+00:00
+    expiration: 2024-01-29 18:20:14.690372+00:00
+    identifier: RHMwSN67rO0gcntNNAuBxw
+    owner: 460
+- model: badges.badge
+  pk: 460
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.692548+00:00
+    modified: 2024-01-04 15:51:14.692548+00:00
+    expiration: 2023-12-07 22:04:14.692505+00:00
+    identifier: 8dlbAeErG5UUbiGXwHLokQ
+    owner: 461
+- model: badges.badge
+  pk: 461
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.694652+00:00
+    modified: 2024-01-04 15:51:14.694652+00:00
+    expiration: 2024-01-29 16:14:14.694606+00:00
+    identifier: nL4Fc83RCso4mfTRCa_6dQ
+    owner: 462
+- model: badges.badge
+  pk: 462
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.696840+00:00
+    modified: 2024-01-04 15:51:14.696840+00:00
+    expiration: 2023-11-28 13:47:14.696796+00:00
+    identifier: h4hNrFMfrSQLg7UUOdDSrQ
+    owner: 463
+- model: badges.badge
+  pk: 463
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.698951+00:00
+    modified: 2024-01-04 15:51:14.698951+00:00
+    expiration: 2024-02-04 17:43:14.698907+00:00
+    identifier: IhvobHDEdEVx9YxlkxZgCg
+    owner: 464
+- model: badges.badge
+  pk: 464
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.701073+00:00
+    modified: 2024-01-04 15:51:14.701073+00:00
+    expiration: 2024-02-02 16:33:14.701030+00:00
+    identifier: 5GnnHbvIUrWhmENVs6UTlg
+    owner: 465
+- model: badges.badge
+  pk: 465
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.703211+00:00
+    modified: 2024-01-04 15:51:14.703211+00:00
+    expiration: 2023-11-03 00:54:14.703167+00:00
+    identifier: UWaTTwPZAX3wjY9R0o5jUw
+    owner: 466
+- model: badges.badge
+  pk: 466
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.705525+00:00
+    modified: 2024-01-04 15:51:14.705525+00:00
+    expiration: 2023-11-02 10:53:14.705479+00:00
+    identifier: XKleNT5YvCsWjnoVUDd4Ag
+    owner: 467
+- model: badges.badge
+  pk: 467
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.707702+00:00
+    modified: 2024-01-04 15:51:14.707702+00:00
+    expiration: 2024-01-31 15:12:14.707658+00:00
+    identifier: 97AtCXtModp4b045kKegYA
+    owner: 468
+- model: badges.badge
+  pk: 468
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.709831+00:00
+    modified: 2024-01-04 15:51:14.709831+00:00
+    expiration: 2023-12-29 16:07:14.709785+00:00
+    identifier: zX347vHLNsU5OZcbxOQ_PA
+    owner: 469
+- model: badges.badge
+  pk: 469
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.712161+00:00
+    modified: 2024-01-04 15:51:14.712161+00:00
+    expiration: 2024-03-04 04:53:14.712115+00:00
+    identifier: NXDth6i0qb0yMqMwiDR9yw
+    owner: 470
+- model: badges.badge
+  pk: 470
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.714212+00:00
+    modified: 2024-01-04 15:51:14.714212+00:00
+    expiration: 2024-01-07 14:16:14.714165+00:00
+    identifier: wzFw7DohUJdApuCUVUV31w
+    owner: 471
+- model: badges.badge
+  pk: 471
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.716200+00:00
+    modified: 2024-01-04 15:51:14.716200+00:00
+    expiration: 2024-01-17 11:14:14.716154+00:00
+    identifier: NT-4NOQpMsqeMye2WqFM9g
+    owner: 472
+- model: badges.badge
+  pk: 472
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.718171+00:00
+    modified: 2024-01-04 15:51:14.718171+00:00
+    expiration: 2024-02-08 11:01:14.718129+00:00
+    identifier: UZkpp-cjnJ6ERvwBPKodFQ
+    owner: 473
+- model: badges.badge
+  pk: 473
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.720279+00:00
+    modified: 2024-01-04 15:51:14.720279+00:00
+    expiration: 2024-02-29 15:00:14.720237+00:00
+    identifier: Rsv_ZP8bXPk3ojU2WuDa5Q
+    owner: 474
+- model: badges.badge
+  pk: 474
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.722468+00:00
+    modified: 2024-01-04 15:51:14.722468+00:00
+    expiration: 2024-01-13 13:47:14.722424+00:00
+    identifier: 9M2FK-wgLb6BdLKIu1-wcQ
+    owner: 475
+- model: badges.badge
+  pk: 475
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.724517+00:00
+    modified: 2024-01-04 15:51:14.724517+00:00
+    expiration: 2024-03-10 23:36:14.724473+00:00
+    identifier: jCi5vBqIt48ggPCFYSOetg
+    owner: 476
+- model: badges.badge
+  pk: 476
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.726794+00:00
+    modified: 2024-01-04 15:51:14.726794+00:00
+    expiration: 2024-01-02 15:48:14.726751+00:00
+    identifier: sbt-JxeuGxV2MbjdTtdupQ
+    owner: 477
+- model: badges.badge
+  pk: 477
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.728951+00:00
+    modified: 2024-01-04 15:51:14.728951+00:00
+    expiration: 2024-01-26 02:05:14.728906+00:00
+    identifier: Wuu3UWgPJJTZdXE40GlJfg
+    owner: 478
+- model: badges.badge
+  pk: 478
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.730963+00:00
+    modified: 2024-01-04 15:51:14.730963+00:00
+    expiration: 2024-02-24 16:58:14.730919+00:00
+    identifier: 8zxGi5J93_TLj5tEtOAV6A
+    owner: 479
+- model: badges.badge
+  pk: 479
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.733066+00:00
+    modified: 2024-01-04 15:51:14.733066+00:00
+    expiration: 2023-11-23 05:23:14.733022+00:00
+    identifier: 4-mf-5eJj6hPgdLMfjWlvQ
+    owner: 480
+- model: badges.badge
+  pk: 480
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.735358+00:00
+    modified: 2024-01-04 15:51:14.735358+00:00
+    expiration: 2023-12-29 05:42:14.735314+00:00
+    identifier: o82KQ2_rMw6mBIr6tu5lzg
+    owner: 481
+- model: badges.badge
+  pk: 481
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.737411+00:00
+    modified: 2024-01-04 15:51:14.737411+00:00
+    expiration: 2024-01-03 00:32:14.737367+00:00
+    identifier: 5XEF1jHMyxsyW8cb7A-VUw
+    owner: 482
+- model: badges.badge
+  pk: 482
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.739438+00:00
+    modified: 2024-01-04 15:51:14.739438+00:00
+    expiration: 2023-11-12 18:27:14.739395+00:00
+    identifier: Tq1sWXXaWJxhaCAmhPC8Zg
+    owner: 483
+- model: badges.badge
+  pk: 483
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.741454+00:00
+    modified: 2024-01-04 15:51:14.741454+00:00
+    expiration: 2024-03-08 15:58:14.741411+00:00
+    identifier: gFDYUrx6e48u5WDxQvtQaQ
+    owner: 484
+- model: badges.badge
+  pk: 484
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.743555+00:00
+    modified: 2024-01-04 15:51:14.743555+00:00
+    expiration: 2024-02-09 17:31:14.743510+00:00
+    identifier: lKL3ZJlsUxv5HjrOfqd1Qw
+    owner: 485
+- model: badges.badge
+  pk: 485
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.745645+00:00
+    modified: 2024-01-04 15:51:14.745645+00:00
+    expiration: 2024-01-31 20:53:14.745602+00:00
+    identifier: c_P_xEpchqwoUyG1qATAHA
+    owner: 486
+- model: badges.badge
+  pk: 486
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.747832+00:00
+    modified: 2024-01-04 15:51:14.747832+00:00
+    expiration: 2023-12-29 22:07:14.747785+00:00
+    identifier: SSGON2BDjnnWzgN0mBUIJQ
+    owner: 487
+- model: badges.badge
+  pk: 487
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.750231+00:00
+    modified: 2024-01-04 15:51:14.750231+00:00
+    expiration: 2023-10-31 00:12:14.750184+00:00
+    identifier: d3k0DvLA4lJnxHdCLKlWEg
+    owner: 488
+- model: badges.badge
+  pk: 488
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.752310+00:00
+    modified: 2024-01-04 15:51:14.752310+00:00
+    expiration: 2024-03-11 06:35:14.752253+00:00
+    identifier: BMho72nU9PVKQvK48JoRuA
+    owner: 489
+- model: badges.badge
+  pk: 489
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.754328+00:00
+    modified: 2024-01-04 15:51:14.754328+00:00
+    expiration: 2023-11-22 15:37:14.754270+00:00
+    identifier: d_paKb91EB_CGGLleCvUuA
+    owner: 490
+- model: badges.badge
+  pk: 490
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.756346+00:00
+    modified: 2024-01-04 15:51:14.756346+00:00
+    expiration: 2024-03-03 00:51:14.756304+00:00
+    identifier: Vu2tATzwnA0oOojCIijQNA
+    owner: 491
+- model: badges.badge
+  pk: 491
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.758297+00:00
+    modified: 2024-01-04 15:51:14.758297+00:00
+    expiration: 2024-01-06 09:42:14.758243+00:00
+    identifier: DQIHIGyPgtdMd1CZJKdgeg
+    owner: 492
+- model: badges.badge
+  pk: 492
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.760370+00:00
+    modified: 2024-01-04 15:51:14.760370+00:00
+    expiration: 2024-01-25 23:22:14.760329+00:00
+    identifier: SwKq3d8wMYOp-YVt6KoBwA
+    owner: 493
+- model: badges.badge
+  pk: 493
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.762510+00:00
+    modified: 2024-01-04 15:51:14.762510+00:00
+    expiration: 2023-12-20 00:48:14.762458+00:00
+    identifier: -df9k7QcVaeYuOyYQ3BA1Q
+    owner: 494
+- model: badges.badge
+  pk: 494
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.764836+00:00
+    modified: 2024-01-04 15:51:14.764836+00:00
+    expiration: 2024-01-06 21:26:14.764794+00:00
+    identifier: GXlquq-dnnTxZyW9yD2BUQ
+    owner: 495
+- model: badges.badge
+  pk: 495
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.766881+00:00
+    modified: 2024-01-04 15:51:14.766881+00:00
+    expiration: 2023-11-29 21:52:14.766835+00:00
+    identifier: U6H2jKix7t4hZF8mnmJJew
+    owner: 496
+- model: badges.badge
+  pk: 496
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.768888+00:00
+    modified: 2024-01-04 15:51:14.768888+00:00
+    expiration: 2023-10-29 05:03:14.768844+00:00
+    identifier: 32aNr5WwC7sgZK5gJgwBWg
+    owner: 497
+- model: badges.badge
+  pk: 497
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: false
+    created: 2024-01-04 15:51:14.770919+00:00
+    modified: 2024-01-04 15:51:14.770919+00:00
+    expiration: 2023-11-09 23:42:14.770875+00:00
+    identifier: xJ1Sh_0lwBsfrjcv1DsO9w
+    owner: 498
+- model: badges.badge
+  pk: 498
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:51:14.772918+00:00
+    modified: 2024-01-04 15:51:14.772918+00:00
+    expiration: 2023-11-06 00:57:14.772873+00:00
+    identifier: WsHpw73U5N01lq4ViTxlOg
+    owner: 499
+- model: badges.badge
+  pk: 499
+  fields:
+    deleted: null
+    deleted_by_cascade: false
+    is_active: true
+    created: 2024-01-04 15:52:20.451101+00:00
+    modified: 2024-01-04 15:52:20.451101+00:00
+    expiration: 2025-04-06 14:52:10.650000+00:00
+    identifier: a5RozpCVomeOdM9a0fIygw
+    owner: 1

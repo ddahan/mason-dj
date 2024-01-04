@@ -550,9 +550,3 @@
     name: Can view signup password less token
     content_type: 23
     codename: view_signuppasswordlesstoken
-- model: auth.permission
-  pk: 93
-  fields:
-    name: Can Access Section Foo
-    content_type: 24
-    codename: can_access_foo
