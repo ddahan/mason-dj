@@ -101,7 +101,6 @@ DATABASES = {"default": dj_database_url.config(env="DJ_DATABASE_URL", conn_max_a
 LANGUAGE_CODE = "en"
 TIME_ZONE = "Europe/Paris"
 USE_I18N = True
-USE_L10N = True
 USE_TZ = True
 
 ##########################################################################################
