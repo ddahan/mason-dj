@@ -93,7 +93,7 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 - [ ] Intelligent Search → [Algolia](https://www.algolia.com/)
 - [ ] Enterprise chat → [Slack](https://slack.com/)
 - [ ] Team Projects → [Notion](https://www.notion.so/)
-- [ ] Business Inteligence → [Metabase](https://www.metabase.com/)
+- [ ] Business Intelligence → [Metabase](https://www.metabase.com/)
 
 #### Documentation
 - [ ] Add a full documentation to this template (either using a tool like [Gitbook](https://www.gitbook.com/) or directly in the code)
@@ -110,25 +110,25 @@ A __modern__, fully-featured and __opinionated__ Back-End Django Starter Templat
 ## FAQ
 
 
-> Why not using the front-end part of Django?
+> Why not use the front-end part of Django?
 
-For a significant part of medium-sized projects, Django front-end abilities are unfortunately not enough to ensure a great UX/DX, compared to tools like React or Vue. [Htmx](https://htmx.org/) kind of fills the gap, but it currently lacks a proper integration with Django and a good developer experience. Besides, a Nuxt Mason Starter (cf. above) should be developped to have the front-end counterpart of this template.
+For a significant part of medium-sized projects, Django front-end abilities are unfortunately not enough to ensure a great UX/DX, compared to tools like React or Vue. [Htmx](https://htmx.org/) kind of fills the gap, but it currently lacks a proper integration with Django and a good developer experience. Besides, a Nuxt Mason Starter (cf. above) should be developed to have the front-end counterpart of this template.
 
 > What if I (or other team members) are not using VS Code?
 
-The whole DX part of this template is focused on VS Code so you would lose these specific features. Besides, if there are different code editors within your team, you should add configuration tools that work between multiple IDEs, like [EditorConfig](https://editorconfig.org/).
+The whole DX part of this template is focused on VS Code so you would lose these specific features. Besides, if your team has different code editors, you should add configuration tools that work between multiple IDEs, like [EditorConfig](https://editorconfig.org/).
 
 > How do you pick the tools of this template?
 
 - I try to pick tools that are suitable for **small to medium start-ups**. You never should start too big. I try to avoid complex concepts that can be more harmful than useful (kubernetes, micro-services)
 
-- I try to favor **multi-usages tools** to have less tools in the end. For example, PostgreSQL can be used for sql **and** nosql, Redis can be used as a message broker **and** a cache mechanism, etc.
+- I try to favor **multi-usages tools** to have fewer tools in the end. For example, PostgreSQL can be used for sql **and** nosql, Redis can be used as a message broker **and** a cache mechanism, etc.
 
-- I try to favor **open-source tools** which allow the user to self-host tool or using a paying SaaS (like highlight.io)
+- I try to favor **open-source tools** which allow the user to self-host tool or use a paying SaaS (like highlight.io)
 
 - When adding integrations, I try to pick the ones that are **broadly used** rather than the "best" ones.
 
-- I try to **avoid in-progress work** that should change (That's the reason I prefer using Soeti to django-channels or anything async with Django).
+- I try to **avoid in-progress work** that should change (That's why I prefer using Soeti to django-channels or anything async with Django).
 
 > Why Django rather than fullstack JS?
 
