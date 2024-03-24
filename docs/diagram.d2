@@ -100,8 +100,8 @@ token_auth: {
   }
   shape: rectangle
 }
-badges.Badge -> profiles.User
-core.GlobalPermission -> contenttypes.ContentType
-token_auth.APIAccessToken -> profiles.User
-token_auth.MagicLinkToken -> profiles.User
-token_auth.LoginPasswordLessToken -> profiles.User
+badges.Badge.owner -> profiles.User
+core.GlobalPermission.content_type -> contenttypes.ContentType
+token_auth.APIAccessToken.user -> profiles.User
+token_auth.MagicLinkToken.user -> profiles.User
+token_auth.LoginPasswordLessToken.user -> profiles.User

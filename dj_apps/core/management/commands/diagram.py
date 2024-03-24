@@ -174,17 +174,18 @@ class FieldD2:
 
         return [
             D2Connection(
-                shape_1=app_model_display(self.parent_model.dj_model),
+                shape_1=app_model_display(self.parent_model.dj_model, self),
                 shape_2=app_model_display(self.dj_field.related_model),
                 direction=Direction.BOTH if self.dj_field.many_to_many else Direction.TO,
             )
         ]
 
 
-def app_model_display(dj_model) -> str:
-    """Get a string formatted as <app_name>.<Model>
+def app_model_display(dj_model, field=None) -> str:
+    """Get a string formatted as <app_name>.<Model> or <app_name>.<Model>.<Field>
     This is used to describe D2 connections"""
-    return f"{dj_model._meta.app_label}.{dj_model._meta.object_name}"
+    field_name_suffix = f".{field.name}" if field else ""
+    return f"{dj_model._meta.app_label}.{dj_model._meta.object_name}{field_name_suffix}"
 
 
 class Command(BaseCommand):
@@ -209,7 +210,7 @@ class Command(BaseCommand):
         self.stdout.write("Converting d2 file to svg and opening browser...")
 
         process = sh(
-            f"d2 --watch  --sketch --theme 5 {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}",
+            f"d2 --watch  --sketch --theme 5  --layout=elk {OUTPUT_D2_FILE} {OUTPUT_SVG_FILE}",
             blocking=False,
         )
         # NOTE: this is dirty code as there is no option to automatic closing
